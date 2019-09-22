@@ -41,15 +41,15 @@
   4. `git commit -m "日志信息"` (此时 commit 一定不能带具体文件名)
 ### github
 ***
-1. 远程地址加别名
+1. 远程地址加别名  
    `git remote add [别名] [远程地址]`
-2. 查看远程地址别名 
+2. 查看远程地址别名   
    `git remote -v`   
-3. 将本地库内容推送到github中
+3. 将本地库内容推送到github中  
    `git push [远程地址/别名] master`
-4. 克隆github中内容到本地库
+4. 克隆github中内容到本地库  
    `git clone [远程地址/别名]`
-5. 更新本地库从github
+5. 更新本地库从github  
    `git fetch` add `git merge`
    or `git pull`
 ***
