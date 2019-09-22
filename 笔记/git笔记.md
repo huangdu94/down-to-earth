@@ -48,5 +48,8 @@
 3. 将本地库内容推送到github中
    `git push [远程地址/别名] master`
 4. 克隆github中内容到本地库
-git clone [远程地址/别名]
+   `git clone [远程地址/别名]`
+5. 更新本地库从github
+   `git fetch` add `git merge`
+   or `git pull`
 ***
