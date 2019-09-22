@@ -41,8 +41,8 @@ git merge 合并分支
 4 git commit -m "日志信息" (此时 commit 一定不能带具体文件名)
 
 ---------------------------------------------------
-git remote add [别名] [远程地址]	远程地址加别名
+git remote add [别名] [远程地址]	远程地址加别名	origin
 git remote -v 查看当前所有远程地址别名
 git push [远程地址/别名] master	将本地库内容推送到github中
-
+git fetch [远程地址/别名]		从远程库更新
 git clone [远程地址/别名] 克隆
