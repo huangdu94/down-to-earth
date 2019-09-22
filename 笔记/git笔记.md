@@ -4,11 +4,11 @@
    `git init`	
 2. 设置签名  
    + 项目级别/仓库级别     
-     `git config user.name`
-     `git config user.email`   
+     `git config user.name`  
+     `git config user.email`     
    + 系统用户级别  
-     `git config --global user.name`
-     `git config --global user.email`
+     `git config --global user.name`  
+     `git config --global user.email`  
 3. 查看状态  
    `git status`
 4. 暂存区  
