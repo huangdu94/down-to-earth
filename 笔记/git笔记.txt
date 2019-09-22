@@ -1,0 +1,48 @@
+初始化
+git init
+	
+设置签名
+项目级别/仓库级别
+git config user.name
+git config user.name
+
+系统用户级别
+git config --global user.name
+git config --global user.eamil
+
+查看状态
+git status
+
+git add	暂存区
+
+暂存区操作			
+git rm	删除
+git commit	提交	git commit -m "" filename
+
+查看历史记录
+git log
+git log --pretty=oneline
+git reflog
+
+前进和后退
+git reset --hard
+
+分支管理
+git branch 创建分支
+git checkout 切换分支
+git branch -v 查看分支
+
+git merge 合并分支
+
+冲突的解决：
+1 编辑文件，删除特殊符号
+2 把文件修改到满意的程度，保存退出
+3 git add [文件名]
+4 git commit -m "日志信息" (此时 commit 一定不能带具体文件名)
+
+---------------------------------------------------
+git remote add [别名] [远程地址]	远程地址加别名
+git remote -v 查看当前所有远程地址别名
+git push [远程地址/别名] master	将本地库内容推送到github中
+
+git clone [远程地址/别名] 克隆
