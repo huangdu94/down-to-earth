@@ -31,6 +31,9 @@
 	`git checkout`
 	+ 查看分支  
 	`git branch -v`
+	+ 比较差异  
+	`git diff`  
+	`git log -p`
 	+ 合并分支  
 	`git merge`
 	+ 冲突解决
