@@ -14,9 +14,9 @@
 4. 暂存区
 	+ 添加  
 	`git add`     
-   + 删除  
+	+ 删除  
 	`git rm`
-   + 提交  
+	+ 提交  
 	`git commit`
 5. 历史记录  
 	`git log`  
