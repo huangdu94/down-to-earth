@@ -9,6 +9,8 @@
 	+ 系统用户级别  
 	`git config --global user.name`  
 	`git config --global user.email`
+	+ 查看已有配置信息  
+	`git config --list`
 3. 查看状态  
 	`git status`
 4. 暂存区
@@ -48,7 +50,7 @@
 2. 查看远程地址别名  
 	`git remote -v`
 3. 将本地库内容推送到github中  
-	`git push [远程地址/别名] master`
+	`git push -u [远程地址/别名] master`
 4. 克隆github中内容到本地库  
 	`git clone [远程地址/别名]`
 5. 更新本地库从github  
