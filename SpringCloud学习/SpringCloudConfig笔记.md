@@ -153,7 +153,7 @@ public class ConfigClientApplication {
     }
 }
 ```
-4. 配置文件，**bootstrap.yml**如下：
+3. 配置文件，**bootstrap.yml**如下：
 ```YML
 server:
   port: 8081
