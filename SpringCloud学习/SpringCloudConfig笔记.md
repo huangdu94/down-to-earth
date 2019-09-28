@@ -1,9 +1,11 @@
 # Spring Cloud Config
 ​		原文作者为CSDN博主「方志朋」，遵循 [CC 4.0 BY-SA](https://creativecommons.org/licenses/by-sa/4.0/) 版权协议，转载请附上原文出处链接及本声明。[原文链接](https://blog.csdn.net/forezp/article/details/81041028)  
 ​		**本笔记在此基础上修改整理。**
+
 ## 一、简介
 ​		分布式配置中心组件**Spring Cloud Config**可以方便在分布式系统中服务配置文件统一管理。它支持配置服务放在本地，也支持放在远程Git仓库中。  
 ​		在**Spring Cloud Config**组件中，分两个角色，**Config Server**和**Config Client**。
+
 ## 二、构建Config Server
 1. 创建一个父项目**spring-cloud-demo**，**pom.xml**如下:
 ```XML
@@ -167,3 +169,4 @@ spring:
 ## 四、写程序中遇到的问题
 1. 创建了一个**ConfigClientProperties**类用于读取配置，但是程序运行失败，最后发现Spring库中有同名类导致创建Bean时发生冲突。
 2. 程序运行成功调试程序时，属性值读取异常，发现误将`@Value("${message}")`用成`@Value("message")`。
+
