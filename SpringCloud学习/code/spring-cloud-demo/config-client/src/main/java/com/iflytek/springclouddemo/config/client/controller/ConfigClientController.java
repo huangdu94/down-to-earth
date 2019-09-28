@@ -5,6 +5,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.bind.annotation.RestController;
 
 /**
  * Spring Cloud Config Client Controller
@@ -12,19 +13,20 @@ import org.springframework.web.bind.annotation.RequestMethod;
  *
  * @author DuHuang
  */
-@RequestMapping
+@RestController
 public class ConfigClientController {
     @Autowired
     private ConfigClientProperties configClientProperties;
 
-    @RequestMapping(value = "/get/{key}", method = RequestMethod.GET)
+    @RequestMapping(value = "/show/{key}", method = RequestMethod.GET)
     public String getProperties(@PathVariable String key) {
         switch (key) {
             case "message":
                 return configClientProperties.getMessage();
             case "secret":
                 return configClientProperties.getSecret();
+            default:
+                return String.format("key '%s' is not exist.", key);
         }
-        return String.format("key {0} is not exist.",key);
     }
 }
