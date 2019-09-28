@@ -9,4 +9,4 @@ spring:
       server:
         git:
           uri: https://github.com/huangdu94/down-to-earth.git
-          searchPaths: code/respo
+          search-paths: respo
