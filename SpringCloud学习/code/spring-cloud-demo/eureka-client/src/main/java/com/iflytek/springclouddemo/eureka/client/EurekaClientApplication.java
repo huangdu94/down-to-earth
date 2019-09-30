@@ -27,7 +27,7 @@ public class EurekaClientApplication {
     }
 
     @RequestMapping("/{name}")
-    public String home(@PathVariable String name, @RequestParam(value = "message", defaultValue = "Hello World") String message) {
+    public String sayHello(@PathVariable String name, @RequestParam(value = "message", defaultValue = "Hello World") String message) {
         return String.format("Come by port: %s,say to %s: %s.", port, name, message);
     }
 }
