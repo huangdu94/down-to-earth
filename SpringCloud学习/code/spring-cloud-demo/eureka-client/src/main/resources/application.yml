@@ -1,0 +1,11 @@
+server:
+  port: 8762
+spring:
+  application:
+    name: eureka-client #服务与服务之间相互调用一般都是根据这个name
+eureka:
+  instance:
+    prefer-ip-address: true #注册服务的IP,而不是服务器名称
+  client:
+    serviceUrl:
+      defaultZone: http://localhost:8761/eureka/
