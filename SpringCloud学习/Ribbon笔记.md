@@ -1,0 +1,180 @@
+# Spring Cloud Config
+​		原文作者为CSDN博主[方志朋](https://blog.csdn.net/forezp)，遵循 [CC 4.0 BY-SA](https://creativecommons.org/licenses/by-sa/4.0/) 版权协议，转载请附上原文出处链接及本声明。[原文链接](https://blog.csdn.net/forezp/article/details/81041028)  
+​		**本笔记在此基础上修改整理。**
+
+## 一、简介
+​		Ribbon is a client side load balancer which gives you a lot of control over the behaviour of HTTP and TCP clients.
+## 二、准备工作
+​		参考**Eureka笔记**，创建**eureka-server**和**eureka-client**，启动一个**eureka-server**和两个**eureka-client**，用于演示。
+## 三、建一个服务消费者
+1. 创建一个父项目**spring-cloud-demo**，**pom.xml**如下:
+```XML
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <groupId>com.iflytek</groupId>
+    <artifactId>spring-cloud-demo</artifactId>
+    <version>1.0-SNAPSHOT</version>
+    <packaging>pom</packaging>
+
+    <name>spring-cloud-demo</name>
+    <description>Demo project for Spring Cloud</description>
+
+    <modules>
+        <module>service-ribbon</module>
+    </modules>
+
+    <properties>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+        <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
+        <java.version>1.8</java.version>
+        <spring-cloud.version>Finchley.RELEASE</spring-cloud.version>
+    </properties>
+
+    <parent>
+        <groupId>org.springframework.boot</groupId>
+        <artifactId>spring-boot-starter-parent</artifactId>
+        <version>2.0.3.RELEASE</version>
+        <relativePath/>
+    </parent>
+
+    <dependencies>
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-test</artifactId>
+            <scope>test</scope>
+        </dependency>
+    </dependencies>
+
+    <dependencyManagement>
+        <dependencies>
+            <dependency>
+                <groupId>org.springframework.cloud</groupId>
+                <artifactId>spring-cloud-dependencies</artifactId>
+                <version>${spring-cloud.version}</version>
+                <type>pom</type>
+                <scope>import</scope>
+            </dependency>
+        </dependencies>
+    </dependencyManagement>
+
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>org.springframework.boot</groupId>
+                <artifactId>spring-boot-maven-plugin</artifactId>
+            </plugin>
+        </plugins>
+    </build>
+</project>
+```
+2. 创建一个子项目**service-ribbon**，**pom.xml**如下：
+```XML
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <parent>
+        <artifactId>spring-cloud-demo</artifactId>
+        <groupId>com.iflytek</groupId>
+        <version>1.0-SNAPSHOT</version>
+    </parent>
+    <modelVersion>4.0.0</modelVersion>
+
+    <artifactId>service-ribbon</artifactId>
+    <packaging>jar</packaging>
+
+    <name>service-ribbon</name>
+    <description>Demo project for Ribbon</description>
+
+    <dependencies>
+        <dependency>
+            <groupId>org.springframework.cloud</groupId>
+            <artifactId>spring-cloud-starter-netflix-eureka-client</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-web</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework.cloud</groupId>
+            <artifactId>spring-cloud-starter-netflix-ribbon</artifactId>
+        </dependency>
+    </dependencies>
+</project>
+```
+3.  创建启动类，**RibbonApplication.java**如下：
+```JAVA
+@SpringBootApplication
+@EnableEurekaClient
+@EnableDiscoveryClient
+public class RibbonApplication {
+    public static void main(String[] args) {
+        SpringApplication.run(RibbonApplication.class, args);
+    }
+}
+```
+4. 配置文件，**application.yml**如下：
+```YML
+server:
+  port: 8764
+spring:
+  application:
+    name: service-ribbon
+eureka:
+  instance:
+    prefer-ip-address: true
+  client:
+    serviceUrl:
+      defaultZone: http://localhost:8761/eureka/
+```
+5. **RestTemplate**的Bean配置类如下：
+```JAVA
+@Configuration
+public class RestConfig {
+    @Bean
+    @LoadBalanced
+    public RestTemplate restTemplate() {
+        return new RestTemplate();
+    }
+}
+```
+6. **CallRemoteController**、**CallRemoteService**和**CallRemoteServiceImpl**如下：
+```JAVA
+@RestController
+public class CallRemoteController {
+    @Autowired
+    private CallRemoteService callRemoteService;
+
+    @RequestMapping("/callRemote")
+    public String callRemoteService() {
+        return callRemoteService.sayHelloCallByRemote("duhuang");
+    }
+}
+```
+```JAVA
+public interface CallRemoteService {
+    /**
+     * 调用远程的sayHello端点
+     * @return
+     */
+    String sayHelloCallByRemote(String name);
+}
+```
+```JAVA
+@Service
+public class CallRemoteServiceImpl implements CallRemoteService {
+    @Autowired
+    private RestTemplate restTemplate;
+
+    @Override
+    public String sayHelloCallByRemote(String name) {
+        return restTemplate.getForObject("http://eureka-client/"+name,String.class);
+    }
+}
+```
+## 四、架构图
+![架构图](https://img-blog.csdnimg.cn/20190601005135471.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9mb3JlenAuYmxvZy5jc2RuLm5ldA==,size_16,color_FFFFFF,t_70 "架构图")
