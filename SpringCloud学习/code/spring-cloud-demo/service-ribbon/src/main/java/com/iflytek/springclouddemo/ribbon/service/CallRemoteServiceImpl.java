@@ -1,5 +1,6 @@
 package com.iflytek.springclouddemo.ribbon.service;
 
+import com.netflix.hystrix.contrib.javanica.annotation.HystrixCommand;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.web.client.RestTemplate;
@@ -16,7 +17,12 @@ public class CallRemoteServiceImpl implements CallRemoteService {
     private RestTemplate restTemplate;
 
     @Override
+    @HystrixCommand(fallbackMethod = "callError")
     public String sayHelloCallByRemote(String name) {
         return restTemplate.getForObject("http://eureka-client/"+name,String.class);
+    }
+
+    public String callError(String name) {
+        return String.format("%s,call remote is wrong!",name);
     }
 }

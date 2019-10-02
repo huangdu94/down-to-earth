@@ -13,7 +13,7 @@ import org.springframework.web.bind.annotation.RequestParam;
  *
  * @author DuHuang
  */
-@FeignClient("eureka-client")
+@FeignClient(value = "eureka-client",fallback = CallRemoteServiceHystric.class)
 public interface CallRemoteService {
     @RequestMapping("/{name}")
     String sayHelloCallByRemote(@PathVariable String name, @RequestParam(value = "message", defaultValue = "Hello World") String message);
