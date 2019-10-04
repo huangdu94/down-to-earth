@@ -10,3 +10,9 @@ spring:
         git:
           uri: https://github.com/huangdu94/down-to-earth.git
           search-paths: SpringCloud学习\code\respo
+eureka:
+  instance:
+    prefer-ip-address: true
+  client:
+    serviceUrl:
+      defaultZone: http://localhost:8761/eureka/
