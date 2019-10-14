@@ -126,22 +126,53 @@
 		+ 引用数据类型 > `null`
 	
 ## 五、字符串
-1. 字符串变量
-	+ `String str = "Hello World.";`
-2. 字符串的连接
+1. 字符串类对象实例化
+	+ 直接赋值实例化 `String str = "Hello World.";`
+	+ 构造方法实例化 `String str = new String("Hello World.");`
+	+ 直接赋值实例化可重用相同的实例，构造方法实例化会开辟新的堆内存空间
+2. 字符串比较
+	+ `equals`比较内容是否相等
+	+ `==`比较引用地址是否相等
+3. 字符串连接
 	+ 可以用`+`来连接两个字符串(`+`在这里是一个连接运算符)
+	+ 字符串常量的内容不会改变，采用`+`连接符会生成新的字符串常量对象
 	+ 转义字符：每个转义字符都是由两个符号组成，但是编译器把他当成一个字符
 		+ `\n` 换行符 光标移动到下一行
 		+ `\r` 回车符 把光标移动到本行的开始处
 		+ `\t` 制表符
 		+ (`\r\n` windows `\n` linux `\r` mac 表示换行)
-3. 字符串处理
-	+ 求子串`substring`(含头不含尾)
-	+ 测试字符串是否相等：
-		+ `equals`比较值是否相等 `==`比较引用地址是否相等
-		+ 字符串常量与new出来的String对象有区别(字符串常量池的概念)
-	+ 字符串常量的内容不会改变，采用`+`连接符会生成新的字符串常量
-	+ 字符串其他常用操作：查阅API
+4. 字符串常量池
+	+ 直接赋值实例化的`String`对象保存在常量池中，供下次重用
+	+ 构造方法实例化的`String`对象也可调用`intern()`手动入池
+	+ 静态常量池
+	```java
+	public class StringDemo {
+		public static void main(String[] args) {
+			//静态常量池
+			//程序加载的时候会自动将程序中保存的字符串、普通的常量、类和方法等信息全部分配
+			String strA = "www.iflytek.com";
+			String strB = "www." + "iflytek" + ".com";
+			//判断结果: true
+			System.out.println(strA == strB);
+		}
+	}
+	```
+	+ 运行时常量池
+	```java
+	public class StringDemo {
+		public static void main(String[] args) {
+			//运行时常量池
+			//程序执行中动态的实例化字符串对象
+			String logo = "iflytek";
+			String strA = "www.iflytek.com";
+			//频繁进行这样的操作会产生大量垃圾
+			String strB = "www." + logo + ".com";
+			//判断结果: false
+			System.out.println(strA == strB);
+		}
+	}
+	```	
+5. 字符串其他常用操作：查阅API
 	
 ## 六、运算符
 1. 算数运算符
