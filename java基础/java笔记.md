@@ -395,7 +395,7 @@
 	+ 当没有写构造方法时，编译器会默认加上无参构造方法
 	+ 写了构造方法时，编译器不会默认加上无参构造方法
 	+ `this(参数列表);`调用本类其它构造器(只能调用一个构造方法且必须位于开始)
-	+ `super(参数列表);`调用父类构造器(只能调用一个构造方法且必须位于开始
+	+ `super(参数列表);`调用父类构造器(只能调用一个构造方法且必须位于开始)
 	+ 构造方法的递归调用是不允许的
 7. `this`和`super`对比
 	|No.|对比|this|super|
@@ -468,7 +468,7 @@
 			+ 子类方法返回值类型应比父类方法返回值类型更小或相等(父类`double`子类`int`不行)
 			+ 子类方法声明抛出的异常类应比父类方法声明抛出的异常类更小或相等
 			+ 子类方法的访问权限应比父类方法的访问权限更大或相等
-		+ 父类`private`修饰的方法不能被重写
+		+ 父类`private`或`static`修饰的方法不能被重写
 	+ 注意子类定义和父类(或接口)相同名字的属性时的一些情况
 	```java
 	class Father {
@@ -532,18 +532,52 @@
 	+ `@Documented` 注解可被JavaDoc工具提取成文档
 	+ `@Inherited` 被它修饰的注解具有继承性，被子类自动继承
 
-## 十二、Object类
-1. 唯一没有父类的类，所有类的父类(没有继承其它类的类默认继承`Object`)
-2. `toString()` 获取对象相关信息
-3. `equals()` 对象比较
-4. `clone()` 重写该方法的类需要实现`Cloneable`接口
-5. `finalize()` 对象被回收时调用
-	+ `System.gc();` 可建议JVM回收垃圾，但是无法控制，因为这是由JVM的算法决定的
+## 十二、Object类和包装类 
+1. `Object`类概述
+	+ 唯一没有父类的类
+	+ 所有类的父类，没有继承其它类的类默认继承`Object`
+2. `Object`类部分方法
+	+ `toString()` 获取对象相关信息
+	+ `equals()` 对象比较
+	+ `clone()` 重写该方法的类需要实现`Cloneable`接口
+	+ `finalize()` 对象被回收时调用(`System.gc();` 可建议JVM回收垃圾，但是无法控制，因为这是由JVM的算法决定的)
+3. 包装类概述
+	+ 为了满足面向对象概念，利用类结构对八大基本数据类型进行包装
+	|No.|基本数据类型|包装类|父类|
+	|:-:|:-:|:-:|:-:|
+	|1|byte|Byte|Number|
+	|2|short|Short|Number|
+	|3|int|Integer|Number|
+	|4|long|Long|Number|
+	|5|float|Float|Number|
+	|6|double|Double|Number|
+	|7|boolean|Boolean|Object|
+	|8|char|Character|Object|
+4. 装箱与拆箱
+	+ 装箱：将基本数据类型保存到包装类中
+		+ 自动装箱`Integer iObject=i;`(包装类 变量=基本类型)
+		+ 手动装箱`Integer iObject=Integer.valueOf(i);`(包装类 变量=包装类.valueOf(基本类型))
+	+ 拆箱：从包装类中获取基本数据类型
+		+ 自动拆箱`int i=iObject`(基本类型 变量=包装类变量)
+		+ 手动拆箱`int i=iObject.intValue();`(基本类型 变量=包装类变量.intValue())
+	+ jdk1.5之后提供了自动装箱与自动装箱，jdk1.9开始包装类的构造方法上出现了过期声明
+	+ `Integer` `Byte` `Short` `Long` `Character` 也有与字符串常量池类似的对象池概念
+		+ 采用自动采用自动(或`valueOf()`方法)装箱的对象可复用(在一定范围内可复用)
+		+ 通过构造方法`new`对象不可复用
+		+ 具体表现在`==`和`equals()`比较的结果不同
+5. 字符串与基本类型的相互转换
+	+ 基本类型转换为字符串
+		+ `基本类型+""` 会产生垃圾不推荐
+		+ `String.valueOf(基本类型)` 不会产生垃圾推荐
+	+ 字符串转换为基本类型
+		+ `Number`类的子类都提供相应的静态转换方法，例`int i=Integer.parseInt("1");`(如果转换失败抛出`NumberFormatException`)
+		+ `Character`类不需要此方法，`Boolean`提供`parseBoolean()`静态方法
 		
-## 十三、抽象类
+## 十三、抽象类和接口
 1. 抽象方法
 	+ 由`abstract`修饰的方法
 	+ 只有方法的定义，没有具体的实现(连`{}`都没有)
+	+ 抽象方法不允许使用`final`修饰
 2. 抽象类
 	+ 由`abstract`修饰的类
 	+ 包含抽象方法的类必须是抽象类，不包含抽象方法的类也可以声明为抽象类(我乐意)
@@ -555,18 +589,54 @@
 		+ 封装子类共有的属性和行为(代码复用)
 		+ 为所有子类提供统一的类型(向上造型)
 		+ 可以包含抽象方法，为所有子类提供统一的入口，子类的具体实现不同，但方法的定义是一致的
-
-## 十四、接口
-1. 接口
-	+ 是一种由`interface`定义的引用数据类型
-	+ 接口中只能包含常量和抽象方法(编译器默认添加`public static final`或`public abstract`)
+3. 接口
+	+ 是一种由`interface`定义的特殊的类
+	+ 接口中属性只能时常量(默认添加`public static final`)
+	+ 接口中方法只能是公共的，可以是`abstract`或`default`或`static`方法(`default`方法和`static`方法出现在jdk1.8以后，可以说是对有缺陷老代码的补救措施)
+	+ 接口中没有方法体的方法默认添加`public abstract`，其它默认添加`public`
 	+ 接口不能被实例化
 	+ 接口是需要被实现的，实现类必须重写接口中的所有抽象方法(或者声明为抽象类)
 	+ 一个类可以实现多个接口，用逗号分隔(若又继承又实现时，应先继承后实现)
 	+ 接口可以继承接口(可以继承好几个接口用逗号分隔)
-	+ 如果这几个接口有相同的方法和相同的变量，那么相同的变量需要通过“接口名.变量名”的形式来访问(相同的方法不影响不必深究)
+	+ 如果这几个接口有相同名字的变量，那么它们需要通过“接口名.变量名”的形式来访问
+	+ 如果这几个接口有相同名字的方法，如果是`default`方法则要求子接口必须重写该方法
+	```java
+	interface IFatherA {
+		default void defaultMethod() {}
+		static void staticMethod() {}
+		void abstractMethod();
+	}
 
-## 十五、内部类
+	interface IFatherB {
+		default void defaultMethod() {}
+		static void staticMethod() {}
+		void abstractMethod();
+	}
+
+	/**
+	* 子接口继承的两个父接口有同名方法时的情况测试
+	*/
+	interface ISon extends IFatherA, IFatherB {
+		/**
+		* 两个父接口中有同名default方法子接口必须要重写
+		* 还可以重写为抽象方法(虽然可能没意义但编译器允许)
+		*/
+		@Override
+		default void defaultMethod() {}
+		/**
+		* 抽象方法不能被重写
+		*/
+		static void staticMethod() {}
+		/**
+		* 抽象方法不重写也没错
+		* 也可以重写为抽象方法
+		*/
+		@Override
+		default void abstractMethod() {}
+	}
+	```
+	
+## 十四、内部类
 1. 成员内部类
 	+ 类中套类，外面的类称为`Outer`，里面的类称为`Inner`
 	+ 内部类通常只服务于外部类，对外不具备可见性
@@ -757,19 +827,3 @@
 	public class GenChild<T> extends GenParent
 10 泛型继承中方法的覆盖
 	对于泛型类的继承来说，方法重写同样适用
---------------------------------------------------------------------------------
---------------------------------------------------------------------------------
-二十.基本数据类型的封装类
-----------------------------------------
-1 byte		Byte
-  short		Short
-  int		Int
-  long		Long
-  float		Float
-  double	Double	
-  char		Character
-  boolean	Boolean
-2 自动装箱与拆箱
-	基本数据类型 转换为 封装类型：装箱	Integer i=Integer.valueOf(d);
-	封装类型 转换为 基本数据类型：拆箱	int d=new Integer(123).intValue();
-3 Math类 double random()
