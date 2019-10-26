@@ -296,6 +296,7 @@
 	
 ## 八、数组
 1. 数组概述	
+	
 	+ 数组就是一组数的集合，集合中的数据必须是相同类型的，并且每一个数组都有一个名字，也就是数组名，我们可以通过数组名来访问数组中的元素
 2. 创建数组
 	+ `ArrayType arrayName[]=new ArrayType[length];`
@@ -361,7 +362,6 @@
 
 ## 九、类的基础
 1. 类的概述
-	
 	+ 类就是事物的集合和抽象，它所代表的是这类事物所共有的一些行为和属性
 2. 类的一般形式
 	+ 类是由属性(成员变量Field)和行为(方法Method)构成
@@ -736,28 +736,39 @@
 	|4|不同包的非子类||||√|
 	
 ## 十七、内部类
-1. 成员内部类
+1. 内部类概述
+	+ 内部类是指一种嵌套的结构关系
+	+ 在一个类的内部可以继续定义一个类结构(普通类、抽象类、接口)
+	+ 使得程序的结构定义更加灵活
 	+ 类中套类，外面的类称为`Outer`，里面的类称为`Inner`
-	+ 内部类通常只服务于外部类，对外不具备可见性
-	+ 内部类对象通常都是在外部类中创建的
-	+ 外面创建方法 `Outer.Inner in=new Outer().new Inner();`
-	+ 内部类中可以直接访问外部类的成员(包括私有的，内部类中有个隐式的引用指向了创建它的外部类对象`外部类名.this`)
-2. 匿名内部类(应用率高)
-	+ 若想创建一个类(子类)的对象，并且对象只被创建一次，此时该类不必命名，称为匿名内部类
-	+ 匿名内部类中访问外部的变量，该变量必须是`final`修饰的
-3. 局部内部类
-	+ 在局部内部类里面可以访问外部类的所有成员变量
-	局部内部类访问方法中的局部变量的时候，该局部变量必须声明为final类型
-	为什么局部变量必须是final类型?变量生命周期问题
-4. 静态内部类
+	+ 当内部类源代码进行编译后，字节码文件为`Outer$Inner.class`
+	+ 内部类最大的作用在于可以与外部类直接进行私有属性的相互访问，避免对象引用所带来的麻烦
+2. 成员内部类
+	+ 内部类通常只服务于外部类，内部类对象一般都是在外部类中创建的
+	+ 外部类外面也可以创建创建内部类 `Outer.Inner in=new Outer().new Inner();`
+	+ 外部类可以直接利用内部类的对象访问内部类私有成员
+	+ 内部类中可以直接访问外部类的私有的成员(内部类中有个隐式的引用指向了创建它的外部类对象`外部类名.this`)
+	+ 内部类也可以用`abstract`修饰，需要被继承使用
+		+ 可以先继承外部类，再在其中定义内部类继承该抽象内部类
+		+ 或者在外部类外面直接继承，需要先传入其外部类对象
+3. 静态内部类
 	+ 在内部类前添加`static`修饰符
 	+ 创建静态内部类的对象，不需要其外部类的对象 `Outer.Inner in=new Outer.Inner();`
 	+ 静态内部类中可以声明`static`成员变量，非静态内部类中不可以
 	+ 静态内部类不可以使用外部类的非静态成员变量和方法
-5. 内部类的继承
+	+ 外部类内可以定义内部接口，默认加了`static`修饰，可在外部类外面直接被实现
+4. 局部内部类
+	+ 局部内部类里面可以访问外部类的所有成员变量
+	+ 局部内部类里面也可以访问方法中的局部变量
+	+ jdk1.8之前，局部内部类只能访问`final`修饰的局部变量(变量生命周期问题)
+5. 匿名内部类
+	+ 若想创建一个类(子类)的对象，并且对象只需要被创建一次，此时该类不必命名，称为匿名内部类
+	+ 匿名内部类可以减少类的定义数量
+	+ jdk1.8之前，匿名内部类中访问外部的变量，该变量必须是`final`修饰的
+6. 内部类的继承
 	```java
 	/**
-	 * 继承内部类：
+	 * 继承普通内部类(非static修饰的)：
 	 * 1.需要在构造方法中传入其外部类对象
 	 * 2.需要先调用外部类的构造方法
 	 */
@@ -771,37 +782,131 @@
 		public class Inner{}
 	}
 	```
+
+## 十八、Lambda表达式
+1. Lambda概述
+	+ jdk1.8中引入的重要技术特征
+	+ 适用于SAM(Single Abstract Method)，即只含有一个抽象方法的接口的情况
+	+ 用于简化匿名内部类的定义
+2. Lambda表达式基本语法
+	```java
+	public class Demo {
+		public static void main(String[] args) {
+			// 1.匿名内部类定义
+			IMessage iMessage = new IMessage() {
+				@Override
+				public void send(String str) {
+					System.out.println(str);
+				}
+			};
+			// 2.Lambda表达式定义
+			iMessage = (str) -> {
+				System.out.println(str);
+			};
+			// 3.要实现的方法体仅有一行，进一步简化
+			iMessage = (str) -> System.out.println(str);
+			// 4.方法传参只有一个时，进一步简化
+			iMessage = str -> System.out.println(str);
+			// 5.使用方法引用
+			iMessage = System.out::println;
+			// 6.如果方法体为单行返回值语句，则可以省略return
+		}
+	}
+
+	/**
+	* 该注解表示此为函数式接口，里面只允许定义一个抽象方法
+	*/
+	@FunctionalInterface
+	interface IMessage {
+		void send(String str);
+	}
+	```
+3. 方法引用
+	```java
+	public class Demo {
+		public static void main(String[] args) {
+			//方法引用与对象引用的概念类似，指的是可以为方法进行别名定义
+			//1. 引用静态方法
+			IFunction1 function1 = String::valueOf;
+			//2. 引用某个对象的普通方法(无传参)
+			IFunction2 function2 = ""::toUpperCase;
+			//3. 引用某个对象的普通方法(有传参,对象本身作为第一个参数)
+			IFunction3 function3 = String::toUpperCase;
+			IFunction4 function4 = String::compareTo;
+			//4. 引用构造方法
+			IFunction5 function5 = String::new;
+			//5. 为了简化开发，jdk1.8开始提供了一个新的开发包java.util.function
+			//此包中提供许多内置的函数式接口 Function Consumer Supplier Predicate
+		}
+	}
+
+	@FunctionalInterface
+	interface IFunction1 {
+		String valueOf(int i);
+	}
+	@FunctionalInterface
+	interface IFunction2 {
+		String toUpperCase();
+	}
+	@FunctionalInterface
+	interface IFunction3 {
+		String toUpperCase(String s);
+	}
+	@FunctionalInterface
+	interface IFunction4 {
+		int compareTo(String s1, String s2);
+	}
+	@FunctionalInterface
+	interface IFunction5 {
+		String creat(String s);
+	}
+	```
 	
-十八.Java异常
-----------------------------------------
-1 什么是异常
-	异常就是程序运行过程中所出现的不正常现象
-	try 把可能发生异常的代码包起来，当发生异常时，将异常抛出 catch 捕获异常并处理 finally 不管是否发生异常，都会执行
-	try catch finally 是可以嵌套使用的
-	throw 手动抛出一个异常 throws 定义任何被调用方法的异常
-    异常出现的原因：用户输入错误 代码的错误 环境的因素
-	异常机制保证了程序的健壮性
-2 异常的分类
-	Error:它是Java运行时的内部错误以及资源耗尽错误。很难恢复，不期望用户来处理
-	Throwable --> Error:IOError VirtualMachineError StackOverflowError OutOfMemoryError								
-	         |--> Exception --> RuntimeException:运行时异常(编译器不会检测该异常，不用显式处理也可以编译通过):NullPointerException ClassCastException ArithmeticException IndexOutOfBoundsException NumberFormatException
-						   |--> 非RuntimeException:由环境因素导致 ClassNotFoundException CloneNotSupportedException IOException
-3 获取异常信息 try catch
-	程序发生异常的时候，程序就直接从try语句块执行到catch语句块，不再继续执行try语句块中该语句后的语句
-	try 不能单独出现，后面必须跟着catch或finally或两者都有
-	return; 不会影响finally语句块的执行 System.exit(0);可以
-4 异常声明 throws
-	指一个方法不处理它所产生的异常，而是调用层次向上传递，谁调用的这个方法，谁来处理。
-5 手动抛出异常 throw
-	throw exception; 参数exception表示要抛出的异常对象，该对象是throwable类的子类，而且只能够是一个
-6 异常链
-	两个或者多个不同的异常出现在同一个程序中，并且会发生嵌套抛出，我们称之为异常链	
-	exception1.initCause(exception2); 异常1是由异常2造成的
-7 自定义异常
-	自定义异常创建 1)继承Throwable 2)继承Exception
-	自定义异常使用 自己定义的异常一般来说是用于throw
+## 十九、异常的捕获与处理
+1. 异常概述
+	+ 异常是指程序运行过程中由于程序处理逻辑上的错误而导致程序中断的一种指令流
+	+ 产生异常时，如果程序中没有提供异常处理的支持，JVM采用默认异常处理方式，首先打印异常信息，然后直接退出当前的程序
+	+ 异常出现的原因：
+		+ 用户输入错误
+		+ 代码的错误
+		+ 环境的因素
+	+ 异常机制保证了程序的健壮性
+2. 异常处理
+	+ `try` 把可能发生异常的代码包起来，当发生异常时，将异常抛出
+	+ `catch` 捕获异常并处理
+	+ `finally` 不管是否发生异常，都会执行
+	+ `try` `catch` `finally` 是可以嵌套使用的
+	+ 程序发生异常的时候，程序就直接从`try`语句块执行到`catch`语句块，不再继续执行`try`语句块中该语句后的语句
+	+ `try` 不能单独出现，后面必须跟着`catch`或`finally`或两者都有
+	+ `return;` 不会影响`finally`语句块的执行，`System.exit(0);`可以
+	+ `throw` 手动抛出一个异常
+	+ `throws` 将方法的产生异常交给调用者处理
+3. 异常的分类
+	+ `Throwable`
+		+ `Error`
+			+ 它是Java运行时的内部错误以及资源耗尽错误，很难恢复，不需要用户来处理
+			+ `IOError` `VirtualMachineError` `StackOverflowError` `OutOfMemoryError`
+		+ `Exception`
+			+ `RuntimeException`
+				+ 运行时异常，编译器不会检测该异常，
+				+ `NullPointerException` `ClassCastException` `ArithmeticException` `IndexOutOfBoundsException` `NumberFormatException`
+			+ 非`RuntimeException`
+				+ 不显式处理编译不通过，由环境因素导致 
+				+ `ClassNotFoundException` `CloneNotSupportedException` `IOException`
+4. 自定义异常
+	+ 自定义异常创建
+		+ 继承Throwable(不推荐)
+		+ 继承Exception(不用显示处理则继承`RuntimeException`)
+	+ 自定义异常使用：自己定义的异常一般来说是用于`throw`
+	+ 两个或者多个不同的异常出现在同一个程序中，并且会发生嵌套抛出，我们称之为异常链	
+	+ `exception1.initCause(exception2);` 异常1是由异常2造成的
+5. `assert`关键字
+	+ jdk1.4后引入的，主要功能是进行断言
+	+ 默认情况下是不开启断言的，启用断言需要启动时增加`-ea`选项
+	+ 断言结果为`false`程序会抛出`java.lang.AssertionError`
 	
-十九.线程
+	
+二十.线程
 ----------------------------------------
 1 线程基本知识
 	线程与进程
@@ -862,7 +967,7 @@
 	使用NotifyAll而不是使用notify
 	了解对象锁与类锁
 
-## 二十、设计模式
+## 二十一、设计模式
 1. 模板设计模式
 2. 工厂设计模式
 3. 代理设计模式
@@ -870,3 +975,6 @@
 	+ 饿汉式
 	+ 懒汉式
 5. 多例设计模式
+
+## 二十二、数据结构
+1. 链表
