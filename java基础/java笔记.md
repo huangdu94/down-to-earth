@@ -80,14 +80,14 @@
     + 需要注意数据溢出
 
 ## 三、变量和常量
-1. Java的变量  
+1. java的变量  
     + 值可以改变的量
     + 命名规则：
         + 遵循标识符命名规则
         + 尽量使用有意义的单词
         + 一般首字母小写
         + 英文的见名知意、驼峰命名法
-2. Java的常量  
+2. java的常量  
     + 值不能改变的量
     + 各类型直接常量不能超过它们的范围，否则编译报错
     + 定义常量  
@@ -330,7 +330,7 @@
     
     + `Arrays.sort();`
 7. 多维数组
-    + Java中只存在一维数组，多维数组只不过是数组中的数组
+    + java中只存在一维数组，多维数组只不过是数组中的数组
     + 不规则数组创建
         + 方法一：
         ```java
@@ -378,7 +378,7 @@
     + 使用 `对象.成员变量` `对象.方法()`
     + 匿名对象的创建使用(没用引用) `new 类名称().方法()`
 4. 对象类型的参数传递
-    + Java中只有值传递 (引用类型存储的值是地址，存储在**栈内存**)
+    + java中只有值传递 (引用类型存储的值是地址，存储在**栈内存**)
     + 引用类型作为参数，操作的是引用指向的**堆内存**中的对象
     + GC(Garbage Collection)会不定期的对没有用的对象进行清理
 5. 方法
@@ -452,7 +452,7 @@
     + 访问控制修饰符：封装的具体的访问权限(属性私有化，方法公开化)
 2. 继承
     + 实现代码的复用，减少代码的重复
-    + `extends`只能继承一个类，Java不支持多重继承，但可以`implements`实现多个接口
+    + `extends`只能继承一个类，java不支持多重继承，但可以`implements`实现多个接口
     + 子类继承父类之后，子类可以调用父类的属性和方法(传递性)，也可以重写父类的方法，覆盖父类的属性，还可以增加自己的属性和方法
     + 重写
         + 重写方法被调用时，看对象的类型，遵循运行期绑定
@@ -884,7 +884,7 @@
 3. 异常的分类
     + `Throwable`
         + `Error`
-            + 它是Java运行时的内部错误以及资源耗尽错误，很难恢复，不需要用户来处理
+            + 它是java运行时的内部错误以及资源耗尽错误，很难恢复，不需要用户来处理
             + `IOError` `VirtualMachineError` `StackOverflowError` `OutOfMemoryError`
         + `Exception`
             + `RuntimeException`
@@ -909,62 +909,70 @@
 ## 二十、多线程编程
 1. 线程基本知识
     + 线程与进程
-        + 进程:执行中的程序
-        线程:轻量级的进程，线程本身不能单独运行，必须放在一个进程中才能执行
-    Java的线程模型(线程五种状态)
-        1)新建状态 New
-            线程被创建之后便处于新建状态
-        2)就绪状态 Runnable
-            新建见状态的线程调用start()进入就绪状态
-            阻塞状态的线程解除阻塞之后进入就绪状态
-        3)运行状态 Running
-            处于就绪状态的线程获得了CPU的资源，该线程就进入了运行状态
-        4)阻塞状态 Blocked
-            是一个正在运行的线程，因为一些原因让出CPU资源暂时中止而进入的状态
-        5)终止状态 Dead
-            正常终止
-            强制终止：stop、destroy System.exit(0)
-            异常终止：当线程执行过程中产生了异常，线程会终止
+        + 进程：程序的一次动态执行过程
+        + 线程：轻量级的进程，线程本身不能单独运行，必须放在一个进程中才能执行
+    + java的线程模型(线程五种状态)
+    ![java线程的五种状态](java线程的五种状态.jpg "java线程的五种状态")
+        1. 新建状态(New)
+            + 线程被创建之后便处于新建状态
+        2. 就绪状态(Runnable)
+            + 新建状态的线程调用`start()`进入就绪状态
+            + 阻塞状态的线程解除阻塞之后进入就绪状态
+        3. 运行状态(Running)
+            + 处于就绪状态的线程获得了CPU的资源，该线程就进入了运行状态
+        4. 阻塞状态(Blocked)
+            + 是一个正在运行的线程，在某些特殊情况下让出CPU资源暂时中止而进入的状态
+            + 人为挂起、需要运行耗时的输入或输出操作
+            + `sleep()` `suspend()` `wait()`
+        5. 终止状态(Dead)
+            + 处于终止状态的线程不具有继续运行的能力
+            + 正常终止
+            + 强制终止：`stop()` `destroy()` `System.exit(0)`
+            + 异常终止：当线程执行过程中产生了异常，线程会终止
 2. 创建线程的方式
-    1)继承Thread类
-        继承Thread类，重写run()方法，调用start()方法执行线程
-    2)继承Runnable类
-        实现Runnable接口，实现run()方法，作为参数构造Thread对象，调用start()方法执行线程
-    3)两种方法的比较
-        因为Java是单继承，方法一限制较大
-    4)线程池
-        ExecutorService threadPool=Executors.newFixedThreadPool(2);
-        threadPool.execute(runn);//runn是Runnable子类
-        threadPool.shutdown();
+    + 继承`Thread`类
+        + 继承`Thread`类，重写`run()`方法，调用`start()`方法执行线程
+    + 实现`Runnable`接口
+        + 实现`Runnable`接口，实现`run()`方法，作为参数构造`Thread`对象，调用`start()`方法执行线程
+    + 两种方法的比较
+        + 因为java是单继承，继承`Thread`类限制较大
+    + 实现`Callable`接口
+    + 线程池
+    ```java
+    ExecutorService threadPool=Executors.newFixedThreadPool(2);
+    threadPool.execute(runn);//runn是Runnable子类
+    threadPool.shutdown();
+    ```
 3. 多个线程并发执行
-    Java对于线程启动后唯一能保证的是每个线程都被启动并且结束。但是对于哪个线程先执行，哪个后执行，什么时候执行，是没有保证的
-4. Thread常用方法
-    1)static Thread currentThread() 可以获取运行该方法的线程
-    2)*static void sleep(long ms)   休眠方法，该方法可以将运行该方法的线程阻塞指定毫秒
-    3)*static void yield()  暂停方法，释放调用该方法的线程的CPU资源，大家一起来抢(包括自己)
-    4)*void join()  挂起方法，等待调用该方法的线程终止后再继续执行
-    5)void setPriority(int newPriority) 设置线程优先级，Java中优先级高的线程有更大的可能性获得CPU，但不是优先级高的总是先执行，也不是优先级低的线程总是后执行
-    6)void setDaemon(boolean on)    设置守护线程(后台线程)，当一个进程中的所有前台进程都结束时，进程结束，无论该进程中的守护线程是否还在运行都要强制将它们结束
-    7)其它 getId() getName() getPriority() isDaemon() isAlive() isInterrupted() start() interrupt()
-    *为线程调度三个方法
+    + java对于线程启动后唯一能保证的是每个线程都被启动并且结束。但是对于哪个线程先执行，哪个后执行，什么时候执行，是没有保证的
+4. `Thread`常用方法
+    + `static Thread currentThread()` 可以获取运行该方法的线程
+    + \*`static void sleep(long ms)` 休眠方法，该方法可以将运行该方法的线程阻塞指定毫秒
+    + \*`static void yield()` 暂停方法，释放调用该方法的线程的CPU资源，大家一起来抢(包括自己)
+    + \*`void join()` 挂起方法，等待调用该方法的线程终止后再继续执行
+    + `void setPriority(int newPriority)` 设置线程优先级，java中优先级高的线程有更大的可能性获得CPU，但不是优先级高的总是先执行，也不是优先级低的线程总是后执行
+    + `void setDaemon(boolean on)` 设置守护线程(后台线程)，当一个进程中的所有前台进程都结束时，进程结束，无论该进程中的守护线程是否还在运行都要强制将它们结束
+    + 其它 `getId()` `getName()` `getPriority()` `isDaemon()` `isAlive()` `isInterrupted()` `start()` `interrupt()`
+    + \* 为线程调度三个方法
 5. 线程同步问题的由来
-    1)线程同步问题的由来：多个线程共享资源并没有进行控制
-        当多个线程并发访问同一资源时，由于线程切换时机不确定导致执行代码顺序的混乱，从而出现执行未按程序设计顺序运行导致出现各种错误，严重时可能导致系统瘫痪.
-    2)同步问题Java的解决方案
-        同步方法：synchronized 方法声明{}
-        当线程进入同步方法的时候，会获得同步方法所属对象的锁，一旦获得对象锁，则其他线程不能再执行被锁对象的其他任何同步方法。只有在同步方法执行完毕之后释放了锁，其他线程才能继续执行
-        同步块：  synchronized(资源对象){//需要进行同步的方法}
-        Lock:private Lock lock = new ReentrantLock();   lock() tryLock() unlock() Condition newCondition() await() signal() signalAll()
-    3)StringBuiler不是线程安全的，当多个线程操作同一个字符串时应当使用StringBuffer
-      对于集合而言，常用的实现类：ArrayList,LinkedList,HashSet它们都不是线程安全的
-      Collections可以将现有的集合转换为线程安全的 listName=Collections.synchronizedList(listName);
+    + 线程同步问题的由来
+        + 多个线程共享资源并没有进行控制
+        + 当多个线程并发访问同一资源时，由于线程切换时机不确定导致执行代码顺序的混乱，从而出现执行未按程序设计顺序运行导致出现各种错误，严重时可能导致系统瘫痪
+    + 同步问题java的解决方案
+        + 同步方法 `synchronized 方法声明{}`
+            + 当线程进入同步方法的时候，会获得同步方法所属对象的锁，一旦获得对象锁，则其他线程不能再执行被锁对象的其他任何同步方法。只有在同步方法执行完毕之后释放了锁，其他线程才能继续执行
+        + 同步块 `synchronized(资源对象){//需要进行同步的方法}`
+        + `Lock` `private Lock lock = new ReentrantLock();` `lock()` `tryLock()` `unlock()` `Condition` `newCondition()` `await()` `signal()` `signalAll()`
+    + `StringBuiler`不是线程安全的，当多个线程操作同一个字符串时应当使用`StringBuffer`
+    + 对于集合而言，常用的实现类：`ArrayList` `LinkedList` `HashSet`它们都不是线程安全的
+    + `Collections`可以将现有的集合转换为线程安全的 `listName=Collections.synchronizedList(listName);`
 6. 死锁问题
-    例：A线程需要申请资源1才能继续执行，而资源1被B线程所占有
-        B线程需要申请资源2才能继续执行，而资源2被A线程所占有
+    + 例：A线程需要申请资源1才能继续执行，而资源1被B线程所占有  
+    B线程需要申请资源2才能继续执行，而资源2被A线程所占有
 7. 生产者和消费者模型
-    永远在while循环中对条件进行判断而不是if语句中进行wait条件的判断
-    使用NotifyAll而不是使用notify
-    了解对象锁与类锁
+    + 永远在`while`循环中对条件进行判断而不是`if`语句中进行`wait`条件的判断
+    + 使用`NotifyAll`而不是使用`notify`
+    + 了解对象锁与类锁
 
 ## 二十一、设计模式
 1. 模板设计模式
