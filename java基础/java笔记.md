@@ -906,11 +906,10 @@
     + 断言结果为`false`程序会抛出`java.lang.AssertionError`
     
     
-二十.线程
-----------------------------------------
-1 线程基本知识
-    线程与进程
-        进程:执行中的程序
+## 二十、多线程编程
+1. 线程基本知识
+    + 线程与进程
+        + 进程:执行中的程序
         线程:轻量级的进程，线程本身不能单独运行，必须放在一个进程中才能执行
     Java的线程模型(线程五种状态)
         1)新建状态 New
@@ -926,7 +925,7 @@
             正常终止
             强制终止：stop、destroy System.exit(0)
             异常终止：当线程执行过程中产生了异常，线程会终止
-2 创建线程的方式
+2. 创建线程的方式
     1)继承Thread类
         继承Thread类，重写run()方法，调用start()方法执行线程
     2)继承Runnable类
@@ -937,9 +936,9 @@
         ExecutorService threadPool=Executors.newFixedThreadPool(2);
         threadPool.execute(runn);//runn是Runnable子类
         threadPool.shutdown();
-3 多个线程并发执行
+3. 多个线程并发执行
     Java对于线程启动后唯一能保证的是每个线程都被启动并且结束。但是对于哪个线程先执行，哪个后执行，什么时候执行，是没有保证的
-4 Thread常用方法
+4. Thread常用方法
     1)static Thread currentThread() 可以获取运行该方法的线程
     2)*static void sleep(long ms)   休眠方法，该方法可以将运行该方法的线程阻塞指定毫秒
     3)*static void yield()  暂停方法，释放调用该方法的线程的CPU资源，大家一起来抢(包括自己)
@@ -948,7 +947,7 @@
     6)void setDaemon(boolean on)    设置守护线程(后台线程)，当一个进程中的所有前台进程都结束时，进程结束，无论该进程中的守护线程是否还在运行都要强制将它们结束
     7)其它 getId() getName() getPriority() isDaemon() isAlive() isInterrupted() start() interrupt()
     *为线程调度三个方法
-5 线程同步问题的由来
+5. 线程同步问题的由来
     1)线程同步问题的由来：多个线程共享资源并没有进行控制
         当多个线程并发访问同一资源时，由于线程切换时机不确定导致执行代码顺序的混乱，从而出现执行未按程序设计顺序运行导致出现各种错误，严重时可能导致系统瘫痪.
     2)同步问题Java的解决方案
@@ -959,10 +958,10 @@
     3)StringBuiler不是线程安全的，当多个线程操作同一个字符串时应当使用StringBuffer
       对于集合而言，常用的实现类：ArrayList,LinkedList,HashSet它们都不是线程安全的
       Collections可以将现有的集合转换为线程安全的 listName=Collections.synchronizedList(listName);
-6 死锁问题
+6. 死锁问题
     例：A线程需要申请资源1才能继续执行，而资源1被B线程所占有
         B线程需要申请资源2才能继续执行，而资源2被A线程所占有
-7 生产者和消费者模型
+7. 生产者和消费者模型
     永远在while循环中对条件进行判断而不是if语句中进行wait条件的判断
     使用NotifyAll而不是使用notify
     了解对象锁与类锁
