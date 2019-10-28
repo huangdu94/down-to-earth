@@ -938,9 +938,9 @@
         + 实现`Callable`接口，实现`call()`方法，可以有返回值
         + `Callable`接口可以设置一个泛型，即`call()`方法返回数据类型
         + `FutureTask`类常用方法(其实现了`RunnableFuture`接口)
-            + `public FutureTask(Callabel<V> callable)` 接收`Callable`接口实例
-            + `public FutureTask(Runnable runnable, V result)` 接收`Runnable`接口实例，并指定返回结果类型
-            + `public V get() throws InterruptedException,ExecutionException` 取得线程操作结果，此方法为`Future`接口定义
+            + `FutureTask(Callabel<V> c)` 接收`Callable`接口实例
+            + `FutureTask(Runnable r, V r)` 接收`Runnable`接口实例，并指定返回结果类型
+            + `V get()` 取得线程操作结果，此方法为`Future`接口定义
         + 将`Callable`接口对象作为参数构造`FutureTask`对象，再将`FutureTask`对象作为参数构造`Thread`对象，调用`start()`方法执行线程
         + 当线程执行完毕后可调用`FutureTask`对象`get()`方法获取线程的执行结果
     + `Thread` `Runnable` `Callable`的比较
@@ -960,13 +960,13 @@
     + 但是对于哪个线程先执行，哪个后执行，什么时候执行，是没有保证的
 4. `Thread`常用方法
     + `static Thread currentThread()` 可以获取运行该方法的线程
-    + \*`static void sleep(long ms)` 休眠方法，该方法可以将运行该方法的线程阻塞指定毫秒
-    + \*`static void yield()` 暂停方法，释放调用该方法的线程的CPU资源，大家一起来抢(包括自己)
-    + \*`void join()` 挂起方法，等待调用该方法的线程终止后再继续执行
+    + **\*** `static void sleep(long ms)` 休眠方法，该方法可以将运行该方法的线程阻塞指定毫秒
+    + **\*** `static void yield()` 暂停方法，释放调用该方法的线程的CPU资源，大家一起来抢(包括自己)
+    + **\*** `void join()` 挂起方法，等待调用该方法的线程终止后再继续执行
     + `void setPriority(int newPriority)` 设置线程优先级，java中优先级高的线程有更大的可能性获得CPU，但不是优先级高的总是先执行，也不是优先级低的线程总是后执行
     + `void setDaemon(boolean on)` 设置守护线程(后台线程)，当一个进程中的所有前台进程都结束时，进程结束，无论该进程中的守护线程是否还在运行都要强制将它们结束(GC线程就属于一个守护线程)
-    + 其它 `getId()` `getName()` `getPriority()` `isDaemon()` `isAlive()` `isInterrupted()` `start()` `interrupt()`
-    + \* 为线程调度三个方法
+    + 其它`getId()` `getName()` `getPriority()` `isDaemon()` `isAlive()` `isInterrupted()` `start()` `interrupt()`
+    + **\*** 为线程调度三个方法
 5. 线程同步问题的由来
     + 线程同步问题的由来
         + 多个线程共享资源并没有进行控制
