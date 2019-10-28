@@ -904,8 +904,7 @@
     + jdk1.4后引入的，主要功能是进行断言
     + 默认情况下是不开启断言的，启用断言需要启动时增加`-ea`选项
     + 断言结果为`false`程序会抛出`java.lang.AssertionError`
-    
-    
+        
 ## 二十、多线程编程
 1. 线程基本知识
     + 线程与进程
@@ -934,9 +933,22 @@
         + 继承`Thread`类，重写`run()`方法，调用`start()`方法执行线程
     + 实现`Runnable`接口
         + 实现`Runnable`接口，实现`run()`方法，作为参数构造`Thread`对象，调用`start()`方法执行线程
-    + 两种方法的比较
-        + 因为java是单继承，继承`Thread`类限制较大
+        + `Runnable`为函数接口支持Lambda表达式
     + 实现`Callable`接口
+        + 实现`Callable`接口，实现`call()`方法，可以有返回值
+        + `Callable`接口可以设置一个泛型，即`call()`方法返回数据类型
+        + `FutureTask`类常用方法(其实现了`RunnableFuture`接口)
+            + `public FutureTask(Callabel<V> callable)` 接收`Callable`接口实例
+            + `public FutureTask(Runnable runnable, V result)` 接收`Runnable`接口实例，并指定返回结果类型
+            + `public V get() throws InterruptedException,ExecutionException` 取得线程操作结果，此方法为`Future`接口定义
+        + 将`Callable`接口对象作为参数构造`FutureTask`对象，再将`FutureTask`对象作为参数构造`Thread`对象，调用`start()`方法执行线程
+        + 当线程执行完毕后可调用`FutureTask`对象`get()`方法获取线程的执行结果
+    + `Thread` `Runnable` `Callable`的比较
+        + 因为java是单继承，继承`Thread`类限制较大
+        + 从结构上说`Thread`描述的是线程对象，`Runnable`定义的是并发资源
+        + `Runnable`是在jdk1.0后提出的，`Callable`是在jdk1.5后提出的
+        + `Runnable`提供一个`run()`方法，并且没有返回值
+        + `Callable`提供一个`call()`方法，可以有返回值(通过`Future`接口获取)
     + 线程池
     ```java
     ExecutorService threadPool=Executors.newFixedThreadPool(2);
@@ -944,14 +956,15 @@
     threadPool.shutdown();
     ```
 3. 多个线程并发执行
-    + java对于线程启动后唯一能保证的是每个线程都被启动并且结束。但是对于哪个线程先执行，哪个后执行，什么时候执行，是没有保证的
+    + java对于线程启动后唯一能保证的是每个线程都被启动并且结束
+    + 但是对于哪个线程先执行，哪个后执行，什么时候执行，是没有保证的
 4. `Thread`常用方法
     + `static Thread currentThread()` 可以获取运行该方法的线程
     + \*`static void sleep(long ms)` 休眠方法，该方法可以将运行该方法的线程阻塞指定毫秒
     + \*`static void yield()` 暂停方法，释放调用该方法的线程的CPU资源，大家一起来抢(包括自己)
     + \*`void join()` 挂起方法，等待调用该方法的线程终止后再继续执行
     + `void setPriority(int newPriority)` 设置线程优先级，java中优先级高的线程有更大的可能性获得CPU，但不是优先级高的总是先执行，也不是优先级低的线程总是后执行
-    + `void setDaemon(boolean on)` 设置守护线程(后台线程)，当一个进程中的所有前台进程都结束时，进程结束，无论该进程中的守护线程是否还在运行都要强制将它们结束
+    + `void setDaemon(boolean on)` 设置守护线程(后台线程)，当一个进程中的所有前台进程都结束时，进程结束，无论该进程中的守护线程是否还在运行都要强制将它们结束(GC线程就属于一个守护线程)
     + 其它 `getId()` `getName()` `getPriority()` `isDaemon()` `isAlive()` `isInterrupted()` `start()` `interrupt()`
     + \* 为线程调度三个方法
 5. 线程同步问题的由来
@@ -959,21 +972,229 @@
         + 多个线程共享资源并没有进行控制
         + 当多个线程并发访问同一资源时，由于线程切换时机不确定导致执行代码顺序的混乱，从而出现执行未按程序设计顺序运行导致出现各种错误，严重时可能导致系统瘫痪
     + 同步问题java的解决方案
-        + 同步方法 `synchronized 方法声明{}`
-            + 当线程进入同步方法的时候，会获得同步方法所属对象的锁，一旦获得对象锁，则其他线程不能再执行被锁对象的其他任何同步方法。只有在同步方法执行完毕之后释放了锁，其他线程才能继续执行
-        + 同步块 `synchronized(资源对象){//需要进行同步的方法}`
-        + `Lock` `private Lock lock = new ReentrantLock();` `lock()` `tryLock()` `unlock()` `Condition` `newCondition()` `await()` `signal()` `signalAll()`
+        + 同步方法
+            + `synchronized 方法声明{}`
+            + 当线程进入同步方法的时候，会获得同步方法所属对象的锁
+            + 一旦获得对象锁，则其他线程不能再执行被锁对象的其他任何同步方法，只有在同步方法执行完毕之后释放了锁，其他线程才能继续执行
+        + 同步块(比同步方法更细粒度)
+            + `synchronized(资源对象){//需要进行同步的方法}`
+            + 当线程进入同步块的时候，会获得同步块所属对象的锁
+            + 一旦获得对象锁，则其他线程不能再执行被锁对象的该同步块，只有在同步块执行完毕之后释放了锁，其他线程才能继续执行
+        + 使用`Lock`类
+            + 创建方法 `private Lock lock = new ReentrantLock();`
+            + 常用方法 `lock()` `tryLock()` `unlock()` `Condition` `newCondition()` `await()` `signal()` `signalAll()`
     + `StringBuiler`不是线程安全的，当多个线程操作同一个字符串时应当使用`StringBuffer`
-    + 对于集合而言，常用的实现类：`ArrayList` `LinkedList` `HashSet`它们都不是线程安全的
-    + `Collections`可以将现有的集合转换为线程安全的 `listName=Collections.synchronizedList(listName);`
+    + 常用的集合实现类：`ArrayList` `LinkedList` `HashSet`它们都不是线程安全的
+        + `Collections`可以将现有的集合转换为线程安全的
+        + 例：`listName=Collections.synchronizedList(listName);`
 6. 死锁问题
-    + 例：A线程需要申请资源1才能继续执行，而资源1被B线程所占有  
-    B线程需要申请资源2才能继续执行，而资源2被A线程所占有
+    + 例：A线程需要申请资源1才能继续执行，而资源1被B线程所占有；B线程需要申请资源2才能继续执行，而资源2被A线程所占有
 7. 生产者和消费者模型
-    + 永远在`while`循环中对条件进行判断而不是`if`语句中进行`wait`条件的判断
-    + 使用`NotifyAll`而不是使用`notify`
+    + 永远在`while`循环中对条件进行判断而不是`if`语句中进行`wait()`条件的判断
+    + 使用`notifyAll()`而不是使用`notify()`
     + 了解对象锁与类锁
+    + 使用同步块的生产者消费者模型
+    ```java
+    public class ProducerConsumerDemo {
+        public static void main(String[] args) {
+            List<Integer> list=new LinkedList();//仓库
+            int max=100;//仓库大小
+            Producer p=new Producer("生产者",max,list);
+            Consumer c=new Consumer("消费者",max,list);
 
+            new Thread(p::produce).start();
+            new Thread(c::consume).start();
+        }
+    }
+
+    /**
+    * 生产者
+    */
+    class Producer{
+        private String userName;
+        private int max;
+        private List<Integer> list;
+        public Producer(String userName,int max,List<Integer> list){
+            this.userName=userName;
+            this.max=max;
+            this.list=list;
+        }
+        public void produce(){
+            while(true){
+                synchronized (list){
+                    while(list.size()>=max){
+                        System.out.println("当前仓库产品数量:"+list.size()+",仓库满了.生产者等待.");
+                        try {
+                            list.wait();
+                        } catch (InterruptedException e) {
+                            e.printStackTrace();
+                        }
+                    }
+                    int product=(int)(Math.random()*100)+1;
+                    list.add(product);
+                    System.out.println(this.userName+"生产了产品:"+product+",当前仓库产品数量:"+list.size());
+                    list.notifyAll();
+                }
+            }
+        }
+    }
+
+    /**
+    * 消费者
+    */
+    class Consumer{
+        private String userName;
+        private int max;
+        private List<Integer> list;
+        public Consumer(String userName,int max,List<Integer> list){
+            this.userName=userName;
+            this.max=max;
+            this.list=list;
+        }
+        public void consume(){
+            while (true) {
+                synchronized (list){
+                    while(list.isEmpty()){
+                        System.out.println("仓库空了,消费者等待.");
+                        try {
+                            list.wait();
+                        } catch (InterruptedException e) {
+                            e.printStackTrace();
+                        }
+                    }
+                    int goods=list.remove(0);
+                    System.out.println(this.userName+"消费了商品:"+goods+",当前仓库产品数量:"+list.size());
+                    list.notifyAll();
+                }
+            }
+        }
+    }
+    ```
+    + 使用`Lock`类的生产者消费者模型
+    ```java
+    public class ProducerConsumerDemo2 {
+        public static void main(String[] args) {
+            Lock lock = new ReentrantLock();
+            Condition empty = lock.newCondition();
+            Condition full = lock.newCondition();
+            List<Integer> list = new LinkedList();//仓库
+            int max = 1000;//仓库大小
+            Producer2 p = new Producer2("生产者", max, list, lock, empty, full);
+            Consumer2 c = new Consumer2("消费者", max, list, lock, empty, full);
+
+            new Thread(p::produce).start();
+            new Thread(c::consume).start();
+        }
+    }
+
+    /**
+    * 生产者
+    */
+    class Producer2 {
+        private String userName;
+        private int max;
+        private List<Integer> list;
+        private Lock lock;
+        private Condition empty;
+        private Condition full;
+
+        public Producer2(String userName, int max, List<Integer> list, Lock lock, Condition empty, Condition full) {
+            this.userName = userName;
+            this.max = max;
+            this.list = list;
+            this.lock = lock;
+            this.empty = empty;
+            this.full = full;
+        }
+
+        public void produce() {
+            while (true) {
+                lock.lock();
+                try {
+                    while (list.size() >= max) {
+                        System.out.println("当前仓库产品数量:" + list.size() + ",仓库满了.生产者等待.");
+                        full.await();
+                    }
+                    int product = (int) (Math.random() * 100) + 1;
+                    list.add(product);
+                    System.out.println(this.userName + "生产了产品:" + product + ",当前仓库产品数量:" + list.size());
+                    empty.signalAll();
+                } catch (InterruptedException e) {
+                    e.printStackTrace();
+                } finally {
+                    lock.unlock();
+                }
+            }
+        }
+    }
+
+    /**
+    * 消费者
+    */
+    class Consumer2 {
+        private String userName;
+        private int max;
+        private List<Integer> list;
+        private Lock lock;
+        private Condition empty;
+        private Condition full;
+
+        public Consumer2(String userName, int max, List<Integer> list, Lock lock, Condition empty, Condition full) {
+            this.userName = userName;
+            this.max = max;
+            this.list = list;
+            this.lock = lock;
+            this.empty = empty;
+            this.full = full;
+        }
+
+        public void consume() {
+            while (true) {
+                lock.lock();
+                try {
+                    while (list.isEmpty()) {
+                        System.out.println("仓库空了,消费者等待.");
+                        empty.await();
+                    }
+                    int goods = list.remove(0);
+                    System.out.println(this.userName + "消费了商品:" + goods + ",当前仓库产品数量:" + list.size());
+                    full.signalAll();
+                } catch (InterruptedException e) {
+                    e.printStackTrace();
+                } finally {
+                    lock.unlock();
+                }
+            }
+        }
+    }
+    ```
+8. 优雅的停止线程
+    + `suspend()` `resume()` `stop()` 三个方法从jdk1.2开始不推荐使用，因为会产生死锁问题
+    + 优雅的停止一个线程
+    ```java
+    public class StopThread {
+        private static boolean flag = true;
+        public static void main(String[] args){
+            new Thread(() -> {
+                long num = 0;
+                while (flag) {
+                    try {
+                        Thread.sleep(50);
+                    } catch (InterruptedException e) {
+                        e.printStackTrace();
+                    }
+                    System.out.println(num++);
+                }
+            }).start();
+            //如果想让线程停止只需要将flag设置为false
+        }
+    }
+    ```
+9. `volatile`关键字
+    + 多线程操作公共的普通变量时，往往是复制相应的副本，操作完成后再将此副本变量数据与原始变量进行同步处理
+    + 使用`volatile`关键字声明变量，可以直接进行原始变量的操作
+    + `volatile`关键字不是描述同步的操作，而是可以更快捷地进行原始变量的访问，避免了副本创建与数据同步处理
+      
 ## 二十一、设计模式
 1. 模板设计模式
 2. 工厂设计模式
