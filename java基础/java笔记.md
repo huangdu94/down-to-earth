@@ -510,21 +510,55 @@
     + 可在类、方法、属性上进行标记
     + 又称元数据(MetaData)，其实就是代码里的特殊标记
     + 可以在不改变原有逻辑的情况下，在源文件中嵌入一些补充信息
+    + 有成员变量称为元数据，无成员变量称为标记
 2. 基本的Annotation
     + `@Override` 限定重写父类方法，该注释只能用于方法
     + `@Deprecated` 用于表示某个程序元素(类，方法)已过时
     + `@SuppressWarnings` 抑制编译器警告
-3. 自定义注解(有成员变量>元数据，无成员变量>标记)
-    1. `@interface`关键字
-    2. 使用类似于接口方法声明的方式来定义注解的属性:其中返回值称为属性的类型，方法名为属性的名称
-    3. 默认属性值用`default`关键字
-4. 提取Annotation信息(反射机制)
-5. JDK的元Annotation修饰其他Annotation定义
-    + `@Retention` 指定Annotation可以保留多长时间`value` `RententionPolicy`
-    + `@Target` 指定被修饰的注解能用于修饰哪些程序元素`value` `ElementType`
+3. 自定义注解
+    + `@interface`关键字(其本身相当于一个接口，可以被实现)
+    + 使用类似于接口方法声明的方式来定义注解的属性:其中返回值称为属性的类型，方法名为属性的名称
+    + 设置默认属性值用`default`关键字 
+    + `value`为注解系统内定属性名称，所以为其赋值时可以省略
+    + 可以使用`@AliasFor("属性别名")`注解为注解的属性取别名(Spring中的注解)
+4. JDK的元Annotation修饰其他Annotation定义
+    + `@Retention` 指定Annotation可以保留多长时间 `RententionPolicy`
+        + `SOURCE` 只会保留在程序源文件中，编译后不会保存
+        + `CLASS` 编译后会保存在类文件中，但是不会随类加载到JVM中
+        + `RUNTIME` 会随类一起加载到JVM中
+    + `@Target` 指定被修饰的注解能用于修饰哪些程序元素 `ElementType`
     + `@Documented` 注解可被JavaDoc工具提取成文档
     + `@Inherited` 被它修饰的注解具有继承性，被子类自动继承
-
+    ```java
+    @Retention(RetentionPolicy.RUNTIME)
+    @Target({ElementType.FIELD, ElementType.METHOD, ElementType.TYPE})
+    @Inherited
+    @Documented
+    public @interface MyAnnotation {
+        String value() default "Hello World!";
+        String name() default "Du Huang";
+    }
+    ```
+5. 通过反射机制提取Annotation信息
+    ```java
+    @MyAnnotation(value = "您好 世界!", name = "打爆任何人。")
+    class Test {
+        public static void main(String[] args) {
+            Class<Test> clazz = Test.class;
+            //Annotation[] annotations=MyAnnotation.class.getDeclaredAnnotations();
+            //Annotation[] annotations=MyAnnotation.class.getAnnotations();
+            if (clazz.isAnnotationPresent(MyAnnotation.class)) {
+                //getDeclaredAnnotation...方法会忽略从父类继承的注解
+                MyAnnotation myAnnotation = clazz.getAnnotation(MyAnnotation.class);
+                System.out.println(myAnnotation.value());
+                System.out.println(myAnnotation.name());
+                System.out.println(myAnnotation.toString());
+                System.out.println(myAnnotation.annotationType());
+            }
+        }
+    }
+    ```
+    
 ## 十二、Object类和包装类 
 1. `Object`类概述
     + 唯一没有父类的类
@@ -1203,6 +1237,7 @@
     + 饿汉式
     + 懒汉式
 5. 多例设计模式
+6. 代理设计模式
 
 ## 二十二、数据结构
 1. 链表
