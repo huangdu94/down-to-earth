@@ -171,7 +171,7 @@
     }
     ```
 5. 字符串其他常用操作：查阅API
-    
+   
 ## 六、运算符
 1. 算数运算符
     + `+` `-` `*` `/` `%`
@@ -296,7 +296,7 @@
     
 ## 八、数组
 1. 数组概述 
-    
+   
     + 数组就是一组数的集合，集合中的数据必须是相同类型的，并且每一个数组都有一个名字，也就是数组名，我们可以通过数组名来访问数组中的元素
 2. 创建数组
     + `ArrayType arrayName[]=new ArrayType[length];`
@@ -327,7 +327,7 @@
     + `System.arraycopy(源数组,源数组起始位置,目标数组,目标数组起始位置,要复制的数组元素数量);`
     + `目标数组=Arrays.copyOf(源数组，目标数组长度);`
 6. 数组排序
-    
+   
     + `Arrays.sort();`
 7. 多维数组
     + java中只存在一维数组，多维数组只不过是数组中的数组
@@ -362,6 +362,7 @@
 
 ## 九、类的基础
 1. 类的概述
+    
     + 类就是事物的集合和抽象，它所代表的是这类事物所共有的一些行为和属性
 2. 类的一般形式
     + 类是由属性(成员变量Field)和行为(方法Method)构成
@@ -670,7 +671,7 @@
     + 泛型是jdk1.5新添加的特性
     + 泛型就是将类型参数化
 2. 没有泛型的情况
-    
+   
     + 可以使用`Object`类和类型强转来实现类似的功能，但是数据类型转换比较复杂，且在转换中会产生不安全的因素
 3. 泛型的使用
     + `Ioo<String> a =new Ioo<String>();`(jdk1.5)
@@ -694,7 +695,7 @@
     + `<T extends 类>`类就为T的上界
     + `<T super 类>`类就为T的下界
 6. 通配符的使用
-    + 解决泛型类型的引用传递问题，例如方法的参数列表有`Gen<String> g`则方法不能接受`Gen<Integer>`类型的参数
+    + 解决泛型类型的引用传递问题，例如方法的参数列表有`Gen<String> g`则方法不能接受`Gen<Integer>`类型的参数(一个类实现了一个接口，那么该接口可以理解为该类的父类，其为接口子类)
     + 通过不设置泛型的方式也可以实现接受任意泛型对象的引用，例如方法的参数设置为`Gen`，但是参数在方法中使用无法利用泛型的安全特性
     + `<?>`无边界类型通配符，等同于上边界通配符`<? extends Object>`，所以可以以Object类去获取数据
     + `<? extends 父类型>`上边界类型通配符：因为可以确定父类型，所以可以用父类型去获取数据(向上转型)，但是不能写入数据
@@ -938,7 +939,7 @@
     + jdk1.4后引入的，主要功能是进行断言
     + 默认情况下是不开启断言的，启用断言需要启动时增加`-ea`选项
     + 断言结果为`false`程序会抛出`java.lang.AssertionError`
-        
+      
 ## 二十、多线程编程
 1. 线程基本知识
     + 线程与进程
@@ -1021,7 +1022,7 @@
     + 常用的集合实现类：`ArrayList` `LinkedList` `HashSet`它们都不是线程安全的
         + `Collections`可以将现有的集合转换为线程安全的
         + 例：`listName=Collections.synchronizedList(listName);`
-6. 死锁问题
+6. 死锁问题    
     + 例：A线程需要申请资源1才能继续执行，而资源1被B线程所占有；B线程需要申请资源2才能继续执行，而资源2被A线程所占有
 7. 生产者和消费者模型
     + 永远在`while`循环中对条件进行判断而不是`if`语句中进行`wait()`条件的判断
@@ -1228,8 +1229,190 @@
     + 多线程操作公共的普通变量时，往往是复制相应的副本，操作完成后再将此副本变量数据与原始变量进行同步处理
     + 使用`volatile`关键字声明变量，可以直接进行原始变量的操作
     + `volatile`关键字不是描述同步的操作，而是可以更快捷地进行原始变量的访问，避免了副本创建与数据同步处理
-      
-## 二十一、设计模式
+
+## 二十一、反射机制
+1. 反射机制概述
+    + 重用性是面向对象设计的核心原则，为了进一步提升代码的重用性，java提供了反射机制
+    + 正操作：使用一个类一定要先导入程序所在的包，然后根据类进行对象实例化，依靠对象调用类的方法
+    + 反操作：根据实例化对象反推出其类型，即一个`Class`实例
+2. `Class`类对象实例化
+```java
+public class Demo1 {
+    public static void main(String[] args) throws ClassNotFoundException {
+        String str = "Class类是反射机制的根源，以String为例";
+        // 1.通过Object类中所提供的getClass()方法获取
+        Class<?> clazz1 = str.getClass();
+        // 2.通过“类型.class”形式获取(此方法可以获取八大基本类型的class)
+        Class<?> clazz2 = String.class;
+        // 3.通过Class类的静态方法forName()获取，该方法可能会抛出ClassNotFoundException
+        Class<?> clazz3 = Class.forName("java.lang.String");
+    }
+}
+```
+3. 反射实例化
+```java
+public class Demo2 {
+    public static void main(String[] args)
+            throws IllegalAccessException, InstantiationException, NoSuchMethodException, InvocationTargetException {
+        Class<String> clazz = String.class;
+        //相当于String str = new String();
+        //该方法只能够通过指定类的无参构造方法进行对象实例化，jdk1.9后设置为Deprecated
+        String str1 = clazz.newInstance();
+        //jdk1.9后提倡的方式，根据参数类型获得指定构造方法进行实例化
+        String str2 = clazz.getDeclaredConstructor().newInstance();
+        String str3 = clazz.getDeclaredConstructor(String.class).newInstance("hello");
+    }
+}
+```
+4. 反射机制与类操作
+    1. 反射获取类结构信息
+    ```java
+    public class Demo3 {
+        public static void main(String[] args) {
+            Class<String> clazz = String.class;
+            // 1.获取包信息
+            Package p = clazz.getPackage();
+            // 2.获取继承父类
+            Class<? super String> fatherClazz = clazz.getSuperclass();
+            // 3.获取实现接口
+            Class<?>[] interfaces = clazz.getInterfaces();
+        }
+    }
+    ```
+    2. 反射调用构造方法
+    ```java
+    public class Demo4 {
+        public static void main(String[] args) throws NoSuchMethodException, IllegalAccessException, InvocationTargetException, InstantiationException {
+            Class<String> clazz = String.class;
+            // 一、获取构造方法Constructor
+            // 1.获取指定类中所有构造方法
+            Constructor<?>[] constructors1 = clazz.getDeclaredConstructors();
+            // 2.获取指定类中所有public构造方法
+            Constructor<?>[] constructors2 = clazz.getConstructors();
+            // 3.获取指定类中指定参数类型的构造方法
+            Constructor<?> constructor1 = clazz.getDeclaredConstructor(char[].class, boolean.class);
+            // 4.获取指定类中指定参数类型的public构造方法
+            Constructor<?> constructor2 = clazz.getConstructor(String.class);
+            // 二、Constructor类常用方法
+            // 1.调用构造方法传入指定参数进行对象实例化
+            String instance = (String) constructor2.newInstance("hello");
+            // 2.获取构造方法名称
+            String name = constructor2.getName();
+            // 3.获取构造方法的参数类型
+            Class<?>[] parameterClazzs = constructor2.getParameterTypes();
+            Type[] parameterTypes = constructor2.getGenericParameterTypes();
+            // 4.获取构造方法抛出的异常类型
+            Class<?>[] exceptionClazzs = constructor2.getExceptionTypes();
+            Type[] exceptionTypes = constructor2.getGenericExceptionTypes();
+            // 5.获取构造方法的参数个数
+            int parameterCount = constructor2.getParameterCount();
+            // 6.设置构造方法可见性，可使用私有构造方法
+            constructor2.setAccessible(true);
+            // 7.获取注解(省略)
+        }
+    }
+    ```
+    3. 反射调用方法
+    ```java
+    public class Demo5 {
+        public static void main(String[] args) throws NoSuchMethodException, IllegalAccessException, InvocationTargetException {
+            Class<String> clazz = String.class;
+            // 获取方法Mehod
+            // 1.获取指定类中所有方法(不包括继承的)
+            Method[] methods1 = clazz.getDeclaredMethods();
+            // 2.获取指定类中所有public方法(包括继承的)
+            Method[] methods2 = clazz.getMethods();
+            // 3.获取指定类中指定名称，指定参数类型的方法(不包括继承的)
+            Method method1 = clazz.getDeclaredMethod("indexOf", String.class);
+            // 4.获取指定类中指定名称，指定参数类型的public方法(包括继承的)
+            Method method2 = clazz.getMethod("chars");
+            // Method类常用方法
+            // 1.方法调用，等价于“实例化对象.方法()”
+            int returnValue = (int) method1.invoke("Hello World!", "World");
+            // 2.获取方法返回值类型
+            Class<?> returnClazz = method1.getReturnType();
+            // 3.获取方法名称
+            String name = method1.getName();
+            // 4.获取方法的参数类型
+            Class[] parameterClazzs = method1.getParameterTypes();
+            Type[] parameterTypes = method1.getGenericParameterTypes();
+            // 5.获取方法抛出的异常类型
+            Class[] exceptionClazzs = method1.getExceptionTypes();
+            Type[] exceptionTypes = method1.getGenericExceptionTypes();
+            // 6.获取方法的参数个数
+            int parameterCount = method1.getParameterCount();
+            // 7.设置方法可见性，可使用私有方法
+            method1.setAccessible(true);
+            // 8.获取方法修饰符 见Modifier类
+            int modifiers = method1.getModifiers();
+            // 9.获取注解(省略)
+        }
+    }
+    ```
+    4. 反射调用成员属性
+    ```java
+    public class Demo6 {
+        public static void main(String[] args) throws NoSuchFieldException, IllegalAccessException {
+            Class<String> clazz = String.class;
+            // 获取成员属性Field
+            // 1.获取指定类中所有属性(不包括继承的)
+            Field[] fields1 = clazz.getDeclaredFields();
+            // 2.获取指定类中所有public属性(包括继承的)
+            Field[] fields2 = clazz.getFields();
+            // 3.获取指定类中指定属性名称的属性(不包括继承的)
+            Field field1 = clazz.getDeclaredField("hash");
+            // 4.获取指定类中指定属性名称的public属性(包括继承的)
+            Field field2 = clazz.getField("CASE_INSENSITIVE_ORDER");
+            // Field类常用属性
+            // 1.获取成员属性名
+            String name = field1.getName();
+            // 2.获取成员属性类型
+            Class<?> type = field1.getType();
+            // 3.设置成员属性可见性，可使用私有属性
+            field1.setAccessible(true);
+            // 4.设置成员属性内容
+            Object obj = "Hello";
+            field1.set(obj, 1);
+            // 5.获取成员属性内容
+            int value = (int) field1.get(obj);
+            // 6.获取成员属性修饰符 见Modifier类
+            int modifiers = field1.getModifiers();
+            // 7.获取注解(省略)
+        }
+    }
+    ```
+    5. `Unsafe`工具类
+        + java中的`Unsafe`类为我们提供了类似C++手动管理内存的能力
+        + 从名字中我们可以看出来这个类对普通程序员来说是危险的，一般应用开发者不会用到这个类
+        ![Unsafe类功能](Unsafe类功能.png "Unsafe类功能")
+        + 扩展链接：
+        [Java中的Unsafe](https://www.jianshu.com/p/db8dce09232d "Java中的Unsafe")
+        [JAVA中神奇的双刃剑--Unsafe](https://www.cnblogs.com/throwable/p/9139947.html "JAVA中神奇的双刃剑--Unsafe")
+5. `ClassLoader`类加载器
+    + JVM解释的程序类需要通过类加载器进行加载后才可以执行，为了保证java程序的执行安全性，JVM提供有3种类加载器
+        + Bootstrap(根加载器 系统类加载器) C++编写，加载java底层系统类库
+        + PlatformClassLoader(平台类加载器) jdk1.8以前为ExtClassLoader，主要进行模块功能加载
+        + AppClassLoader(应用程序类加载器) 加载CLASSPATH指定的类文件或者JAR文件
+    + 获取`ClassLoader`
+    ```java
+    public class ClassLoaderDemo {
+        public static void main(String[] args) {
+            String str = "String类由系统类加载器加载.";
+            // 系统类加载器非java编写，所以只能以null结果返回
+            System.out.println(str.getClass().getClassLoader());
+            // 自定义类由AppClassLoader加载，可通过getParent()获取其父类加载器
+            ClassLoaderDemo demo=new ClassLoaderDemo();
+            System.out.println(demo.getClass().getClassLoader());
+            System.out.println(demo.getClass().getClassLoader().getParent());
+            System.out.println(demo.getClass().getClassLoader().getParent().getParent());
+        }
+    }
+    ```
+    + 自定义`ClassLoader`
+        + 继承`ClassLoader`
+        + 使用`ClassLoader`提供的`defineClass()`方法可将二进制数据文件加载为类
+        + 自定义加载器为AppClassLoader的子类加载器
+## 二十二、设计模式
 1. 模板设计模式
 2. 工厂设计模式
 3. 代理设计模式
@@ -1239,5 +1422,5 @@
 5. 多例设计模式
 6. 代理设计模式
 
-## 二十二、数据结构
+## 二十三、数据结构
 1. 链表
