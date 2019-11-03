@@ -939,7 +939,15 @@
     + jdk1.4后引入的，主要功能是进行断言
     + 默认情况下是不开启断言的，启用断言需要启动时增加`-ea`选项
     + 断言结果为`false`程序会抛出`java.lang.AssertionError`
-      
+6. `try-with-resource`机制
+    + 传统的手动释放外部资源一般放在一般放在`try{}catch(){}finally{}`机制的`finally`代码块中，非常繁琐
+    + jdk1.7之后有了`try-with-resource`处理机制
+    + 首先被自动关闭的资源需要实现`Closeable`或者`AutoCloseable`接口，因为只有实现了这两个接口才可以自动调用`close()`方法去自动关闭资源
+    + 写法为`try(){}catch(){}`，将要关闭的外部资源在`try()`中创建，`catch()`捕获处理异常
+    + 扩展链接：
+        + [利用try-with-resource机制关闭连接](https://blog.csdn.net/weixin_42447959/article/details/81192098 "利用try-with-resource机制关闭连接")    
+        + [使用Try-with-resources自动关闭资源](https://blog.csdn.net/wtopps/article/details/71108342 "使用Try-with-resources自动关闭资源")
+        
 ## 二十、多线程编程
 1. 线程基本知识
     + 线程与进程
@@ -1412,6 +1420,7 @@ public class Demo2 {
         + 继承`ClassLoader`
         + 使用`ClassLoader`提供的`defineClass()`方法可将二进制数据文件加载为类
         + 自定义加载器为AppClassLoader的子类加载器
+        
 ## 二十二、设计模式
 1. 模板设计模式
 2. 工厂设计模式
