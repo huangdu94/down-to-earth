@@ -1421,7 +1421,42 @@ public class Demo2 {
         + 使用`ClassLoader`提供的`defineClass()`方法可将二进制数据文件加载为类
         + 自定义加载器为AppClassLoader的子类加载器
         
-## 二十二、设计模式
+# 二十二、常用类库
+1. `StringBuffer`类
+2. `CharSequence`接口
+3. `AutoCloseable`接口
+4. `Runtime`类
+5. `System`类
+6. `Cleaner`类
+7. 对象克隆
+8. `Math`数学计算
+9. `Random`随机数
+10. 大数字处理类
+11. `Date`日期处理类
+12. `SimpleDateFormat`日期格式化
+13. 正则表达式
+14. 国际化程序
+15. `Arrays`数组操作类
+16. `UUID`无重复数据
+17. `Optional`空处理
+18. `ThreadLocal`
+19. 定时调度
+20. `Base64`加密与解密
+21. 比较器
+
+## 二十三、I/O编程
+
+## 二十四、类集框架
+
+## 二十五、网络编程
+
+## 二十六、数据库编程
+
+## 二十七、JUC并发编程
+
+## 二十八、NIO编程
+
+## 二十九、设计模式
 1. 模板设计模式
 2. 工厂设计模式
 3. 代理设计模式
@@ -1431,5 +1466,6 @@ public class Demo2 {
 5. 多例设计模式
 6. 代理设计模式
 
-## 二十三、数据结构
+## 三十、数据结构
 1. 链表
+2. 二叉树
