@@ -1445,8 +1445,84 @@ public class Demo2 {
 21. 比较器
 
 ## 二十三、I/O编程
+1. `File`文件操作
+    + 创建、删除
+    + 利用递归操作子目录
+2. 字节流与字符流
+    + 字节流 `OutputStream` `InputStream`
+    + 字符流 `Writer` `Reader`(用到缓冲区，适用于中文传输操作)
+    + 字节流与字符流的转换 `OutputStreamWriter` `InputStreamReader`
+3. 字符编码
+    + 建议使用UTF-8编码
+4. 文件操作流与内存操作流
+    + 文件流
+        + 字节流 `FileOutputStream` `FileInputStream`
+        + 字符流 `FileWriter` `FileReader`
+    + 内存流
+        + 字节流 `ByteArrayOutputStream` `ByteArrayInputStream`
+        + 字符流 `CharArrayWriter` `CharArrayReader`
+5. 管道流
+    + 实现两个线程之间的通信，通信前要使用`connect()`方法进行管道连接
+    + `PipedOutputStream` `PipedWriter` `PipedInputStream` `PipedReader`
+6. RandomAccessFile
+    + 提供了灵活的数据访问模式，可以快速实现大文件数据部分内容的读取
+7. 打印流
+    + `PrintStream` `PrintWriter` 简化输出操作
+8. System类对I/O的支持
+    + `System.out` 显示器的标准输出
+    + `System.err` 显示器的错误输出
+    + `System.in` 标准键盘输入
+9. BufferedReader缓冲输入流
+10. Scanner输入流工具
+11. 对象序列化
+    + 对象需要实现`Serializable`接口 `transient`关键字修饰的属性不会被序列化
+    + `ObjectOutputStream` `ObjectInputStream`
 
 ## 二十四、类集框架
+1. java类集框架
+    + 用来创建动态的对象数组操作
+    + jdk1.5之后，类集框架采用泛型
+2. `Collection`集合接口
+    + 最大单值操作父接口
+3. `List`集合
+    + 内容允许重复
+    + `ArrayList` 数组实现集合
+    + `LinkedList` 链表实现集合
+    + `Vector` 早期集合类，所有操作方法都使用`synchronized`同步处理
+4. `Set`集合
+    + 内容不允许重复
+    + `HashSet` 散列存放，没有顺序(依靠`Object`类中的`equals()`和`hashCode()`方法来区分是否为同一对象)
+    + `TreeSet` 顺序存放(使用`Comparable`进行排序操作)
+5. 集合输出
+    + `Collection`接口继承`Iterable`接口
+    + `Iterable`接口中`iterator()`方法可以获取`Iterator`接口实例用于迭代
+    + foreach的方式输出集合，其本质是通过`Iterable`接口中`iterator()`方法获取`Iterator`接口实例用于迭代
+    + 自定义类要使用foreach则必须实现`Iterable`接口
+    + `Vector`类可以使用`elements()`方法获取`Enumeration`接口进行内容输出(最早的迭代输出接口)
+    + `List`类可以使用`listIterator()`方法获取`ListIterator`接口进行双向输出操作，但是应该先执行由前向后的迭代再执行由后向前的迭代
+6. `Map`集合
+    + 可以存放二元偶对象数据，每一对数据都是一个`Map.Entry`接口实例
+    + `HashMap` 异步处理，性能较高 (散列存储，顺序不可控)
+    + `HashTable` 同步处理，性能较低
+    + `LinkedHashMap` (链式存储，顺序可控)
+    + `TreeMap` 可以按照key进行排序
+7. `Stack`栈
+    + `Vector`子类
+    + 入栈`push(E item)` 出栈`pop()`
+8. `Queue`队列
+    + 单端队列，入队`offer(E e)` 出队`poll()`
+    + `Deque`子接口 实现双端队列操作
+    + 实现类
+        + `PriorityQueue`自动排序
+        + `LinkedList`链式
+        + `ArrayDeque`数组形式
+9. `Properties`属性操作
+    + `HashTable`子类
+    + 只允许操作`String`类型数据，可以直接操作属性文件
+10. `Collections`工具类
+11. `Stream`
+    + 数据流操作应用
+    + 结合Lambda表达式可以对集合中的数据进行过滤与数据统计处理
 
 ## 二十五、网络编程
 
