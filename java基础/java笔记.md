@@ -1423,26 +1423,62 @@ public class Demo2 {
         
 # 二十二、常用类库
 1. `StringBuffer`类
+    + 在一个字符串内容需要频繁修改的时候，使用`StringBuffer`可以提升操作性能
+    + `StringBuffer`提供了大量的字符串操作方法：增加、替换、插入等
+    + `StringBuilder`与`StringBuffer`功能类似，但是它没有采用同步处理，线程不安全
 2. `CharSequence`接口
+    + `CharSequence`是一个字符串操作的公共接口
+    + 三个常见子类：`StringBuffer` `StringBuilder` `String`
 3. `AutoCloseable`接口
+    + 提供有`close()`方法，主要实现资源的自动释放操作
+    + 需要结合`try-with-resource`机制使用
 4. `Runtime`类
+    + `Runtime`表示运行时，在一个jvm中只存在一个`Runtime`
+    + 通过`Runtime`类的静态方法`getRuntim()`获得`Runtime`实例
 5. `System`类
+    + 系统类，可以取得系统的相关信息
+    + `System.gc()`可以提醒gc进行垃圾回收，实际上是调用了`Runtime`类中的`gc()`方法
 6. `Cleaner`类
+    + jdk1.9之前对象回收释放的方法`finalize()`
+    + jdk1.9之后新的垃圾回收结构，可以避免对象回收时间过长导致的程序问题    
 7. 对象克隆
+    + 需要被克隆的类实现`Cloneable`接口，该接口属于没有任何方法的标识接口
+    + 克隆的实现可以使用`Object.clone()`完成
 8. `Math`数学计算
+    + 提供数学处理方法，内部方法均为`static`
+    + `round()`方法进行四舍五入操作时只保留整数位
 9. `Random`随机数
+    + 可以取得指定范围的随机数字
 10. 大数字处理类
+    + 处理整型大数字可以使用`BigInteger`
+    + 处理小数大数字可以使用`BigDecimal`
 11. `Date`日期处理类
+    + 方便取得时间
 12. `SimpleDateFormat`日期格式化
+    + 可以进行日期的格式化操作
+    + `Format`是文本格式化操作类，共有三个子类：`DateFormat` `NumberFormat` `MessageFormat`
 13. 正则表达式
+    + `String`类中的`replaceAll()` `split()` `matches()`方法都对正则提供支持
+    + `java.util.regex`包中的`Pattern` `Matcher`类
 14. 国际化程序
+    + 可以让一套程序业务逻辑在不同国家使用
+    + 需要利用资源文件、`Locale`、`ResourceBundle`
 15. `Arrays`数组操作类
+    + 使用`Arrays.sort()`进行排序操作时必须使用比较器
+    + 比较器接口`Comparable`中定义了一个`compareTo()`的比较方法，用来设置比较规则(需要被指定类实现)
+    + 或者使用`Comparator`接口定义比较规则(可以用Lambda形式使用)
 16. `UUID`无重复数据
+    + 可以根据时间戳、硬件编号自动生成一个无重复的内容，该内容可以作为唯一编号使用
 17. `Optional`空处理
+    + 可以避免由于数据为`null`造成的`NullPointerException`问题
 18. `ThreadLocal`
+    + 并发状态下的数据安全访问机制，每个线程对象只关心可以操作的数据
+    + 会由`ThreadLocal`帮助用户自行处理当前线程的保存与判断
 19. 定时调度
+    + 可以根据既定的时间安排实现程序任务的自动执行
+    + `TimerTask` `Timer`
 20. `Base64`加密与解密
-21. 比较器
+    + 一种加密算法，利用合理的加密规则可以使得数据传输更加安全
 
 ## 二十三、I/O编程
 1. `File`文件操作
@@ -1525,8 +1561,21 @@ public class Demo2 {
     + 结合Lambda表达式可以对集合中的数据进行过滤与数据统计处理
 
 ## 二十五、网络编程
+1. TCP是HTTP通信的基础，利用TCP可以实现可靠的数据传输服务
+2. java中通过`ServerSocket`和`Socket`两个类实现了TCP协议封装
+3. UDP属于数据报传送协议，采用的是不可靠的连接模式，即服务器端发送的消息内容客户端可能无法接收
+4. java中使用`DatagramPacket`和`DatagramSocket`类完成UDP程序的开发
 
 ## 二十六、数据库编程
+1. JDBC提供了一套与平台无关的标准数据库操作接口和类，只要是支持java的数据库厂商，所提供的数据库只要依据此标准提供实现方法库就全部可以使用java语言进行数据库操作
+2. JDBC属于服务，其标准操作步骤如下
+    1. 加载驱动程序：驱动程序由各个数据库生产商提供
+    2. 连接数据库：`DriverManager.getConnection()`得到`Connection`(连接时要提供连接路径、用户名、密码) 
+    3. 实例化操作：通过`Connection`实例化`Statement` `PreparedStatement`对象
+    4. 操作数据库：使用`Statement` `PreparedStatement`执行sql语句，如果是查询，则查询结果用`ResultSet`处理
+3. 开发中不要使用`Statement`，而是要使用`PreparedStatement`，性能高且安全性高
+4. JDBC2.0中提供的重要特性就是批处理操作，此操作可以让多条sql语句一次性执行完毕
+5. 事务控制可以在数据库更新时保证数据的一致性，主要方法为`Connection`提供的`setAutoCommit()` `commit()` `rollback()`方法
 
 ## 二十七、JUC并发编程
 
