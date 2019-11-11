@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!-- XML处理指令 -->
+<!-- 根元素只能有一个 -->
+<root>
+	<input/><!-- 自关闭标签 -->
+	<name>实体引用的方法,小于号&lt;</name>
+	<![CDATA[
+		无论这里写什么都会被当成一个文本
+		<data><data/>
+	]]>
+</root>
