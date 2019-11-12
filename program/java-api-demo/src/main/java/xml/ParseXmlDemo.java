@@ -40,7 +40,7 @@ public class ParseXmlDemo {
 
             //2
 //			reader.read(new File("emplist.xml"));
-            Document doc = reader.read(new FileInputStream("emplist.xml"));
+            Document doc = reader.read(new FileInputStream(ParseXmlDemo.class.getResource("/myemp.xml").getPath()));
             System.out.println("读取XML文档完毕!");
 
 

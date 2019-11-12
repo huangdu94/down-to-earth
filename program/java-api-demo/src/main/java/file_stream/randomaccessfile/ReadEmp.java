@@ -18,6 +18,7 @@ public class ReadEmp {
             emps[i] = new Emp();
             emps[i].formatRead(raf);
         }
+        raf.close();
         for (int i = 0; i < empNumber; i++) {//将每一个Emp元素的信息输出
             String information = emps[i].toString();
             System.out.println(information);

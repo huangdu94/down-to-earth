@@ -20,7 +20,7 @@ import java.util.List;
  * @author Bean
  */
 
-public class writeXmlDemo {
+public class WriteXmlDemo {
     public static void main(String[] args) {
         List<Emp> list = new ArrayList<Emp>();
         list.add(new Emp(1, "盲僧", 45, "男", 10000));
@@ -79,7 +79,7 @@ public class writeXmlDemo {
         }
         XMLWriter writer = null;
         try {
-            writer = new XMLWriter(new FileOutputStream("myemp.xml"), OutputFormat.createPrettyPrint());
+            writer = new XMLWriter(new FileOutputStream(WriteXmlDemo.class.getResource("/myemp.xml").getPath()), OutputFormat.createPrettyPrint());
             writer.write(doc);
             System.out.println("写出完毕.");
         } catch (UnsupportedEncodingException e) {
