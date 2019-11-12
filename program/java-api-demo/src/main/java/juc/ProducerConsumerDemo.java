@@ -1,4 +1,4 @@
-package thread;
+package juc;
 
 import java.util.LinkedList;
 import java.util.List;
@@ -12,15 +12,15 @@ import java.util.concurrent.locks.ReentrantLock;
  *
  * @author DuHuang
  */
-public class ProducerConsumerDemo2 {
+public class ProducerConsumerDemo {
     public static void main(String[] args) {
         Lock lock = new ReentrantLock();
         Condition empty = lock.newCondition();
         Condition full = lock.newCondition();
         List<Integer> list = new LinkedList();//仓库
         int max = 1000;//仓库大小
-        Producer2 p = new Producer2("生产者", max, list, lock, empty, full);
-        Consumer2 c = new Consumer2("消费者", max, list, lock, empty, full);
+        Producer p = new Producer("生产者", max, list, lock, empty, full);
+        Consumer c = new Consumer("消费者", max, list, lock, empty, full);
 
         new Thread(p::produce).start();
         new Thread(c::consume).start();
@@ -30,7 +30,7 @@ public class ProducerConsumerDemo2 {
 /**
  * 生产者
  */
-class Producer2 {
+class Producer {
     private String userName;
     private int max;
     private List<Integer> list;
@@ -38,7 +38,7 @@ class Producer2 {
     private Condition empty;
     private Condition full;
 
-    public Producer2(String userName, int max, List<Integer> list, Lock lock, Condition empty, Condition full) {
+    public Producer(String userName, int max, List<Integer> list, Lock lock, Condition empty, Condition full) {
         this.userName = userName;
         this.max = max;
         this.list = list;
@@ -71,7 +71,7 @@ class Producer2 {
 /**
  * 消费者
  */
-class Consumer2 {
+class Consumer {
     private String userName;
     private int max;
     private List<Integer> list;
@@ -79,7 +79,7 @@ class Consumer2 {
     private Condition empty;
     private Condition full;
 
-    public Consumer2(String userName, int max, List<Integer> list, Lock lock, Condition empty, Condition full) {
+    public Consumer(String userName, int max, List<Integer> list, Lock lock, Condition empty, Condition full) {
         this.userName = userName;
         this.max = max;
         this.list = list;
