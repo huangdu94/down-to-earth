@@ -1,4 +1,4 @@
-package compare;
+package collection.sort;
 
 /**
  * 自定义类 实现Comparable接口

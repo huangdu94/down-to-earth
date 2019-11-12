@@ -1,7 +1,6 @@
-package compare;
+package collection.sort;
 
 import java.util.Arrays;
-import java.util.Comparator;
 
 /**
  * Arrays.sort() 数组排序 需要排序对象实现Comparable接口

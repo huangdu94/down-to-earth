@@ -2,12 +2,7 @@ package collection;
 
 import java.util.ArrayList;
 import java.util.Collection;
-import java.util.DoubleSummaryStatistics;
 import java.util.HashSet;
-import java.util.function.BinaryOperator;
-import java.util.function.Predicate;
-import java.util.stream.Collector;
-import java.util.stream.Collectors;
 
 /**
  * 集合操作
@@ -15,12 +10,12 @@ import java.util.stream.Collectors;
  */
 public class Collection_addAll {
 	public static void main(String[] args) {
-		Collection<String> c1= new ArrayList<String>();
+		Collection<String> c1= new ArrayList<>();
 		c1.add("java");
 		c1.add("c++");
 		c1.add(".net");
 		System.out.println("c1："+c1);
-		Collection<String> c2=new HashSet<String>();
+		Collection<String> c2=new HashSet<>();
 		c2.add("android");
 		c2.add("ios");
 		c2.add("java");
@@ -42,7 +37,7 @@ public class Collection_addAll {
 		boolean contains=c1.containsAll(c2);
 		System.out.println("c1包含c2所有元素："+contains);
 		
-		Collection<String> c3=new ArrayList<String>();
+		Collection<String> c3=new ArrayList<>();
 		c3.add("java");
 		c3.add("android");
 		c3.add("php");
