@@ -6,7 +6,7 @@ package thread;
  *
  * @author DuHuang
  */
-public class StopThread {
+public class StopThreadDemo {
     private static boolean  flag = true;
     public static void main(String[] args){
         new Thread(() -> {

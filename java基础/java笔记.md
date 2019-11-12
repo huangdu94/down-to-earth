@@ -1557,6 +1557,7 @@ public class Demo2 {
     + `HashTable`子类
     + 只允许操作`String`类型数据，可以直接操作属性文件
 10. `Collections`工具类
+    + 提供将现有的集合转换为线程安全的集合的方法
 11. `Stream`
     + 数据流操作应用
     + 结合Lambda表达式可以对集合中的数据进行过滤与数据统计处理
