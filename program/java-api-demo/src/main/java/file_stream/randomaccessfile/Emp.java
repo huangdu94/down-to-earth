@@ -5,27 +5,6 @@ import java.io.RandomAccessFile;
 import java.nio.charset.StandardCharsets;
 
 /**
- * 读取指定格式emp.dat里的员工信息，并显示在控制台上
- *
- * @author Bean
- */
-public class ReadEmp {
-    public static void main(String[] args) throws IOException {
-        RandomAccessFile raf = new RandomAccessFile(ReadEmp.class.getResource("/emp.dat").getPath(), "r");
-        int empNumber = (int) (raf.length() / Emp.DataLen.ALL_LEN);//计算文件中员工数量
-        Emp[] emps = new Emp[empNumber];//创建Emp型数组
-        for (int i = 0; i < empNumber; i++) {//为每一个Emp元素获取信息
-            emps[i] = new Emp();
-            emps[i].formatRead(raf);
-        }
-        for (int i = 0; i < empNumber; i++) {//将每一个Emp元素的信息输出
-            String information = emps[i].toString();
-            System.out.println(information);
-        }
-    }
-}
-
-/**
  * 员工类，包含dat文件中，一个员工的所有数据的字节信息。
  * 读出员工信息的方法。
  * 重写了toString方法用于返回员工信息字符串。
