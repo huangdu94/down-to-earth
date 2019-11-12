@@ -14,9 +14,8 @@ public class File_listFiles {
 		 */
 		File dir=new File(".");
 		/*
-		 * boolean isFire()subs[i].isDirectory()?"目录：":"文件：")+subs[i].getName());
-			}
-		 * 判断当前Fire表示的是否为一个文件
+		 * boolean isFile()
+		 * 判断当前File表示的是否为一个文件
 		 * 
 		 * boolean isDirectory()
 		 * 判断当前File表示的是否为一个目录
