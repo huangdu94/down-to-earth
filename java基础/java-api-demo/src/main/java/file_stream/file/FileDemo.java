@@ -24,7 +24,7 @@ public class FileDemo {
          * 1".":表示当前目录，当前目录视运行环境不同路径也不同.
          * 在eclipse中运行java程序时的当前目录是当前类所在项目的根目录
          */
-        File file = new File("." + File.separator + ".test.txt");
+        File file = new File(FileDemo.class.getResource("/.test.txt").getPath());
         //获得文件名
         String name = file.getName();
         System.out.println("文件名：" + name);

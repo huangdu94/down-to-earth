@@ -11,7 +11,7 @@ import java.nio.charset.StandardCharsets;
  */
 public class ReadEmp {
     public static void main(String[] args) throws IOException {
-        RandomAccessFile raf = new RandomAccessFile("emp.dat", "r");
+        RandomAccessFile raf = new RandomAccessFile(ReadEmp.class.getResource("/emp.dat").getPath(), "r");
         int empNumber = (int) (raf.length() / Emp.DataLen.ALL_LEN);//计算文件中员工数量
         Emp[] emps = new Emp[empNumber];//创建Emp型数组
         for (int i = 0; i < empNumber; i++) {//为每一个Emp元素获取信息
