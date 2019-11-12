@@ -1,4 +1,4 @@
-package autocloseable;
+package file_stream.autocloseable;
 
 import java.nio.channels.ClosedChannelException;
 

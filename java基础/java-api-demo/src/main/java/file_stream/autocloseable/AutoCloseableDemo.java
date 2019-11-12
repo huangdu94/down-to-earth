@@ -1,4 +1,4 @@
-package autocloseable;
+package file_stream.autocloseable;
 
 /**
  * 实现AutoCloseable或者Closeable(其继承了AutoCloseable)接口的资源
