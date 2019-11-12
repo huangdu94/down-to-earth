@@ -1490,6 +1490,7 @@ public class Demo2 {
     + 字节流与字符流的转换 `OutputStreamWriter` `InputStreamReader`
 3. 字符编码
     + 建议使用UTF-8编码
+    + `StandardCharsets`类定义了标准的编码格式
 4. 文件操作流与内存操作流
     + 文件流
         + 字节流 `FileOutputStream` `FileInputStream`

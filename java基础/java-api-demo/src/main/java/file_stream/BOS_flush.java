@@ -3,6 +3,7 @@ package file_stream;
 import java.io.BufferedOutputStream;
 import java.io.FileOutputStream;
 import java.io.IOException;
+import java.nio.charset.StandardCharsets;
 
 /**
  * 缓冲输出流的缓冲区问题
@@ -15,7 +16,7 @@ public class BOS_flush {
 		BufferedOutputStream bos=new BufferedOutputStream(fos);
 		
 		String str="你在南方的艳阳里大雪纷飞.";
-		byte[] data=str.getBytes("UTF-8");
+		byte[] data=str.getBytes(StandardCharsets.UTF_8);
 		bos.write(data);
 		/*
 		 * void flush()
