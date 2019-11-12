@@ -4,6 +4,11 @@ import java.io.IOException;
 import java.io.InputStream;
 
 /**
+ * System类里内置了三种流
+ * System.in 键盘标准输入流
+ * System.out 标准输出流
+ * System.err 错误输出流
+ *
  * @author DuHuang
  * @date 2019/11/9 20:01
  */

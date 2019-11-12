@@ -12,6 +12,10 @@ import java.io.UnsupportedEncodingException;
  * PrintWriter也是缓冲字符输出流，它内部总是连接
  * BufferedWriter,除此之外PW还提供了自动行刷新
  * 功能.所以更常用.
+ *
+ * PrintStream有几乎相同的功能,但是它内部只能使用系统默认编码
+ * 它出现的较早,System.out用的就是它,为了兼容没有废弃,推荐使用PrintWriter
+ *
  * @author Bean
  *
  */
