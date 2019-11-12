@@ -1580,8 +1580,85 @@ public class Demo2 {
 5. 事务控制可以在数据库更新时保证数据的一致性，主要方法为`Connection`提供的`setAutoCommit()` `commit()` `rollback()`方法
 
 ## 二十七、JUC并发编程
+1. JUC简介
+    + `java.util.concurrent`提供了并发访问工具支持
+    + `atomic`子包提供原子操作类
+    + `locks`子包实现各种锁机制
+2. `TimeUnit`
+    + 时间单元操作枚举类
+    + 可以实现时间单位的转换，并且方便地进行准确时间的休眠处理
+3. 原子操作类
+    + 原子操作类可以保证在多线程并发访问下的数据安全，原子操作类中的数据内容都通过`volatile`关键字定义，为了进一步实现数据的计算准确性，又提供加法器与累加器的支持
+    + 基本类型：`AtomicInteger` `AtomicLong` `AtomicBoolean`
+    + 数组类型：`AtomicIntegerArray` `AtomicLongArray` `AtomicReferenceArray`
+    + 引用类型：`AtomicReference` `AtomicStampedReference` `AtomicMarkableReference`
+    + 对象的属性修改类型：`AtomicIntegerFieldUpdater` `AtomicLongFieldUpdater` `AtomicReferenceFieldUpdater`
+    + CAS(Compare And Swap)是一条CPU并发原语，体现在`Unsafe`类中各个方法
+    + 累加器和加法器：`DoubleAccumulator` `LongAccumulator` `DoubleAdder` `LongAdder`
+4. `ThreadFactory`
+    + 依据此接口实现`Thread`类实例的统一管理，工厂设计模式
+5. 线程锁
+    + AQS操作支持：`AbstractOwnableSynchronizer` `AbstractQueuedSynchronizer` `AbstractLongSynchronizer`
+    + `Lock`接口：`ReentrantLock`
+    + `ReadWriteLock`接口：`ReentrantReadWriterLock`
+    + `StampedLock`
+    + `Condition`：`await()` `signal()` `signalAll()`
+    + `LockSupport`：`park(...)` `unpark(...)`
+    + `Semaphore` `CountDownLatch` `CyclicBarrier` `Exchanger` `CompletableFuture`
+6. 并发集合和阻塞队列
+    |No.|集合接口|集合类|描述|
+    |:-:|:-:|:-:|:-:|
+    |1|List|CopyOnWriteArrayList|相当于ArrayList|
+    |2|Set|CopyOnWriteArraySet|相当于HashSet，基于CopyOnWriteArrayList实现|
+    |3|Set|ConcurrentSkipListSet|相当于TreeSet，基于跳表结构实现|
+    |4|Map|ConcurrentHashMap|相当于HashMap|
+    |5|Map|ConcurrentSkipListMap|相当于TreeMap，基于跳表结构实现|
+    |6|Queue|BlockingQueue|阻塞队列：ArrayBlockingQueue,LinkedBlockingQueue,PriorityBlockingQueue,SynchronousQueue|
+    |7|Queue|ConcurrentLinkedQueue|单向链表实现的无界队列，支持FIFO处理|
+    |8|Deque|BlockingDeque|阻塞队列：LinkedBlockingDeque|
+    |9|Deque|ConcurrentLinkedDeque|双向链表实现的无界队列，支持FIFO、FILO处理|
+    |10|Queue|BlockingQueue|延迟队列：DelayQueue(所保存元素需实现Delayed接口)|
+7. 线程池
+    + 线程池主要通过`Executors`类提供的方法创建，这些方法是对`ThreadPoolExecutor`类的封装
+    + 使用`ThreadPoolExecutor`类可以由用户传入自定义的阻塞队列与拒绝机制定制属于自己的特定线程池
+    + `CompletionService`提供有线程池中执行线程处理结果的异步接收操作
+8. `ForkJoinPool`
+    + 将一个复杂的业务拆分为若干个子业务，每个业务分别创建线程，这样可以实现较高的执行性能
+    + `ForkJoinPool`中需要通过`ForkJoinTask`定义执行任务
+    + `ForkJoinTask`有两个子类：`RecursiveTask`(有返回值任务) `RecursiveAction`(无返回值任务)
+    + `fork()`分解操作 `join()`合并操作
 
 ## 二十八、NIO编程
+1. NIO简介
+    + NIO采用Reactor模型实现了所有通道的集中管理，可以方便地使用缓冲区实现通道数据读/写
+2. `Buffer`
+    + 缓冲区`Buffer`提供有高性能的数据操作，可以通过position,limit,capacity表示缓冲区的操作状态
+    + 子类：`ByteBuffer` `CharBuffer` `ShortBuffer` `IntBuffer` `LongBuffer` `FloatBuffer` `DoubleBuffer`
+    + `static allocate(...)` 创建指定容量的缓冲区
+    + `capacity()` `limit()` `position()` 获取缓冲区指针信息
+    + `put(...)` 缓冲区数据存放 `flip()` 准备输出
+    + `hasRemaining()` 是否有数据 `get()` 返回一个数据
+    + `clear()` 清空缓冲区
+3. `Channel`
+    + 通道可以用来读取和写入数据(操作缓冲区)，类似于之前的输入/输出流，但是程序不会直接操作通道，所有的内容都是先读取或写入缓冲区中，再通过缓冲区取得或写入
+    + 通道与传统的流操作不同，通道本身是双向操作的，既可以完成输入也可以完成输出
+    + `FileChannel`通道可以通过`FileInputStream`或`FileOutputStream`的`getChannel()`方法取得
+    + `Pipe` 线程管道
+        + `static open()` 打开管道流
+        + `source()` 获得`Pipe.SourceChannel`接收管道数据
+        + `sink()` 获得`Pipe.SinkChannel`发送管道数据
+4. 文件锁
+    + `FileChannel`可通过`tryLock()`操作获得`FileLock`实例锁定文件
+    + `FileLock`可使用`release()`方法释放
+5. 字符集
+    + `Charset`类通过`forName(...)`指定编码实例化
+    + `newEncoder`创建编码器`CharsetEncoder`可使用`encode(...)`方法编码
+    + `newDecoder`创建解码器`CharsetDecoder`可使用`decode(...)`方法解码
+6. 同步非阻塞I/O通信模型
+    + `ServerSocketChannel` `SocketChannel`
+7. 异步非阻塞I/O通信模型
+    + `AsynchronousServerSocketChannel` `AsynchronousSocketChannel`
+    + `CompletionHandler`
 
 ## 二十九、设计模式
 1. 模板设计模式

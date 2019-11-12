@@ -4,9 +4,14 @@
 ## 目录结构
 
 + `/`	根目录
+  + `docker学习`
   + `git学习/`
+  + `java学习/`
+  + `linux学习/`
   + `makedown学习/`
   + `SpringCloud学习/`
     + `code/`
-      + `respo/`	**配置仓库,Spring Cloud Config Server使用**
-      + `spring-cloud-demo/`
+      + `respo/`    **配置仓库,Spring Cloud Config Server使用**
+  + `program/`
+    + `java-api-demo`   **Java API练习demo**
+    + `spring-cloud-demo/`  **Spring Cloud练习demo**
