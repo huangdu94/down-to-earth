@@ -19,6 +19,15 @@ public class RecursionDemo {
     }
 
     public static void delete(File f) {
+        /*
+        for(File sub:subs) {
+        	System.out.println(sub);
+        }相当于
+        for(int i=0:i<subs.length;i++) {
+        	File sub=subs[i];
+        	System.out.println(sub);
+        }
+        */
         if (f.isDirectory()) {
             //先将该目录中所有子项删除
             File[] subs = f.listFiles();
