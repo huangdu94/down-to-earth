@@ -1,4 +1,4 @@
-package com.iflytek.nio;
+package nio;
 
 import java.nio.Buffer;
 import java.nio.ByteBuffer;

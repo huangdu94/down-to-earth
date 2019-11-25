@@ -1,4 +1,4 @@
-package com.iflytek.reference;
+package reference;
 
 import java.lang.ref.PhantomReference;
 import java.lang.ref.ReferenceQueue;

@@ -1,4 +1,4 @@
-package com.iflytek.reference;
+package reference;
 
 import java.lang.ref.Reference;
 import java.lang.ref.ReferenceQueue;
@@ -18,7 +18,7 @@ public class CheckRefQueue extends Thread {
 
     @Override
     public void run() {
-        Reference<? extends MyObject> obj = null;
+        Reference<? extends reference.MyObject> obj = null;
         try {
             obj = softQueue.remove();
         } catch (InterruptedException e) {

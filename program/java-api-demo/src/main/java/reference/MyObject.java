@@ -1,4 +1,4 @@
-package com.iflytek.reference;
+package reference;
 
 /**
  * MyObject

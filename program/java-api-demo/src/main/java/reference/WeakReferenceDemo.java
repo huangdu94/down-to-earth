@@ -1,4 +1,4 @@
-package com.iflytek.reference;
+package reference;
 
 import java.lang.ref.ReferenceQueue;
 import java.lang.ref.WeakReference;
