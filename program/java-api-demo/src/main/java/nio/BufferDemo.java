@@ -15,27 +15,27 @@ public class BufferDemo {
         // 2.
         //byte[] arr = new byte[15];
         //ByteBuffer buffer = ByteBuffer.wrap(arr);
-        showBufferState(buffer);
+        showBufferState(buffer); //15 0 15
         // Buffer中存入值
         for (byte i = 0; i < 10; i++) {
             buffer.put(i);
         }
-        showBufferState(buffer);
+        showBufferState(buffer); //15 10 15
         buffer.flip();
-        showBufferState(buffer);
+        showBufferState(buffer); //15 0 10
         for (int i = 0; i < 5; i++) {
             System.out.println(buffer.get());
         }
-        showBufferState(buffer);
+        showBufferState(buffer); //15 5 10
         buffer.flip();
-        showBufferState(buffer);
+        showBufferState(buffer); //15 0 5
         for (int i = 0; i < 5; i++) {
             System.out.println(buffer.get());
         }
-        showBufferState(buffer);
+        showBufferState(buffer); //15 5 5
         //buffer.rewind();
         buffer.clear();
-        showBufferState(buffer);
+        showBufferState(buffer); //15 0 15
     }
 
     private static void showBufferState(Buffer buffer) {
