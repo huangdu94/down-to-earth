@@ -1747,3 +1747,29 @@ public class Demo2 {
         }
     }
     ```
+    
+## 三十二、java性能调优工具
+1. linux命令行工具
+    + `top`
+    + `sar`
+    + `vmstat`
+    + `iostat`
+    + `pidstat`
+2. windows工具
+    + 任务管理器
+    + perfmon性能监控工具
+    + Process Explorer
+    + pslist命令行
+3. jdk命令行工具
+    + `jps`
+    + `jstat`
+    + `jinfo`
+    + `jmap`
+    + `jhat`
+    + `jstack`
+    + `jstatd`
+    + `hprof`
+4. JConsole工具
+5. Visual VM多合一工具(支持OQL)
+6. MAT内存分析工具(支持OQL)
+7. JProfile简介
