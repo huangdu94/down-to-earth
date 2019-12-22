@@ -5,8 +5,8 @@
 + Elasticsearch是一个基于Apache Lucene(TM)的开源搜索引擎。无论在开源还是专有领域，Lucene可以被认为是迄今为止最先进、性能最好的、功能最全的搜索引擎库
 
 ### 二、下载与安装
-+ 安装Elasticsearch唯一的要求是安装Java，地址：www.java.com
-+ 你可以从 elasticsearch.org/download 下载最新版本的Elasticsearch
++ 安装Elasticsearch唯一的要求是安装Java，地址：[java](www.java.com)
++ 你可以从[elasticsearch](elasticsearch.org/download)下载最新版本的Elasticsearch
 + `./bin/elasticsearch -d` 后台运行
 + `curl 'http://localhost:9200/?pretty'` 查看es是否正常运行
 + `curl -XPOST 'http://localhost:9200/_shutdown'` 关闭es
