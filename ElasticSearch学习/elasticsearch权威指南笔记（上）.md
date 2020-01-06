@@ -135,11 +135,11 @@ GET /megacorp/employee/_search
           "age" : { "gt" : 30 } <1>
         }
       },
-        "query" : {
-          "match" : {
-            "last_name" : "smith" <2>
-          }
+      "query" : {
+        "match" : {
+          "last_name" : "smith" <2>
         }
+      }
     }
   }
 }
