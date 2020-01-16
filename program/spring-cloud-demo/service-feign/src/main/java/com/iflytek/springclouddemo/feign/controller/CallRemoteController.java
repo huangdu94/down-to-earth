@@ -1,9 +1,10 @@
 package com.iflytek.springclouddemo.feign.controller;
 
 import com.iflytek.springclouddemo.feign.service.CallRemoteService;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
+
+import javax.annotation.Resource;
 
 /**
  * demo Controller
@@ -13,7 +14,7 @@ import org.springframework.web.bind.annotation.RestController;
  */
 @RestController
 public class CallRemoteController {
-    @Autowired
+    @Resource
     private CallRemoteService callRemoteService;
 
     @RequestMapping("/callRemote")
