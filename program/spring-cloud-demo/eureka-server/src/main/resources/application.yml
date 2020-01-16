@@ -1,16 +1,16 @@
-#server:
-#  port: 8761
-#spring:
-#  application:
-#    name: eurka-server
-#eureka:
-#  instance:
-#    hostname: localhost
-#  client:
-#    registerWithEureka: false #是否向eureka注册 本身是eureka不用注册
-#    fetchRegistry: false #是否向缓存中注册 eureka不需要注册
-#    serviceUrl:
-#      defaultZone: http://${eureka.instance.hostname}:${server.port}/eureka/
+server:
+  port: 8761
 spring:
-  profiles:
-    active: peer1
+  application:
+    name: eurka-server
+eureka:
+  instance:
+    hostname: localhost
+  client:
+    registerWithEureka: false #是否向eureka注册 本身是eureka不用注册
+    fetchRegistry: false #是否向缓存中注册 eureka不需要注册
+    serviceUrl:
+      defaultZone: http://${eureka.instance.hostname}:${server.port}/eureka/
+#spring:
+#  profiles:
+#    active: peer1
