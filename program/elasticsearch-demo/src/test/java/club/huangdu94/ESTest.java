@@ -3,7 +3,6 @@ package club.huangdu94;
 import org.elasticsearch.client.transport.TransportClient;
 import org.elasticsearch.common.settings.Settings;
 import org.elasticsearch.common.transport.InetSocketTransportAddress;
-import org.elasticsearch.transport.client.PreBuiltTransportClient;
 import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
@@ -21,7 +20,8 @@ public class ESTest {
     public void beforeTest() {
         System.out.println("初始化操作...");
         Settings settings = Settings.builder().put("cluster.name", "elasticsearch-study").put("client.transport.sniff", true).build();
-        client = new PreBuiltTransportClient(settings);
+        //new PreBuiltTransportClient(settings);
+        client = TransportClient.builder().settings(settings).build();
         client.addTransportAddress(new InetSocketTransportAddress(new InetSocketAddress("111.67.206.137", PORT)));
     }
 
