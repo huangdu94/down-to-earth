@@ -2,6 +2,8 @@ package club.huangdu94;
 
 import club.huangdu94.opt.IndexAdd;
 
+import java.io.IOException;
+
 /**
  * 程序入口,模仿SpringBoot
  *
@@ -10,6 +12,11 @@ import club.huangdu94.opt.IndexAdd;
  */
 public class Application {
     public static void main(String[] args) {
-        IndexAdd.addOneProductByJson();
+        //IndexAdd.addOneProductByJson();
+        try {
+            IndexAdd.addOneProductByXContentBuilder();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
     }
 }
