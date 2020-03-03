@@ -18,7 +18,7 @@ public class CheckRefQueue extends Thread {
 
     @Override
     public void run() {
-        Reference<? extends reference.MyObject> obj = null;
+        Reference<? extends MyObject> obj = null;
         try {
             obj = softQueue.remove();
         } catch (InterruptedException e) {

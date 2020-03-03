@@ -16,9 +16,9 @@ import java.lang.ref.ReferenceQueue;
 public class PhantomPeferenceDemo {
     public static void main(String[] args) throws InterruptedException {
         MyObject obj = new MyObject();
-        ReferenceQueue<MyObject> softQueue = new ReferenceQueue<>();
-        PhantomReference<MyObject> phantomRef = new PhantomReference<>(obj, softQueue);
-        new CheckRefQueue(softQueue).start();
+        ReferenceQueue<MyObject> phantomQueue = new ReferenceQueue<>();
+        PhantomReference<MyObject> phantomRef = new PhantomReference<>(obj, phantomQueue);
+        new CheckRefQueue(phantomQueue).start();
         obj = null;
         System.out.println("Before GC:Soft Get= " + phantomRef.get());
         System.gc();

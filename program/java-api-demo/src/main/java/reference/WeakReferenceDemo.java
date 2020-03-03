@@ -14,9 +14,9 @@ import java.lang.ref.WeakReference;
 public class WeakReferenceDemo {
     public static void main(String[] args) {
         MyObject obj = new MyObject();
-        ReferenceQueue<MyObject> softQueue = new ReferenceQueue<>();
-        WeakReference<MyObject> weakRef = new WeakReference<>(obj, softQueue);
-        new CheckRefQueue(softQueue).start();
+        ReferenceQueue<MyObject> weakQueue = new ReferenceQueue<>();
+        WeakReference<MyObject> weakRef = new WeakReference<>(obj, weakQueue);
+        new CheckRefQueue(weakQueue).start();
         obj = null;
         System.out.println("Before GC:Soft Get= " + weakRef.get());
         System.gc();
