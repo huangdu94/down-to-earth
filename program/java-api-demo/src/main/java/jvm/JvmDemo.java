@@ -39,7 +39,10 @@ package jvm;
  * -Xms 最小堆内存
  * -Xmn 设置新生代的大小
  * (-XX:NewSize 新生代初始值 -XX:MaxNewSize 新生代最大值 例-XX:NewSize=10M)
- * -XX:PermSize 方法区初始大小 -XX:MaxPermSize 方法区最大值
+ * -XX:PermSize 方法区初始大小 -XX:MaxPermSize 方法区最大值 (方法区设置jdk8以后完全过时)
+ * -XX:MaxMetaspaceSize -XX:MetaspaceSize 元空间大小
+ * -XX:MinMetaspaceFreeRatio -XX:MaxMetaspaceFreeRatio
+ * -XX:MaxDirectMemorySize(默认同Java堆最大值) 直接内存大小
  * -Xss 设置线程栈的大小(虚拟机栈)
  *      -XX:SurvivorRatio 新生代中 eden/s0 或 eden/s1(s0 和 s1大小相等)
  *      -XX:NewRatio 老年代/新生代
