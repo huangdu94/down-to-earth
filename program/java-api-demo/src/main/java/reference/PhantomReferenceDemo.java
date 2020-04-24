@@ -13,7 +13,7 @@ import java.lang.ref.ReferenceQueue;
  * @author duhuang@iflytek
  * @version 2019/11/20 15:46
  */
-public class PhantomPeferenceDemo {
+public class PhantomReferenceDemo {
     public static void main(String[] args) throws InterruptedException {
         MyObject obj = new MyObject();
         ReferenceQueue<MyObject> phantomQueue = new ReferenceQueue<>();
