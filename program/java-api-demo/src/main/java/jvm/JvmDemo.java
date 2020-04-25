@@ -55,7 +55,7 @@ package jvm;
  *          -XX:LargePageSizeInBytes 设置大页的大小
  *
  * GC相关设置
- * -Xloggc 指定GC日志的输出位置
+ * -Xlog:gc 指定GC日志的输出位置
  * -verbose:gc
  * -XX:+PrintGC 显示GC过程
  * -XX:+PrintGCDetails 显示GC详情
