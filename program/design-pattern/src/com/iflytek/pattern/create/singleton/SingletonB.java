@@ -1,7 +1,7 @@
 package com.iflytek.pattern.create.singleton;
 
 /**
- * 饿汉模式 线程安全 但是效率低 (不推荐)
+ * 懒汉模式 线程安全 但是效率低 (不推荐)
  *
  * @author DuHuang 2019/10/31 14:06
  */
