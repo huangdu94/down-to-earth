@@ -16,13 +16,41 @@ package club.huangdu94.algorithm_difficult.arrstring;
  */
 public class ProductExceptSelf {
     // 使用除法版(题目要求不能使用除法但想不到别的)
-    public int[] productExceptSelf(int[] nums) {
-        int product = 1;
-        for (int n : nums)
-            product *= n;
+    public int[] productExceptSelf1(int[] nums) {
         int[] output = new int[nums.length];
+        // 两种特殊情况
+        // 如果数组中的0大于1个则返回结果都为0
+        // 如果数组中的0等于1个则除它之外,所有结果都为0
+        int mark = -1;
+        int product = 1;
+        for (int i = 0; i < nums.length; i++)
+            if (nums[i] == 0)
+                if (mark == -1)
+                    mark = i;
+                else
+                    return output;
+            else
+                product *= nums[i];
+        // 代码执行到这里要么没有0,要么只有一个
+        if (mark != -1) {
+            output[mark] = product;
+            return output;
+        }
+        // 代码执行到这里肯定没有0
         for (int i = 0; i < nums.length; i++)
             output[i] = product / nums[i];
+        return output;
+    }
+
+    // 左右乘积列表
+    public int[] productExceptSelf2(int[] nums) {
+        int[] output = new int[nums.length];
+        output[0] = 1;
+        int rightProduct = 1;
+        for (int i = 1; i < nums.length; i++)
+            output[i] = output[i - 1] * nums[i - 1];
+        for (int j = nums.length - 2; j >= 0; j--)
+            output[j] *= (rightProduct *= nums[j + 1]);
         return output;
     }
 }
