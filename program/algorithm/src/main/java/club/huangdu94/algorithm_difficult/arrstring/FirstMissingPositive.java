@@ -1,6 +1,8 @@
 package club.huangdu94.algorithm_difficult.arrstring;
 
 import java.util.Arrays;
+import java.util.HashSet;
+import java.util.Set;
 
 /**
  * 缺失的第一个正数
@@ -21,8 +23,8 @@ import java.util.Arrays;
  * @version 2020/7/27 14:28
  */
 public class FirstMissingPositive {
-    // 先排序再找(时间复杂度o(nlog n))
-    public int firstMissingPositive(int[] nums) {
+    // 先排序再找(时间复杂度o(nlog n) 空间复杂度o(1))
+    public int firstMissingPositive1(int[] nums) {
         Arrays.sort(nums);
         int small = 1;
         int i = 0;
@@ -37,5 +39,54 @@ public class FirstMissingPositive {
             i++;
         }
         return small;
+    }
+
+    // 暴力解(时间复杂度o(最坏o(n^2) 最好o(n)) 空间复杂度o(1))
+    public int firstMissingPositive2(int[] nums) {
+        int small = 1;
+        boolean flag = true;
+        while (flag) {
+            flag = false;
+            for (int n : nums)
+                if (small == n) {
+                    small++;
+                    flag = true;
+                    break;
+                }
+        }
+        return small;
+    }
+
+    // 使用额外空间(时间复杂度o(n) 空间复杂度o(n))
+    public int firstMissingPositive3(int[] nums) {
+        int small = 1;
+        Set<Integer> set = new HashSet<>();
+        for (int n : nums)
+            set.add(n);
+        while (set.contains(small)) {
+            small++;
+        }
+        return small;
+    }
+
+    // 不使用额外空间(时间复杂度o(n) 空间复杂度o(1))
+    public int firstMissingPositive4(int[] nums) {
+        int len = nums.length;
+        for (int i = 0; i < len; i++)
+            if (nums[i] < 1)
+                nums[i] = len + 1;
+        for (int n : nums) {
+            n = Math.abs(n);
+            if (n <= len)
+                if (nums[n - 1] > 0)
+                    nums[n - 1] *= -1;
+        }
+        int i = 0;
+        while (i < len) {
+            if (nums[i] > 0)
+                break;
+            i++;
+        }
+        return i + 1;
     }
 }
