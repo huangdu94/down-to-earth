@@ -19,7 +19,18 @@ package club.huangdu94.algorithm_difficult.arrstring;
  * @version 2020/7/27 19:16
  */
 public class FindDuplicate {
+    // 交换法 把每一个数字都交换到与之数字对应的index位置上 交换停止后输出index为0的数
     public int findDuplicate(int[] nums) {
-        return -1;
+        // num一定大于0，所以第一次交换一定能实质性发生
+        // num一定小于等于n，数组长度n+1一定不会越界
+        // 第二次交换就有可能找到重复数字了
+        do {
+            int n = nums[0];
+            nums[0] = nums[n];
+            nums[n] = n;
+        } while (nums[nums[0]] != nums[0]);
+        return nums[0];
     }
+
+    // 其它方法 1.二分查找 2.二进制 3.快慢指针
 }

@@ -14,6 +14,7 @@ package club.huangdu94.algorithm_difficult.arrstring;
  */
 public class LongestConsecutive {
     public int longestConsecutive(int[] nums) {
+        
         return -1;
     }
 }
