@@ -19,6 +19,11 @@ import java.util.Map;
 public class MinWindow {
     // 暴力解优化，从等于t长度大小的窗口开始寻找，找到位置 依然超时 继续优化
     public String minWindow(String s, String t) {
+        return null;
+    }
+
+    // 暴力解优化，从等于t长度大小的窗口开始寻找，找到位置 依然超时 继续优化
+    public String minWindow2(String s, String t) {
         String result = "";
         // String t预处理
         Map<Character, Integer> tMap = this.charCountForString(t);
