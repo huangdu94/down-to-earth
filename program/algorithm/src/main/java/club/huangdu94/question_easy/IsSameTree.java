@@ -1,4 +1,4 @@
-package club.huangdu94.daily;
+package club.huangdu94.question_easy;
 
 import java.util.LinkedList;
 import java.util.Queue;
