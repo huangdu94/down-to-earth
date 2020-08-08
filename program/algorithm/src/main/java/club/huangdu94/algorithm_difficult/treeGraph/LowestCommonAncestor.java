@@ -22,7 +22,13 @@ package club.huangdu94.algorithm_difficult.treeGraph;
  */
 public class LowestCommonAncestor {
     public TreeNode lowestCommonAncestor(TreeNode root, TreeNode p, TreeNode q) {
-        return null;
+        if (root == null) return null;
+        if (root == p || root == q) return root;
+        TreeNode left = this.lowestCommonAncestor(root.left, p, q);
+        TreeNode right = this.lowestCommonAncestor(root.right, p, q);
+        if (left != null && right != null) return root;
+        if (left != null) return left;
+        return right;
     }
 }
 
