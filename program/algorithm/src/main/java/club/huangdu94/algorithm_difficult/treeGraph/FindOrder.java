@@ -1,5 +1,7 @@
 package club.huangdu94.algorithm_difficult.treeGraph;
 
+import java.util.*;
+
 /**
  * 课程表 II
  * 现在你总共有 n 门课需要选，记为0到n-1。
@@ -27,7 +29,78 @@ package club.huangdu94.algorithm_difficult.treeGraph;
  * @version 2020/8/9 13:29
  */
 public class FindOrder {
+    // 深度优先搜索，基于出度
     public int[] findOrder(int numCourses, int[][] prerequisites) {
-        return null;
+        // 0. 结果stack和结果数组
+        Stack<Integer> stack = new Stack<>();
+        // 1. visited有三种状态 0 未搜索 1 搜索中 2 已搜索完成
+        int[] visited = new int[numCourses];
+        // 2. 构建map，key:父节点 value:子节点列表
+        Map<Integer, List<Integer>> map = new HashMap<>(numCourses);
+        // 3. 初始化map
+        for (int[] prerequisite : prerequisites) {
+            List<Integer> subList = map.computeIfAbsent(prerequisite[1], k -> new ArrayList<>());
+            subList.add(prerequisite[0]);
+        }
+        // 4. dfs 结果为false表示遇到环了直接输出空数组
+        for (int node = 0; node < numCourses; node++)
+            if (visited[node] == 0)
+                if (dfs(node, visited, map, stack)) return new int[0];
+        // 5. 输入结果
+        int[] res = new int[numCourses];
+        for (int i = 0; i < numCourses; i++) res[i] = stack.pop();
+        return res;
+    }
+
+    // 广度优先搜索，基于入度
+    private int[] bfs(int numCourses, int[][] prerequisites) {
+        // 0. 构建结果数组
+        int[] res = new int[numCourses];
+        int len = 0;
+        // 1. 构建入度数组
+        int[] inDegree = new int[numCourses];
+        // 2. 构建map，key:父节点 value:子节点列表
+        Map<Integer, List<Integer>> map = new HashMap<>(numCourses);
+        // 3. 初始化入度数组和map
+        for (int[] prerequisite : prerequisites) {
+            inDegree[prerequisite[0]]++;
+            List<Integer> subList = map.computeIfAbsent(prerequisite[1], k -> new ArrayList<>());
+            subList.add(prerequisite[0]);
+        }
+        Queue<Integer> queue = new ArrayDeque<>();
+        // 4. 将入度为0的节点假如queue中，并输出结果
+        for (int i = 0; i < numCourses; i++)
+            if (inDegree[i] == 0) {
+                queue.offer(i);
+                res[len++] = i;
+            }
+        // 5. 广度遍历图，每次取出入度为0的节点(并加入结果)，并将其相邻节点入度-1，循环遍历
+        while (!queue.isEmpty()) {
+            int node = queue.poll();
+            List<Integer> subList = map.get(node);
+            if (subList != null)
+                for (int subNode : subList)
+                    if (--inDegree[subNode] == 0) {
+                        queue.offer(subNode);
+                        res[len++] = subNode;
+                    }
+        }
+        return len == numCourses ? res : new int[0];
+    }
+
+    // 深度优先搜索，基于出度，true表示有环
+    private boolean dfs(int cur, int[] visited, Map<Integer, List<Integer>> map, Stack<Integer> stack) {
+        if (visited[cur] == 2) return false;
+        List<Integer> subList = map.get(cur);
+        if (subList != null) {
+            visited[cur] = 1;
+            for (int subNode : subList) {
+                if (visited[subNode] == 1 || dfs(subNode, visited, map, stack))
+                    return true;
+            }
+        }
+        visited[cur] = 2;
+        stack.push(cur);
+        return false;
     }
 }
