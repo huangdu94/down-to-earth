@@ -24,7 +24,68 @@ import java.util.*;
  * @version 2020/8/9 13:27
  */
 public class CanFinish {
+
+    // 广度优先搜索，基于入度
+    private boolean bfs(int numCourses, int[][] prerequisites) {
+        // 0. 入度为0的数量
+        int count = 0;
+        // 1. 构建入度数组
+        int[] inDegree = new int[numCourses];
+        // 2. 构建list，index:父节点 value:子节点列表
+        List<List<Integer>> map = new ArrayList<>(numCourses);
+        // 3. 初始化map
+        for (int i = 0; i < numCourses; i++) map.add(new ArrayList<>());
+        for (int[] prerequisite : prerequisites) {
+            inDegree[prerequisite[0]]++;
+            map.get(prerequisite[1]).add(prerequisite[0]);
+        }
+        Queue<Integer> queue = new ArrayDeque<>();
+        // 4. 将入度为0的节点假如queue中，并输出结果
+        for (int i = 0; i < numCourses; i++)
+            if (inDegree[i] == 0) queue.offer(i);
+        // 5. 广度遍历图，每次取出入度为0的节点(并加入结果)，并将其相邻节点入度-1，循环遍历
+        while (!queue.isEmpty()) {
+            int node = queue.poll();
+            count++;
+            for (int subNode : map.get(node))
+                if (--inDegree[subNode] == 0) queue.offer(subNode);
+        }
+        return count == numCourses;
+    }
+
+    // 深度优先搜索，基于出度
     public boolean canFinish(int numCourses, int[][] prerequisites) {
+        // 1. visited有三种状态 0 未搜索 1 搜索中 2 已搜索完成
+        int[] visited = new int[numCourses];
+        // 2. 构建list，index:父节点 value:子节点列表
+        List<List<Integer>> map = new ArrayList<>(numCourses);
+        // 3. 初始化map
+        for (int i = 0; i < numCourses; i++) map.add(new ArrayList<>());
+        for (int[] prerequisite : prerequisites)
+            map.get(prerequisite[1]).add(prerequisite[0]);
+        // 4. dfs 结果为false表示遇到环了直接输出false
+        for (int node = 0; node < numCourses; node++)
+            if (visited[node] == 0)
+                if (dfs(node, visited, map)) return false;
+        // 5. 输出结果
+        return true;
+    }
+
+    private boolean dfs(int cur, int[] visited, List<List<Integer>> map) {
+        if (visited[cur] == 2) return false;
+        List<Integer> subList = map.get(cur);
+        if (subList != null) {
+            visited[cur] = 1;
+            for (int subNode : subList) {
+                if (visited[subNode] == 1 || dfs(subNode, visited, map))
+                    return true;
+            }
+        }
+        visited[cur] = 2;
+        return false;
+    }
+
+    public boolean canFinish2(int numCourses, int[][] prerequisites) {
         List<List<Integer>> courses = new ArrayList<>(numCourses);
         // 一门课对应的先决条件为-1表示这门课可以直接被修
         for (int i = 0; i < numCourses; i++) {
