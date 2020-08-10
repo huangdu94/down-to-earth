@@ -40,7 +40,7 @@ public class CanFinish {
             else
                 preList.add(prerequisite[1]);
         }
-        int threshold = numCourses * (numCourses - 1) + 1;
+        int threshold = numCourses + prerequisites.length;
         boolean[] checked = new boolean[numCourses];
         for (int i = 0; i < numCourses; i++)
             if (!checked[i] && isRing(courses, threshold, i, checked)) return false;
