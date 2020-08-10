@@ -1,6 +1,6 @@
 package club.huangdu94.algorithm_difficult.treeGraph;
 
-import java.util.Arrays;
+import java.util.*;
 
 /**
  * 课程表
@@ -25,37 +25,50 @@ import java.util.Arrays;
  */
 public class CanFinish {
     public boolean canFinish(int numCourses, int[][] prerequisites) {
-        int[] courses = new int[numCourses];
-        boolean[] visited = new boolean[numCourses];
-        Arrays.fill(courses, -1);
-        for (int[] prerequisite : prerequisites) courses[prerequisite[0]] = prerequisite[1];
+        List<List<Integer>> courses = new ArrayList<>(numCourses);
+        // 一门课对应的先决条件为-1表示这门课可以直接被修
+        for (int i = 0; i < numCourses; i++) {
+            List<Integer> defaultList = new ArrayList<>();
+            defaultList.add(-1);
+            courses.add(defaultList);
+        }
+        // 设置每门课的前置课程
+        for (int[] prerequisite : prerequisites) {
+            List<Integer> preList = courses.get(prerequisite[0]);
+            if (preList.get(0) == -1)
+                preList.set(0, prerequisite[1]);
+            else
+                preList.add(prerequisite[1]);
+        }
+        int threshold = numCourses * (numCourses - 1) + 1;
+        boolean[] checked = new boolean[numCourses];
         for (int i = 0; i < numCourses; i++)
-            if (!visited[i] && isRing(courses, i, visited)) return false;
+            if (!checked[i] && isRing(courses, threshold, i, checked)) return false;
         return true;
     }
 
-    // 判断是否有环 有环true 没环false
-    private boolean isRing(int[] courses, int start, boolean[] visited) {
-        if (start == -1 || courses[start] == -1)
-            return false;
-        visited[start] = true;
-        int slow = start;
-        int fast = courses[start];
-        while (fast != -1 && slow != fast) {
-            slow = courses[slow];
-            visited[fast] = true;
-            fast = courses[fast];
-            if (fast == -1) break;
-            visited[fast] = true;
-            fast = courses[fast];
+    // 判断是否有环 有环true 没环false 循环次数超过阈值还没结束肯定有环
+    private boolean isRing(List<List<Integer>> courses, int threshold, int start, boolean[] checked) {
+        if (start == -1) return false;
+        Queue<Integer> queue = new ArrayDeque<>();
+        queue.offer(start);
+        int cur;
+        while (!queue.isEmpty()) {
+            if (threshold-- <= 0) return true;
+            cur = queue.poll();
+            checked[cur] = true;
+            List<Integer> preList = courses.get(cur);
+            if (preList.get(0) != -1) for (int pre : preList) queue.offer(pre);
         }
-        return fast != -1;
+        return false;
     }
 
     public static void main(String[] args) {
         CanFinish canFinish = new CanFinish();
-        int numCourses = 3;
-        int[][] prerequisites = {{1, 0}, {1, 2}, {0, 1}};
+        /*int numCourses = 8;
+        int[][] prerequisites = {{1, 0}, {2, 6}, {1, 7}, {6, 4}, {7, 0}, {0, 5}};*/
+        int numCourses = 1;
+        int[][] prerequisites = {};
         boolean result = canFinish.canFinish(numCourses, prerequisites);
         System.out.println(result);
     }
