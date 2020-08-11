@@ -1,6 +1,7 @@
 package club.huangdu94.algorithm_difficult.treeGraph;
 
 import java.util.ArrayList;
+import java.util.LinkedList;
 import java.util.List;
 
 /**
@@ -42,7 +43,31 @@ public class CountSmaller {
         return res;
     }
 
+    /**
+     * 反向插入排序(155 ms,在所有Java提交中击败了8.66%的用户)
+     */
     public List<Integer> countSmaller(int[] nums) {
-        return null;
+        if (nums == null || nums.length == 0) return new ArrayList<>();
+        int len = nums.length;
+        List<Integer> res = new LinkedList<>();
+        res.add(0, 0);
+        for (int i = len - 2, j = i; i >= 0; j = --i) {
+            int numi = nums[i];
+            while (numi <= nums[j + 1]) {
+                nums[j] = nums[j + 1];
+                if (++j == len - 1)
+                    break;
+            }
+            nums[j] = numi;
+            res.add(0, len - j - 1);
+        }
+        return res;
+    }
+
+    public static void main(String[] args) {
+        CountSmaller countSmaller = new CountSmaller();
+        int[] nums = {2, 0, 1};
+        List<Integer> res = countSmaller.countSmaller(nums);
+        System.out.println(res);
     }
 }
