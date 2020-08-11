@@ -26,8 +26,8 @@ public class Heap {
             heapify(nums, --len, 0);
         }
         long end = System.currentTimeMillis();
-        System.out.println(String.format("堆排序耗时: %s ms", end - start));
-        System.out.println(String.format("排序结果: %s", Arrays.toString(nums)));
+        System.out.printf("堆排序耗时: %s ms%n", end - start);
+        System.out.printf("排序结果: %s%n", Arrays.toString(nums));
     }
 
     /**

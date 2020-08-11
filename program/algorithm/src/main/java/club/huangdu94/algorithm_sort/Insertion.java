@@ -28,7 +28,7 @@ public class Insertion {
             nums[j + 1] = temp;
         }
         long end = System.currentTimeMillis();
-        System.out.println(String.format("插入排序耗时: %s ms", end - start));
-        System.out.println(String.format("排序结果: %s", Arrays.toString(nums)));
+        System.out.printf("插入排序耗时: %s ms%n", end - start);
+        System.out.printf("排序结果: %s%n", Arrays.toString(nums));
     }
 }

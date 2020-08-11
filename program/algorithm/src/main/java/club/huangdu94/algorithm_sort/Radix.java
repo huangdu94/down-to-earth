@@ -31,7 +31,7 @@ public class Radix {
             if (n < min)
                 min = n;
         }
-        // 支持负数
+        // 支持负数(将所有数转化为>=0的数排序，有溢出风险)
         max -= min;
         int maxDigit;
         for (int i = 0; ; i++) {
@@ -74,7 +74,7 @@ public class Radix {
             }
         }
         long end = System.currentTimeMillis();
-        System.out.println(String.format("基数排序耗时: %s ms", end - start));
-        System.out.println(String.format("排序结果: %s", Arrays.toString(nums)));
+        System.out.printf("基数排序耗时: %s ms%n", end - start);
+        System.out.printf("排序结果: %s%n", Arrays.toString(nums));
     }
 }

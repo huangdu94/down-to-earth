@@ -19,8 +19,8 @@ public class Merge {
         long start = System.currentTimeMillis();
         sort(nums, 0, nums.length - 1);
         long end = System.currentTimeMillis();
-        System.out.println(String.format("归并排序耗时: %s ms", end - start));
-        System.out.println(String.format("排序结果: %s", Arrays.toString(nums)));
+        System.out.printf("归并排序耗时: %s ms%n", end - start);
+        System.out.printf("排序结果: %s%n", Arrays.toString(nums));
     }
 
     private static void sort(int[] arr, int l, int r) {

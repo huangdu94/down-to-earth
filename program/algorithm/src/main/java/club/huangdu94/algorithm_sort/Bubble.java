@@ -28,8 +28,8 @@ public class Bubble {
             }
         }
         long end = System.currentTimeMillis();
-        System.out.println(String.format("冒泡排序耗时: %s ms", end - start));
-        System.out.println(String.format("排序结果: %s", Arrays.toString(nums)));
+        System.out.printf("冒泡排序耗时: %s ms%n", end - start);
+        System.out.printf("排序结果: %s%n", Arrays.toString(nums));
     }
 
     public static void sort2(int[] nums) {
@@ -49,7 +49,7 @@ public class Bubble {
             }
         }
         long end = System.currentTimeMillis();
-        System.out.println(String.format("优化版冒泡排序耗时: %s ms", end - start));
-        System.out.println(String.format("排序结果: %s", Arrays.toString(nums)));
+        System.out.printf("优化版冒泡排序耗时: %s ms%n", end - start);
+        System.out.printf("排序结果: %s%n", Arrays.toString(nums));
     }
 }

@@ -52,8 +52,8 @@ public class Bucket {
             }
         }
         long end = System.currentTimeMillis();
-        System.out.println(String.format("桶排序耗时: %s ms", end - start));
-        System.out.println(String.format("排序结果: %s", Arrays.toString(nums)));
+        System.out.printf("桶排序耗时: %s ms%n", end - start);
+        System.out.printf("排序结果: %s%n", Arrays.toString(nums));
     }
 
     private static void insertion(List<Integer> bucket) {

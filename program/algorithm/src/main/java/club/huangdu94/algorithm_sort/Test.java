@@ -52,7 +52,7 @@ public class Test {
         }
         // 测试数据加负数
         nums[len] = -1;
-        System.out.println(String.format("测试数据：%s", Arrays.toString(nums)));
+        System.out.printf("测试数据：%s%n", Arrays.toString(nums));
         return nums;
     }
 
@@ -60,7 +60,7 @@ public class Test {
         long start = System.currentTimeMillis();
         Arrays.sort(nums);
         long end = System.currentTimeMillis();
-        System.out.println(String.format("Arrays.sort()排序耗时: %s ms", end - start));
-        System.out.println(String.format("排序结果: %s", Arrays.toString(nums)));
+        System.out.printf("Arrays.sort()排序耗时: %s ms%n", end - start);
+        System.out.printf("排序结果: %s%n", Arrays.toString(nums));
     }
 }

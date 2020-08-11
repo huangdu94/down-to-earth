@@ -41,7 +41,7 @@ public class Counting {
             }
         }
         long end = System.currentTimeMillis();
-        System.out.println(String.format("计数排序耗时: %s ms", end - start));
-        System.out.println(String.format("排序结果: %s", Arrays.toString(nums)));
+        System.out.printf("计数排序耗时: %s ms%n", end - start);
+        System.out.printf("排序结果: %s%n", Arrays.toString(nums));
     }
 }

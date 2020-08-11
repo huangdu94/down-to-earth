@@ -19,16 +19,16 @@ public class Quick {
         long start = System.currentTimeMillis();
         quick(nums, 0, nums.length - 1);
         long end = System.currentTimeMillis();
-        System.out.println(String.format("快速排序耗时: %s ms", end - start));
-        System.out.println(String.format("排序结果: %s", Arrays.toString(nums)));
+        System.out.printf("快速排序耗时: %s ms%n", end - start);
+        System.out.printf("排序结果: %s%n", Arrays.toString(nums));
     }
 
     public static void sort2(int[] nums) {
         long start = System.currentTimeMillis();
         quick2(nums, 0, nums.length - 1);
         long end = System.currentTimeMillis();
-        System.out.println(String.format("快速排序(版本2)耗时: %s ms", end - start));
-        System.out.println(String.format("排序结果: %s", Arrays.toString(nums)));
+        System.out.printf("快速排序(版本2)耗时: %s ms%n", end - start);
+        System.out.printf("排序结果: %s%n", Arrays.toString(nums));
     }
 
     private static void quick(int[] arr, int l, int r) {
