@@ -19,6 +19,18 @@ import java.util.Arrays;
  * @version 2020/7/20 17:29
  */
 public class CoinChange {
+    public int coinChange(int[] coins, int amount) {
+        int[] dp = new int[amount + 1];
+        for (int target = 1; target <= amount; target++) {
+            int min = -1;
+            for (int coin : coins)
+                if (target - coin >= 0 && dp[target - coin] != -1
+                        && (min == -1 || min > dp[target - coin]))
+                    min = dp[target - coin] + 1;
+            dp[target] = min;
+        }
+        return dp[amount];
+    }
 
     /**
      * 求最少硬币的组合方法,如果没有则返回-1
@@ -39,7 +51,7 @@ public class CoinChange {
      * 直到k>j/coins[i-1]循环结束
      * 都为-1时则返回-1，否则返回不是-1中的最小值
      */
-    public int coinChange(int[] coins, int amount) {
+    public int coinChange4(int[] coins, int amount) {
         if (amount < 0 || coins == null)
             return -1;
         int len = coins.length;
@@ -189,8 +201,8 @@ public class CoinChange {
     }
 
     public static void main(String[] args) {
-        int[] coins = {};
-        int amount = 0;
+        int[] coins = {2};
+        int amount = 3;
         CoinChange coinChange = new CoinChange();
         int result = coinChange.coinChange(coins, amount);
         System.out.println(result);
