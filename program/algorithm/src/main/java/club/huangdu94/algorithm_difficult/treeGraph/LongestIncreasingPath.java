@@ -28,6 +28,44 @@ package club.huangdu94.algorithm_difficult.treeGraph;
  */
 public class LongestIncreasingPath {
     public int longestIncreasingPath(int[][] matrix) {
-        return -1;
+        if (matrix == null || matrix.length == 0 || matrix[0] == null || matrix[0].length == 0)
+            return 0;
+        int len, max = 0, m = matrix.length, n = matrix[0].length;
+        // 没有遍历过的点为0，遍历过的点其数字即为从这点开始最长的递增路径长度
+        int[][] visited = new int[m][n];
+        // 选择没有遍历过的点开始遍历
+        for (int i = 0; i < m; i++) {
+            for (int j = 0; j < n; j++) {
+                if (visited[i][j] == 0) {
+                    len = dfs(matrix, visited, m, n, i, j);
+                    if (len > max) max = len;
+                }
+            }
+        }
+        return max;
+    }
+
+    // 深度优先搜索
+    private int dfs(int[][] matrix, int[][] visited, int m, int n, int i, int j) {
+        if (visited[i][j] != 0) return visited[i][j];
+        int len, max = 0, cur = matrix[i][j];
+        if (i - 1 >= 0 && matrix[i - 1][j] > cur) {
+            len = dfs(matrix, visited, m, n, i - 1, j);
+            if (len > max) max = len;
+        }
+        if (i + 1 < m && matrix[i + 1][j] > cur) {
+            len = dfs(matrix, visited, m, n, i + 1, j);
+            if (len > max) max = len;
+        }
+        if (j - 1 >= 0 && matrix[i][j - 1] > cur) {
+            len = dfs(matrix, visited, m, n, i, j - 1);
+            if (len > max) max = len;
+        }
+        if (j + 1 < n && matrix[i][j + 1] > cur) {
+            len = dfs(matrix, visited, m, n, i, j + 1);
+            if (len > max) max = len;
+        }
+        visited[i][j] = max + 1;
+        return max + 1;
     }
 }
