@@ -112,19 +112,6 @@ public class Codec {
 // Codec codec = new Codec();
 // codec.deserialize(codec.serialize(root));
 
-/**
- * Definition for a binary tree node.
- */
-class TreeNode {
-    int val;
-    TreeNode left;
-    TreeNode right;
-
-    TreeNode(int x) {
-        val = x;
-    }
-}
-
 class Codec2 {
     // Encodes a tree to a single string.
     public String serialize(TreeNode root) {
