@@ -33,10 +33,45 @@ import java.util.*;
  * @version 2020/8/4 12:06
  */
 public class LadderLength {
+
+    public int ladderLength(String beginWord, String endWord, List<String> wordList) {
+        // 转换map，key:单词，value:可转换单词列表
+        Map<String, List<String>> transformMap = new HashMap<>(wordList.size());
+        List<String> transformList;
+        for (String word : wordList) {
+            transformList = new ArrayList<>();
+            for (String transform : wordList) {
+                if (!transform.equals(word)) {
+                    if (filter(word, transform)) {
+                        transformList.add(transform);
+                    }
+                }
+            }
+            transformMap.put(word, transformList);
+        }
+        return -1;
+    }
+
+    /**
+     * 过滤器
+     *
+     * @param curWord 当前单词
+     * @param target  目标单词
+     * @return 是否满足过滤条件(只有一个字母不一样则满足条件)
+     */
+    private boolean filter(String curWord, String target) {
+        int count = 0;
+        for (int i = 0; i < curWord.length(); i++)
+            if (curWord.charAt(i) != target.charAt(i))
+                if (++count > 1)
+                    return false;
+        return count == 1;
+    }
+
     // 结果
     private int result = 0;
 
-    public int ladderLength(String beginWord, String endWord, List<String> wordList) {
+    public int ladderLength_old(String beginWord, String endWord, List<String> wordList) {
         // 如果wordList中根本就没有beginWord则不可能转换，无需递归
         boolean flag = false;
         for (String word : wordList)
@@ -107,22 +142,6 @@ public class LadderLength {
             }
         }
         return false;
-    }
-
-    /**
-     * 过滤器
-     *
-     * @param curWord 当前单词
-     * @param target  目标单词
-     * @return 是否满足过滤条件(只有一个字母不一样则满足条件)
-     */
-    private boolean filter(String curWord, String target) {
-        int count = 0;
-        for (int i = 0; i < curWord.length(); i++)
-            if (curWord.charAt(i) != target.charAt(i))
-                if (++count > 1)
-                    return false;
-        return count == 1;
     }
 
     public static void main(String[] args) {
