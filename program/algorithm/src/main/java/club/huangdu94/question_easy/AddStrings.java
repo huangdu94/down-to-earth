@@ -23,7 +23,6 @@ public class AddStrings {
             int s = n1 + n2 + carry;
             carry = s / 10;
             sum[index--] = intToChar(s % 10);
-            if (carry == 0 && j < 0) break;
         }
         return num1.substring(0, i + 1) + new String(sum, index + 1, sum.length - 1 - index);
     }
