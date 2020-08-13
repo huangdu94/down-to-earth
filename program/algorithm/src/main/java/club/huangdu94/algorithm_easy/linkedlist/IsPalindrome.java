@@ -1,5 +1,7 @@
 package club.huangdu94.algorithm_easy.linkedlist;
 
+import club.huangdu94.data_structure.ListNode;
+
 /**
  * 回文链表
  * 请判断一个链表是否为回文链表。

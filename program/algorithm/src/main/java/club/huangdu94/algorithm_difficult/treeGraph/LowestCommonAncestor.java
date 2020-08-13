@@ -1,5 +1,7 @@
 package club.huangdu94.algorithm_difficult.treeGraph;
 
+import club.huangdu94.data_structure.TreeNode;
+
 /**
  * 二叉树的最近公共祖先
  * 给定一个二叉树, 找到该树中两个指定节点的最近公共祖先。
@@ -29,16 +31,5 @@ public class LowestCommonAncestor {
         if (left != null && right != null) return root;
         if (left != null) return left;
         return right;
-    }
-}
-
-//Definition for a binary tree node.
-class TreeNode {
-    int val;
-    TreeNode left;
-    TreeNode right;
-
-    TreeNode(int x) {
-        val = x;
     }
 }

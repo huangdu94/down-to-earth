@@ -1,5 +1,7 @@
 package club.huangdu94.algorithm_middle.linkedlist;
 
+import club.huangdu94.data_structure.ListNode;
+
 /**
  * 奇偶链表
  * 给定一个单链表，把所有的奇数节点和偶数节点分别排在一起。请注意，这里的奇数节点和偶数节点指的是节点编号的奇偶性，而不是节点的值的奇偶性。
@@ -18,24 +20,6 @@ package club.huangdu94.algorithm_middle.linkedlist;
  * @version 2020/7/4 19:14
  */
 public class OddEvenList {
-    // Definition for singly-linked list.
-    public static class ListNode {
-        int val;
-        ListNode next;
-
-        ListNode() {
-        }
-
-        ListNode(int val) {
-            this.val = val;
-        }
-
-        ListNode(int val, ListNode next) {
-            this.val = val;
-            this.next = next;
-        }
-    }
-
     public ListNode oddEvenList(ListNode head) {
         if (head == null)
             return null;

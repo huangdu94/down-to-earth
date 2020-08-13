@@ -1,5 +1,7 @@
 package club.huangdu94.question_easy;
 
+import club.huangdu94.data_structure.TreeNode;
+
 /**
  * 111. 二叉树的最小深度
  * 给定一个二叉树，找出其最小深度。
@@ -18,17 +20,6 @@ package club.huangdu94.question_easy;
  * @version 2020/8/8 22:55
  */
 public class MinDepth {
-    //Definition for a binary tree node.
-    private static class TreeNode {
-        int val;
-        TreeNode left;
-        TreeNode right;
-
-        TreeNode(int x) {
-            val = x;
-        }
-    }
-
     /*
     public int minDepth(TreeNode root) {
         if (root == null) return 0;

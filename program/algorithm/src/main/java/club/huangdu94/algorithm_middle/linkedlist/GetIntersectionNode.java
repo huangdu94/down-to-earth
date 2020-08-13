@@ -1,5 +1,7 @@
 package club.huangdu94.algorithm_middle.linkedlist;
 
+import club.huangdu94.data_structure.ListNode;
+
 /**
  * 相交链表
  *
@@ -7,17 +9,6 @@ package club.huangdu94.algorithm_middle.linkedlist;
  * @version 2020/7/4 19:16
  */
 public class GetIntersectionNode {
-    // Definition for singly-linked list.
-    public static class ListNode {
-        int val;
-        ListNode next;
-
-        ListNode(int x) {
-            val = x;
-            next = null;
-        }
-    }
-
     public ListNode getIntersectionNode(ListNode headA, ListNode headB) {
         if (headA == null || headB == null)
             return null;
@@ -70,8 +61,6 @@ public class GetIntersectionNode {
         ListNode node1 = new ListNode(1);
         ListNode node2 = new ListNode(2);
         node1.next = node2;
-        ListNode headA = node1;
-        ListNode headB = node2;
-        System.out.println(new GetIntersectionNode().getIntersectionNode(headA, headB).val);
+        System.out.println(new GetIntersectionNode().getIntersectionNode(node1, node2).val);
     }
 }

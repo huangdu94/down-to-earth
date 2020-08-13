@@ -1,7 +1,7 @@
 package club.huangdu94.algorithm_difficult.treeGraph;
 
 import club.huangdu94.algorithm_middle.design.Codec;
-import club.huangdu94.algorithm_middle.design.TreeNode;
+import club.huangdu94.data_structure.TreeNode;
 
 /**
  * 二叉树中的最大路径和

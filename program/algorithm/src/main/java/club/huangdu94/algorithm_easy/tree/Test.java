@@ -1,5 +1,7 @@
 package club.huangdu94.algorithm_easy.tree;
 
+import club.huangdu94.data_structure.TreeNode;
+
 /**
  * 测试类
  *
@@ -32,21 +34,5 @@ public class Test {
 //        new Symmetric().isSymmetric(root);
 
         new SortedArrayToBST().sortedArrayToBST(new int[]{1, 2, 3});
-    }
-}
-
-/**
- * Definition for a binary tree node.
- *
- * @author duhuang@iflytek.com
- * @version 2020/6/22 17:02
- */
-class TreeNode {
-    int val;
-    club.huangdu94.algorithm_easy.tree.TreeNode left;
-    club.huangdu94.algorithm_easy.tree.TreeNode right;
-
-    TreeNode(int x) {
-        val = x;
     }
 }

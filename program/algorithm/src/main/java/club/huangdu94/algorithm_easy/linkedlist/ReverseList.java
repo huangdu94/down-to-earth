@@ -1,5 +1,7 @@
 package club.huangdu94.algorithm_easy.linkedlist;
 
+import club.huangdu94.data_structure.ListNode;
+
 /**
  * 反转链表
  * 反转一个单链表。

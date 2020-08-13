@@ -1,5 +1,7 @@
 package club.huangdu94.question_easy;
 
+import club.huangdu94.data_structure.TreeNode;
+
 /**
  * 110. 平衡二叉树
  * 给定一个二叉树，判断它是否是高度平衡的二叉树。
@@ -28,17 +30,6 @@ package club.huangdu94.question_easy;
  * @version 2020/8/8 22:40
  */
 public class IsBalanced {
-    //Definition for a binary tree node.
-    private static class TreeNode {
-        int val;
-        TreeNode left;
-        TreeNode right;
-
-        TreeNode(int x) {
-            val = x;
-        }
-    }
-
     public boolean isBalanced(TreeNode root) {
         return isBalanced(root, 1) != -1;
     }

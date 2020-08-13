@@ -1,5 +1,7 @@
 package club.huangdu94.algorithm_difficult.linkedlist;
 
+import club.huangdu94.data_structure.ListNode;
+
 import java.util.Arrays;
 import java.util.Comparator;
 import java.util.PriorityQueue;
@@ -225,15 +227,5 @@ public class MergeKLists {
         MergeKLists mergeKLists = new MergeKLists();
         ListNode head = mergeKLists.mergeKLists(lists2);
         System.out.println(Arrays.toString(lists));
-    }
-}
-
-//Definition for singly-linked list.
-class ListNode {
-    int val;
-    ListNode next;
-
-    ListNode(int x) {
-        val = x;
     }
 }

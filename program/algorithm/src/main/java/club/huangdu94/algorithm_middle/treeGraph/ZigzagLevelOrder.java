@@ -1,5 +1,7 @@
 package club.huangdu94.algorithm_middle.treeGraph;
 
+import club.huangdu94.data_structure.TreeNode;
+
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Stack;
@@ -25,17 +27,6 @@ import java.util.Stack;
  * @version 2020/7/5 19:30
  */
 public class ZigzagLevelOrder {
-    // Definition for a binary tree node.
-    public static class TreeNode {
-        int val;
-        TreeNode left;
-        TreeNode right;
-
-        TreeNode(int x) {
-            val = x;
-        }
-    }
-
     public List<List<Integer>> zigzagLevelOrder(TreeNode root) {
         List<List<Integer>> orderList = new ArrayList<>();
         if (root == null)

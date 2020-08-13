@@ -1,5 +1,7 @@
 package club.huangdu94.algorithm_easy.linkedlist;
 
+import club.huangdu94.data_structure.ListNode;
+
 /**
  * 删除链表中的节点
  * 请编写一个函数，使其可以删除某个链表中给定的（非末尾）节点，你将只被给定要求被删除的节点。
@@ -33,25 +35,5 @@ public class DeleteNode {
         // }
         node.val = node.next.val;
         node.next = node.next.next;
-    }
-}
-
-// Definition for singly-linked list.
-class ListNode {
-    int val;
-    ListNode next;
-
-    // 只有MergeTwoLists可以使用
-    ListNode() {
-    }
-
-    ListNode(int x) {
-        val = x;
-    }
-
-    // 只有MergeTwoLists可以使用
-    ListNode(int val, ListNode next) {
-        this.val = val;
-        this.next = next;
     }
 }

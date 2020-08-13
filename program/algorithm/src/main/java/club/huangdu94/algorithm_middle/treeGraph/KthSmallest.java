@@ -1,5 +1,7 @@
 package club.huangdu94.algorithm_middle.treeGraph;
 
+import club.huangdu94.data_structure.TreeNode;
+
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Stack;
@@ -34,26 +36,6 @@ import java.util.Stack;
  * @version 2020/7/7 18:56
  */
 public class KthSmallest {
-    // Definition for a binary tree node.
-    public class TreeNode {
-        int val;
-        TreeNode left;
-        TreeNode right;
-
-        TreeNode() {
-        }
-
-        TreeNode(int val) {
-            this.val = val;
-        }
-
-        TreeNode(int val, TreeNode left, TreeNode right) {
-            this.val = val;
-            this.left = left;
-            this.right = right;
-        }
-    }
-
     public int kthSmallest(TreeNode root, int k) {
         List<Integer> inorder = new ArrayList<>();
         TreeNode pre;

@@ -1,5 +1,7 @@
 package club.huangdu94.question_easy;
 
+import club.huangdu94.data_structure.TreeNode;
+
 /**
  * 112. 路径总和
  * 给定一个二叉树和一个目标和，判断该树中是否存在根节点到叶子节点的路径，这条路径上所有节点值相加等于目标和。
@@ -19,17 +21,6 @@ package club.huangdu94.question_easy;
  * @version 2020/8/9 17:54
  */
 public class HasPathSum {
-    // Definition for a binary tree node.
-    private static class TreeNode {
-        int val;
-        TreeNode left;
-        TreeNode right;
-
-        TreeNode(int x) {
-            val = x;
-        }
-    }
-
     // 递归
     public boolean hasPathSum(TreeNode root, int sum) {
         if (root == null) return false;

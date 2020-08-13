@@ -1,5 +1,7 @@
 package club.huangdu94.algorithm_easy.linkedlist;
 
+import club.huangdu94.data_structure.ListNode;
+
 /**
  * 环形链表
  * 给定一个链表，判断链表中是否有环。

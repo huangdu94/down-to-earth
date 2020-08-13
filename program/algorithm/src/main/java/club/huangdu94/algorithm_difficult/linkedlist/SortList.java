@@ -1,5 +1,7 @@
 package club.huangdu94.algorithm_difficult.linkedlist;
 
+import club.huangdu94.data_structure.ListNode;
+
 /**
  * 排序链表
  * 在O(n log n) 时间复杂度和常数级空间复杂度下，对链表进行排序。

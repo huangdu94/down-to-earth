@@ -1,5 +1,7 @@
 package club.huangdu94.question_easy;
 
+import club.huangdu94.data_structure.TreeNode;
+
 import java.util.LinkedList;
 import java.util.Queue;
 
@@ -73,25 +75,5 @@ public class IsSameTree {
         q.left = new TreeNode(2);
         q.right = new TreeNode(3);
         System.out.println(isSameTree.isSameTree(p, q));
-    }
-
-    //Definition for a binary tree node.
-    private static class TreeNode {
-        int val;
-        TreeNode left;
-        TreeNode right;
-
-        TreeNode() {
-        }
-
-        TreeNode(int val) {
-            this.val = val;
-        }
-
-        TreeNode(int val, TreeNode left, TreeNode right) {
-            this.val = val;
-            this.left = left;
-            this.right = right;
-        }
     }
 }

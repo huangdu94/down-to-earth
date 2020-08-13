@@ -1,5 +1,7 @@
 package club.huangdu94.question_easy;
 
+import club.huangdu94.data_structure.TreeNode;
+
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
@@ -25,17 +27,6 @@ import java.util.List;
  * @version 2020/8/8 22:25
  */
 public class LevelOrderBottom {
-    //Definition for a binary tree node.
-    private static class TreeNode {
-        int val;
-        TreeNode left;
-        TreeNode right;
-
-        TreeNode(int x) {
-            val = x;
-        }
-    }
-
     private final List<List<Integer>> list = new ArrayList<>();
 
     public List<List<Integer>> levelOrderBottom(TreeNode root) {
