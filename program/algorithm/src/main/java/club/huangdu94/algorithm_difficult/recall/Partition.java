@@ -1,5 +1,6 @@
 package club.huangdu94.algorithm_difficult.recall;
 
+import java.util.ArrayList;
 import java.util.List;
 
 /**
@@ -18,7 +19,46 @@ import java.util.List;
  * @version 2020/8/13 13:59
  */
 public class Partition {
+    private final List<List<String>> res = new ArrayList<>();
+    private final List<String> combination = new ArrayList<>();
+
     public List<List<String>> partition(String s) {
-        return null;
+        if (s == null || s.length() == 0) return res;
+        recall(s, 0);
+        return res;
+    }
+
+    /**
+     * 回溯方法
+     *
+     * @param s     字符串
+     * @param start 当前位置
+     */
+    private void recall(String s, int start) {
+        for (int end = start + 1; end <= s.length(); end++) {
+            if (isPlalindrome(s, start, end - 1)) {
+                combination.add(s.substring(start, end));
+                if (end == s.length()) {
+                    res.add(new ArrayList<>(combination));
+                } else {
+                    recall(s, end);
+                }
+                combination.remove(combination.size() - 1);
+            }
+        }
+    }
+
+    /**
+     * 判断字符串[i,j]子串是否为回文串
+     *
+     * @param s 字符串
+     * @param i 子串开始
+     * @param j 子串结尾
+     * @return 是否为回文串
+     */
+    private boolean isPlalindrome(String s, int i, int j) {
+        while (i < j)
+            if (s.charAt(i++) != s.charAt(j--)) return false;
+        return true;
     }
 }
