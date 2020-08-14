@@ -1,8 +1,5 @@
 package club.huangdu94.exploration.advanced_algorithms.design;
 
-import java.util.ArrayList;
-import java.util.List;
-
 /**
  * 实现 Trie (前缀树)
  * 实现一个 Trie (前缀树)，包含insert,search, 和startsWith这三个操作。
@@ -22,37 +19,92 @@ import java.util.List;
  * @version 2020/8/14 12:04
  */
 public class Trie {
-    private final List<String> datalist;
+    /**
+     * Letter count.
+     */
+    private static final int LETTER_COUNT = 26;
+
+    /**
+     * Trie root.
+     */
+    private final TrieNode root = new TrieNode();
 
     /**
      * Initialize your data structure here.
      */
     public Trie() {
-        datalist = new ArrayList<>();
     }
 
     /**
      * Inserts a word into the trie.
      */
     public void insert(String word) {
-        datalist.add(word);
+        if (word == null || word.isEmpty()) return;
+        TrieNode cur = root;
+        for (int i = 0; i < word.length(); i++) {
+            char c = word.charAt(i);
+            if (cur.sons[charToIndex(c)] == null)
+                cur.sons[charToIndex(c)] = new TrieNode();
+            cur = cur.sons[charToIndex(c)];
+        }
+        cur.end = true;
     }
 
     /**
      * Returns if the word is in the trie.
      */
     public boolean search(String word) {
-        return datalist.contains(word);
+        if (word == null || word.isEmpty()) return true;
+        TrieNode cur = root;
+        for (int i = 0; i < word.length(); i++) {
+            char c = word.charAt(i);
+            if (cur.sons[charToIndex(c)] == null) return false;
+            cur = cur.sons[charToIndex(c)];
+        }
+        return cur.end;
     }
 
     /**
      * Returns if there is any word in the trie that starts with the given prefix.
      */
     public boolean startsWith(String prefix) {
-        for (String word : datalist) {
-            if (word.startsWith(prefix)) return true;
+        if (prefix == null || prefix.isEmpty()) return true;
+        TrieNode cur = root;
+        for (int i = 0; i < prefix.length(); i++) {
+            char c = prefix.charAt(i);
+            if (cur.sons[charToIndex(c)] == null) return false;
+            cur = cur.sons[charToIndex(c)];
         }
-        return false;
+        return true;
+    }
+
+    /**
+     * Transform letter to index.
+     *
+     * @param c letter
+     * @return index
+     */
+    private static int charToIndex(char c) {
+        return c - 'a';
+    }
+
+    /**
+     * Trie node.
+     */
+    private static class TrieNode {
+        TrieNode[] sons = new TrieNode[LETTER_COUNT];
+        boolean end = false;
+
+        TrieNode() {
+        }
+    }
+
+    public static void main(String[] args) {
+        Trie trie = new Trie();
+        trie.insert("app");
+        trie.insert("apps");
+        trie.insert("apple");
+        System.out.println(trie.search("app"));
     }
 }
 /**
