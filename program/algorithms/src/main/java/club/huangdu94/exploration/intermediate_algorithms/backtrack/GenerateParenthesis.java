@@ -1,4 +1,4 @@
-package club.huangdu94.exploration.intermediate_algorithms.recall;
+package club.huangdu94.exploration.intermediate_algorithms.backtrack;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -24,8 +24,8 @@ public class GenerateParenthesis {
         List<String> result = new ArrayList<>();
         if (n < 1)
             return result;
-        //this.recall(n, 0, 0, result, "");
-        this.recall2(n, 0, 0, result, new char[n * 2], 0);
+        //this.backtrack(n, 0, 0, result, "");
+        this.backtrack2(n, 0, 0, result, new char[n * 2], 0);
         return result;
     }
 
@@ -38,18 +38,18 @@ public class GenerateParenthesis {
      * @param resultList 结果list
      * @param pre        上一个深度生成的字符串
      */
-    private void recall(int n, int count, int i, List<String> resultList, String pre) {
+    private void backtrack(int n, int count, int i, List<String> resultList, String pre) {
         if (count == n) {
             resultList.add(pre);
             return;
         }
         if (i == 0) {
-            this.recall(n, count, i + 1, resultList, pre + '(');
+            this.backtrack(n, count, i + 1, resultList, pre + '(');
         } else if (i == n - count) {
-            this.recall(n, count + 1, i - 1, resultList, pre + ')');
+            this.backtrack(n, count + 1, i - 1, resultList, pre + ')');
         } else {
-            this.recall(n, count, i + 1, resultList, pre + '(');
-            this.recall(n, count + 1, i - 1, resultList, pre + ')');
+            this.backtrack(n, count, i + 1, resultList, pre + '(');
+            this.backtrack(n, count + 1, i - 1, resultList, pre + ')');
         }
     }
 
@@ -63,22 +63,22 @@ public class GenerateParenthesis {
      * @param pre        字符数组
      * @param index      记录index
      */
-    private void recall2(int n, int count, int i, List<String> resultList, char[] pre, int index) {
+    private void backtrack2(int n, int count, int i, List<String> resultList, char[] pre, int index) {
         if (count == n) {
             resultList.add(new String(pre));
             return;
         }
         if (i == 0) {
             pre[index] = '(';
-            this.recall2(n, count, i + 1, resultList, pre, index + 1);
+            this.backtrack2(n, count, i + 1, resultList, pre, index + 1);
         } else if (i == n - count) {
             pre[index] = ')';
-            this.recall2(n, count + 1, i - 1, resultList, pre, index + 1);
+            this.backtrack2(n, count + 1, i - 1, resultList, pre, index + 1);
         } else {
             pre[index] = '(';
-            this.recall2(n, count, i + 1, resultList, pre, index + 1);
+            this.backtrack2(n, count, i + 1, resultList, pre, index + 1);
             pre[index] = ')';
-            this.recall2(n, count + 1, i - 1, resultList, pre, index + 1);
+            this.backtrack2(n, count + 1, i - 1, resultList, pre, index + 1);
         }
     }
 

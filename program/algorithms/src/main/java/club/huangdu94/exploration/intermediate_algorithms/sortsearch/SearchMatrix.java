@@ -58,10 +58,10 @@ public class SearchMatrix {
         int m = matrix.length;
         int n = matrix[0].length;
         boolean[][] haveStep = new boolean[m][n];
-        return recall(matrix, haveStep, 0, 0, m - 1, n - 1, target);
+        return backtrack(matrix, haveStep, 0, 0, m - 1, n - 1, target);
     }
 
-    private boolean recall(int[][] matrix, boolean[][] haveStep, int i, int j, int m, int n, int target) {
+    private boolean backtrack(int[][] matrix, boolean[][] haveStep, int i, int j, int m, int n, int target) {
         int cur = matrix[i][j];
         haveStep[i][j] = true;
         if (cur == target)
@@ -69,9 +69,9 @@ public class SearchMatrix {
         boolean flag = false;
         if (cur < target) {
             if (i + 1 <= m && !haveStep[i + 1][j])
-                flag = recall(matrix, haveStep, i + 1, j, m, n, target);
+                flag = backtrack(matrix, haveStep, i + 1, j, m, n, target);
             if (!flag && j + 1 <= n && !haveStep[i][j + 1])
-                flag = recall(matrix, haveStep, i, j + 1, m, n, target);
+                flag = backtrack(matrix, haveStep, i, j + 1, m, n, target);
         }
         return flag;
     }

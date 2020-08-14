@@ -1,4 +1,4 @@
-package club.huangdu94.exploration.intermediate_algorithms.recall;
+package club.huangdu94.exploration.intermediate_algorithms.backtrack;
 
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -27,12 +27,12 @@ public class Permute {
         List<List<Integer>> result = new ArrayList<>();
         if (nums == null || nums.length < 1)
             return result;
-        //this.recall(nums, new boolean[nums.length], result, new ArrayList<>());
-        //this.recall2(nums, new boolean[nums.length], result, new ArrayList<>());
+        //this.backtrack(nums, new boolean[nums.length], result, new ArrayList<>());
+        //this.backtrack2(nums, new boolean[nums.length], result, new ArrayList<>());
         List<Integer> numList = new ArrayList<>();
         for (int n : nums)
             numList.add(n);
-        this.recall3(numList, result, new ArrayList<>());
+        this.backtrack3(numList, result, new ArrayList<>());
         return result;
     }
 
@@ -44,7 +44,7 @@ public class Permute {
      * @param resultList 结果list
      * @param permute    一个排序list
      */
-    private void recall(int[] nums, boolean[] used, List<List<Integer>> resultList, List<Integer> permute) {
+    private void backtrack(int[] nums, boolean[] used, List<List<Integer>> resultList, List<Integer> permute) {
         boolean flag = false;
         for (boolean b : used) {
             if (!b) {
@@ -61,7 +61,7 @@ public class Permute {
                 used_copy[i] = true;
                 List<Integer> permute_copy = new ArrayList<>(permute);
                 permute_copy.add(nums[i]);
-                this.recall(nums, used_copy, resultList, permute_copy);
+                this.backtrack(nums, used_copy, resultList, permute_copy);
             }
         } else {
             resultList.add(permute);
@@ -76,7 +76,7 @@ public class Permute {
      * @param resultList 结果list
      * @param permute    一个排序list
      */
-    private void recall2(int[] nums, boolean[] used, List<List<Integer>> resultList, List<Integer> permute) {
+    private void backtrack2(int[] nums, boolean[] used, List<List<Integer>> resultList, List<Integer> permute) {
         if (permute.size() == nums.length) {
             resultList.add(new ArrayList<>(permute));
             return;
@@ -87,7 +87,7 @@ public class Permute {
             }
             used[i] = true;
             permute.add(nums[i]);
-            this.recall2(nums, used, resultList, permute);
+            this.backtrack2(nums, used, resultList, permute);
             used[i] = false;
             permute.remove(permute.size() - 1);
         }
@@ -100,7 +100,7 @@ public class Permute {
      * @param resultList 结果list
      * @param permute    一个排序list
      */
-    private void recall3(List<Integer> numList, List<List<Integer>> resultList, List<Integer> permute) {
+    private void backtrack3(List<Integer> numList, List<List<Integer>> resultList, List<Integer> permute) {
         if (numList.size() == 0) {
             resultList.add(new ArrayList<>(permute));
             return;
@@ -108,7 +108,7 @@ public class Permute {
         for (int i = 0; i < numList.size(); i++) {
             permute.add(numList.get(i));
             int element = numList.remove(i);
-            this.recall3(numList, resultList, permute);
+            this.backtrack3(numList, resultList, permute);
             permute.remove(permute.size() - 1);
             numList.add(i, element);
         }

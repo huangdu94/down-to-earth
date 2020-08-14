@@ -1,4 +1,4 @@
-package club.huangdu94.exploration.intermediate_algorithms.recall;
+package club.huangdu94.exploration.intermediate_algorithms.backtrack;
 
 /**
  * 单词搜索

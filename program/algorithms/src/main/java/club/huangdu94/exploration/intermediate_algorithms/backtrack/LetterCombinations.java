@@ -1,4 +1,4 @@
-package club.huangdu94.exploration.intermediate_algorithms.recall;
+package club.huangdu94.exploration.intermediate_algorithms.backtrack;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -34,8 +34,8 @@ public class LetterCombinations {
         List<String> resultList = new ArrayList<>();
         if (digits == null || digits.length() == 0)
             return resultList;
-        //this.recall(digits.toCharArray(), 0, resultList, "");
-        this.recall2(digits.toCharArray(), 0, resultList, new char[digits.length()]);
+        //this.backtrack(digits.toCharArray(), 0, resultList, "");
+        this.backtrack2(digits.toCharArray(), 0, resultList, new char[digits.length()]);
         return resultList;
     }
 
@@ -47,13 +47,13 @@ public class LetterCombinations {
      * @param resultList 结果list
      * @param pre        上一个深度生成的字符串
      */
-    private void recall(char[] numArr, int depth, List<String> resultList, String pre) {
+    private void backtrack(char[] numArr, int depth, List<String> resultList, String pre) {
         if (depth > numArr.length - 1) {
             resultList.add(pre);
             return;
         }
         for (char c : dictionary[numArr[depth++] - '2'])
-            this.recall(numArr, depth, resultList, pre + c);
+            this.backtrack(numArr, depth, resultList, pre + c);
     }
 
     /**
@@ -64,14 +64,14 @@ public class LetterCombinations {
      * @param resultList 结果list
      * @param pre        字符数组
      */
-    private void recall2(char[] numArr, int depth, List<String> resultList, char[] pre) {
+    private void backtrack2(char[] numArr, int depth, List<String> resultList, char[] pre) {
         if (depth > numArr.length - 1) {
             resultList.add(new String(pre));
             return;
         }
         for (char c : dictionary[numArr[depth] - '2']) {
             pre[depth] = c;
-            this.recall2(numArr, depth + 1, resultList, pre);
+            this.backtrack2(numArr, depth + 1, resultList, pre);
         }
     }
 

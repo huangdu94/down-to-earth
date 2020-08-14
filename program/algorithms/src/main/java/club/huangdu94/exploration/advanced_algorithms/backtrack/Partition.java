@@ -1,4 +1,4 @@
-package club.huangdu94.exploration.advanced_algorithms.recall;
+package club.huangdu94.exploration.advanced_algorithms.backtrack;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -24,7 +24,7 @@ public class Partition {
 
     public List<List<String>> partition(String s) {
         if (s == null || s.length() == 0) return res;
-        recall(s, 0);
+        backtrack(s, 0);
         return res;
     }
 
@@ -34,14 +34,14 @@ public class Partition {
      * @param s     字符串
      * @param start 当前位置
      */
-    private void recall(String s, int start) {
+    private void backtrack(String s, int start) {
         for (int end = start + 1; end <= s.length(); end++) {
             if (isPlalindrome(s, start, end - 1)) {
                 combination.add(s.substring(start, end));
                 if (end == s.length()) {
                     res.add(new ArrayList<>(combination));
                 } else {
-                    recall(s, end);
+                    backtrack(s, end);
                 }
                 combination.remove(combination.size() - 1);
             }

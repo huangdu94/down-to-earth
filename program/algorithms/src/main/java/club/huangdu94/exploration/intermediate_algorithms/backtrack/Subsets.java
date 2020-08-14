@@ -1,4 +1,4 @@
-package club.huangdu94.exploration.intermediate_algorithms.recall;
+package club.huangdu94.exploration.intermediate_algorithms.backtrack;
 
 import java.util.*;
 
@@ -31,10 +31,10 @@ public class Subsets {
 //        List<Integer> numList = new ArrayList<>();
 //        for (int n : nums)
 //            numList.add(n);
-//        this.recall(numList, resultSet);
+//        this.backtrack(numList, resultSet);
 //        return new ArrayList<>(resultSet);
         List<List<Integer>> resultList = new ArrayList<>();
-        this.recall2(nums, 0, new ArrayList<>(), resultList);
+        this.backtrack2(nums, 0, new ArrayList<>(), resultList);
         return resultList;
     }
 
@@ -44,13 +44,13 @@ public class Subsets {
      * @param numList   数字list
      * @param resultSet 结果set
      */
-    private void recall(List<Integer> numList, Set<List<Integer>> resultSet) {
+    private void backtrack(List<Integer> numList, Set<List<Integer>> resultSet) {
         resultSet.add(new ArrayList<>(numList));
         if (numList.isEmpty())
             return;
         for (int i = 0; i < numList.size(); i++) {
             Integer element = numList.remove(i);
-            this.recall(numList, resultSet);
+            this.backtrack(numList, resultSet);
             numList.add(i, element);
         }
     }
@@ -63,15 +63,15 @@ public class Subsets {
      * @param index      当前到底几个数了
      * @param resultList 结果list
      */
-    private void recall2(int[] nums, int index, List<Integer> cur, List<List<Integer>> resultList) {
+    private void backtrack2(int[] nums, int index, List<Integer> cur, List<List<Integer>> resultList) {
         if (index == nums.length) {
             resultList.add(new ArrayList<>(cur));
             return;
         }
         cur.add(nums[index]);
-        this.recall2(nums, index + 1, cur, resultList);
+        this.backtrack2(nums, index + 1, cur, resultList);
         cur.remove(cur.size() - 1);
-        this.recall2(nums, index + 1, cur, resultList);
+        this.backtrack2(nums, index + 1, cur, resultList);
     }
 
     public static void main(String[] args) {
