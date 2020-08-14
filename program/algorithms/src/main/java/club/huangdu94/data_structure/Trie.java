@@ -40,20 +40,6 @@ public class Trie {
     }
 
     /**
-     * Search a prefix or whole key in trie and
-     * returns the node where search ends
-     */
-    public TrieNode searchPrefix(String word) {
-        TrieNode cur = root;
-        for (int i = 0; i < word.length(); i++) {
-            char ch = word.charAt(i);
-            if (cur.notContainsKey(ch)) return null;
-            cur = cur.get(ch);
-        }
-        return cur;
-    }
-
-    /**
      * Returns if the word is in the trie.
      */
     public boolean search(String word) {
@@ -70,82 +56,23 @@ public class Trie {
     }
 
     /**
-     * Trie node
+     * Returns trie root.
      */
-    private static class TrieNode {
-        /**
-         * Letter count.
-         */
-        private static final int LETTER_COUNT = 26;
+    public TrieNode getRoot() {
+        return root;
+    }
 
-        /**
-         * LETTER_COUNT links to node children.
-         */
-        private final TrieNode[] nextList;
-
-        /**
-         * Is end.
-         */
-        private boolean end;
-
-        /**
-         * Build a node.
-         */
-        public TrieNode() {
-            nextList = new TrieNode[LETTER_COUNT];
+    /**
+     * Search a prefix or whole key in trie and
+     * returns the node where search ends
+     */
+    private TrieNode searchPrefix(String word) {
+        TrieNode cur = root;
+        for (int i = 0; i < word.length(); i++) {
+            char ch = word.charAt(i);
+            if (cur.notContainsKey(ch)) return null;
+            cur = cur.get(ch);
         }
-
-        /**
-         * Returns if the letter is in the node's nextList.
-         */
-        public boolean containsKey(char ch) {
-            return nextList[ch - 'a'] != null;
-        }
-
-        /**
-         * On the contrary with containsKey.
-         */
-        public boolean notContainsKey(char ch) {
-            return nextList[ch - 'a'] == null;
-        }
-
-        /**
-         * Get next node by letter.
-         */
-        public TrieNode get(char ch) {
-            return nextList[charToIndex(ch)];
-        }
-
-        /**
-         * Create a new node by letter.
-         */
-        public void put(char ch) {
-            nextList[charToIndex(ch)] = new TrieNode();
-        }
-
-        /**
-         * Put a node at index transform by letter.
-         */
-        public void put(char ch, TrieNode node) {
-            nextList[charToIndex(ch)] = node;
-        }
-
-        /**
-         * Set node as end.
-         */
-        public void setEnd() {
-            end = true;
-        }
-
-        /**
-         * Returns if is end.
-         */
-        public boolean isEnd() {
-            return end;
-        }
-
-        private int charToIndex(char ch) {
-            return ch - 'a';
-        }
+        return cur;
     }
 }
