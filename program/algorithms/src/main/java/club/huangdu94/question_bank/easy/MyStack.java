@@ -23,6 +23,7 @@ import java.util.Queue;
  *
  * @author duhuang@iflytek.com
  * @version 2020/8/15 11:58
+ * @see MyQueue
  */
 public class MyStack {
     private final Queue<Integer> queue;
