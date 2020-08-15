@@ -122,7 +122,7 @@ public class CoinChange {
         int[] dp = new int[len];
         // 1.先贪心一遍
         int remain = greed(coins, dp, 0, len, amount);
-        // 2.第二遍贪心 TODO
+        // 2.第二遍贪心
         if (remain != 0) {
             for (int kind = len - 2; kind >= 0; kind--) {
                 int r = remain;
@@ -133,7 +133,6 @@ public class CoinChange {
                 }
             }
         }
-        // TODO
         if (remain == 0)
             return sum(dp, len);
         else
