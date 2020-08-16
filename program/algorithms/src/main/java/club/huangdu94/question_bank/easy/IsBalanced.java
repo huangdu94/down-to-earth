@@ -30,11 +30,11 @@ import club.huangdu94.data_structure.TreeNode;
  * @version 2020/8/8 22:40
  */
 public class IsBalanced {
-    public boolean isBalanced(TreeNode root) {
-        return isBalanced(root, 1) != -1;
+    public boolean isBalanced2(TreeNode root) {
+        return balanced(root) != -1;
     }
 
-    private int isBalanced(TreeNode node, int height) {
+    /*private int isBalanced(TreeNode node, int height) {
         if (node == null) return height - 1;
         int leftHeight = this.isBalanced(node.left, height + 1);
         if (leftHeight == -1) return -1;
@@ -42,5 +42,15 @@ public class IsBalanced {
         if (rightHeight == -1) return -1;
         if (Math.abs(leftHeight - rightHeight) <= 1) return Math.max(leftHeight, rightHeight);
         return -1;
+    }*/
+
+    private int balanced(TreeNode node) {
+        if (node == null) return 0;
+        int leftHeight, rightHeight;
+        if ((leftHeight = balanced(node.left)) == -1
+                || (rightHeight = balanced(node.right)) == -1
+                || Math.abs(leftHeight - rightHeight) > 1)
+            return -1;
+        return Math.max(leftHeight, rightHeight) + 1;
     }
 }
