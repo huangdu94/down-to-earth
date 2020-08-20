@@ -60,7 +60,73 @@ public class LongestPalindrome {
         return right - left - 1;
     }
 
+    public String longestPalindrome2(String s) {
+        // 边界情况
+        if (s == null || s.length() <= 1) return s;
+        int begin = 0, subLen = 1, len = s.length(), i, j;
+        for (int k = 0; k < 2 * len - subLen; k++) {
+            i = k / 2;
+            j = k / 2 + k % 2;
+            while (i >= 0 && j < len && s.charAt(i) == s.charAt(j)) {
+                i--;
+                j++;
+            }
+            if ((j - i - 1) > subLen) {
+                subLen = j - i - 1;
+                begin = i + 1;
+            }
+        }
+        return s.substring(begin, begin + subLen);
+    }
+
+    // 马拉车
+    public String longestPalindrome3(String s) {
+        if (s == null || s.length() <= 1) return s;
+        // 1. 马拉车算法预处理 开头^ 结尾$ 中间#
+        int len = s.length() * 2 + 3;
+        char[] chars = new char[len];
+        chars[0] = '^';
+        for (int i = 1; i < len - 1; i++) {
+            chars[i] = i % 2 == 1 ? '#' : s.charAt((i - 1) / 2);
+        }
+        chars[len - 1] = '$';
+        // 2. 马拉车算法计算部分
+        int[] p = new int[len];
+        int c = 0, r = 0, i_mirror;
+        for (int i = 1; i < len - 1; i++) {
+            i_mirror = 2 * c - i;
+            if (r > i) {
+                // 超过了r的部分是不可以算的
+                p[i] = Math.min(p[i_mirror], r - i);
+            } else {
+                // 如果i就超过了或者等于r的话，则p[i]赋值为0
+                // i只有在初始时才有可能小于r，其它时候只有可能等于r
+                p[i] = 0;
+            }
+            // 中心扩展法： 针对 1. i_mirror碰到了左边界 2. i碰到了右边界
+            while (chars[i + p[i] + 1] == chars[i - p[i] - 1]) {
+                p[i]++;
+            }
+            // 当i的回文右边界超过了r，更新c和r
+            if (i + p[i] > r) {
+                c = i;
+                r = i + p[i];
+            }
+        }
+        // 3. 寻找最大的子串(start开始记录中心位置，以避免重复计算)
+        int maxLen = 1, start = 0;
+        for (int i = 1; i < len - 1; i++) {
+            if (p[i] > maxLen) {
+                start = i;
+                maxLen = p[i];
+            }
+        }
+        start = (start - maxLen) / 2;
+        // 4. 返回字符串
+        return s.substring(start, start + maxLen);
+    }
+
     public static void main(String[] args) {
-        System.out.println(new LongestPalindrome().longestPalindrome("babad"));
+        System.out.println(new LongestPalindrome().longestPalindrome2("bb"));
     }
 }
