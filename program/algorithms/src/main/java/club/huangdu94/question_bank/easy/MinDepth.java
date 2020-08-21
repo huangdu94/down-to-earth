@@ -2,6 +2,9 @@ package club.huangdu94.question_bank.easy;
 
 import club.huangdu94.data_structure.TreeNode;
 
+import java.util.ArrayDeque;
+import java.util.Queue;
+
 /**
  * 111. 二叉树的最小深度
  * 给定一个二叉树，找出其最小深度。
@@ -20,18 +23,36 @@ import club.huangdu94.data_structure.TreeNode;
  * @version 2020/8/8 22:55
  */
 public class MinDepth {
-    /*
-    public int minDepth(TreeNode root) {
-        if (root == null) return 0;
-        int min = 0;
-        int left = this.minDepth(root.left);
-        if (left != 0) min = left;
-        int right = this.minDepth(root.right);
-        if (right != 0 && (min == 0 || right < min)) min = right;
-        return 1 + min;
-    }*/
 
     public int minDepth(TreeNode root) {
+        if (root == null) return 0;
+        int res = 0;
+        Queue<TreeNode> queue = new ArrayDeque<>();
+        queue.offer(root);
+        while (!queue.isEmpty()) {
+            res++;
+            int size = queue.size();
+            for (int i = 0; i < size; i++) {
+                TreeNode cur = queue.remove();
+                if (cur.left == null && cur.right == null) return res;
+                if (cur.left != null) queue.offer(cur.left);
+                if (cur.right != null) queue.offer(cur.right);
+            }
+        }
+        return -1;
+    }
+
+    public int minDepth2(TreeNode root) {
+        if (root == null) return 0;
+        int left = this.minDepth(root.left);
+        int right = this.minDepth(root.right);
+        if (left == 0 && right == 0) return 1;
+        if (right == 0) return left + 1;
+        if (left == 0) return right + 1;
+        return Math.min(left, right) + 1;
+    }
+
+    /*public int minDepth(TreeNode root) {
         if (root == null) return 0;
         if (root.left == null && root.right == null)
             return 1;
@@ -41,7 +62,7 @@ public class MinDepth {
             if (min == -1) min = this.minDepth(root.right);
             else min = Math.min(min, this.minDepth(root.right));
         return 1 + min;
-    }
+    }*/
 
     public static void main(String[] args) {
         TreeNode root = new TreeNode(1);
