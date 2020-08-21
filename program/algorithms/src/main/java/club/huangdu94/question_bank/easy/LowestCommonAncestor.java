@@ -21,7 +21,7 @@ import club.huangdu94.data_structure.TreeNode;
  *
  * @author duhuang@iflytek.com
  * @version 2020/8/15 14:41
- * @see club.huangdu94.exploration.advanced_algorithms.treeGraph.LowestCommonAncestor
+ * @see club.huangdu94.exploration.advanced_algorithms.tree_graph.LowestCommonAncestor
  */
 public class LowestCommonAncestor {
     private int pVal;
