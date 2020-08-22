@@ -22,10 +22,10 @@ import java.util.Arrays;
 public class WiggleSort {
     /*
         如果把nums分成两半，小的一半放在index为偶数位置，大的一半放在index为奇数位置则肯定满足题目要求
-        1. 分析后转换问题为，求第nums.length/2+1个最大元素记为i（小于等于它的数放在index为偶数位置即可）
+        1. 分析后转换问题为，求第nums.length/2+1个最大元素记为mid（小于等于它的数放在index为偶数位置即可）
         以上不管nums.length为偶数还是奇数都成立
         2. 采用双指针i和j，i指向index为偶数位置，j指向index为奇数位置
-        找到nums[i]>i的位置，找到nums[j]<=i的位置，交换它们，直到i或j到达末尾
+        找到nums[i]>mid的位置，找到nums[j]<=mid的位置，交换它们，直到i或j到达末尾
         时间复杂度o(n) 空间复杂度o(1)
      */
     public void wiggleSort(int[] nums) {
@@ -47,8 +47,8 @@ public class WiggleSort {
                 swap(nums, i, j);
             }
         }
-        // 3. 经过1和2处理后可以保证比i小的数都在偶数位置上（并且在i之后，i和i之前的数需要放上i）
-        // 记录i位置，偶数位置上i和i之后肯定都为i
+        // 3. 经过1和2处理后可以保证比mid小的数都在偶数位置上（并且在i之后，i和i之前的数需要放上mid）
+        // 记录i位置，偶数位置上i和i之后肯定都为mid
         j = 1;
         while (i < len) {
             while (i < len && nums[i] <= mid) {
@@ -65,7 +65,7 @@ public class WiggleSort {
         }
         // 4. 经过1、2和3后，偶数位置的数还是有可能等于奇数位置的数，所以还要进行一轮处理o(n)
         // (在第nums.length/2+1个最大元素等于nums.length/2+2个最大元素的情况下)
-        // 5. 将奇数位的i都调到末尾
+        // 5. 将奇数位的mid都调到末尾
         i = j;
         j = len - 1 - len % 2;
         while (i < j) {
@@ -79,14 +79,14 @@ public class WiggleSort {
                 swap(nums, i, j);
             }
         }
-        // 6. 将偶数位的i都调到开头
+        // 6. 将偶数位的mid都调到开头
         i = 0;
         j = len - 2 + len % 2;
         while (i < j) {
-            while (i < j && nums[j] != i) {
+            while (i < j && nums[j] != mid) {
                 j -= 2;
             }
-            while (i < j && nums[i] == i) {
+            while (i < j && nums[i] == mid) {
                 i += 2;
             }
             if (i < j) {
