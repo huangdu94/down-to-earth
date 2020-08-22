@@ -19,7 +19,10 @@ package club.huangdu94.question_bank.difficult;
  * @version 2020/8/22 12:23
  */
 public class JudgePoint24 {
-    private static final double PRECISION = 1e-6;
+    // 采用回溯算法会更优雅，用list装四个数，每次拿两个出来计算，计算结果放回去
+    // 直到list中只有个数的时候比较是否为24
+    // 有两点需要注意的：1.判断double是否相等不能用==，要用范围 2.除数等于0的情况可以直接规避
+    private static final double EPSILON = 1e-6;
     private static final int NUM_COUNT = 4;
     private static final char[] OPERATORS = {'+', '-', '*', '/'};
 
@@ -141,7 +144,7 @@ public class JudgePoint24 {
     }
 
     private boolean equal24(double n) {
-        return Math.abs(n - 24) < PRECISION;
+        return Math.abs(n - 24) < EPSILON;
     }
 
     public static void main(String[] args) {
