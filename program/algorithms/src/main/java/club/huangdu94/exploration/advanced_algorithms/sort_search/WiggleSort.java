@@ -129,8 +129,9 @@ public class WiggleSort {
         nums[i] = pivot;
         if (i < k)
             return specialQuickSort(nums, i + 1, r, k);
-        else
+        else if (i > k)
             return specialQuickSort(nums, l, i - 1, k);
+        return nums[i];
     }
 
     private void swap(int[] nums, int i, int j) {
