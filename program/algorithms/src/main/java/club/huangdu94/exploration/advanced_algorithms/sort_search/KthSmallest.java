@@ -1,5 +1,9 @@
 package club.huangdu94.exploration.advanced_algorithms.sort_search;
 
+import java.util.Comparator;
+import java.util.PriorityQueue;
+import java.util.Queue;
+
 /**
  * 有序矩阵中第K小的元素
  * 给定一个n x n矩阵，其中每行和每列元素均按升序排序，找到矩阵中第 k 小的元素。
@@ -26,6 +30,7 @@ public class KthSmallest {
     3. 对于每一层上的元素，顺序是不定的，可以先定位到目标所在的层，然后再对该层排序后寻找结果
     4. 由于是确定了找第K个最小的，所以可以使用特殊的快速排序，每次只排目标区域，时间复杂度o(n)
     */
+    /*
     public int kthSmallest(int[][] matrix, int k) {
         int n = matrix.length, d_n = 2 * n, layer = 1, sum = 1;
         // 1. 找到k所在的层数
@@ -54,7 +59,7 @@ public class KthSmallest {
         specialQuickSort(nums, 0, count - 1, k);
         // 5. 返回结果
         return nums[k];
-    }
+    }*/
 
     private void specialQuickSort(int[] nums, int l, int r, int k) {
         if (l >= r) return;
@@ -91,5 +96,61 @@ public class KthSmallest {
         int k = 3;
         int res = kthSmallest.kthSmallest(matrix, k);
         System.out.println(res);
+    }
+
+    // 1. 直接排序后返回（时间复杂度o(n^2log n)，采用特殊的快速排序时间复杂度o(n^2)）
+    public int kthSmallest1(int[][] matrix, int k) {
+        int n = matrix.length, index = 0;
+        int[] nums = new int[n * n];
+        for (int[] row : matrix) {
+            for (int num : row) {
+                nums[index++] = num;
+            }
+        }
+        specialQuickSort(nums, 0, nums.length - 1, k - 1);
+        return nums[k - 1];
+    }
+
+    // 2. 维护优先级队列，时间复杂度 k*log(n)
+    public int kthSmallest2(int[][] matrix, int k) {
+        int n = matrix.length;
+        Queue<int[]> queue = new PriorityQueue<>(Comparator.comparingInt(o -> o[0]));
+        for (int i = 0; i < n; i++) {
+            queue.offer(new int[]{matrix[i][0], i, 0});
+        }
+        for (int i = 0; i < k - 1; i++) {
+            int[] poll = queue.remove();
+            if (poll[2] != n - 1) {
+                queue.offer(new int[]{matrix[poll[1]][poll[2] + 1], poll[1], poll[2] + 1});
+            }
+        }
+        return queue.remove()[0];
+    }
+
+    // 3. 二分查找法 n*log(max-min)
+    public int kthSmallest(int[][] matrix, int k) {
+        int n = matrix.length, l = matrix[0][0], r = matrix[n - 1][n - 1];
+        while (l < r) {
+            int mid = l + ((r - l) >> 1);
+            if (k <= lessAndEqualCount(matrix, n, mid)) {
+                r = mid;
+            } else {
+                l = mid + 1;
+            }
+        }
+        return l;
+    }
+
+    private int lessAndEqualCount(int[][] matrix, int n, int mid) {
+        int i = n - 1, j = 0, count = 0;
+        while (i >= 0 && j < n) {
+            if (matrix[i][j] <= mid) {
+                count += (i + 1);
+                j++;
+            } else {
+                i--;
+            }
+        }
+        return count;
     }
 }
