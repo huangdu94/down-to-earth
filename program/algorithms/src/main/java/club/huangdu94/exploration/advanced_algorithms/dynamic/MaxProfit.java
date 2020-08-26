@@ -1,7 +1,7 @@
 package club.huangdu94.exploration.advanced_algorithms.dynamic;
 
 /**
- * 最佳买卖股票时机含冷冻期
+ * 309. 最佳买卖股票时机含冷冻期
  * 给定一个整数数组，其中第i个元素代表了第i天的股票价格 。
  * 设计一个算法计算出最大利润。在满足以下约束条件下，你可以尽可能地完成更多的交易（多次买卖一支股票）:
  * 你不能同时参与多笔交易（你必须在再次购买前出售掉之前的股票）。
@@ -13,6 +13,11 @@ package club.huangdu94.exploration.advanced_algorithms.dynamic;
  *
  * @author duhuang@iflytek.com
  * @version 2020/8/26 10:12
+ * @see club.huangdu94.exploration.primary_algorithms.array.MaxProfit
+ * @see club.huangdu94.exploration.primary_algorithms.dynamic.MaxProfit
+ * @see club.huangdu94.question_bank.medium.MaxProfit
+ * @see club.huangdu94.question_bank.difficult.MaxProfit3
+ * @see club.huangdu94.question_bank.difficult.MaxProfit4
  */
 public class MaxProfit {
     /*

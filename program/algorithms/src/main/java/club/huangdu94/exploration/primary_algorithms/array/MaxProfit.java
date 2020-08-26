@@ -3,7 +3,7 @@ package club.huangdu94.exploration.primary_algorithms.array;
 import java.util.HashSet;
 
 /**
- * 买卖股票的最佳时机 II
+ * 122. 买卖股票的最佳时机 II
  * 给定一个数组，它的第i 个元素是一支给定股票第 i 天的价格。
  * 设计一个算法来计算你所能获取的最大利润。你可以尽可能地完成更多的交易（多次买卖一支股票）。
  * 注意：你不能同时参与多笔交易（你必须在再次购买前出售掉之前的股票）。
@@ -28,6 +28,11 @@ import java.util.HashSet;
  *
  * @author duhuang@iflytek.com
  * @version 2020/7/26 15:08
+ * @see club.huangdu94.exploration.primary_algorithms.dynamic.MaxProfit
+ * @see club.huangdu94.question_bank.medium.MaxProfit
+ * @see club.huangdu94.exploration.advanced_algorithms.dynamic.MaxProfit
+ * @see club.huangdu94.question_bank.difficult.MaxProfit3
+ * @see club.huangdu94.question_bank.difficult.MaxProfit4
  */
 public class MaxProfit {
     public int maxProfit(int[] prices) {
