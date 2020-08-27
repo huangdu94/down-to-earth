@@ -1,8 +1,5 @@
 package club.huangdu94.question_bank.difficult;
 
-import java.util.ArrayList;
-import java.util.List;
-
 /**
  * 123. 买卖股票的最佳时机 III
  * 给定一个数组，它的第 i 个元素是一支给定的股票在第 i 天的价格。
@@ -35,12 +32,27 @@ import java.util.List;
 public class MaxProfit3 {
     public int maxProfit(int[] prices) {
         if (prices == null || prices.length < 2) return 0;
+        int cash1 = 0, stock1 = -prices[0], cash2 = 0, stock2 = -prices[0];
+        for (int i = 1; i < prices.length; i++) {
+            cash1 = Math.max(stock1 + prices[i], cash1);
+            stock1 = Math.max(stock1, -prices[i]);
+            cash2 = Math.max(stock2 + prices[i], cash2);
+            stock2 = Math.max(stock2, cash1 - prices[i]);
+        }
+        return cash2;
+    }
+
+/*    public int maxProfit(int[] prices) {
+        if (prices == null || prices.length < 2) return 0;
         List<Integer> valleys = new ArrayList<>();
         List<Integer> peaks = new ArrayList<>();
         int len = prices.length, i = 0, max = 0;
         while (i < len - 1) {
             while (i < len - 1 && prices[i] >= prices[i + 1]) {
                 i++;
+            }
+            if (i == len - 1) {
+                break;
             }
             valleys.add(prices[i]);
             while (i < len - 1 && prices[i] <= prices[i + 1]) {
@@ -60,12 +72,46 @@ public class MaxProfit3 {
                 selectValley[k] = valleys.get(k);
                 selectPeak[k] = peaks.get(k);
             }
+            *//*
+     * 几种情况：
+     * 1. 合并上坡：01和2; 0和12;
+     * 2. 不合并：0和1; 0和2; 1和2;
+     *//*
             for (int k = 2; k < size; k++) {
                 int value0 = selectPeak[0] - selectValley[0];
                 int value1 = selectPeak[1] - selectValley[1];
                 int value2 = peaks.get(k) - valleys.get(k);
+                int value01 = selectPeak[1] - selectValley[0];
+                int value12 = peaks.get(k) - selectValley[1];
+                max = value0 + value1;
+                max = Math.max(max, value0 + value2);
+                max = Math.max(max, value1 + value2);
+                max = Math.max(max, value01 + value2);
+                max = Math.max(max, value0 + value12);
+                if (max == value0 + value2) {
+                    selectValley[1] = valleys.get(k);
+                    selectPeak[1] = peaks.get(k);
+                } else if (max == value1 + value2) {
+                    selectValley[0] = selectValley[1];
+                    selectPeak[0] = selectPeak[1];
+                    selectValley[1] = valleys.get(k);
+                    selectPeak[1] = peaks.get(k);
+                } else if (max == value01 + value2) {
+                    selectPeak[0] = selectPeak[1];
+                    selectValley[1] = valleys.get(k);
+                    selectPeak[1] = peaks.get(k);
+                } else if (max == value0 + value12) {
+                    selectPeak[1] = peaks.get(k);
+                }
             }
         }
         return max;
+    }*/
+
+    public static void main(String[] args) {
+        MaxProfit3 maxProfit3 = new MaxProfit3();
+        int[] prices = {1, 2, 4, 2, 5, 7, 2, 4, 9, 0};
+        int max = maxProfit3.maxProfit(prices);
+        System.out.println(max);
     }
 }

@@ -1,5 +1,7 @@
 package club.huangdu94.question_bank.difficult;
 
+import java.util.Arrays;
+
 /**
  * 188. 买卖股票的最佳时机 IV
  * 给定一个数组，它的第 i 个元素是一支给定的股票在第 i 天的价格。
@@ -25,6 +27,34 @@ package club.huangdu94.question_bank.difficult;
  */
 public class MaxProfit4 {
     public int maxProfit(int k, int[] prices) {
-        return -1;
+        if (prices == null || prices.length < 2 || k <= 0) return 0;
+        int len = prices.length;
+        if (k > len / 2) {
+            int cash = 0, stock = -prices[0];
+            for (int i = 1; i < len; i++) {
+                cash = Math.max(cash, stock + prices[i]);
+                stock = Math.max(stock, cash - prices[i]);
+            }
+            return cash;
+        }
+        int[] cash = new int[k], stock = new int[k];
+        Arrays.fill(stock, -prices[0]);
+        for (int i = 1; i < len; i++) {
+            cash[0] = Math.max(cash[0], stock[0] + prices[i]);
+            stock[0] = Math.max(stock[0], -prices[i]);
+            for (int j = 1; j < k; j++) {
+                cash[j] = Math.max(cash[j], stock[j] + prices[i]);
+                stock[j] = Math.max(stock[j], cash[j - 1] - prices[i]);
+            }
+        }
+        return cash[k - 1];
+    }
+
+    public static void main(String[] args) {
+        MaxProfit4 maxProfit4 = new MaxProfit4();
+        int[] prices = {2, 1, 4};
+        int k = 2;
+        int profit = maxProfit4.maxProfit(k, prices);
+        System.out.println(profit);
     }
 }
