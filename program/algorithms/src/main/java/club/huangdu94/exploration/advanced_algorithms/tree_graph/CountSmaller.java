@@ -135,7 +135,7 @@ public class CountSmaller {
          * A[i] 包含于 C[i + 2k]、C[(i + 2k) + 2k]...；
          */
         private void update(int pos) {
-            while (pos <= c.length) {
+            while (pos <= c.length - 1) {
                 c[pos] += 1;
                 pos += lowBit(pos);
             }

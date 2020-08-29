@@ -87,14 +87,14 @@ public class LongestPalindrome {
         char[] chars = new char[len];
         chars[0] = '^';
         for (int i = 1; i < len - 1; i++) {
-            chars[i] = i % 2 == 1 ? '#' : s.charAt((i - 1) / 2);
+            chars[i] = i % 2 == 1 ? '#' : s.charAt(i / 2 - 1);
         }
         chars[len - 1] = '$';
         // 2. 马拉车算法计算部分
         int[] p = new int[len];
-        int c = 0, r = 0, i_mirror;
+        int c = 0, r = 0;
         for (int i = 1; i < len - 1; i++) {
-            i_mirror = 2 * c - i;
+            int i_mirror = 2 * c - i;
             if (r > i) {
                 // 超过了r的部分是不可以算的
                 p[i] = Math.min(p[i_mirror], r - i);
