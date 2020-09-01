@@ -1,5 +1,7 @@
 package club.huangdu94.competition.weekly;
 
+import java.math.BigInteger;
+
 /**
  * 第 204 场周赛
  *
@@ -309,7 +311,45 @@ public class Solution204 {
      * nums 中所有数 互不相同 。
      */
     public int numOfWays(int[] nums) {
-        return -1;
+        return helper(nums).subtract(BigInteger.ONE).mod(BigInteger.valueOf(1000000007)).intValue();
+    }
+
+    private BigInteger helper(int[] tree) {
+        int len = tree.length;
+        if (len <= 2) {
+            return BigInteger.ONE;
+        }
+        int root = tree[0], leftCount = 0, rightCount;
+        for (int i = 1; i < len; i++) {
+            if (tree[i] < root) {
+                leftCount++;
+            }
+        }
+        if (leftCount == 0 || leftCount == len - 1) {
+            int[] son = new int[len - 1];
+            System.arraycopy(tree, 1, son, 0, len - 1);
+            return helper(son);
+        }
+        rightCount = len - leftCount - 1;
+        int[] left = new int[leftCount], right = new int[rightCount];
+        int l = 0, r = 0;
+        for (int i = 1; i < len; i++) {
+            if (tree[i] < root) {
+                left[l++] = tree[i];
+            } else {
+                right[r++] = tree[i];
+            }
+        }
+        return combinatorialNumber(len - 1, leftCount, rightCount).multiply(helper(left)).multiply(helper(right));
+    }
+
+    private BigInteger combinatorialNumber(int sum, int left, int right) {
+        int select = Math.min(left, right);
+        BigInteger res = BigInteger.valueOf(sum--);
+        for (int i = 1; i < select; i++) {
+            res = res.multiply(BigInteger.valueOf(sum--)).divide(BigInteger.valueOf(i + 1));
+        }
+        return res;
     }
 
     public static void main(String[] args) {
