@@ -10,6 +10,7 @@ package club.huangdu94.question_bank.medium;
  * @version 2020/9/2 12:46
  */
 public class IsNumber {
+    // 有限状态自动机
     /*
       分析：
         1. 数值里可能包含的字符，0-9 + - e E .，出现其它字符肯定不是数值
