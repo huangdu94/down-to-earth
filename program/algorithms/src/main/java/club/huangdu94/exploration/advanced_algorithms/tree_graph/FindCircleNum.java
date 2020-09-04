@@ -1,5 +1,7 @@
 package club.huangdu94.exploration.advanced_algorithms.tree_graph;
 
+import club.huangdu94.data_structure.UnionFindSets;
+
 /**
  * 朋友圈
  * 班上有N名学生。其中有些人是朋友，有些则不是。他们的友谊具有是传递性。如果已知 A 是 B的朋友，B 是 C的朋友，那么我们可以认为 A 也是 C的朋友。所谓的朋友圈，是指所有朋友的集合。
@@ -36,59 +38,6 @@ public class FindCircleNum {
                 if (M[i][j] == 1)
                     set.union(i, j);
         return set.getCount();
-    }
-
-    // 并查集
-    private static class UnionFindSets {
-        private int count;
-        private final int[] parent;
-        private final int[] rank;
-
-        // 初始化
-        public UnionFindSets(int n) {
-            parent = new int[n];
-            rank = new int[n];
-            count = n;
-            for (int i = 0; i < n; i++) {
-                parent[i] = i;
-                rank[i] = 1;
-            }
-        }
-
-        // 查找(路径压缩)(迭代版)
-        private int find(int a) {
-            while (parent[a] != parent[parent[a]]) parent[a] = parent[parent[a]];
-            return parent[a];
-        }
-
-        // 查找(路径压缩)(递归版)
-        /*private int find(int a) {
-            if (a != parent[a]) parent[a] = find(parent[a]);
-            return parent[a];
-        }*/
-
-        // 查找(路径压缩)(递归版)
-        /*public int find(int a) {
-            if (parent[a] == a) return a;
-            return parent[a] = find(parent[a]);
-        }*/
-
-        // 合并
-        public void union(int a, int b) {
-            int parentA = find(a);
-            int parentB = find(b);
-            if (parentA == parentB) return;
-            count--;
-            if (rank[parentB] > rank[parentA]) parent[parentA] = parentB;
-            else {
-                if (rank[parentA] == rank[parentB]) rank[parentA]++;
-                parent[parentB] = parentA;
-            }
-        }
-
-        public int getCount() {
-            return count;
-        }
     }
 
     public static void main(String[] args) {
