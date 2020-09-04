@@ -1,5 +1,7 @@
 package club.huangdu94.data_structure;
 
+import java.util.List;
+
 /**
  * Definition a trie.
  *
@@ -10,20 +12,16 @@ public class Trie {
     /**
      * Trie root.
      */
-    private final TrieNode root;
+    private final TrieNode root = new TrieNode();
 
     /**
      * Initialize your data structure here.
      */
     public Trie() {
-        root = new TrieNode();
     }
 
-    /**
-     * Initialize your data structure here.
-     */
-    public Trie(TrieNode _root) {
-        root = _root;
+    public Trie(List<String> wordList) {
+        insert(wordList);
     }
 
     /**
@@ -37,6 +35,13 @@ public class Trie {
             cur = cur.get(ch);
         }
         cur.setEnd();
+    }
+
+    /**
+     * Inserts a word list into the trie.
+     */
+    public void insert(List<String> wordList) {
+        wordList.forEach(this::insert);
     }
 
     /**
