@@ -9,8 +9,12 @@ package club.huangdu94.data_structure;
 public class TrieNode {
     /**
      * Letter count.
+     * If value is 26, It can only support lower case letter.
+     * If value is 52, It can support lower and upper case letter.
      */
-    private static final int LETTER_COUNT = 26;
+    private static final int LOWER_CASE = 26;
+    private static final int UPPER_CASE = 52;
+    private static final int LETTER_COUNT = LOWER_CASE;
 
     /**
      * LETTER_COUNT links to node children.
@@ -33,14 +37,14 @@ public class TrieNode {
      * Returns if the letter is in the node's nextList.
      */
     public boolean containsKey(char ch) {
-        return nextList[ch - 'a'] != null;
+        return nextList[charToIndex(ch)] != null;
     }
 
     /**
      * On the contrary with containsKey.
      */
     public boolean notContainsKey(char ch) {
-        return nextList[ch - 'a'] == null;
+        return nextList[charToIndex(ch)] == null;
     }
 
     /**
@@ -97,8 +101,23 @@ public class TrieNode {
 
     /**
      * Transform a char to index.
+     * A 65
+     * a 97
+     * -65 + 26 = -39
      */
-    private int charToIndex(char ch) {
-        return ch - 'a';
+    private static int charToIndex(char ch) {
+        if (ch < 97) return ch - 39;
+        return ch - 97;
+    }
+
+    /**
+     * Transform index to a char.
+     * A 65
+     * a 97
+     * -65 + 26 = -39
+     */
+    private static char indexToChar(int index) {
+        if (index < 26) return (char) (index + 97);
+        return (char) (index + 39);
     }
 }

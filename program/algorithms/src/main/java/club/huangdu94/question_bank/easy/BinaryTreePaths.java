@@ -1,9 +1,12 @@
 package club.huangdu94.question_bank.easy;
 
 import club.huangdu94.data_structure.TreeNode;
+import javafx.util.Pair;
 
+import java.util.ArrayDeque;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Queue;
 
 /**
  * 257. 二叉树的所有路径
@@ -26,7 +29,8 @@ public class BinaryTreePaths {
     private final List<String> res = new ArrayList<>();
 
     public List<String> binaryTreePaths(TreeNode root) {
-        dfs(root, "");
+        //dfs(root, "");
+        bfs(root);
         return res;
     }
 
@@ -40,5 +44,27 @@ public class BinaryTreePaths {
         s = s.concat("->");
         dfs(root.left, s);
         dfs(root.right, s);
+    }
+
+    private void bfs(TreeNode root) {
+        if (root == null) return;
+        Queue<Pair<TreeNode, String>> queue = new ArrayDeque<>();
+        queue.offer(new Pair<>(root, ""));
+        while (!queue.isEmpty()) {
+            Pair<TreeNode, String> pair = queue.poll();
+            TreeNode node = pair.getKey();
+            String str = pair.getValue();
+            str = str.concat(Integer.toString(node.val));
+            if (node.left == null && node.right == null) {
+                res.add(str);
+            }
+            str = str.concat("->");
+            if (node.left != null) {
+                queue.offer(new Pair<>(node.left, str));
+            }
+            if (node.right != null) {
+                queue.offer(new Pair<>(node.right, str));
+            }
+        }
     }
 }
