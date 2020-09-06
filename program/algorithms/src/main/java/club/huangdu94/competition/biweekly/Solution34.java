@@ -1,5 +1,7 @@
 package club.huangdu94.competition.biweekly;
 
+import java.util.Arrays;
+
 /**
  * 第 34 场双周赛
  *
@@ -234,6 +236,9 @@ public class Solution34 {
                 map[j][i] = map[i][j];
             }
         }
+        for (int[] memoRow : memo) {
+            Arrays.fill(memoRow, -1);
+        }
         return helper(start, fuel);
     }
 
@@ -244,7 +249,7 @@ public class Solution34 {
         if (map[cur][finish] > fuel) {
             return 0;
         }
-        if (memo[cur][fuel] != 0) {
+        if (memo[cur][fuel] != -1) {
             return memo[cur][fuel];
         }
         int routes = cur == finish ? 1 : 0;
