@@ -2,9 +2,7 @@ package club.huangdu94.question_bank.easy;
 
 import club.huangdu94.data_structure.TreeNode;
 
-import java.util.ArrayList;
-import java.util.Collections;
-import java.util.List;
+import java.util.*;
 
 /**
  * 107. 二叉树的层次遍历 II
@@ -29,7 +27,32 @@ import java.util.List;
 public class LevelOrderBottom {
     private final List<List<Integer>> list = new ArrayList<>();
 
+    // bfs
     public List<List<Integer>> levelOrderBottom(TreeNode root) {
+        LinkedList<List<Integer>> res = new LinkedList<>();
+        if (root == null) return res;
+        Queue<TreeNode> queue = new ArrayDeque<>();
+        queue.offer(root);
+        while (!queue.isEmpty()) {
+            int size = queue.size();
+            List<Integer> level = new ArrayList<>();
+            for (int i = 0; i < size; i++) {
+                TreeNode node = queue.remove();
+                level.add(node.val);
+                if (node.left != null) {
+                    queue.offer(node.left);
+                }
+                if (node.right != null) {
+                    queue.offer(node.right);
+                }
+            }
+            res.addFirst(level);
+        }
+        return res;
+    }
+
+    // dfs
+    public List<List<Integer>> levelOrderBottom2(TreeNode root) {
         this.levelOrder(root, 0);
         Collections.reverse(list);
         return list;
