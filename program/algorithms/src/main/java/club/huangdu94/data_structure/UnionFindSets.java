@@ -24,10 +24,10 @@ public class UnionFindSets {
 
     // 查找(路径压缩)(迭代版)
     private int find(int a) {
-        while (parent[a] != a) {
-            a = parent[a];
+        while (parent[a] != parent[parent[a]]) {
+            parent[a] = parent[parent[a]];
         }
-        return a;
+        return parent[a];
     }
 
     // 查找(路径压缩)(递归版)
