@@ -1,11 +1,9 @@
 package club.huangdu94.exploration.intermediate_algorithms.sort_search;
 
-import java.util.Arrays;
-import java.util.HashMap;
-import java.util.Map;
+import java.util.*;
 
 /**
- * 前 K 个高频元素
+ * 347. 前K个高频元素
  * 给定一个非空的整数数组，返回其中出现频率前 k 高的元素。
  * 示例 1:
  * 输入: nums = [1,1,1,2,2,3], k = 2
@@ -24,7 +22,7 @@ import java.util.Map;
  */
 public class TopKFrequent {
     @SuppressWarnings("rawtypes")
-    public int[] topKFrequent(int[] nums, int k) {
+    public int[] topKFrequent1(int[] nums, int k) {
         Map<Integer, Integer> countMap = new HashMap<>();
         // o(n) 计数
         for (int n : nums)
@@ -71,6 +69,9 @@ public class TopKFrequent {
             quickSort(entries, l, i - 1, k);
     }
 
+    /**
+     * 超出内存限制
+     */
     public int[] topKFrequent2(int[] nums, int k) {
         // o(n) 求最大值最小值
         int max = nums[0];
@@ -150,6 +151,29 @@ public class TopKFrequent {
             this.value = value;
             this.count = count;
         }
+    }
+
+    public int[] topKFrequent(int[] nums, int k) {
+        Map<Integer, Integer> countMap = new HashMap<>();
+        // o(n) 计数
+        for (int n : nums)
+            countMap.merge(n, 1, Integer::sum);
+        Queue<int[]> queue = new PriorityQueue<>(Comparator.comparingInt(o -> o[1]));
+        for (Map.Entry<Integer, Integer> entry : countMap.entrySet()) {
+            if (queue.size() == k) {
+                if (queue.peek() != null && queue.peek()[1] < entry.getValue()) {
+                    queue.poll();
+                    queue.offer(new int[]{entry.getKey(), entry.getValue()});
+                }
+            } else {
+                queue.offer(new int[]{entry.getKey(), entry.getValue()});
+            }
+        }
+        int[] res = new int[k];
+        for (int i = 0; i < k; i++) {
+            res[i] = queue.remove()[0];
+        }
+        return res;
     }
 
     public static void main(String[] args) {
