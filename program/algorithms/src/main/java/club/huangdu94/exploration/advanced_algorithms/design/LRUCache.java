@@ -1,6 +1,7 @@
 package club.huangdu94.exploration.advanced_algorithms.design;
 
-import java.util.*;
+import java.util.HashMap;
+import java.util.Map;
 
 /**
  * LRU缓存机制
@@ -59,7 +60,7 @@ public class LRUCache {
         optQueue.offer(key);
         cache.put(key, value);
     }*/
-    private final int capacity;
+    /*private final int capacity;
     private final Map<Integer, Integer> cache;
     private final Map<Integer, Integer> count;
     private final Queue<Integer> optQueue;
@@ -92,5 +93,78 @@ public class LRUCache {
         count.merge(key, 1, Integer::sum);
         optQueue.offer(key);
         cache.put(key, value);
+    }*/
+
+    private final int capacity;
+    private final Map<Integer, DoublyListNode> linkedMap;
+    private final DoublyListNode headDummy;
+    private final DoublyListNode tailDummy;
+
+    public LRUCache(int capacity) {
+        this.capacity = capacity;
+        this.linkedMap = new HashMap<>(capacity);
+        headDummy = new DoublyListNode();
+        tailDummy = new DoublyListNode();
+        headDummy.next = tailDummy;
+        tailDummy.prev = headDummy;
+    }
+
+    public int get(int key) {
+        DoublyListNode node = linkedMap.get(key);
+        if (node == null) return -1;
+        moveNodeToTail(node);
+        return node.value;
+    }
+
+    public void put(int key, int value) {
+        DoublyListNode node = linkedMap.get(key);
+        if (node != null) {
+            node.value = value;
+            moveNodeToTail(node);
+        } else {
+            if (linkedMap.size() == capacity) {
+                removeHeadNodeAndEntry();
+            }
+            node = new DoublyListNode(key, value);
+            addNodeToTail(node);
+            linkedMap.put(key, node);
+        }
+    }
+
+    private void addNodeToTail(DoublyListNode node) {
+        node.prev = tailDummy.prev;
+        tailDummy.prev = node;
+        node.next = tailDummy;
+        node.prev.next = node;
+    }
+
+    private DoublyListNode removeNode(DoublyListNode node) {
+        node.prev.next = node.next;
+        node.next.prev = node.prev;
+        return node;
+    }
+
+    private void moveNodeToTail(DoublyListNode node) {
+        addNodeToTail(removeNode(node));
+    }
+
+    private void removeHeadNodeAndEntry() {
+        DoublyListNode head = headDummy.next;
+        linkedMap.remove(removeNode(head).key);
+    }
+
+    private static class DoublyListNode {
+        public int key;
+        public int value;
+        public DoublyListNode prev;
+        public DoublyListNode next;
+
+        public DoublyListNode() {
+        }
+
+        public DoublyListNode(int key, int value) {
+            this.key = key;
+            this.value = value;
+        }
     }
 }
