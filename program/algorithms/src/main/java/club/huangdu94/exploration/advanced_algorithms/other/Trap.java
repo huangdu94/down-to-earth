@@ -15,29 +15,55 @@ import java.util.Deque;
  * @version 2020/9/8 11:43
  */
 public class Trap {
-    public int trap(int[] height) {
-        int len = height.length, volume = 0, maxLeft = 0;
+    public int trap1(int[] height) {
+        int volume = 0, leftHeight = 0;
         Deque<Integer> monoStack = new ArrayDeque<>();
-        for (int i = 0; i < len; i++) {
-            int minSide = Math.min(height[maxLeft], height[i]), right = i, prevHeight = -1;
-            while (!monoStack.isEmpty() && height[monoStack.peek()] < height[i]) {
-                int prevIndex = monoStack.pop();
-                volume += (minSide - height[prevIndex]);
-                if (right - prevIndex > 1) {
-                    volume += (minSide - prevHeight) * (right - prevIndex - 1);
-                }
-                prevHeight = height[prevIndex];
-                right = prevIndex;
+        for (int i = 0; i < height.length; i++) {
+            int minSide = Math.min(leftHeight, height[i]);
+            while (!monoStack.isEmpty() && height[monoStack.peek()] <= height[i]) {
+                int index = monoStack.pop();
+                if (monoStack.isEmpty()) break;
+                volume += (minSide - height[index]) * (index - monoStack.peek());
             }
-            if (monoStack.isEmpty()) maxLeft = i;
+            if (monoStack.isEmpty()) leftHeight = height[i];
             monoStack.push(i);
+        }
+        return volume;
+    }
+
+    public int trap2(int[] height) {
+        int volume = 0;
+        Deque<Integer> monoStack = new ArrayDeque<>();
+        for (int i = 0; i < height.length; i++) {
+            while (!monoStack.isEmpty() && height[monoStack.peek()] <= height[i]) {
+                int index = monoStack.pop();
+                if (monoStack.isEmpty()) break;
+                volume += (Math.min(height[monoStack.peek()], height[i]) - height[index]) * (i - monoStack.peek() - 1);
+            }
+            monoStack.push(i);
+        }
+        return volume;
+    }
+
+    public int trap(int[] height) {
+        int volume = 0, i = 0, j = height.length - 1, left = 0, right = 0;
+        while (i < j) {
+            if (height[i] <= height[j]) {
+                if (left < height[i]) left = height[i];
+                else if (left > height[i]) volume += (left - height[i]);
+                i++;
+            } else {
+                if (right < height[j]) right = height[j];
+                else if (right > height[j]) volume += (right - height[j]);
+                j--;
+            }
         }
         return volume;
     }
 
     public static void main(String[] args) {
         Trap trap = new Trap();
-        int[] heights = {4, 2, 0, 3, 2, 4, 3, 4};
+        int[] heights = {5, 4, 1, 2};
         System.out.println(trap.trap(heights));
     }
 }
