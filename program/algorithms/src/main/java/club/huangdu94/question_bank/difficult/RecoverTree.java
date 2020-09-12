@@ -1,5 +1,7 @@
 package club.huangdu94.question_bank.difficult;
 
+import club.huangdu94.data_structure.TreeNode;
+
 import java.util.Stack;
 
 /**
@@ -39,26 +41,6 @@ import java.util.Stack;
  * @version 2020/8/8 10:57
  */
 public class RecoverTree {
-    //Definition for a binary tree node.
-    private static class TreeNode {
-        int val;
-        TreeNode left;
-        TreeNode right;
-
-        TreeNode() {
-        }
-
-        TreeNode(int val) {
-            this.val = val;
-        }
-
-        TreeNode(int val, TreeNode left, TreeNode right) {
-            this.val = val;
-            this.left = left;
-            this.right = right;
-        }
-    }
-
     // 莫里斯中序遍历
     public void recoverTree(TreeNode root) {
         TreeNode a = null;

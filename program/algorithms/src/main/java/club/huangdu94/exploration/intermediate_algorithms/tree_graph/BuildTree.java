@@ -1,5 +1,7 @@
 package club.huangdu94.exploration.intermediate_algorithms.tree_graph;
 
+import club.huangdu94.data_structure.TreeNode;
+
 import java.util.Stack;
 
 /**
@@ -21,17 +23,6 @@ import java.util.Stack;
  * @version 2020/7/5 19:31
  */
 public class BuildTree {
-    // Definition for a binary tree node.
-    public static class TreeNode {
-        int val;
-        TreeNode left;
-        TreeNode right;
-
-        TreeNode(int x) {
-            val = x;
-        }
-    }
-
     public TreeNode buildTree(int[] preorder, int[] inorder) {
         if (preorder == null || inorder == null)
             return null;

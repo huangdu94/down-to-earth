@@ -1,5 +1,10 @@
 package club.huangdu94.exploration.advanced_algorithms.dynamic;
 
+import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
+
 /**
  * 戳气球
  * 有 n 个气球，编号为0 到 n-1，每个气球上都标有一个数字，这些数字存在数组nums中。
@@ -18,7 +23,18 @@ package club.huangdu94.exploration.advanced_algorithms.dynamic;
  * @version 2020/9/4 15:20
  */
 public class MaxCoins {
+    private int len;
+    private List<Integer> numList;
+    private Map<List<Integer>, Integer> memo;
+
     public int maxCoins(int[] nums) {
+        this.len = nums.length;
+        this.numList = new ArrayList<>(this.len);
+        this.memo = new HashMap<>();
+        return helper();
+    }
+
+    private int helper() {
         return 0;
     }
 }

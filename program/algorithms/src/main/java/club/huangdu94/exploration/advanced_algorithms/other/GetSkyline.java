@@ -1,6 +1,6 @@
 package club.huangdu94.exploration.advanced_algorithms.other;
 
-import java.util.List;
+import java.util.*;
 
 /**
  * 天际线问题
@@ -19,7 +19,65 @@ import java.util.List;
  * @version 2020/9/8 12:44
  */
 public class GetSkyline {
+    private LinkedList<int[]> heightList;
+
     public List<List<Integer>> getSkyline(int[][] buildings) {
-        return null;
+        this.heightList = new LinkedList<>();
+        int len = buildings.length;
+        if (len == 0) return new ArrayList<>();
+        for (int[] building : buildings) add(building);
+        List<List<Integer>> res = new ArrayList<>(heightList.size() + 1);
+        int pre = -1;
+        for (int[] element : heightList) {
+            if (pre == element[2]) continue;
+            pre = element[2];
+            res.add(Arrays.asList(element[0], element[2]));
+        }
+        res.add(Arrays.asList(heightList.getLast()[1], 0));
+        return res;
+    }
+
+    private void add(int[] building) {
+        if (heightList.isEmpty()) {
+            heightList.add(building);
+        } else {
+            ListIterator<int[]> iterator = heightList.listIterator(heightList.size());
+            while (iterator.hasPrevious()) {
+                if (building[0] >= iterator.previous()[1]) {
+                    iterator.next();
+                    break;
+                }
+            }
+            while (iterator.hasNext()) {
+                int[] next = iterator.next();
+                if (building[2] > next[2]) {
+                    iterator.remove();
+                    if (building[0] != next[0]) {
+                        iterator.add(new int[]{next[0], building[0], next[2]});
+                    }
+                    if (building[1] < next[1]) {
+                        iterator.add(Arrays.copyOf(building, 3));
+                        iterator.add(new int[]{building[1], next[1], next[2]});
+                    } else {
+                        iterator.add(new int[]{building[0], next[1], building[2]});
+                    }
+                }
+                building[0] = next[1];
+                if (building[1] <= next[1]) break;
+            }
+            if (!iterator.hasNext() && building[0] < building[1]) {
+                int[] tail = heightList.getLast();
+                if (tail[1] < building[0]) {
+                    heightList.add(new int[]{tail[1], building[0], 0});
+                }
+                heightList.add(building);
+            }
+        }
+    }
+
+    public static void main(String[] args) {
+        GetSkyline getSkyline = new GetSkyline();
+        int[][] buildings = {{2, 9, 10}, {3, 7, 15}, {5, 12, 12}, {15, 20, 10}, {19, 24, 8}};
+        System.out.println(getSkyline.getSkyline(buildings));
     }
 }

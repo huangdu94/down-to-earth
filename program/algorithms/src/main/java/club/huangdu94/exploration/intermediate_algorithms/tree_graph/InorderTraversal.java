@@ -1,5 +1,7 @@
 package club.huangdu94.exploration.intermediate_algorithms.tree_graph;
 
+import club.huangdu94.data_structure.TreeNode;
+
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Stack;
@@ -21,17 +23,6 @@ import java.util.Stack;
  * @version 2020/7/5 19:28
  */
 public class InorderTraversal {
-    // Definition for a binary tree node.
-    public static class TreeNode {
-        int val;
-        TreeNode left;
-        TreeNode right;
-
-        TreeNode(int x) {
-            val = x;
-        }
-    }
-
     public List<Integer> inorderTraversal(TreeNode root) {
         List<Integer> inorderList = new ArrayList<>();
         if (root == null)
