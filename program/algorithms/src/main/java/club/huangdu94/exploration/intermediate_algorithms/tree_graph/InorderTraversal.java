@@ -2,12 +2,10 @@ package club.huangdu94.exploration.intermediate_algorithms.tree_graph;
 
 import club.huangdu94.data_structure.TreeNode;
 
-import java.util.ArrayList;
-import java.util.List;
-import java.util.Stack;
+import java.util.*;
 
 /**
- * 中序遍历二叉树
+ * 94. 二叉树的中序遍历
  * 给定一个二叉树，返回它的中序 遍历。
  * 示例:
  * 输入: [1,null,2,3]
@@ -69,6 +67,20 @@ public class InorderTraversal {
             }
         }
         return inorderList;
+    }
+
+    private final List<Integer> res = new ArrayList<>();
+
+    public List<Integer> inorderTraversal3(TreeNode root) {
+        helper(root);
+        return res;
+    }
+
+    private void helper(TreeNode root) {
+        if (root == null) return;
+        helper(root.left);
+        res.add(root.val);
+        helper(root.right);
     }
 
     public static void main(String[] args) {
