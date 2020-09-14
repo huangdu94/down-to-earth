@@ -1,4 +1,4 @@
-package club.huangdu94.exploration.start_from_scratch.array;
+package club.huangdu94.exploration.start_from_scratch.array.traversal;
 
 /**
  * 628. 三个数的最大乘积

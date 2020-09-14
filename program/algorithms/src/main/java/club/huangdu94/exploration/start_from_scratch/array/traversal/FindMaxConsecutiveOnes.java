@@ -1,4 +1,4 @@
-package club.huangdu94.exploration.start_from_scratch.array;
+package club.huangdu94.exploration.start_from_scratch.array.traversal;
 
 /**
  * 485. 最大连续1的个数
