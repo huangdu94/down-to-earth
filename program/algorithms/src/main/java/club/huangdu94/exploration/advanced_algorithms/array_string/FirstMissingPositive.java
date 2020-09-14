@@ -5,7 +5,7 @@ import java.util.HashSet;
 import java.util.Set;
 
 /**
- * 缺失的第一个正数
+ * 41. 缺失的第一个正数
  * 给你一个未排序的整数数组，请你找出其中没有出现的最小的正整数。
  * 示例 1:
  * 输入: [1,2,0]
@@ -69,8 +69,25 @@ public class FirstMissingPositive {
         return small;
     }
 
-    // 不使用额外空间(时间复杂度o(n) 空间复杂度o(1))
+    // 使用额外空间(时间复杂度o(n) 空间复杂度o(n))
     public int firstMissingPositive4(int[] nums) {
+        int n = nums.length;
+        boolean[] visited = new boolean[n];
+        for (int num : nums) {
+            if (num > 0 && num <= n) {
+                visited[num - 1] = true;
+            }
+        }
+        for (int i = 0; i < n; i++) {
+            if (!visited[i]) {
+                return i + 1;
+            }
+        }
+        return n + 1;
+    }
+
+    // 不使用额外空间(时间复杂度o(n) 空间复杂度o(1))
+    public int firstMissingPositive5(int[] nums) {
         int len = nums.length;
         for (int i = 0; i < len; i++)
             if (nums[i] < 1)
