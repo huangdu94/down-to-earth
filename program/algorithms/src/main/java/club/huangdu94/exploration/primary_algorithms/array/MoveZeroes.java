@@ -59,4 +59,22 @@ public class MoveZeroes {
             }
         }
     }
+
+    public void moveZeroes3(int[] nums) {
+        int len = nums.length, i = 0, j = 0;
+        // j的位置等于0 i的位置不等于0 i>j需要发生交换
+        while (i < len) {
+            while (j < len && nums[j] != 0) {
+                j++;
+            }
+            if (i < j) i = j;
+            while (i < len && nums[i] == 0) {
+                i++;
+            }
+            if (i < len) {
+                nums[j] = nums[i];
+                nums[i] = 0;
+            }
+        }
+    }
 }
