@@ -111,13 +111,17 @@ public class GetRow {
     }
 
     public List<Integer> getRow3(int rowIndex) {
-        List<Integer> list = new ArrayList<>();
-        while (rowIndex-- >= 0) {
+        if (rowIndex == 0) return Collections.singletonList(1);
+        if (rowIndex == 1) return Arrays.asList(1, 1);
+        List<Integer> list = new ArrayList<>(rowIndex + 1);
+        list.add(1);
+        list.add(1);
+        for (int i = 2; i <= rowIndex; i++) {
+            for (int k = i - 1; k > 0; k--) {
+                list.set(k, list.get(k - 1) + list.get(k));
+            }
             list.add(1);
-            for (int i = list.size() - 2; i > 0; i--)
-                list.set(i, list.get(i) + list.get(i - 1));
         }
-
         return list;
     }
 
