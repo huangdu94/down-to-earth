@@ -1,4 +1,4 @@
-package club.huangdu94.exploration.start_from_scratch.array.twod_roll;
+package club.huangdu94.exploration.start_from_scratch.array.roll_twodimension;
 
 /**
  * 119. 杨辉三角 II
