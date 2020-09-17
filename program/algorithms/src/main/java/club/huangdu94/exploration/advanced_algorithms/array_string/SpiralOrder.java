@@ -53,6 +53,37 @@ public class SpiralOrder {
         return result;
     }
 
+    public List<Integer> spiralOrder2(int[][] matrix) {
+        if (matrix.length == 0) return new ArrayList<>();
+        int n = matrix.length, m = matrix[0].length, capacity = n * m;
+        List<Integer> res = new ArrayList<>(capacity);
+        int u = 0, d = n - 1, l = 0, r = m - 1;
+        while (l <= r && u <= d) {
+            for (int i = l; i <= r; i++) {
+                res.add(matrix[u][i]);
+            }
+            u++;
+            for (int i = u; i <= d; i++) {
+                res.add(matrix[i][r]);
+            }
+            r--;
+            if (u - 1 != d) {
+                for (int i = r; i >= l; i--) {
+                    res.add(matrix[d][i]);
+                }
+            }
+            d--;
+            if (r + 1 != l) {
+                for (int i = d; i >= u; i--) {
+                    res.add(matrix[i][l]);
+                }
+            }
+            l++;
+        }
+        return res;
+    }
+
+
     public static void main(String[] args) {
         int[][] matrix = {
                 {1, 2, 3, 4},
