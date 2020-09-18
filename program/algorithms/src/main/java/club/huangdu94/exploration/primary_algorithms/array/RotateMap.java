@@ -90,4 +90,30 @@ public class RotateMap {
         }
         System.out.println("]");
     }
+
+    public void rotate2(int[][] matrix) {
+        int n = matrix.length;
+        if ((n & 1) == 0) {
+            for (int i = 0; i < n / 2; i++) {
+                for (int j = 0; j < n / 2; j++) {
+                    rotate(matrix, n, i, j);
+                }
+            }
+        } else {
+            for (int i = 0; i < n / 2; i++) {
+                for (int j = 0; j <= n / 2; j++) {
+                    rotate(matrix, n, i, j);
+                }
+            }
+        }
+    }
+
+    // i,j -> j,n-1-i -> n-1-i,n-1-j -> n-1-j,i
+    private void rotate(int[][] matrix, int n, int i, int j) {
+        int temp = matrix[n - 1 - j][i];
+        matrix[n - 1 - j][i] = matrix[n - 1 - i][n - 1 - j];
+        matrix[n - 1 - i][n - 1 - j] = matrix[j][n - 1 - i];
+        matrix[j][n - 1 - i] = matrix[i][j];
+        matrix[i][j] = temp;
+    }
 }

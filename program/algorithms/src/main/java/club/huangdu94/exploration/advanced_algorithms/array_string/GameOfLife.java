@@ -143,4 +143,45 @@ public class GameOfLife {
         }
         return flag;
     }
+
+    /**
+     * 此题关键便是计数，活细胞记正数，死细胞记负数
+     * 并且要避开0、1这两个数，否则无法区分
+     * 死细胞周围活细胞个数count记为-count-1
+     * 活细胞周围活细胞个数count记为count+2
+     * 那么判断活细胞还是死细胞的方式便是
+     * 小于等于0为死细胞，大于等于1为死细胞
+     * 最后再一次更新
+     * 1. 如果活细胞周围八个位置的活细胞数少于两个，则该位置活细胞死亡；
+     * 2. 如果活细胞周围八个位置有两个或三个活细胞，则该位置活细胞仍然存活；(对应4、5)
+     * 3. 如果活细胞周围八个位置有超过三个活细胞，则该位置活细胞死亡；
+     * 4. 如果死细胞周围正好有三个活细胞，则该位置死细胞复活；(对应-4)
+     * 综上，更新的时候遇到数值4、5、-4置为1，其它置为0
+     */
+    public void gameOfLife2(int[][] board) {
+        int m = board.length, n = board[0].length;
+        for (int i = 0; i < m; i++) {
+            for (int j = 0; j < n; j++) {
+                int count = 0;
+                for (int _i = i - 1; _i <= i + 1; _i++) {
+                    for (int _j = j - 1; _j <= j + 1; _j++) {
+                        if (_i < 0 || _i >= m || _j < 0 || _j >= n || (_i == i && _j == j)) continue;
+                        if (board[_i][_j] > 0) {
+                            count++;
+                        }
+                    }
+                }
+                board[i][j] = board[i][j] == 0 ? -count - 1 : count + 2;
+            }
+        }
+        for (int i = 0; i < m; i++) {
+            for (int j = 0; j < n; j++) {
+                if (board[i][j] == -4 || board[i][j] == 4 || board[i][j] == 5) {
+                    board[i][j] = 1;
+                } else {
+                    board[i][j] = 0;
+                }
+            }
+        }
+    }
 }
