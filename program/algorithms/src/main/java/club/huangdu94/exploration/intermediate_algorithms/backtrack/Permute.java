@@ -27,13 +27,33 @@ public class Permute {
         List<List<Integer>> result = new ArrayList<>();
         if (nums == null || nums.length < 1)
             return result;
-        //this.backtrack(nums, new boolean[nums.length], result, new ArrayList<>());
+        this.backtrack(nums, 0, result, new ArrayList<>());
+        //this.backtrack1(nums, new boolean[nums.length], result, new ArrayList<>());
         //this.backtrack2(nums, new boolean[nums.length], result, new ArrayList<>());
-        List<Integer> numList = new ArrayList<>();
-        for (int n : nums)
-            numList.add(n);
-        this.backtrack3(numList, result, new ArrayList<>());
+        //List<Integer> numList = new ArrayList<>();
+        //for (int n : nums) numList.add(n);
+        //this.backtrack3(numList, result, new ArrayList<>());
         return result;
+    }
+
+    private void backtrack(int[] nums, int index, List<List<Integer>> resultList, List<Integer> permute) {
+        if (index == nums.length) {
+            resultList.add(new ArrayList<>(permute));
+            return;
+        }
+        for (int i = index; i < nums.length; i++) {
+            permute.add(nums[i]);
+            swap(nums, index, i);
+            backtrack(nums, index + 1, resultList, permute);
+            permute.remove(index);
+            swap(nums, index, i);
+        }
+    }
+
+    private void swap(int[] nums, int a, int b) {
+        int temp = nums[a];
+        nums[a] = nums[b];
+        nums[b] = temp;
     }
 
     /**
@@ -44,7 +64,7 @@ public class Permute {
      * @param resultList 结果list
      * @param permute    一个排序list
      */
-    private void backtrack(int[] nums, boolean[] used, List<List<Integer>> resultList, List<Integer> permute) {
+    private void backtrack1(int[] nums, boolean[] used, List<List<Integer>> resultList, List<Integer> permute) {
         boolean flag = false;
         for (boolean b : used) {
             if (!b) {
@@ -61,7 +81,7 @@ public class Permute {
                 used_copy[i] = true;
                 List<Integer> permute_copy = new ArrayList<>(permute);
                 permute_copy.add(nums[i]);
-                this.backtrack(nums, used_copy, resultList, permute_copy);
+                this.backtrack1(nums, used_copy, resultList, permute_copy);
             }
         } else {
             resultList.add(permute);
