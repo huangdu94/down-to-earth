@@ -1,10 +1,10 @@
 package club.huangdu94.competition.biweekly;
 
 /**
- * 第 35 场双周赛
+ * 第35场双周赛
  *
  * @author duhuang@iflytek.com
- * @version 2020/9/19 10:19
+ * @version 2020/9/19 22:02
  */
 public class Solution35 {
 }
