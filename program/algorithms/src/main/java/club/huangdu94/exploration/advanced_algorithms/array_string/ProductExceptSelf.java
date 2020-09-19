@@ -43,14 +43,17 @@ public class ProductExceptSelf {
     }
 
     // 左右乘积列表
-    public int[] productExceptSelf2(int[] nums) {
-        int[] output = new int[nums.length];
+    public int[] productExceptSelf(int[] nums) {
+        int n = nums.length;
+        int[] output = new int[n];
         output[0] = 1;
-        int rightProduct = 1;
-        for (int i = 1; i < nums.length; i++)
-            output[i] = output[i - 1] * nums[i - 1];
-        for (int j = nums.length - 2; j >= 0; j--)
-            output[j] *= (rightProduct *= nums[j + 1]);
+        for (int i = 0; i < n - 1; i++) {
+            output[i + 1] = output[i] * nums[i];
+        }
+        int right = 1;
+        for (int i = n - 2; i >= 0; i--) {
+            output[i] *= (right *= nums[i + 1]);
+        }
         return output;
     }
 }

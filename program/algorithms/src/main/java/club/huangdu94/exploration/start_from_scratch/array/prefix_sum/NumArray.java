@@ -1,4 +1,4 @@
-package club.huangdu94.question_bank.easy;
+package club.huangdu94.exploration.start_from_scratch.array.prefix_sum;
 
 /**
  * 303. 区域和检索 - 数组不可变
