@@ -3,7 +3,7 @@ package club.huangdu94.exploration.intermediate_algorithms.backtrack;
 import java.util.*;
 
 /**
- * 子集
+ * 78. 子集
  * 给定一组不含重复元素的整数数组 nums，返回该数组所有可能的子集（幂集）。
  * 说明：解集不能包含重复的子集。
  * 示例:
@@ -24,7 +24,7 @@ import java.util.*;
  * @version 2020/7/9 0:22
  */
 public class Subsets {
-    public List<List<Integer>> subsets(int[] nums) {
+    public List<List<Integer>> subsets2(int[] nums) {
         if (nums == null)
             return null;
 //        Set<List<Integer>> resultSet = new HashSet<>();
@@ -82,5 +82,26 @@ public class Subsets {
         long end = System.currentTimeMillis();
         System.out.println("结果：" + result);
         System.out.println("时间(ms)：" + (end - start));
+    }
+
+    private List<List<Integer>> subsets;
+    private List<Integer> subset;
+
+    public List<List<Integer>> subsets(int[] nums) {
+        subsets = new ArrayList<>();
+        subset = new ArrayList<>();
+        backtrack(nums, nums.length, 0);
+        return subsets;
+    }
+
+    private void backtrack(int[] nums, int n, int i) {
+        if (i == n) {
+            subsets.add(new ArrayList<>(subset));
+            return;
+        }
+        backtrack(nums, n, i + 1);
+        subset.add(nums[i]);
+        backtrack(nums, n, i + 1);
+        subset.remove(subset.size() - 1);
     }
 }
