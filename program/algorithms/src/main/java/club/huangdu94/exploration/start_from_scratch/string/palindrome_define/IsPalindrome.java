@@ -1,4 +1,4 @@
-package club.huangdu94.exploration.start_from_scratch.string.palindrome;
+package club.huangdu94.exploration.start_from_scratch.string.palindrome_define;
 
 /**
  * 125. 验证回文串
