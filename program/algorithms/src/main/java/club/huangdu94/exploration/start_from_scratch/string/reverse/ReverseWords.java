@@ -1,4 +1,4 @@
-package club.huangdu94.question_bank.easy;
+package club.huangdu94.exploration.start_from_scratch.string.reverse;
 
 /**
  * 557. 反转字符串中的单词 III
@@ -22,7 +22,7 @@ public class ReverseWords {
         return reverseWords.substring(1);
     }
 
-    public String reverseWords(String s) {
+    public String reverseWords1(String s) {
         int len = s.length(), i = 0, index = 0, word_start, word_end;
         char[] chars = new char[len], original = s.toCharArray();
         while (i < len) {
@@ -38,6 +38,26 @@ public class ReverseWords {
                 chars[index++] = ' ';
             }
             i = word_end + 1;
+        }
+        return new String(chars);
+    }
+
+    public String reverseWords(String s) {
+        int len = s.length(), index = -1, i, j;
+        char[] chars = s.toCharArray();
+        while (index < len) {
+            i = j = index + 1;
+            while (j < len && chars[j] != ' ') {
+                j++;
+            }
+            index = j--;
+            while (i < j) {
+                char temp = chars[i];
+                chars[i] = chars[j];
+                chars[j] = temp;
+                i++;
+                j--;
+            }
         }
         return new String(chars);
     }
