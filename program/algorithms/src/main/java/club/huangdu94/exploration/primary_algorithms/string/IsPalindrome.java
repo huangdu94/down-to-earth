@@ -53,4 +53,41 @@ public class IsPalindrome {
             return c - 32;
         return c;
     }
+
+    public boolean isPalindrome2(String s) {
+        int i = 0, j = s.length() - 1;
+        while (i < j) {
+            while (i < j && !isLetterOrNumber(s.charAt(i))) {
+                i++;
+            }
+            while (i < j && !isLetterOrNumber(s.charAt(j))) {
+                j--;
+            }
+            if (i < j) {
+                if (toLowerCase(s.charAt(i)) != toLowerCase(s.charAt(j))) {
+                    return false;
+                }
+                i++;
+                j--;
+            }
+        }
+        return true;
+    }
+
+    private char toLowerCase(char c) {
+        if (c <= 'Z' && c >= 'A') {
+            c += 32;
+        }
+        return c;
+    }
+
+    private boolean isLetterOrNumber(char c) {
+        return c >= 'a' && c <= 'z' || c >= 'A' && c <= 'Z' || c >= '0' && c <= '9';
+    }
+
+    public static void main(String[] args) {
+        String s = "A man, a plan, a canal: Panama";
+        IsPalindrome isPalindrome = new IsPalindrome();
+        System.out.println(isPalindrome.isPalindrome2(s));
+    }
 }
