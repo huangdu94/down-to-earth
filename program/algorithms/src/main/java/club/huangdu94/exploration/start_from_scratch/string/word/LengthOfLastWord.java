@@ -1,4 +1,4 @@
-package club.huangdu94.question_bank.easy;
+package club.huangdu94.exploration.start_from_scratch.string.word;
 
 /**
  * 58. 最后一个单词的长度
@@ -10,10 +10,22 @@ package club.huangdu94.question_bank.easy;
  * 输出: 5
  *
  * @author duhuang@iflytek.com
- * @version 2020/8/7 11:10
+ * @version 2020/9/21 11:28
  */
 public class LengthOfLastWord {
     public int lengthOfLastWord(String s) {
+        int len = s.length(), i = len - 1, res = 0;
+        while (i >= 0 && s.charAt(i) == ' ') {
+            i--;
+        }
+        while (i >= 0 && s.charAt(i) != ' ') {
+            res++;
+            i--;
+        }
+        return res;
+    }
+
+    public int lengthOfLastWord2(String s) {
         int index = s.length() - 1;
         // 跳过末尾空格
         while (index >= 0 && s.charAt(index) == ' ') index--;
