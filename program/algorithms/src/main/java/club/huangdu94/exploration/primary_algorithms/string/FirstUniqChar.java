@@ -1,5 +1,9 @@
 package club.huangdu94.exploration.primary_algorithms.string;
 
+import java.util.Arrays;
+import java.util.HashSet;
+import java.util.Set;
+
 /**
  * 字符串中的第一个唯一字符
  * 给定一个字符串，找到它的第一个不重复的字符，并返回它的索引。如果不存在，则返回 -1。
@@ -51,5 +55,54 @@ public class FirstUniqChar {
                 return i;
         }
         return -1;
+    }
+
+    public int firstUniqChar2(String s) {
+        int[] count = new int[256];
+        int len = s.length();
+        for (int i = 0; i < len; i++) {
+            count[s.charAt(i)]++;
+        }
+        Set<Character> uniqueCharSet = new HashSet<>();
+        for (int i = 'a'; i <= 'z'; i++) {
+            if (count[i] == 1) {
+                uniqueCharSet.add((char) i);
+            }
+        }
+        if (uniqueCharSet.isEmpty()) return -1;
+        for (int i = 0; i < len; i++) {
+            if (uniqueCharSet.contains(s.charAt(i))) {
+                return i;
+            }
+        }
+        return -1;
+    }
+
+    public int firstUniqChar3(String s) {
+        int[] recodes = new int[26];
+        Arrays.fill(recodes, Integer.MIN_VALUE);
+        int len = s.length();
+        for (int i = 0; i < len; i++) {
+            int c = s.charAt(i) - 'a';
+            if (recodes[c] == Integer.MIN_VALUE) {
+                recodes[c] = i;
+            } else {
+                recodes[c] = -1;
+            }
+        }
+        int res = Integer.MAX_VALUE;
+        for (int index : recodes)
+            if (index >= 0) {
+                if (res > index) {
+                    res = index;
+                }
+            }
+        return res == Integer.MAX_VALUE ? -1 : res;
+    }
+
+    public static void main(String[] args) {
+        FirstUniqChar firstUniqChar = new FirstUniqChar();
+        String s = "loveleetcode";
+        System.out.println(firstUniqChar.firstUniqChar3(s));
     }
 }

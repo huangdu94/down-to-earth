@@ -18,6 +18,7 @@ package club.huangdu94.exploration.primary_algorithms.string;
  * @version 2020/7/26 17:01
  */
 public class IsAnagram {
+    // 如果是unicode字符的话，使用HashMap
     public boolean isAnagram(String s, String t) {
         if (s.length() != t.length())
             return false;
@@ -30,6 +31,26 @@ public class IsAnagram {
         for (int i = 0; i < 26; i++) {
             if (sRecode[i] != tRecode[i])
                 return false;
+        }
+        return true;
+    }
+
+    public boolean isAnagram2(String s, String t) {
+        if (s.length() != t.length()) return false;
+        int len = s.length();
+        int[] count = new int[26];
+        for (int i = 0; i < len; i++) {
+            int si = s.charAt(i) - 'a';
+            int ti = t.charAt(i) - 'a';
+            if (si != ti) {
+                count[si]++;
+                count[ti]--;
+            }
+        }
+        for (int c : count) {
+            if (c != 0) {
+                return false;
+            }
         }
         return true;
     }
