@@ -1,4 +1,4 @@
-package club.huangdu94.question_bank.easy;
+package club.huangdu94.exploration.start_from_scratch.string.character_statistics;
 
 /**
  * 657. 机器人能否返回原点
@@ -15,10 +15,20 @@ package club.huangdu94.question_bank.easy;
  * 解释：机器人向左移动两次。它最终位于原点的左侧，距原点有两次 “移动” 的距离。我们返回 false，因为它在移动结束时没有返回原点。
  *
  * @author duhuang@iflytek.com
- * @version 2020/8/28 9:40
+ * @version 2020/9/24 19:36
  */
 public class JudgeCircle {
     public boolean judgeCircle(String moves) {
+        if ((moves.length() & 1) == 1) return false;
+        int[] count = new int[128];
+        char[] chars = moves.toCharArray();
+        for (char c : chars) {
+            count[c]++;
+        }
+        return count['U'] == count['D'] && count['L'] == count['R'];
+    }
+
+    public boolean judgeCircle2(String moves) {
         // 1. 不移动肯定再原点
         if (moves.length() == 0) return true;
         // 2. 移动次数为奇数肯定不在原点
