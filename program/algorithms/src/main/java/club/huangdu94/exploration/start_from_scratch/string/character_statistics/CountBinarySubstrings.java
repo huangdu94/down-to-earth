@@ -1,4 +1,4 @@
-package club.huangdu94.question_bank.easy;
+package club.huangdu94.exploration.start_from_scratch.string.character_statistics;
 
 /**
  * 696. 计数二进制子串
@@ -19,9 +19,25 @@ package club.huangdu94.question_bank.easy;
  * s 只包含“0”或“1”字符。
  *
  * @author duhuang@iflytek.com
- * @version 2020/8/10 1:16
+ * @version 2020/9/25 10:30
  */
 public class CountBinarySubstrings {
+    public int countBinarySubstrings(String s) {
+        char pre = ' ';
+        int res = 0, preCount = 0, count = 0;
+        for (char c : s.toCharArray()) {
+            if (pre != c) {
+                res += Math.min(preCount, count);
+                pre = c;
+                preCount = count;
+                count = 1;
+            } else {
+                count++;
+            }
+        }
+        return res + Math.min(preCount, count);
+    }
+
     public int countBinarySubstrings2(String s) {
         if (s.length() == 1) return 0;
         // 符合题目要求的子串数量
@@ -50,7 +66,7 @@ public class CountBinarySubstrings {
         return count;
     }
 
-    public int countBinarySubstrings(String s) {
+    public int countBinarySubstrings3(String s) {
         if (s.length() == 1) return 0;
         int res = 0;
         int[] counts = new int[2];
