@@ -22,7 +22,27 @@ package club.huangdu94.exploration.start_from_scratch.string.character_statistic
  * @version 2020/9/25 10:50
  */
 public class FindSubstringInWraproundString {
+    // len表示以当前字符结尾的最长递增子串的长度，map数组里存的是当前状态以a-z字母结尾的最长子串长度。每访问一个字符，则首先更新len值，连续的则len+1， 否则len等于1。然后将len值与map里对应的值比较，大于的话说明有新的以当前字母结尾的子串，更新sum的值。
     public int findSubstringInWraproundString(String p) {
+        if (p.length() == 0) return 0;
+        char[] chars = p.toCharArray();
+        int len = 0, sum = 0;
+        int[] counts = new int[128];
+        for (int i = 0, n = p.length(); i < n; i++) {
+            if (i == 0 || chars[i - 1] == 'z' ? chars[i] == 'a' : chars[i] == chars[i - 1] + 1) {
+                len++;
+            } else {
+                len = 1;
+            }
+            if (len > counts[chars[i]]) {
+                sum += (len - counts[chars[i]]);
+                counts[chars[i]] = len;
+            }
+        }
+        return sum;
+    }
+
+    public int findSubstringInWraproundString2(String p) {
         if (p.length() == 0) return 0;
         char[] chars = p.toCharArray();
         char start = chars[0];
