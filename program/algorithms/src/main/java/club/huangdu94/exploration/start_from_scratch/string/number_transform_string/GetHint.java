@@ -1,4 +1,4 @@
-package club.huangdu94.question_bank.easy;
+package club.huangdu94.exploration.start_from_scratch.string.number_transform_string;
 
 /**
  * 299. 猜数字游戏
@@ -39,5 +39,21 @@ public class GetHint {
             cows += Math.min(count_s[i], count_g[i]);
         }
         return new StringBuilder().append(bulls).append('A').append(cows).append('B').toString();
+    }
+
+
+    public String getHint2(String secret, String guess) {
+        int a = 0, b = 0;
+        int[] counts = new int[10];
+        for (int i = 0, len = secret.length(); i < len; i++) {
+            int s = secret.charAt(i) - '0';
+            int g = guess.charAt(i) - '0';
+            if (s == g) {
+                a++;
+            }
+            if (counts[s]++ < 0) b++;
+            if (counts[g]-- > 0) b++;
+        }
+        return a + "A" + (b - a) + "B";
     }
 }

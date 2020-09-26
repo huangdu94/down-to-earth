@@ -47,4 +47,22 @@ public class FizzBuzz {
         }
         return result;
     }
+
+    public List<String> fizzBuzz2(int n) {
+        List<String> res = new ArrayList<>(n);
+        for (int i = 1; i <= n; i++) {
+            StringBuilder iStr = new StringBuilder();
+            if (i % 3 == 0) {
+                iStr.append("Fizz");
+            }
+            if (i % 5 == 0) {
+                iStr.append("Buzz");
+            }
+            if (iStr.length() == 0) {
+                iStr.append(i);
+            }
+            res.add(iStr.toString());
+        }
+        return res;
+    }
 }
