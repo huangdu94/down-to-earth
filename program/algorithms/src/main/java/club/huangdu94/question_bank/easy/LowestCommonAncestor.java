@@ -42,4 +42,18 @@ public class LowestCommonAncestor {
             return lowestCommonAncestor(root.right);
         return root;
     }
+
+    public TreeNode lowestCommonAncestor2(TreeNode root, TreeNode p, TreeNode q) {
+        TreeNode commonAncestor = root;
+        while (true) {
+            if (commonAncestor.val > p.val && commonAncestor.val > q.val) {
+                commonAncestor = commonAncestor.left;
+            } else if (commonAncestor.val < p.val && commonAncestor.val < q.val) {
+                commonAncestor = commonAncestor.right;
+            } else {
+                break;
+            }
+        }
+        return commonAncestor;
+    }
 }
