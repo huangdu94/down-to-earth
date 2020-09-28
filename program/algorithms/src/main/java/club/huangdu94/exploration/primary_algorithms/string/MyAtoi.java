@@ -1,7 +1,7 @@
 package club.huangdu94.exploration.primary_algorithms.string;
 
 /**
- * 字符串转换整数 (atoi)
+ * 8. 字符串转换整数 (atoi)
  * 请你来实现一个 atoi 函数，使其能将字符串转换成整数。
  * 首先，该函数会根据需要丢弃无用的开头空格字符，直到寻找到第一个非空格的字符为止。接下来的转化规则如下：
  * 如果第一个非空字符为正或者负号时，则将该符号与之后面尽可能多的连续数字字符组合起来，形成一个有符号整数。
@@ -86,5 +86,44 @@ public class MyAtoi {
             }
         }
         return sign ? result : -result;
+    }
+
+    /**
+     * 有限状态机
+     * 符号分为：0.空格 1.正负号 2.数字 3.其它
+     * 状态分为：
+     * 一、 初始状态： 0->一 1、2->二 3->结束
+     * 二、 数字状态：2->二 0、1、3->结束 (数字溢出时直接结束)
+     * 三、 结束状态
+     */
+    public int myAtoi2(String str) {
+        int len = str.length(), i = 0;
+        while (i < len && str.charAt(i) == ' ') {
+            i++;
+        }
+        if (i == len) return 0;
+        char first = str.charAt(i++);
+        if (first == '+' || first == '-' || first >= '0' && first <= '9') {
+            // + true - false
+            boolean sign = first != '-';
+            int num = first >= '0' ? first - '0' : 0;
+            char next;
+            while (i < len && (next = str.charAt(i)) >= '0' && next <= '9') {
+                if (num > 214748364 || num == 214748364 && (sign && next > '7' || !sign && next > '8')) {
+                    return sign ? Integer.MAX_VALUE : Integer.MIN_VALUE;
+                }
+                num = num * 10 + (next - '0');
+                i++;
+            }
+            return sign ? num : -num;
+        }
+        return 0;
+    }
+
+    public static void main(String[] args) {
+        System.out.println(Integer.MAX_VALUE / 10);
+        System.out.println(Integer.MIN_VALUE / 10);
+        System.out.println(Integer.MAX_VALUE % 10);
+        System.out.println(Integer.MIN_VALUE % 10);
     }
 }

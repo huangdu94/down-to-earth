@@ -2,8 +2,8 @@ package club.huangdu94.exploration.start_from_scratch.string.number_transform_st
 
 /**
  * @author duhuang@iflytek.com
- * @version 2020/9/26 17:32
- * @see club.huangdu94.exploration.primary_algorithms.math.FizzBuzz
+ * @version 2020/9/28 9:56
+ * @see club.huangdu94.exploration.primary_algorithms.string.CountAndSay
  */
-public class FizzBuzz {
+public class CountAndSay {
 }

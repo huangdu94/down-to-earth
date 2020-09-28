@@ -79,4 +79,18 @@ public class RomanToInt {
         }
         return result;
     }
+
+    public int romanToInt2(String s) {
+        int res = 0, i = 0, len = s.length();
+        while (i < len) {
+            if (i + 2 <= len && romanMap.containsKey(s.substring(i, i + 2))) {
+                res += romanMap.get(s.substring(i, i + 2));
+                i += 2;
+            } else {
+                res += romanMap.get(s.substring(i, i + 1));
+                i++;
+            }
+        }
+        return res;
+    }
 }

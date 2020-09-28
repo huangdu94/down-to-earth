@@ -1,7 +1,7 @@
 package club.huangdu94.exploration.primary_algorithms.string;
 
 /**
- * 外观数列
+ * 38. 外观数列
  * 给定一个正整数 n（1 ≤ n ≤ 30），输出外观数列的第 n 项。
  * 注意：整数序列中的每一项将表示为一个字符串。
  * 「外观数列」是一个整数序列，从数字 1 开始，序列中的每一项都是对前一项的描述。前五项如下：
@@ -121,5 +121,30 @@ public class CountAndSay {
             output.append(count[i]).append(recode[i]);
         }
         return output.toString();
+    }
+
+    public String countAndSay2(int n) {
+        StringBuilder pre = new StringBuilder("1");
+        if (n == 1) return pre.toString();
+        for (int i = 2; i <= n; i++) {
+            StringBuilder next = new StringBuilder();
+            int len = pre.length(), index = 0;
+            while (index < len) {
+                char num = pre.charAt(index++);
+                int count = 1;
+                while (index < len && pre.charAt(index) == pre.charAt(index - 1)) {
+                    count++;
+                    index++;
+                }
+                next.append(count).append(num);
+            }
+            pre = next;
+        }
+        return pre.toString();
+    }
+
+    public static void main(String[] args) {
+        CountAndSay countAndSay = new CountAndSay();
+        System.out.println(countAndSay.countAndSay(3));
     }
 }
