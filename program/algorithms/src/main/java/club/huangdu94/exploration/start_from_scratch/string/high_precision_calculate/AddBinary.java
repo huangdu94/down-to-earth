@@ -1,4 +1,4 @@
-package club.huangdu94.question_bank.easy;
+package club.huangdu94.exploration.start_from_scratch.string.high_precision_calculate;
 
 /**
  * 67. 二进制求和
@@ -77,5 +77,20 @@ public class AddBinary {
     public static void main(String[] args) {
         AddBinary addBinary = new AddBinary();
         System.out.println(addBinary.addBinary("1", "111"));
+    }
+
+    public String addBinary2(String a, String b) {
+        int na = a.length(), nb = b.length(), ia = na - 1, ib = nb - 1, add = 0;
+        StringBuilder res = new StringBuilder();
+        while (ia >= 0 || ib >= 0 || add != 0) {
+            int num1 = ia >= 0 ? a.charAt(ia) - '0' : 0;
+            int num2 = ib >= 0 ? b.charAt(ib) - '0' : 0;
+            int sum = num1 + num2 + add;
+            res.append(sum & 1);
+            add = sum >> 1;
+            ia--;
+            ib--;
+        }
+        return res.reverse().toString();
     }
 }

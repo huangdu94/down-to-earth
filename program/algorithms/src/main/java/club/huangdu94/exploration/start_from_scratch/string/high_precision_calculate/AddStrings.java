@@ -1,4 +1,4 @@
-package club.huangdu94.question_bank.easy;
+package club.huangdu94.exploration.start_from_scratch.string.high_precision_calculate;
 
 /**
  * 415. 字符串相加
@@ -39,9 +39,24 @@ public class AddStrings {
 
     public static void main(String[] args) {
         AddStrings addStrings = new AddStrings();
-        String num1 = "408";
-        String num2 = "5";
-        String res = addStrings.addStrings(num1, num2);
+        String num1 = "98";
+        String num2 = "9";
+        String res = addStrings.addStrings2(num1, num2);
         System.out.println(res);
+    }
+
+    public String addStrings2(String num1, String num2) {
+        int n1 = num1.length(), n2 = num2.length(), i = n1 - 1, j = n2 - 1, add = 0;
+        StringBuilder res = new StringBuilder();
+        while (i >= 0 || j >= 0 || add != 0) {
+            int unit1 = i >= 0 ? num1.charAt(i) - '0' : 0;
+            int unit2 = j >= 0 ? num2.charAt(j) - '0' : 0;
+            int sum = unit1 + unit2 + add;
+            res.append(sum % 10);
+            add = sum / 10;
+            i--;
+            j--;
+        }
+        return res.reverse().toString();
     }
 }

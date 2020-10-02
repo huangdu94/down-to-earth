@@ -34,4 +34,19 @@ public class PlusOne {
         digits[0] = 1;
         return digits;
     }
+
+    public int[] plusOne3(int[] digits) {
+        int n = digits.length, i = n - 1;
+        while (i >= 0) {
+            int sum = digits[i] + 1;
+            digits[i] = sum % 10;
+            if (sum / 10 == 0) {
+                return digits;
+            }
+            i--;
+        }
+        digits = new int[n + 1];
+        digits[0] = 1;
+        return digits;
+    }
 }

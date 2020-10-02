@@ -1,4 +1,4 @@
-package club.huangdu94.question_bank.medium;
+package club.huangdu94.exploration.start_from_scratch.string.high_precision_calculate;
 
 /**
  * 43. 字符串相乘
