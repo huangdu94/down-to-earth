@@ -1,4 +1,4 @@
-package club.huangdu94.question_bank.difficult;
+package club.huangdu94.exploration.start_from_scratch.string.matching;
 
 /**
  * 214. 最短回文串
@@ -14,7 +14,7 @@ package club.huangdu94.question_bank.difficult;
  * @version 2020/8/29 20:45
  */
 public class ShortestPalindrome {
-    public String shortestPalindrome(String s) {
+    public String shortestPalindrome2(String s) {
         // 马拉车算法来一遍
         // 1. 马拉车算法预处理 开头^ 结尾$ 中间#
         int len = s.length() * 2 + 3;
@@ -64,7 +64,79 @@ public class ShortestPalindrome {
     public static void main(String[] args) {
         ShortestPalindrome shortestPalindrome = new ShortestPalindrome();
         String s = "aacecaaa";
-        String res = shortestPalindrome.shortestPalindrome(s);
+        String s2 = "abbabaab";
+        String res = shortestPalindrome.shortestPalindrome3(s);
         System.out.println(res);
+    }
+
+    public String shortestPalindrome(String s) {
+        // 1. 预处理
+        int sLen = s.length(), n = 2 * sLen + 3;
+        char[] chars = new char[n];
+        chars[0] = '^';
+        chars[n - 1] = '&';
+        for (int i = 1; i < n - 1; i++) {
+            chars[i] = (i & 1) == 1 ? '#' : s.charAt(i / 2 - 1);
+        }
+        // 2. 马拉车算法计算部分
+        int[] pArr = new int[n];
+        int c = 1, r = 1;
+        for (int i = 1; i < n - 1; i++) {
+            int i_mirror = 2 * c - i, p;
+            if (i < r) {
+                p = Math.min(pArr[i_mirror], r - i);
+            } else {
+                p = 0;
+            }
+            while (chars[i - p - 1] == chars[i + p + 1]) {
+                p++;
+            }
+            if (i + p > r) {
+                r = i + p;
+                c = i;
+            }
+            pArr[i] = p;
+        }
+        // 3. 应用部分
+        int i = n - 3;
+        while ((i - pArr[i]) / 2 != 0) {
+            i--;
+        }
+        return new StringBuilder(s.substring(pArr[i])).reverse().append(s).toString();
+    }
+
+    // KMP算法
+    public String shortestPalindrome3(String s) {
+        if (s.length() == 0) return s;
+        int n = s.length();
+        String reverseS = new StringBuilder(s).reverse().toString();
+        int[] next = getNext(s);
+        int i = 0, j = 0;
+        while (i < n && j < n) {
+            if (j == -1 || reverseS.charAt(i) == s.charAt(j)) {
+                i++;
+                j++;
+            } else {
+                j = next[j];
+            }
+        }
+        return reverseS.substring(0, i - j).concat(s);
+    }
+
+    private int[] getNext(String s) {
+        int n = s.length();
+        int[] next = new int[n];
+        next[0] = -1;
+        int i = 0, j = -1;
+        while (i < n - 1) {
+            if (j == -1 || s.charAt(i) == s.charAt(j)) {
+                i++;
+                j++;
+                next[i] = j;
+            } else {
+                j = next[j];
+            }
+        }
+        return next;
     }
 }

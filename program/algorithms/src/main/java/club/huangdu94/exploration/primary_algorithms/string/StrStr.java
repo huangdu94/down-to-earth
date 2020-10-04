@@ -19,7 +19,7 @@ package club.huangdu94.exploration.primary_algorithms.string;
  */
 public class StrStr {
     // KMP算法
-    public int strStr(String haystack, String needle) {
+/*    public int strStr(String haystack, String needle) {
         int needleLen = needle.length();
         if (needleLen == 0)
             return 0;
@@ -60,7 +60,7 @@ public class StrStr {
             }
         }
         return next;
-    }
+    }*/
 
     // 暴力解
     public int strStr2(String haystack, String needle) {
@@ -102,5 +102,40 @@ public class StrStr {
             }
         }
         return -1;
+    }
+
+    // KMP算法
+    public int strStr(String haystack, String needle) {
+        if (needle.length() == 0) return 0;
+        int h = haystack.length(), n = needle.length(), i = 0, j = 0;
+        int[] next = getNext(needle);
+        while (i < h && j < n) {
+            if (j == -1 || haystack.charAt(i) == needle.charAt(j)) {
+                i++;
+                j++;
+            } else {
+                j = next[j];
+            }
+        }
+        if (j == n) {
+            return i - n;
+        }
+        return -1;
+    }
+
+    private int[] getNext(String needle) {
+        int n = needle.length(), i = 0, j = -1;
+        int[] next = new int[n];
+        next[0] = -1;
+        while (i < n - 1) {
+            if (j == -1 || needle.charAt(i) == needle.charAt(j)) {
+                i++;
+                j++;
+                next[i] = j;
+            } else {
+                j = next[j];
+            }
+        }
+        return next;
     }
 }

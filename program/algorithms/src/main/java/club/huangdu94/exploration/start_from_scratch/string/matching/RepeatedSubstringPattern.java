@@ -1,4 +1,4 @@
-package club.huangdu94.question_bank.easy;
+package club.huangdu94.exploration.start_from_scratch.string.matching;
 
 /**
  * 459. 重复的子字符串
@@ -72,5 +72,30 @@ public class RepeatedSubstringPattern {
             }
         }
         return true;
+    }
+
+    public boolean repeatedSubstringPattern3(String s) {
+        int n = s.length();
+        char[] chars = s.toCharArray();
+        for (int i = 1; i <= n / 2; i++) {
+            if (n % i == 0) {
+                boolean flag = true;
+                for (int j = i; j < n; j++) {
+                    if (chars[j] != chars[j - i]) {
+                        flag = false;
+                        break;
+                    }
+                }
+                if (flag) {
+                    return true;
+                }
+            }
+        }
+        return false;
+    }
+
+    public static void main(String[] args) {
+        String s = "abab";
+        System.out.println(new RepeatedSubstringPattern().repeatedSubstringPattern3(s));
     }
 }
