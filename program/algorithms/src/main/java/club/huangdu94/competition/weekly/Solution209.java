@@ -249,6 +249,7 @@ public class Solution209 {
      * 0 <= n <= 10^9
      */
     public int minimumOneBitOperations(int n) {
+        // 格雷码
         int ans = 0;
         while (n > 0) {
             ans ^= n;
