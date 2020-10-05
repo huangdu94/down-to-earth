@@ -23,6 +23,10 @@ import java.util.Map;
  *
  * @author duhuang@iflytek.com
  * @version 2020/7/26 20:02
+ * @see club.huangdu94.exploration.primary_algorithms.array.TwoSum
+ * @see club.huangdu94.question_bank.easy.TwoSum
+ * @see club.huangdu94.exploration.intermediate_algorithms.array_string.ThreeSum
+ * @see club.huangdu94.question_bank.medium.FourSum
  */
 public class FourSumCount {
     // 暴力解(超出时间限制),时间复杂度o(n^4)

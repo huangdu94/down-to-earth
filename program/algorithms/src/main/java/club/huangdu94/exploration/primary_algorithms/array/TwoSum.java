@@ -14,6 +14,10 @@ import java.util.Map;
  *
  * @author duhuang@iflytek.com
  * @version 2020/7/26 16:02
+ * @see club.huangdu94.question_bank.easy.TwoSum
+ * @see club.huangdu94.exploration.intermediate_algorithms.array_string.ThreeSum
+ * @see club.huangdu94.exploration.advanced_algorithms.array_string.FourSumCount
+ * @see club.huangdu94.question_bank.medium.FourSum
  */
 public class TwoSum {
     public int[] twoSum(int[] nums, int target) {

@@ -16,6 +16,10 @@ import java.util.*;
  *
  * @author duhuang@iflytek.com
  * @version 2020/7/2 10:33
+ * @see club.huangdu94.exploration.primary_algorithms.array.TwoSum
+ * @see club.huangdu94.question_bank.easy.TwoSum
+ * @see club.huangdu94.exploration.advanced_algorithms.array_string.FourSumCount
+ * @see club.huangdu94.question_bank.medium.FourSum
  */
 public class ThreeSum {
     public List<List<Integer>> threeSum4(int[] nums) {

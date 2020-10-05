@@ -14,6 +14,10 @@ package club.huangdu94.question_bank.easy;
  *
  * @author duhuang@iflytek.com
  * @version 2020/8/11 0:19
+ * @see club.huangdu94.exploration.primary_algorithms.array.TwoSum
+ * @see club.huangdu94.exploration.intermediate_algorithms.array_string.ThreeSum
+ * @see club.huangdu94.exploration.advanced_algorithms.array_string.FourSumCount
+ * @see club.huangdu94.question_bank.medium.FourSum
  */
 public class TwoSum {
     public int[] twoSum(int[] numbers, int target) {
