@@ -1,4 +1,4 @@
-package club.huangdu94.question_bank.easy;
+package club.huangdu94.exploration.start_from_scratch.binary.bit_operation;
 
 /**
  * 9. 回文数
@@ -22,20 +22,22 @@ package club.huangdu94.question_bank.easy;
  */
 public class IsPalindrome {
     public boolean isPalindrome(int x) {
-        if (x < 0)
-            return false;
-        if (x < 10)
-            return true;
-        int len = 0;
-        int[] nums = new int[10];
-        while (x != 0) {
-            nums[len++] = x % 10;
+        if (x < 0 || x % 10 == 0 && x != 0) return false;
+        if (x < 10) return true;
+        int bits = 0;
+        int[] digits = new int[10];
+        while (x > 0) {
+            digits[bits++] = x % 10;
             x /= 10;
         }
-        int i = 0, j = len - 1;
-        while (i < j)
-            if (nums[i++] != nums[j--])
+        int i = 0, j = bits - 1;
+        while (i < j) {
+            if (digits[i] != digits[j]) {
                 return false;
+            }
+            i++;
+            j--;
+        }
         return true;
     }
 
