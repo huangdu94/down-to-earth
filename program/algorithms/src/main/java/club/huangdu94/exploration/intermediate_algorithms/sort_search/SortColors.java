@@ -91,10 +91,36 @@ public class SortColors {
         }
     }
 
+    public void sortColors2(int[] nums) {
+        int n = nums.length;
+        // 三指针
+        int i = 0, j = n - 1, k = 0;
+        while (k < j) {
+            while (i < j && nums[i] == 0) {
+                i++;
+            }
+            while (i < j && nums[j] == 2) {
+                j--;
+            }
+            k = i;
+            while (k <= j && nums[k] == 1) {
+                k++;
+            }
+            if (k < n && nums[k] == 0 && i < k) {
+                nums[k] = nums[i];
+                nums[i] = 0;
+            } else if (k < j && nums[k] == 2) {
+                nums[k] = nums[j];
+                nums[j] = 2;
+            }
+        }
+    }
+
     public static void main(String[] args) {
-        int[] nums = {2, 0, 2, 1, 1, 0};
+//        int[] nums = {2, 0, 2, 1, 1, 0};
+        int[] nums = {1, 1};
         long start = System.currentTimeMillis();
-        new SortColors().sortColors(nums);
+        new SortColors().sortColors2(nums);
         long end = System.currentTimeMillis();
         System.out.println("结果：" + Arrays.toString(nums));
         System.out.println("时间(ms)：" + (end - start));
