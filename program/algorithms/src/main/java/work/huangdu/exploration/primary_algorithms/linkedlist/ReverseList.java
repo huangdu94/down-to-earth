@@ -3,7 +3,8 @@ package work.huangdu.exploration.primary_algorithms.linkedlist;
 import work.huangdu.data_structure.ListNode;
 
 /**
- * 反转链表
+ * 206. 反转链表
+ * 剑指 Offer 24. 反转链表
  * 反转一个单链表。
  * 示例:
  * 输入: 1->2->3->4->5->NULL
@@ -45,6 +46,26 @@ public class ReverseList {
             return;
         reverse(current.next);
         generateResult(current);
+    }
+
+    public ListNode reverseList3(ListNode head) {
+        ListNode pre = null;
+        ListNode cur = head;
+        while (cur != null) {
+            ListNode next = cur.next;
+            cur.next = pre;
+            pre = cur;
+            cur = next;
+        }
+        return pre;
+    }
+
+    public ListNode reverseList4(ListNode head) {
+        if (head == null || head.next == null) return head;
+        ListNode res = reverseList4(head);
+        head.next.next = head;
+        head.next = null;
+        return res;
     }
 
     private void generateResult(ListNode node) {
