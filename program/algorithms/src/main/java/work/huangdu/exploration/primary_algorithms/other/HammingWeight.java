@@ -35,4 +35,19 @@ public class HammingWeight {
         }
         return count;
     }
+
+    // you need to treat n as an unsigned value
+    public int hammingWeight2(int n) {
+        int count = 0;
+        while (n != 0) {
+            n &= (n - 1);
+            count++;
+        }
+        return count;
+    }
+
+    public static void main(String[] args) {
+        HammingWeight weight = new HammingWeight();
+        System.out.println(weight.hammingWeight(4));
+    }
 }
