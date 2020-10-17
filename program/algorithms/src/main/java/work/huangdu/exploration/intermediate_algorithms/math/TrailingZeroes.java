@@ -1,7 +1,7 @@
 package work.huangdu.exploration.intermediate_algorithms.math;
 
 /**
- * 阶乘后的零
+ * 172. 阶乘后的零
  * 给定一个整数 n，返回 n! 结果尾数中零的数量。
  * 示例 1:
  * 输入: 3
@@ -26,7 +26,7 @@ public class TrailingZeroes {
 
     public static void main(String[] args) {
         for (int i = 0; i <= 20; i++)
-            System.out.println(String.format("%s的阶乘是\t%s", i, factorial(i)));
+            System.out.printf("%s的阶乘是\t%s%n", i, factorial(i));
     }
 
     /**
