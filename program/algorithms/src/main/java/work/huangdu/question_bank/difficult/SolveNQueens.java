@@ -87,4 +87,33 @@ public class SolveNQueens {
             }
         }
     }
+
+    public List<List<String>> solveNQueens2(int _n) {
+        n = _n;
+        resList = new ArrayList<>();
+        res = new ArrayList<>(n);
+        rowChars = new char[n];
+        Arrays.fill(rowChars, '.');
+        helper(0, 0, 0, 0);
+        return resList;
+    }
+
+    private void helper(int row, int colVisited, int diaVisited, int backVisited) {
+        if (row == n) {
+            resList.add(new ArrayList<>(res));
+            return;
+        }
+        for (int col = 0; col < n; col++) {
+            int dia = row + col;
+            int back = row + (n - 1 - col);
+            if (((colVisited >>> col) & 1) == 0 && ((diaVisited >>> dia) & 1) == 0 && ((backVisited >>> back) & 1) == 0) {
+                rowChars[col] = 'Q';
+                res.add(new String(rowChars));
+                rowChars[col] = '.';
+                helper(row + 1, colVisited | (1 << col), diaVisited | (1 << dia), backVisited | (1 << back));
+                // 回溯
+                res.remove(row);
+            }
+        }
+    }
 }
