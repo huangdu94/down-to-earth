@@ -1,4 +1,4 @@
-package work.huangdu.exploration.start_from_scratch.binary.bit_operation;
+package work.huangdu.exploration.start_from_scratch.binary.number_bit_operation;
 
 /**
  * 477. 汉明距离总和

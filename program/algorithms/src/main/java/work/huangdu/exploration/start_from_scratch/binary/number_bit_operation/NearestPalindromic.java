@@ -1,4 +1,4 @@
-package work.huangdu.exploration.start_from_scratch.binary.bit_operation;
+package work.huangdu.exploration.start_from_scratch.binary.number_bit_operation;
 
 /**
  * 564. 寻找最近的回文数
