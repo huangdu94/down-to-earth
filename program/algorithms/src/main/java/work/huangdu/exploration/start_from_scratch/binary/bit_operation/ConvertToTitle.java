@@ -1,4 +1,4 @@
-package work.huangdu.question_bank.easy;
+package work.huangdu.exploration.start_from_scratch.binary.bit_operation;
 
 /**
  * 168. Excel表列名称
