@@ -1,7 +1,7 @@
 package work.huangdu.exploration.intermediate_algorithms.math;
 
 /**
- * Pow(x, n)
+ * 50. Pow(x, n)
  * 实现 pow(x, n) ，即计算 x 的 n 次幂函数。
  * 示例 1:
  * 输入: 2.00000, 10
@@ -81,5 +81,25 @@ public class MyPow {
         end = System.currentTimeMillis();
         System.out.println("执行耗时(ms)：" + (end - start));
         System.out.println("执行结果：" + result);
+    }
+
+    public double myPow(double x, int n) {
+        if (n == 0 || Math.abs(x - 1) < 1e-8) return 1;
+        boolean sign;
+        if (n < 0) {
+            sign = false;
+            n = ~n + 1;
+        } else {
+            sign = true;
+        }
+        double res = 1;
+        while (n != 0) {
+            if ((n & 1) == 1) {
+                res *= x;
+            }
+            x *= x;
+            n >>>= 1;
+        }
+        return sign ? res : 1 / res;
     }
 }
