@@ -4,7 +4,7 @@ import java.util.Arrays;
 import java.util.List;
 
 /**
- * 基本计算器 II
+ * 227. 基本计算器 II
  * 实现一个基本的计算器来计算一个简单的字符串表达式的值。
  * 字符串表达式仅包含非负整数，+， - ，*，/ 四种运算符和空格  。 整数除法仅保留整数部分。
  * 示例 1:
@@ -112,4 +112,39 @@ public class Calculate {
     }
 
     // 基本思想 问题拆解
+
+
+    public int calculate2(String s) {
+        int[] stack = new int[s.length() / 2 + 1];
+        int res = 0, num = 0, top = 0;
+        char sign = '+';
+        for (int i = 0, len = s.length(); i < len; i++) {
+            char c = s.charAt(i);
+            if (i != len - 1 && c == ' ') continue;
+            if (c <= '9' && c >= '0') {
+                num = num * 10 + (c - '0');
+            }
+            if (i == len - 1 || c == '+' || c == '-' || c == '*' || c == '/') {
+                switch (sign) {
+                    case '+':
+                        stack[top++] = num;
+                        break;
+                    case '-':
+                        stack[top++] = -num;
+                        break;
+                    case '*':
+                        stack[top - 1] *= num;
+                        break;
+                    default:
+                        stack[top - 1] /= num;
+                }
+                num = 0;
+                sign = c;
+            }
+        }
+        for (int i = 0; i < top; i++) {
+            res += stack[i];
+        }
+        return res;
+    }
 }

@@ -1,9 +1,11 @@
 package work.huangdu.exploration.intermediate_algorithms.other;
 
+import java.util.ArrayDeque;
+import java.util.Deque;
 import java.util.Stack;
 
 /**
- * 逆波兰表达式求值
+ * 150. 逆波兰表达式求值
  * 根据 逆波兰表示法，求表达式的值。
  * 有效的运算符包括 +, -, *, / 。每个运算对象可以是整数，也可以是另一个逆波兰表达式。
  * 说明：
@@ -90,5 +92,29 @@ public class EvalRPN {
             default:
                 throw new RuntimeException();
         }
+    }
+
+    public int evalRPN2(String[] tokens) {
+        Deque<Integer> stack = new ArrayDeque<>();
+        for (String token : tokens) {
+            switch (token) {
+                case "+":
+                    stack.push(stack.pop() + stack.pop());
+                    break;
+                case "-":
+                    stack.push(-stack.pop() + stack.pop());
+                    break;
+                case "*":
+                    stack.push(stack.pop() * stack.pop());
+                    break;
+                case "/":
+                    int temp = stack.pop();
+                    stack.push(stack.pop() / temp);
+                    break;
+                default:
+                    stack.push(Integer.parseInt(token));
+            }
+        }
+        return stack.pop();
     }
 }
