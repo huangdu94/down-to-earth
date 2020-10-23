@@ -3,7 +3,7 @@ package work.huangdu.exploration.primary_algorithms.linkedlist;
 import work.huangdu.data_structure.ListNode;
 
 /**
- * 回文链表
+ * 234. 回文链表
  * 请判断一个链表是否为回文链表。
  * 示例 1:
  * 输入: 1->2
@@ -116,5 +116,40 @@ public class IsPalindrome {
             l1 = l1.next;
         }
         System.out.println("null ]");
+    }
+
+    public boolean isPalindrome2(ListNode head) {
+        if (head == null) return true;
+        // 1. 快慢指针找中点(偶数时为偏右点)
+        ListNode mid = head, end = head;
+        while (end != null && end.next != null) {
+            mid = mid.next;
+            end = end.next.next;
+        }
+        // 2. 从mid开始翻转
+        ListNode tail = reverse(mid), head2 = tail;
+        while (head2 != null) {
+            if (head.val != head2.val) {
+                return false;
+            }
+            head = head.next;
+            head2 = head2.next;
+        }
+        reverse(tail);
+        return true;
+    }
+
+    /**
+     * 翻转链表,返回新链表的头
+     */
+    private ListNode reverse(ListNode head) {
+        ListNode pre = null, cur = head;
+        while (cur != null) {
+            ListNode next = cur.next;
+            cur.next = pre;
+            pre = cur;
+            cur = next;
+        }
+        return pre;
     }
 }
