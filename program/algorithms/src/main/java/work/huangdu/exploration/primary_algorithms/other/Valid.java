@@ -5,7 +5,7 @@ import java.util.Map;
 import java.util.Stack;
 
 /**
- * 有效的括号
+ * 20. 有效的括号
  * 给定一个只包括 '('，')'，'{'，'}'，'['，']' 的字符串，判断字符串是否有效。
  * 有效字符串需满足：
  * 左括号必须用相同类型的右括号闭合。
@@ -85,5 +85,23 @@ public class Valid {
             }
         }
         return stack.empty();
+    }
+
+    public boolean isValid3(String s) {
+        int n = s.length();
+        if ((n & 1) == 1) return false;
+        // 自制栈
+        char[] stack = new char[n / 2];
+        int top = 0;
+        for (int i = 0; i < n; i++) {
+            char c = s.charAt(i);
+            if (c == '(' || c == '{' || c == '[') {
+                if (top == n / 2) return false;
+                stack[top++] = c;
+            } else if (top == 0 || Math.abs(c - stack[--top]) > 2) {
+                return false;
+            }
+        }
+        return top == 0;
     }
 }
