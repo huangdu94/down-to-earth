@@ -56,6 +56,36 @@ public class NestedIterator implements Iterator<Integer> {
     }
 }
 
+class NestedIterator2 implements Iterator<Integer> {
+    private final List<Integer> list = new ArrayList<>();
+    private int index;
+
+    public NestedIterator2(List<NestedInteger> nestedList) {
+        index = 0;
+        readNestedList(nestedList);
+    }
+
+    private void readNestedList(List<NestedInteger> nestedList) {
+        for (NestedInteger ni : nestedList) {
+            if (ni.isInteger()) {
+                list.add(ni.getInteger());
+            } else {
+                readNestedList(ni.getList());
+            }
+        }
+    }
+
+    @Override
+    public Integer next() {
+        return list.get(index++);
+    }
+
+    @Override
+    public boolean hasNext() {
+        return index < list.size();
+    }
+}
+
 /**
  * This is the interface that allows for creating nested lists.
  * You should not implement it, or speculate about its implementation
