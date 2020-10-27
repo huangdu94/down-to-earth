@@ -16,6 +16,31 @@ import work.huangdu.data_structure.ListNode;
  */
 public class ReverseBetween {
     public ListNode reverseBetween(ListNode head, int m, int n) {
-        return null;
+        ListNode dummy = new ListNode(-1);
+        dummy.next = head;
+        ListNode headTail = dummy;
+        for (int i = 1; i < m; i++) {
+            headTail = headTail.next;
+        }
+        ListNode begin = headTail.next, end = begin;
+        for (int i = m; i < n; i++) {
+            end = end.next;
+        }
+        ListNode tailHead = end.next;
+        // 反转后原来的头变成尾，原来的尾变成头
+        reverseList(begin, end.next);
+        headTail.next = end;
+        begin.next = tailHead;
+        return dummy.next;
+    }
+
+    private void reverseList(ListNode begin, ListNode end) {
+        ListNode pre = null, cur = begin;
+        while (cur != end) {
+            ListNode next = cur.next;
+            cur.next = pre;
+            pre = cur;
+            cur = next;
+        }
     }
 }
