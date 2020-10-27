@@ -27,4 +27,18 @@ public class RemoveElements {
         }
         return dummy.next;
     }
+
+    public ListNode removeElements2(ListNode head, int val) {
+        ListNode dummy = new ListNode(-1), prev = dummy;
+        dummy.next = head;
+        while (head != null) {
+            if (head.val == val) {
+                prev.next = head.next;
+            } else {
+                prev = prev.next;
+            }
+            head = head.next;
+        }
+        return dummy.next;
+    }
 }
