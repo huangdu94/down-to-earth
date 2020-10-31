@@ -1,4 +1,4 @@
-package work.huangdu.question_bank.easy;
+package work.huangdu.exploration.start_from_scratch.hashmap.search_insert_delete;
 
 import work.huangdu.exploration.primary_algorithms.array.Intersect;
 
@@ -46,5 +46,23 @@ public class Intersection {
             }
         }
         return Arrays.copyOf(res, index);
+    }
+
+    public int[] intersection2(int[] nums1, int[] nums2) {
+        Set<Integer> set1 = new HashSet<>(), set2 = new HashSet<>();
+        for (int num : nums1) {
+            set1.add(num);
+        }
+        for (int num : nums2) {
+            if (set1.contains(num)) {
+                set2.add(num);
+            }
+        }
+        int i = 0;
+        int[] res = new int[set2.size()];
+        for (int num : set2) {
+            res[i++] = num;
+        }
+        return res;
     }
 }
