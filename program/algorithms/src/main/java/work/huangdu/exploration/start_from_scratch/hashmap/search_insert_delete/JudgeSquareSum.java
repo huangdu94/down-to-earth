@@ -45,4 +45,14 @@ public class JudgeSquareSum {
         }
         return false;
     }
+
+    public boolean judgeSquareSum2(int c) {
+        for (int i = 0, max = (int) Math.sqrt(c >> 1) + 1; i <= max; i++) {
+            double num = Math.sqrt(c - i * i);
+            if ((int) num == num) {
+                return true;
+            }
+        }
+        return false;
+    }
 }
