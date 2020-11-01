@@ -58,4 +58,24 @@ public class IsHappy {
         }
         return next;
     }
+
+    // int最多10位（假设每位都是9，则结果为810，只是为了简便计算，10位都是9就越界了。所以说大于三位的数，计算后结果一定小于三位，循环的话也只可能在三位以内循环，所以可以申请一个大小为1000的数组判断是否重复）
+    public boolean isHappy2(int n) {
+        return isHappy(n, new boolean[1000]);
+    }
+
+    public boolean isHappy(int n, boolean[] exist) {
+        if (n == 1) return true;
+        if (n < 1000) {
+            if (exist[n]) return false;
+            exist[n] = true;
+        }
+        int next = 0;
+        while (n != 0) {
+            int num = n % 10;
+            next += num * num;
+            n /= 10;
+        }
+        return isHappy(next, exist);
+    }
 }

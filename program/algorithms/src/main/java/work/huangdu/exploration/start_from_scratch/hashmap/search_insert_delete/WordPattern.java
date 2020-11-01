@@ -1,4 +1,4 @@
-package work.huangdu.question_bank.easy;
+package work.huangdu.exploration.start_from_scratch.hashmap.search_insert_delete;
 
 import java.util.HashSet;
 import java.util.Set;
@@ -66,5 +66,27 @@ public class WordPattern {
             return temp.equals(s);
         }
         return false;
+    }
+
+    public boolean wordPattern2(String pattern, String s) {
+        Set<String> exist = new HashSet<>();
+        String[] wordPattern = new String[26];
+        char[] patterns = pattern.toCharArray();
+        String[] strArr = s.split(" ");
+        if (patterns.length != strArr.length) {
+            return false;
+        }
+        int n = patterns.length;
+        for (int i = 0; i < n; i++) {
+            int p = patterns[i] - 'a';
+            String t = strArr[i];
+            if (wordPattern[p] == null && !exist.contains(t)) {
+                wordPattern[p] = t;
+                exist.add(t);
+            } else if (!t.equals(wordPattern[p])) {
+                return false;
+            }
+        }
+        return true;
     }
 }
