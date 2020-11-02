@@ -1,4 +1,4 @@
-package work.huangdu.question_bank.easy;
+package work.huangdu.exploration.start_from_scratch.hashmap.search_insert_delete;
 
 import java.util.HashMap;
 import java.util.HashSet;
@@ -38,6 +38,20 @@ public class IsIsomorphic {
                     || t_expect != null && t_expect != tc) return false;
             s_t_map.put(sc, tc);
             t_exist.add(tc);
+        }
+        return true;
+    }
+
+    public boolean isIsomorphic2(String s, String t) {
+        Map<Character, Integer> map_s = new HashMap<>();
+        Map<Character, Integer> map_t = new HashMap<>();
+        if (s.length() != t.length()) {
+            return false;
+        }
+        for (Integer i = 0, n = s.length(); i < n; i++) {
+            if (map_s.put(s.charAt(i), i) != map_t.put(t.charAt(i), i)) {
+                return false;
+            }
         }
         return true;
     }
