@@ -19,6 +19,8 @@ import java.util.Set;
  *
  * @author duhuang@iflytek.com
  * @version 2020/7/26 15:15
+ * @see work.huangdu.exploration.start_from_scratch.hashmap.index.ContainsNearbyDuplicate
+ * @see work.huangdu.exploration.start_from_scratch.hashmap.index.ContainsNearbyAlmostDuplicate
  */
 public class ContainsDuplicate {
     public boolean containsDuplicate(int[] nums) {
