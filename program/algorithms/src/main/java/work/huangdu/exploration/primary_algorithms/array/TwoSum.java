@@ -2,6 +2,7 @@ package work.huangdu.exploration.primary_algorithms.array;
 
 import work.huangdu.exploration.advanced_algorithms.array_string.FourSumCount;
 import work.huangdu.exploration.intermediate_algorithms.array_string.ThreeSum;
+import work.huangdu.exploration.start_from_scratch.hashmap.index.TwoSum2;
 import work.huangdu.question_bank.medium.FourSum;
 
 import java.util.HashMap;
@@ -18,7 +19,7 @@ import java.util.Map;
  *
  * @author duhuang@iflytek.com
  * @version 2020/7/26 16:02
- * @see work.huangdu.question_bank.easy.TwoSum
+ * @see TwoSum2
  * @see ThreeSum
  * @see FourSumCount
  * @see FourSum
@@ -57,6 +58,32 @@ public class TwoSum {
                 return new int[]{map.get(nums[i]), i};
             } else {
                 map.put(target - nums[i], i);
+            }
+        }
+        return null;
+    }
+
+    public int[] twoSum4(int[] nums, int target) {
+        int n = nums.length;
+        Map<Integer, Integer> map = new HashMap<>();
+        for (int i = 0; i < n; i++) {
+            if (map.containsKey(target - nums[i])) {
+                return new int[]{map.get(target - nums[i]), i};
+            } else {
+                map.put(nums[i], i);
+            }
+        }
+        return null;
+    }
+
+    public int[] twoSum5(int[] nums, int target) {
+        int n = nums.length;
+        Map<Integer, Integer> map = new HashMap<>();
+        for (int i = 0; i < n; i++) {
+            if (map.containsKey(target - nums[i])) {
+                return new int[]{map.get(target - nums[i]), i};
+            } else {
+                map.put(nums[i], i);
             }
         }
         return null;

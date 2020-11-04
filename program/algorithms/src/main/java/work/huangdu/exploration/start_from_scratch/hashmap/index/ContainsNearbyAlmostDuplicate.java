@@ -1,7 +1,6 @@
 package work.huangdu.exploration.start_from_scratch.hashmap.index;
 
-import java.util.HashSet;
-import java.util.Set;
+import java.util.TreeSet;
 
 /**
  * 220. 存在重复元素 III
@@ -23,26 +22,32 @@ import java.util.Set;
  * @see work.huangdu.exploration.start_from_scratch.hashmap.index.ContainsNearbyAlmostDuplicate
  */
 public class ContainsNearbyAlmostDuplicate {
-    public boolean containsNearbyAlmostDuplicate(int[] nums, int k, int t) {
-        if (k == 0) return false;
+    // 暴力解超时
+    public boolean containsNearbyAlmostDuplicate2(int[] nums, int k, int t) {
+        if (t < 0) return false;
         int n = nums.length;
-        Set<Integer> set = new HashSet<>(k);
         for (int i = 0; i < n; i++) {
-            long bound1 = (long) nums[i] - t, bound2 = (long) nums[i] + t;
-            long min = Math.min(bound1, bound2), max = Math.max(bound1, bound2);
-            min = Math.max(Integer.MIN_VALUE, min);
-            max = Math.min(Integer.MAX_VALUE, max);
-            for (long j = min; j <= max; j++) {
-                if (j >= Integer.MIN_VALUE && j <= Integer.MAX_VALUE) {
-                    if (set.contains((int) j)) {
-                        return true;
-                    }
+            for (int j = Math.max(0, i - k); j < i; j++) {
+                if (Math.abs((long) nums[i] - nums[j]) <= t) {
+                    return true;
                 }
             }
-            if (set.size() == k) {
+        }
+        return false;
+    }
+
+    public boolean containsNearbyAlmostDuplicate(int[] nums, int k, int t) {
+        int n = nums.length;
+        TreeSet<Integer> set = new TreeSet<>();
+        for (int i = 0; i < n; i++) {
+            Integer large = set.ceiling(nums[i]);
+            if (large != null && (long) large - nums[i] <= t) return true;
+            Integer small = set.floor(nums[i]);
+            if (small != null && (long) nums[i] - small <= t) return true;
+            set.add(nums[i]);
+            if (set.size() > k) {
                 set.remove(nums[i - k]);
             }
-            set.add(nums[i]);
         }
         return false;
     }

@@ -1,7 +1,7 @@
 package work.huangdu.exploration.intermediate_algorithms.array_string;
 
 import work.huangdu.exploration.advanced_algorithms.array_string.FourSumCount;
-import work.huangdu.question_bank.easy.TwoSum;
+import work.huangdu.exploration.start_from_scratch.hashmap.index.TwoSum2;
 import work.huangdu.question_bank.medium.FourSum;
 
 import java.util.*;
@@ -21,7 +21,7 @@ import java.util.*;
  * @author duhuang@iflytek.com
  * @version 2020/7/2 10:33
  * @see work.huangdu.exploration.primary_algorithms.array.TwoSum
- * @see TwoSum
+ * @see TwoSum2
  * @see FourSumCount
  * @see FourSum
  */

@@ -1,4 +1,4 @@
-package work.huangdu.question_bank.easy;
+package work.huangdu.exploration.start_from_scratch.hashmap.index;
 
 import work.huangdu.exploration.advanced_algorithms.array_string.FourSumCount;
 import work.huangdu.exploration.intermediate_algorithms.array_string.ThreeSum;
@@ -23,7 +23,7 @@ import work.huangdu.question_bank.medium.FourSum;
  * @see FourSumCount
  * @see FourSum
  */
-public class TwoSum {
+public class TwoSum2 {
     public int[] twoSum(int[] numbers, int target) {
         int[] res = new int[2];
         int i = 0, j = numbers.length - 1;
@@ -39,5 +39,18 @@ public class TwoSum {
             }
         }
         throw new RuntimeException();
+    }
+
+    public int[] twoSum2(int[] numbers, int target) {
+        int i = 0, j = numbers.length - 1;
+        while (true) {
+            if (numbers[i] + numbers[j] > target) {
+                j--;
+            } else if (numbers[i] + numbers[j] < target) {
+                i++;
+            } else {
+                return new int[]{i + 1, j + 1};
+            }
+        }
     }
 }
