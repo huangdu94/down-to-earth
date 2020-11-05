@@ -3,7 +3,7 @@ package work.huangdu.exploration.advanced_algorithms.tree_graph;
 import java.util.*;
 
 /**
- * 单词接龙
+ * 127. 单词接龙
  * 给定两个单词（beginWord和 endWord）和一个字典，找到从beginWord 到endWord 的最短转换序列的长度。转换需遵循如下规则：
  * 每次转换只能改变一个字母。
  * 转换过程中的中间单词必须是字典中的单词。
@@ -211,5 +211,46 @@ public class LadderLength {
         List<String> wordList = Arrays.asList("hot", "dot", "dog", "lot", "log", "cog");
         int res = ladderLength.ladderLength(beginWord, endWord, wordList);
         System.out.println(res);
+    }
+
+    public int ladderLength3(String beginWord, String endWord, List<String> wordList) {
+        if (wordList.isEmpty()) return 0;
+        int len = wordList.get(0).length();
+        // 1. 预处理，例：cat处理成 *at c*t ca*
+        Map<String, List<String>> map = new HashMap<>();
+        for (String word : wordList) {
+            for (int i = 0; i < len; i++) {
+                String key = word.substring(0, i) + "*" + word.substring(i + 1);
+                List<String> list = map.computeIfAbsent(key, k -> new ArrayList<>());
+                list.add(word);
+            }
+        }
+        Queue<String> stringQueue = new ArrayDeque<>();
+        Queue<Integer> lengthQueue = new ArrayDeque<>();
+        Set<String> set = new HashSet<>();
+        stringQueue.offer(beginWord);
+        lengthQueue.offer(1);
+        set.add(beginWord);
+        while (!stringQueue.isEmpty()) {
+            String word = stringQueue.poll();
+            Integer length = lengthQueue.poll();
+            for (int i = 0; i < len; i++) {
+                String key = word.substring(0, i) + "*" + word.substring(i + 1);
+                List<String> list = map.get(key);
+                if (list != null) {
+                    for (String next : list) {
+                        if (next.equals(endWord)) {
+                            return length + 1;
+                        }
+                        if (!set.contains(next)) {
+                            stringQueue.offer(next);
+                            lengthQueue.offer(length + 1);
+                            set.add(next);
+                        }
+                    }
+                }
+            }
+        }
+        return 0;
     }
 }
