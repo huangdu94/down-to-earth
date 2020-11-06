@@ -45,7 +45,7 @@ public class Quick {
         }
         arr[l] = arr[mid];
         arr[mid] = pivot;
-        quick(arr, l, mid - 1);
+        quick(arr, l, mid);
         quick(arr, mid + 1, r);
     }
 
@@ -69,7 +69,7 @@ public class Quick {
         // 基准数归位
         arr[l] = arr[i];
         arr[i] = pivot;
-        quick(arr, l, i - 1);
+        quick(arr, l, i);
         quick(arr, i + 1, r);
     }
 }
