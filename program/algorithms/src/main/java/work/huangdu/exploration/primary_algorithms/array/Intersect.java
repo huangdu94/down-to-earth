@@ -2,10 +2,10 @@ package work.huangdu.exploration.primary_algorithms.array;
 
 import work.huangdu.exploration.start_from_scratch.hashmap.search_insert_delete.Intersection;
 
-import java.util.Arrays;
+import java.util.*;
 
 /**
-     * 350. 两个数组的交集 II
+ * 350. 两个数组的交集 II
  * 给定两个数组，编写一个函数来计算它们的交集。
  * 示例 1：
  * 输入：nums1 = [1,2,2,1], nums2 = [2,2]
@@ -50,5 +50,31 @@ public class Intersect {
         if (index < 1)
             return new int[0];
         return Arrays.copyOf(result, index);
+    }
+
+    public int[] intersect2(int[] nums1, int[] nums2) {
+        Map<Integer, Integer> nums1Map = new HashMap<>();
+        Map<Integer, Integer> nums2Map = new HashMap<>();
+        for (int num : nums1) {
+            nums1Map.merge(num, 1, Integer::sum);
+        }
+        for (int num : nums2) {
+            nums2Map.merge(num, 1, Integer::sum);
+        }
+        List<Integer> res = new ArrayList<>();
+        for (Map.Entry<Integer, Integer> entry : nums1Map.entrySet()) {
+            int num = entry.getKey();
+            if (nums2Map.containsKey(num)) {
+                int count = Math.min(entry.getValue(), nums2Map.get(num));
+                for (int k = 0; k < count; k++) {
+                    res.add(num);
+                }
+            }
+        }
+        int[] result = new int[res.size()];
+        for (int i = 0; i < result.length; i++) {
+            result[i] = res.get(i);
+        }
+        return result;
     }
 }

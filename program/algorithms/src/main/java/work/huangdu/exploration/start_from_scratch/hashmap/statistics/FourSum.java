@@ -1,4 +1,4 @@
-package work.huangdu.question_bank.medium;
+package work.huangdu.exploration.start_from_scratch.hashmap.statistics;
 
 import work.huangdu.exploration.advanced_algorithms.array_string.FourSumCount;
 import work.huangdu.exploration.intermediate_algorithms.array_string.ThreeSum;

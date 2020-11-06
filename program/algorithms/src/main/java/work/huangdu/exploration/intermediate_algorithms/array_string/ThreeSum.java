@@ -2,7 +2,7 @@ package work.huangdu.exploration.intermediate_algorithms.array_string;
 
 import work.huangdu.exploration.advanced_algorithms.array_string.FourSumCount;
 import work.huangdu.exploration.start_from_scratch.hashmap.index.TwoSum2;
-import work.huangdu.question_bank.medium.FourSum;
+import work.huangdu.exploration.start_from_scratch.hashmap.statistics.FourSum;
 
 import java.util.*;
 

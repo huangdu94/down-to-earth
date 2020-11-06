@@ -2,7 +2,7 @@ package work.huangdu.exploration.advanced_algorithms.array_string;
 
 import work.huangdu.exploration.intermediate_algorithms.array_string.ThreeSum;
 import work.huangdu.exploration.start_from_scratch.hashmap.index.TwoSum2;
-import work.huangdu.question_bank.medium.FourSum;
+import work.huangdu.exploration.start_from_scratch.hashmap.statistics.FourSum;
 
 import java.util.Arrays;
 import java.util.HashMap;
@@ -140,5 +140,27 @@ public class FourSumCount {
         System.out.println(fourSumCount.fourSumCount2(A, B, C, D));
         System.out.println(fourSumCount.fourSumCount3(A, B, C, D));
         System.out.println(fourSumCount.fourSumCount4(A, B, C, D));
+    }
+
+    // 暴力o(n^4)
+    // 用一个HashMap存一个数组的数及数量o(n^3)
+    // 用一个HashMap存两个数组的组合和及数量o(n^2)
+    public int fourSumCount5(int[] A, int[] B, int[] C, int[] D) {
+        int sum = 0;
+        Map<Integer, Integer> abMap = new HashMap<>();
+        for (int a : A) {
+            for (int b : B) {
+                abMap.merge(a + b, 1, Integer::sum);
+            }
+        }
+        for (int c : C) {
+            for (int d : D) {
+                Integer count = abMap.get(-c - d);
+                if (count != null) {
+                    sum += count;
+                }
+            }
+        }
+        return sum;
     }
 }

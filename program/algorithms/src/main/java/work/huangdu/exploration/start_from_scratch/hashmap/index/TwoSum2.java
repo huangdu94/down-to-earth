@@ -2,7 +2,7 @@ package work.huangdu.exploration.start_from_scratch.hashmap.index;
 
 import work.huangdu.exploration.advanced_algorithms.array_string.FourSumCount;
 import work.huangdu.exploration.intermediate_algorithms.array_string.ThreeSum;
-import work.huangdu.question_bank.medium.FourSum;
+import work.huangdu.exploration.start_from_scratch.hashmap.statistics.FourSum;
 
 /**
  * 167. 两数之和 II - 输入有序数组
