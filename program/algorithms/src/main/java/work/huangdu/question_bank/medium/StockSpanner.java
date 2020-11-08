@@ -125,3 +125,34 @@ public class StockSpanner {
         System.out.println(s.next(85));
     }
 }
+
+class StockSpanner2 {
+    private static int day;
+    private final Deque<int[]> stack;
+
+    public StockSpanner2() {
+        day = 0;
+        stack = new LinkedList<>();
+    }
+
+    public int next(int price) {
+        while (!stack.isEmpty() && stack.peek()[0] <= price) {
+            stack.pop();
+        }
+        int start = stack.isEmpty() ? 0 : stack.peek()[1];
+        stack.push(new int[]{price, ++day});
+        return day - start;
+    }
+
+    public static void main(String[] args) {
+        StockSpanner2 s = new StockSpanner2();
+        //[[],[100],[80],[60],[70],[60],[75],[85]]
+        System.out.println(s.next(100));
+        System.out.println(s.next(80));
+        System.out.println(s.next(60));
+        System.out.println(s.next(70));
+        System.out.println(s.next(60));
+        System.out.println(s.next(75));
+        System.out.println(s.next(85));
+    }
+}
