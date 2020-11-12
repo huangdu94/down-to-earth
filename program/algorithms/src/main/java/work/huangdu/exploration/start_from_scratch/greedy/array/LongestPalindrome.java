@@ -1,4 +1,4 @@
-package work.huangdu.question_bank.easy;
+package work.huangdu.exploration.start_from_scratch.greedy.array;
 
 /**
  * 409. 最长回文串
@@ -44,5 +44,29 @@ public class LongestPalindrome {
      */
     private int getMapping(char ch) {
         return ch >= 'a' ? ch - 72 : ch - 65;
+    }
+
+    public int longestPalindrome2(String s) {
+        int[] counts = new int[128];
+        for (char c : s.toCharArray()) {
+            counts[c]++;
+        }
+        boolean flag = false;
+        int len = 0;
+        for (int count : counts) {
+            if (count != 0) {
+                if ((count & 1) == 0) {
+                    len += count;
+                } else {
+                    if (!flag) {
+                        len += count;
+                        flag = true;
+                    } else {
+                        len += (count - 1);
+                    }
+                }
+            }
+        }
+        return len;
     }
 }

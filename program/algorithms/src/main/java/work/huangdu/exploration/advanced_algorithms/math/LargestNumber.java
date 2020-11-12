@@ -93,4 +93,21 @@ public class LargestNumber {
         String res = largestNumber.largestNumber(nums);
         System.out.println(res);
     }
+
+    public String largestNumber2(int[] nums) {
+        int n = nums.length;
+        if (n == 0) return "";
+        if (n == 1) return Integer.toString(nums[0]);
+        String[] strings = new String[n];
+        for (int i = 0; i < n; i++) {
+            strings[i] = Integer.toString(nums[i]);
+        }
+        Arrays.sort(strings, (o1, o2) -> (o2 + o1).compareTo(o1 + o2));
+        if ("0".equals(strings[0])) return "0";
+        StringBuilder sb = new StringBuilder();
+        for (String s : strings) {
+            sb.append(s);
+        }
+        return sb.toString();
+    }
 }
