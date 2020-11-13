@@ -3,7 +3,7 @@ package work.huangdu.exploration.intermediate_algorithms.sort_search;
 import java.util.Arrays;
 
 /**
- * 合并区间
+ * 56. 合并区间
  * 给出一个区间的集合，请合并所有重叠的区间。
  * 示例 1:
  * 输入: [[1,3],[2,6],[8,10],[15,18]]
@@ -43,8 +43,7 @@ public class Merge {
     }
 
     private void quickSort(int[][] intervals, int l, int r) {
-        if (l >= r)
-            return;
+        if (l >= r) return;
         int[] pivot = intervals[l];
         int i = l, j = r;
         while (i < j) {
@@ -74,5 +73,27 @@ public class Merge {
         int[][] intervals = {{1, 3}, {2, 6}, {8, 10}, {15, 18}};
         int[][] result = new Merge().merge(intervals);
         System.out.println(Arrays.deepToString(result));
+        int[][] intervals2 = {{2, 3}, {2, 2}, {3, 3}, {1, 3}, {5, 7}, {2, 2}, {4, 6}};
+        Merge merge = new Merge();
+        System.out.println(Arrays.deepToString(merge.merge2(intervals2)));
+    }
+
+    public int[][] merge2(int[][] intervals) {
+        int n = intervals.length;
+        if (n <= 1) return intervals;
+        // 1. intervals按int[][0]升序排序
+        //Arrays.sort(intervals, Comparator.comparingInt(o -> o[0]));
+        quickSort(intervals, 0, n - 1);
+        int len = 0;
+        int[][] res = new int[n][];
+        // 2. 合并过程
+        for (int[] interval : intervals) {
+            if (len == 0 || res[len - 1][1] < interval[0]) {
+                res[len++] = interval;
+            } else {
+                res[len - 1][1] = Math.max(res[len - 1][1], interval[1]);
+            }
+        }
+        return Arrays.copyOf(res, len);
     }
 }

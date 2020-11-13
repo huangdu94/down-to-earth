@@ -1,7 +1,6 @@
-package work.huangdu.question_bank.difficult;
+package work.huangdu.exploration.start_from_scratch.greedy.array;
 
-import java.util.ArrayList;
-import java.util.List;
+import java.util.Arrays;
 
 /**
  * 57. 插入区间
@@ -21,12 +20,11 @@ import java.util.List;
  */
 public class Insert {
     public int[][] insert(int[][] intervals, int[] newInterval) {
-        int i = 0, n = intervals.length;
-        List<int[]> intervalList = new ArrayList<>(n);
+        int i = 0, n = intervals.length, len = 0;
+        int[][] result = new int[n + 1][];
         // 1. 跳过开头不需要合并的interval
         while (i < n && intervals[i][1] < newInterval[0]) {
-            intervalList.add(intervals[i]);
-            i++;
+            result[len++] = intervals[i++];
         }
         // 2. 合并阶段(考虑不需要合并的情况)
         if (i < n && newInterval[1] >= intervals[i][0]) {
@@ -42,17 +40,12 @@ public class Insert {
             }
             i++;
         }
-        intervalList.add(newInterval);
+        result[len++] = newInterval;
         // 3. 跳过末尾不需要合并的区间
         while (i < n) {
-            intervalList.add(intervals[i]);
-            i++;
+            result[len++] = intervals[i++];
         }
         // 4. 返回结果
-        int[][] result = new int[intervalList.size()][2];
-        for (i = 0; i < intervalList.size(); i++) {
-            result[i] = intervalList.get(i);
-        }
-        return result;
+        return Arrays.copyOf(result, len);
     }
 }
