@@ -1,6 +1,8 @@
 package work.huangdu.exploration.advanced_algorithms.other;
 
+import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.List;
 
 /**
  * 406. 根据身高重建队列
@@ -34,7 +36,7 @@ public class ReconstructQueue {
         return people;
     }
 
-    public int[][] reconstructQueue(int[][] people) {
+    public int[][] reconstructQueue2(int[][] people) {
         int len = people.length, i = 0;
         Arrays.sort(people, (o1, o2) -> o1[0] == o2[0] ? o1[1] - o2[1] : o2[0] - o1[0]);
         while (i < len && people[i][0] == people[0][0]) i++;
@@ -53,5 +55,17 @@ public class ReconstructQueue {
         ReconstructQueue reconstructQueue = new ReconstructQueue();
         int[][] people = {{6, 0}, {1, 1}, {8, 0}, {7, 1}, {9, 0}, {2, 4}, {2, 5}, {3, 4}, {7, 3}, {0, 6}};
         System.out.println(Arrays.deepToString(reconstructQueue.reconstructQueue(people)));
+    }
+
+    // 算法核心思想，先排高个子的，后排小个子的，小个子的不会对高个子的结果产生影响
+    public int[][] reconstructQueue(int[][] people) {
+        int n = people.length;
+        // 1. 排序，先按身高降序排序，身高相同的话按k升序排序
+        Arrays.sort(people, (p1, p2) -> p1[0] == p2[0] ? p1[1] - p2[1] : p2[0] - p1[0]);
+        List<int[]> queue = new ArrayList<>(n);
+        for (int[] p : people) {
+            queue.add(p[1], p);
+        }
+        return queue.toArray(new int[0][0]);
     }
 }
