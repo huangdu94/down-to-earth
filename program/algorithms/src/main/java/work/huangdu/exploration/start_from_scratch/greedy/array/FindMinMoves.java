@@ -32,6 +32,24 @@ package work.huangdu.exploration.start_from_scratch.greedy.array;
  */
 public class FindMinMoves {
     public int findMinMoves(int[] machines) {
-        return -1;
+        int n = machines.length, sum = 0;
+        for (int machine : machines) {
+            sum += machine;
+        }
+        if (sum % n != 0) return -1;
+        int average = sum / n;
+        for (int i = 0; i < n; i++) {
+            machines[i] -= average;
+        }
+        // prefix表示流量，表示从左边部分到右边部分的流量，正数表示左边流出，负数表示左边流入
+        // max表示某一点流量最大值
+        // machine表示单点的输出（当machine为正数时，则全局至少执行machine次，但当machine为负数时不一定，因为流入是可以双向同时流入的）
+        int prefix = 0, max = 0, res = 0;
+        for (int machine : machines) {
+            prefix += machine;
+            max = Math.max(max, Math.abs(prefix));
+            res = Math.max(res, Math.max(max, machine));
+        }
+        return res;
     }
 }
