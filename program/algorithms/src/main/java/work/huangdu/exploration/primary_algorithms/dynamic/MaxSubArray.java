@@ -1,6 +1,7 @@
 package work.huangdu.exploration.primary_algorithms.dynamic;
 
 /**
+ * 53. 最大子序和
  * 给定一个整数数组 nums ，找到一个具有最大和的连续子数组（子数组最少包含一个元素），返回其最大和。
  * 示例:
  * 输入: [-2,1,-3,4,-1,2,1,-5,4],
@@ -75,5 +76,21 @@ public class MaxSubArray {
 
     public int maxSubArray3(int[] nums) {
         return getInfo(nums, 0, nums.length - 1).mSum;
+    }
+
+    public int maxSubArray4(int[] nums) {
+        int sum = 0, max = Integer.MIN_VALUE;
+        for (int num : nums) {
+            // 1. 求和
+            sum += num;
+            if (max < sum) {
+                max = sum;
+            }
+            // 2. sum < 0 表示前面的结果可以被抛弃了
+            if (sum < 0) {
+                sum = 0;
+            }
+        }
+        return max;
     }
 }
