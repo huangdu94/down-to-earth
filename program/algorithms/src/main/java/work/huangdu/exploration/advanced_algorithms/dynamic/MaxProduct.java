@@ -125,4 +125,16 @@ public class MaxProduct {
         int max = maxProduct.maxProduct(nums);
         System.out.println(max);
     }
+
+    public int maxProduct3(int[] nums) {
+        int n = nums.length, result = nums[0], min = result, max = result;
+        for (int i = 1; i < n; i++) {
+            int num = nums[i];
+            int temp = Math.min(num, Math.min(min * num, max * num));
+            max = Math.max(num, Math.max(min * num, max * num));
+            min = temp;
+            result = Math.max(max, result);
+        }
+        return result;
+    }
 }
