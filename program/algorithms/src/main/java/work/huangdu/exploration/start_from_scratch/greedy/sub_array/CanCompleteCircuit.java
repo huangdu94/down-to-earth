@@ -117,4 +117,17 @@ public class CanCompleteCircuit {
         int[] cost = {3, 4, 5, 1, 2};
         System.out.println(ccc.canCompleteCircuit2(gas, cost));
     }
+
+    public int canCompleteCircuit3(int[] gas, int[] cost) {
+        int n = gas.length, sum = 0, cur = 0, start = 0;
+        for (int i = 0; i < n; i++) {
+            sum += (gas[i] - cost[i]);
+            cur += (gas[i] - cost[i]);
+            if (cur < 0) {
+                cur = 0;
+                start = i + 1;
+            }
+        }
+        return sum < 0 ? -1 : start;
+    }
 }
