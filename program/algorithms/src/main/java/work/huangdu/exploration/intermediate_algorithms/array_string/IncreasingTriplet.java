@@ -1,7 +1,7 @@
 package work.huangdu.exploration.intermediate_algorithms.array_string;
 
 /**
- * 递增的三元子序列
+ * 334. 递增的三元子序列
  * 给定一个未排序的数组，判断这个数组中是否存在长度为 3 的递增子序列。
  * 数学表达式如下:
  * 如果存在这样的 i, j, k,  且满足 0 ≤ i < j < k ≤ n-1，
@@ -43,6 +43,20 @@ public class IncreasingTriplet {
                 first = cur;
             else if (first < cur && cur < second)
                 second = cur;
+        }
+        return false;
+    }
+
+    public boolean increasingTriplet2(int[] nums) {
+        int first = Integer.MAX_VALUE, second = Integer.MAX_VALUE;
+        for (int num : nums) {
+            if (num < first) {
+                first = num;
+            } else if (num > first && num < second) {
+                second = num;
+            } else if (num > second) {
+                return true;
+            }
         }
         return false;
     }
