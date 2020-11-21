@@ -2,6 +2,10 @@ package work.huangdu.exploration.advanced_algorithms.linkedlist;
 
 import work.huangdu.data_structure.ListNode;
 
+import java.util.ArrayList;
+import java.util.Comparator;
+import java.util.List;
+
 /**
  * 排序链表
  * 在O(n log n) 时间复杂度和常数级空间复杂度下，对链表进行排序。
@@ -131,5 +135,53 @@ public class SortList {
             intv *= 2;
         }
         return res.next;
+    }
+
+    // 时间复杂度o(nlogn) 空间复杂度 o(n)
+    public ListNode sortList3(ListNode head) {
+        List<ListNode> nodeList = new ArrayList<>();
+        while (head != null) {
+            nodeList.add(head);
+            head = head.next;
+        }
+        nodeList.sort(Comparator.comparingInt(o -> o.val));
+        ListNode dummy = new ListNode(), cur = dummy;
+        for (ListNode node : nodeList) {
+            cur.next = node;
+            cur = cur.next;
+        }
+        cur.next = null;
+        return dummy.next;
+    }
+
+    // 归并排序
+    public ListNode sortList4(ListNode head) {
+        if (head == null || head.next == null) return head;
+        // 快慢指针找链表中点的前一个点
+        ListNode mid = head, fast = head.next.next, head2, dummy = new ListNode(), cur = dummy;
+        while (fast != null && fast.next != null) {
+            mid = mid.next;
+            fast = fast.next.next;
+        }
+        head2 = mid.next;
+        mid.next = null;
+        head = sortList4(head);
+        head2 = sortList4(head2);
+        while (head != null && head2 != null) {
+            if (head.val <= head2.val) {
+                cur.next = head;
+                head = head.next;
+            } else {
+                cur.next = head2;
+                head2 = head2.next;
+            }
+            cur = cur.next;
+        }
+        if (head == null) {
+            cur.next = head2;
+        } else {
+            cur.next = head;
+        }
+        return dummy.next;
     }
 }
