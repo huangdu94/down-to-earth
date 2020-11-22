@@ -1,4 +1,4 @@
-package work.huangdu.question_bank.medium;
+package work.huangdu.exploration.start_from_scratch.greedy.stack;
 
 /**
  * 402. 移掉K位数字
@@ -35,7 +35,7 @@ public class RemoveKdigits {
      * @param k   可以删除的数量
      * @return 删除后最小的数字
      */
-    public String removeKdigits(String num, int k) {
+    public String removeKdigits2(String num, int k) {
         char[] chars = num.toCharArray();
         int n = num.length(), start = 0;
         for (int i = 0; i < n && i - start <= k; i++) {
@@ -58,5 +58,22 @@ public class RemoveKdigits {
             stack[top++] = chars[i];
         }
         return new String(stack, 0, top - k);
+    }
+
+    public String removeKdigits(String num, int k) {
+        int n = num.length(), start = 0, top = 0;
+        char[] chars = num.toCharArray(), stack = new char[n];
+        for (char c : chars) {
+            while (k > 0 && top != 0 && stack[top - 1] > c) {
+                top--;
+                k--;
+            }
+            stack[top++] = c;
+        }
+        while (start < top && stack[start] == '0') {
+            start++;
+        }
+        if (start >= top - k) return "0";
+        return new String(stack, start, top - k - start);
     }
 }
