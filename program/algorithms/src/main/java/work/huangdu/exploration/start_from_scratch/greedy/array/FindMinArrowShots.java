@@ -1,5 +1,8 @@
 package work.huangdu.exploration.start_from_scratch.greedy.array;
 
+import java.util.Arrays;
+import java.util.Comparator;
+
 /**
  * 452. 用最少数量的箭引爆气球
  * 在二维空间中有许多球形的气球。对于每个气球，提供的输入是水平方向上，气球直径的开始和结束坐标。由于它是水平的，所以纵坐标并不重要，因此只要知道开始和结束的横坐标就足够了。开始坐标总是小于结束坐标。
@@ -35,7 +38,8 @@ public class FindMinArrowShots {
         if (n <= 1) return n;
         int count = 1;
         // 按照end位置从小到大排序
-        quickSort(points, 0, n - 1);
+        Arrays.sort(points, Comparator.comparingInt(o -> o[1]));
+        //quickSort(points, 0, n - 1);
 //        int[] cur = points[0];
 //        for (int i = 1; i < n; i++) {
 //            int[] res = intersection(cur, points[i]);
@@ -87,5 +91,21 @@ public class FindMinArrowShots {
         points[i] = pivot;
         quickSort(points, l, i - 1);
         quickSort(points, i + 1, r);
+    }
+
+    public int findMinArrowShots2(int[][] points) {
+        int n = points.length;
+        if (n <= 1) return n;
+        Arrays.sort(points, Comparator.comparingInt(ints -> ints[1]));
+        int i = 0, count = 0;
+        while (i < n) {
+            int end = points[i][1];
+            i++;
+            count++;
+            while (i < n && end >= points[i][0]) {
+                i++;
+            }
+        }
+        return count;
     }
 }
