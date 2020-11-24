@@ -23,6 +23,9 @@ import java.util.Queue;
  * @version 2020/11/24 12:10
  */
 public class CountNodes {
+    // 最优解 先看看最深的一层是多少层，那么根据最深的一层是多少层可以得到节点数量可能值的范围
+    // 用二分法，判断对应序号的节点存不存在
+    // 判断方法。 根节点为1。2的二进制就是10，就表示从根节点后往左走，就看看root.left存不存在就知道了，以此类推
     public int countNodes2(TreeNode root) {
         if (root == null) return 0;
         int count = 0;
