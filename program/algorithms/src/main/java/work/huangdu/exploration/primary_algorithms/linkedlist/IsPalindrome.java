@@ -18,7 +18,7 @@ import work.huangdu.data_structure.ListNode;
  * @version 2020/7/26 18:20
  */
 public class IsPalindrome {
-    public boolean isPalindrome(ListNode head) {
+    public boolean isPalindrome3(ListNode head) {
         // 如果链表为空或长度为1则直接返回true
         if (head == null || head.next == null)
             return true;
@@ -151,5 +151,25 @@ public class IsPalindrome {
             cur = next;
         }
         return pre;
+    }
+
+    private ListNode left;
+    private boolean stop;
+
+    public boolean isPalindrome(ListNode head) {
+        left = head;
+        stop = false;
+        return recursion(head);
+    }
+
+    private boolean recursion(ListNode right) {
+        if (right == null) return true;
+        if (!recursion(right.next)) return false;
+        if (!stop) {
+            if (left == right || right.next == left) stop = true;
+            if (left.val != right.val) return false;
+            left = left.next;
+        }
+        return true;
     }
 }

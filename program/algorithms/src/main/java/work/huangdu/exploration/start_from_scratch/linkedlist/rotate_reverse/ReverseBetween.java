@@ -43,4 +43,29 @@ public class ReverseBetween {
             cur = next;
         }
     }
+
+    // 可以优化，在找到n前，找到m之后 就已经可以开始翻转了。
+    // 递归思路很有意思可以拓展
+    public ListNode reverseBetween2(ListNode head, int m, int n) {
+        ListNode dummy = new ListNode(-1);
+        dummy.next = head;
+        // 分三段one、two和three，翻转two，最后拼接
+        ListNode oneTail = dummy;
+        for (int i = 0; i < m - 1; i++) {
+            oneTail = oneTail.next;
+        }
+        ListNode twoHead = oneTail.next, twoTail = twoHead;
+        for (int i = m; i < n; i++) {
+            twoTail = twoTail.next;
+        }
+        ListNode pre = twoTail.next, cur = twoHead;
+        while (pre != twoTail) {
+            ListNode next = cur.next;
+            cur.next = pre;
+            pre = cur;
+            cur = next;
+        }
+        oneTail.next = twoTail;
+        return dummy.next;
+    }
 }

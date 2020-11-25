@@ -28,7 +28,7 @@ public class SortedListToBST {
 
     // 1. 构建树
     // 2. 中序遍历树，把值放进去
-    public TreeNode sortedListToBST(ListNode head) {
+    public TreeNode sortedListToBST2(ListNode head) {
         if (head == null) return null;
         if (head.next == null) return new TreeNode(head.val);
         ListNode listCur = head.next;
@@ -62,13 +62,59 @@ public class SortedListToBST {
         return root;
     }
 
-  /*  private ListNode curListNode;
+    /*  private ListNode curListNode;
 
-    private void inorder(TreeNode root) {
-        if (root == null) return;
-        inorder(root.left);
-        root.val = curListNode.val;
-        curListNode = curListNode.next;
-        inorder(root.right);
-    }*/
+      private void inorder(TreeNode root) {
+          if (root == null) return;
+          inorder(root.left);
+          root.val = curListNode.val;
+          curListNode = curListNode.next;
+          inorder(root.right);
+      }*/
+    public TreeNode sortedListToBST3(ListNode head) {
+        return sortedListToBST(head, null);
+    }
+
+    public TreeNode sortedListToBST(ListNode head, ListNode tail) {
+        if (head == tail) return null;
+        if (head.next == tail) return new TreeNode(head.val);
+        ListNode mid = findMid(head, tail);
+        TreeNode root = new TreeNode(mid.val);
+        root.left = sortedListToBST(head, mid);
+        root.right = sortedListToBST(mid.next, tail);
+        return root;
+    }
+
+    private ListNode findMid(ListNode left, ListNode right) {
+        ListNode slow = left, fast = left;
+        while (fast != right && fast.next != right) {
+            slow = slow.next;
+            fast = fast.next.next;
+        }
+        return slow;
+    }
+
+    private ListNode current;
+
+    public TreeNode sortedListToBST(ListNode head) {
+        if (head == null) return null;
+        ListNode cur = head;
+        int n = 0;
+        while (cur != null) {
+            n++;
+            cur = cur.next;
+        }
+        current = head;
+        return inorder(n);
+    }
+
+    private TreeNode inorder(int n) {
+        if (n == 0) return null;
+        TreeNode root = new TreeNode();
+        root.left = inorder(n >> 1);
+        root.val = current.val;
+        current = current.next;
+        root.right = inorder(n - 1 - (n >> 1));
+        return root;
+    }
 }

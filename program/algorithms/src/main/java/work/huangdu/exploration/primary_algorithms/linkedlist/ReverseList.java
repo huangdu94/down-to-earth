@@ -75,4 +75,29 @@ public class ReverseList {
             current.next = node;
         current = node;
     }
+
+    private ListNode left;
+    private boolean stop;
+
+    public ListNode reverseList5(ListNode head) {
+        if (head == null || head.next == null) return head;
+        left = head;
+        stop = false;
+        recursion(head.next);
+        return head;
+    }
+
+    private void recursion(ListNode right) {
+        if (right == null) return;
+        recursion(right.next);
+        if (left == right || right.next == left) {
+            stop = true;
+        }
+        if (!stop) {
+            int temp = left.val;
+            left.val = right.val;
+            right.val = temp;
+            left = left.next;
+        }
+    }
 }
