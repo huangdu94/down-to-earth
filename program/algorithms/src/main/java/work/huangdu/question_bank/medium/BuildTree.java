@@ -2,6 +2,8 @@ package work.huangdu.question_bank.medium;
 
 import work.huangdu.data_structure.TreeNode;
 
+import java.util.ArrayDeque;
+import java.util.Deque;
 import java.util.HashMap;
 import java.util.Map;
 
@@ -27,7 +29,7 @@ import java.util.Map;
 public class BuildTree {
     private int postIndex;
 
-    public TreeNode buildTree(int[] inorder, int[] postorder) {
+    public TreeNode buildTree2(int[] inorder, int[] postorder) {
         int len = inorder.length;
         postIndex = len - 1;
         Map<Integer, Integer> inorderMap = new HashMap<>(len);
@@ -55,6 +57,30 @@ public class BuildTree {
         TreeNode root = new TreeNode(rootVal);
         root.right = buildTree(inorderMap, postorder, index + 1, ir);
         root.left = buildTree(inorderMap, postorder, il, index - 1);
+        return root;
+    }
+
+    public TreeNode buildTree(int[] inorder, int[] postorder) {
+        if (inorder.length == 0) return null;
+        int n = inorder.length, inIndex = n - 1;
+        Deque<TreeNode> stack = new ArrayDeque<>();
+        TreeNode root = new TreeNode(postorder[n - 1]);
+        stack.push(root);
+        for (int i = n - 2; i >= 0; i--) {
+            int postVal = postorder[i];
+            TreeNode cur = stack.peek();
+            if (cur.val != inorder[inIndex]) {
+                cur.right = new TreeNode(postVal);
+                stack.push(cur.right);
+            } else {
+                while (!stack.isEmpty() && stack.peek().val == inorder[inIndex]) {
+                    cur = stack.pop();
+                    inIndex--;
+                }
+                cur.left = new TreeNode(postVal);
+                stack.push(cur.left);
+            }
+        }
         return root;
     }
 }
