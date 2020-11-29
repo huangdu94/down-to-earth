@@ -14,5 +14,7 @@ public abstract class ShapeDecorator implements Shape {
     }
 
     @Override
-    public abstract void draw();
+    public void draw() {
+        shape.draw();
+    }
 }
