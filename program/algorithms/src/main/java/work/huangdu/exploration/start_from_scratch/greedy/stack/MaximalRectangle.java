@@ -30,6 +30,42 @@ package work.huangdu.exploration.start_from_scratch.greedy.stack;
  */
 public class MaximalRectangle {
     public int maximalRectangle(char[][] matrix) {
-        return 0;
+        if (matrix.length == 0 || matrix[0].length == 0) return 0;
+        int m = matrix.length, n = matrix[0].length, max = 0;
+        for (int i = 0; i < m; i++) {
+            for (int j = 0; j < n; j++) {
+                if (matrix[i][j] == '1') {
+                    max = maxArea(matrix, i, j, m, n, max);
+                }
+            }
+        }
+        return max;
+    }
+
+    private int maxArea(char[][] matrix, int row, int coj, int m, int n, int max) {
+        // 1. 如果(row,coj)作为左上角，最大的可能性已经小于等于maxArea，则没必要继续
+        if ((m - row) * (n - coj) <= max) return max;
+        // 题目限制row和coj最大200，那这里lastCoj设置为201
+        int lastCoj = 201, area;
+        for (int j = coj; j < n; j++) {
+            // 2. 如果利用上目前已经得到的信息，判断之后可能出现的最大值已经小于等于maxArea，则没必要继续
+            if (lastCoj * (n - coj) <= max) return max;
+            area = 0;
+            int i = row;
+            while (i < m && (i - row < lastCoj) && matrix[i][j] == '1') {
+                area += (j - coj + 1);
+                i++;
+            }
+            lastCoj = i - row;
+            if (max < area) {
+                max = area;
+            }
+        }
+        return max;
+    }
+
+    public static void main(String[] args) {
+        char[][] matrix = {{'1', '1', '0', '1'}, {'1', '1', '0', '1'}, {'1', '1', '1', '1'}};
+        System.out.println(new MaximalRectangle().maximalRectangle(matrix));
     }
 }
