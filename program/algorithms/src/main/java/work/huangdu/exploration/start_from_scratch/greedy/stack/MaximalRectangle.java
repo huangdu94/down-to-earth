@@ -27,6 +27,7 @@ package work.huangdu.exploration.start_from_scratch.greedy.stack;
  *
  * @author duhuang@iflytek.com
  * @version 2020/12/4 13:31
+ * @see work.huangdu.exploration.advanced_algorithms.other.LargestRectangleArea
  */
 public class MaximalRectangle {
     public int maximalRectangle(char[][] matrix) {
