@@ -19,37 +19,46 @@ import java.util.Deque;
  */
 public class LargestRectangleArea {
     public int largestRectangleArea1(int[] heights) {
-        int len = heights.length, maxArea = 0, minHeight;
-        for (int i = 0; i < len; i++) {
-            minHeight = heights[i];
-            if (maxArea < minHeight) maxArea = minHeight;
-            for (int j = i + 1; j < len; j++) {
-                if (minHeight > heights[j]) minHeight = heights[j];
+        int n = heights.length, max = 0;
+        for (int i = 0; i < n; i++) {
+            int minHeight = heights[i];
+            for (int j = i; j < n; j++) {
+                if (minHeight > heights[j]) {
+                    minHeight = heights[j];
+                }
                 int area = minHeight * (j - i + 1);
-                if (maxArea < area) maxArea = area;
+                if (max < area) {
+                    max = area;
+                }
             }
         }
-        return maxArea;
+        return max;
     }
 
     public int largestRectangleArea2(int[] heights) {
-        int len = heights.length, maxArea = 0;
-        for (int k = 0; k < len; k++) {
-            int height = heights[k], i = k, j = k;
-            while (i - 1 >= 0 && heights[i - 1] >= height) i--;
-            while (j + 1 < len && heights[j + 1] >= height) j++;
-            int area = height * (j - i + 1);
-            if (maxArea < area) maxArea = area;
+        int n = heights.length, max = -1;
+        for (int i = 0; i < n; i++) {
+            int height = heights[i], left = i, right = i, area;
+            while (left - 1 >= 0 && heights[left - 1] >= height) {
+                left--;
+            }
+            while (right + 1 < n && heights[right + 1] >= height) {
+                right++;
+            }
+            area = height * (right - left + 1);
+            if (area > max) {
+                max = area;
+            }
         }
-        return maxArea;
+        return max;
     }
 
     public int largestRectangleArea3(int[] heights) {
-        int len = heights.length, maxArea = 0;
-        int[] left = new int[len];
-        int[] right = new int[len];
+        int n = heights.length, maxArea = 0;
+        int[] left = new int[n];
+        int[] right = new int[n];
         Deque<Integer> monoStack = new ArrayDeque<>();
-        for (int i = 0; i < len; i++) {
+        for (int i = 0; i < n; i++) {
             while (!monoStack.isEmpty() && heights[monoStack.peek()] >= heights[i]) {
                 monoStack.pop();
             }
@@ -57,14 +66,14 @@ public class LargestRectangleArea {
             monoStack.push(i);
         }
         monoStack.clear();
-        for (int i = len - 1; i >= 0; i--) {
+        for (int i = n - 1; i >= 0; i--) {
             while (!monoStack.isEmpty() && heights[monoStack.peek()] >= heights[i]) {
                 monoStack.pop();
             }
-            right[i] = monoStack.isEmpty() ? len : monoStack.peek();
+            right[i] = monoStack.isEmpty() ? n : monoStack.peek();
             monoStack.push(i);
         }
-        for (int i = 0; i < len; i++) {
+        for (int i = 0; i < n; i++) {
             int area = heights[i] * (right[i] - left[i] - 1);
             if (maxArea < area) maxArea = area;
         }
@@ -72,19 +81,19 @@ public class LargestRectangleArea {
     }
 
     public int largestRectangleArea(int[] heights) {
-        int len = heights.length, maxArea = 0;
-        int[] left = new int[len];
-        int[] right = new int[len];
-        Arrays.fill(right, len);
+        int n = heights.length, maxArea = 0;
+        int[] left = new int[n];
+        int[] right = new int[n];
+        Arrays.fill(right, n);
         Deque<Integer> monoStack = new ArrayDeque<>();
-        for (int i = 0; i < len; i++) {
+        for (int i = 0; i < n; i++) {
             while (!monoStack.isEmpty() && heights[monoStack.peek()] >= heights[i]) {
                 right[monoStack.pop()] = i;
             }
             left[i] = monoStack.isEmpty() ? -1 : monoStack.peek();
             monoStack.push(i);
         }
-        for (int i = 0; i < len; i++) {
+        for (int i = 0; i < n; i++) {
             int area = heights[i] * (right[i] - left[i] - 1);
             if (maxArea < area) maxArea = area;
         }
@@ -94,7 +103,7 @@ public class LargestRectangleArea {
     public static void main(String[] args) {
         LargestRectangleArea area = new LargestRectangleArea();
         //int[] heights = {2, 1, 5, 6, 2, 3};
-        int[] heights = {1, 1, 1, 1, 1, 1};
+        int[] heights = {1, 1, 3, 3, 3, 1};
         System.out.println(area.largestRectangleArea(heights));
     }
 }
