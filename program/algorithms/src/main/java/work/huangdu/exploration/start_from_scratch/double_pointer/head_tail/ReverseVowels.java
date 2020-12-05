@@ -1,4 +1,7 @@
-package work.huangdu.question_bank.easy;
+package work.huangdu.exploration.start_from_scratch.double_pointer.head_tail;
+
+import java.util.HashSet;
+import java.util.Set;
 
 /**
  * 345. 反转字符串中的元音字母
@@ -16,7 +19,7 @@ package work.huangdu.question_bank.easy;
  * @version 2020/9/1 10:59
  */
 public class ReverseVowels {
-    public String reverseVowels(String s) {
+    public String reverseVowels2(String s) {
         char[] chars = s.toCharArray();
         int i = 0, j = s.length() - 1;
         while (i < j) {
@@ -46,5 +49,37 @@ public class ReverseVowels {
         ReverseVowels reverseVowels = new ReverseVowels();
         String s = "hello";
         System.out.println(reverseVowels.reverseVowels(s));
+    }
+
+    public String reverseVowels(String s) {
+        Set<Character> vowels = new HashSet(10);
+        vowels.add('a');
+        vowels.add('e');
+        vowels.add('i');
+        vowels.add('o');
+        vowels.add('u');
+        vowels.add('A');
+        vowels.add('E');
+        vowels.add('I');
+        vowels.add('O');
+        vowels.add('U');
+        char[] chars = s.toCharArray();
+        int i = 0, j = chars.length - 1;
+        while (i < j) {
+            while (i < j && !vowels.contains(chars[i])) {
+                i++;
+            }
+            while (i < j && !vowels.contains(chars[j])) {
+                j--;
+            }
+            if (i < j) {
+                char temp = chars[i];
+                chars[i] = chars[j];
+                chars[j] = temp;
+                i++;
+                j--;
+            }
+        }
+        return new String(chars);
     }
 }
