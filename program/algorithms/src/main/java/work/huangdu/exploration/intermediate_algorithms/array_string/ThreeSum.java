@@ -163,4 +163,36 @@ public class ThreeSum {
         long end = System.currentTimeMillis();
         System.out.println("耗时 " + (end - start) / 1000.0 + " s.");
     }
+
+    public List<List<Integer>> threeSum6(int[] nums) {
+        List<List<Integer>> result = new ArrayList<>();
+        int n = nums.length;
+        Arrays.sort(nums);
+        for (int first = 0; first < n - 2; first++) {
+            while (first != 0 && first < n && nums[first] == nums[first - 1]) {
+                first++;
+            }
+            if (first == n) break;
+            int target = -nums[first], i = first + 1, j = n - 1;
+            while (i < j) {
+                while (i != first + 1 && i < j && nums[i] == nums[i - 1]) {
+                    i++;
+                }
+                while (j != n - 1 && i < j && nums[j] == nums[j + 1]) {
+                    j--;
+                }
+                if (i < j) {
+                    int sum = nums[i] + nums[j];
+                    if (sum == target) {
+                        result.add(Arrays.asList(nums[first], nums[i++], nums[j--]));
+                    } else if (sum < target) {
+                        i++;
+                    } else {
+                        j--;
+                    }
+                }
+            }
+        }
+        return result;
+    }
 }
