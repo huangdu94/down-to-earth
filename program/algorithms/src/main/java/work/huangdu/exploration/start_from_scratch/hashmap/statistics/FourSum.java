@@ -70,6 +70,49 @@ public class FourSum {
         return res;
     }
 
+    public List<List<Integer>> fourSum2(int[] nums, int target) {
+        int n = nums.length;
+        Arrays.sort(nums);
+        List<List<Integer>> result = new ArrayList<>();
+        for (int first = 0; first < n; first++) {
+            if (first != 0 && nums[first] == nums[first - 1]) {
+                continue;
+            }
+            for (int second = first + 1; second < n; second++) {
+                if (second != first + 1 && nums[second] == nums[second - 1]) {
+                    continue;
+                }
+                int twoSum = nums[first] + nums[second];
+                int third = second + 1, fourth = n - 1;
+                while (third < fourth) {
+                    int fourSum = twoSum + nums[third] + nums[fourth];
+                    if (fourSum < target) {
+                        third++;
+                        while (third < fourth && nums[third] == nums[third - 1]) {
+                            third++;
+                        }
+                    } else if (fourSum > target) {
+                        fourth--;
+                        while (third < fourth && nums[fourth] == nums[fourth + 1]) {
+                            fourth--;
+                        }
+                    } else {
+                        result.add(Arrays.asList(nums[first], nums[second], nums[third], nums[fourth]));
+                        third++;
+                        fourth--;
+                        while (third < fourth && nums[third] == nums[third - 1]) {
+                            third++;
+                        }
+                        while (third < fourth && nums[fourth] == nums[fourth + 1]) {
+                            fourth--;
+                        }
+                    }
+                }
+            }
+        }
+        return result;
+    }
+
     public static void main(String[] args) {
         FourSum fourSum = new FourSum();
         int[] nums = {0, 0, 0, 0};

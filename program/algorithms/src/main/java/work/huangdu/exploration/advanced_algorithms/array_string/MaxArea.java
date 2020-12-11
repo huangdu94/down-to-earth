@@ -70,4 +70,18 @@ public class MaxArea {
         }
         return maxArea;
     }
+
+    // 双指针法，只有移动短边才有可能使最后结果变大
+    public int maxArea3(int[] height) {
+        int i = 0, j = height.length - 1, maxArea = Integer.MIN_VALUE;
+        while (i < j) {
+            maxArea = Math.max(maxArea, Math.min(height[i], height[j]) * (j - i));
+            if (height[i] < height[j]) {
+                i++;
+            } else {
+                j--;
+            }
+        }
+        return maxArea;
+    }
 }

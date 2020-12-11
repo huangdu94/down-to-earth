@@ -4,7 +4,7 @@ import java.util.ArrayDeque;
 import java.util.Deque;
 
 /**
- * 接雨水
+ * 42. 接雨水
  * 给定n个非负整数表示每个宽度为1的柱子的高度图，计算按此排列的柱子，下雨之后能接多少雨水。
  * 上面是由数组 [0,1,0,2,1,0,1,3,2,1,2,1] 表示的高度图，在这种情况下，可以接 6 个单位的雨水（蓝色部分表示雨水）。感谢 Marcos 贡献此图。
  * 示例:
@@ -65,5 +65,21 @@ public class Trap {
         Trap trap = new Trap();
         int[] heights = {5, 4, 1, 2};
         System.out.println(trap.trap(heights));
+    }
+
+    public int trap5(int[] height) {
+        int n = height.length, top = 0, result = 0;
+        int[] stack = new int[n];
+        for (int i = 0; i < n; i++) {
+            int h = height[i], bound = Math.min(height[stack[0]], h);
+            while (top != 0 && h >= height[stack[top - 1]]) {
+                if (top > 1) {
+                    result += (bound - height[stack[top - 1]]) * (stack[top - 1] - stack[top - 2]);
+                }
+                top--;
+            }
+            stack[top++] = i;
+        }
+        return result;
     }
 }
