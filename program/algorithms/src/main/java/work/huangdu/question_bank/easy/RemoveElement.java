@@ -45,6 +45,16 @@ public class RemoveElement {
         return i;
     }
 
+    public int removeElement2(int[] nums, int val) {
+        int i = 0;
+        for (int num : nums) {
+            if (num != val) {
+                nums[i++] = num;
+            }
+        }
+        return i;
+    }
+
     public static void main(String[] args) {
         RemoveElement removeElement = new RemoveElement();
         int[] nums = {3};
