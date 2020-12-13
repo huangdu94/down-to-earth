@@ -1,7 +1,7 @@
 package work.huangdu.exploration.primary_algorithms.array;
 
 /**
- * 删除排序数组中的重复项
+ * 26.删除排序数组中的重复项
  * 给定一个排序数组，你需要在 原地 删除重复出现的元素，使得每个元素只出现一次，返回移除后数组的新长度。
  * 不要使用额外的数组空间，你必须在 原地 修改输入数组 并在使用 O(1) 额外空间的条件下完成。
  * 示例 1:
@@ -39,5 +39,15 @@ public class RemoveDuplicates {
             }
         }
         return index == 0 ? nums.length : index;
+    }
+
+    public int removeDuplicates2(int[] nums) {
+        int i = 0;
+        for (int num : nums) {
+            if (i == 0 || num != nums[i - 1]) {
+                nums[i++] = num;
+            }
+        }
+        return i;
     }
 }
