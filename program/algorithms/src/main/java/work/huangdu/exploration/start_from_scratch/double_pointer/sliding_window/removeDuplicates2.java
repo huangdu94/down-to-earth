@@ -32,4 +32,19 @@ package work.huangdu.exploration.start_from_scratch.double_pointer.sliding_windo
  * @version 2020/12/13 10:24
  */
 public class removeDuplicates2 {
+    public int removeDuplicates(int[] nums) {
+        int curVal = -10001, count = 0, i = 0;
+        for (int num : nums) {
+            if (curVal != num) {
+                curVal = num;
+                count = 1;
+            } else if (count <= 2) {
+                count++;
+            }
+            if (count <= 2) {
+                nums[i++] = num;
+            }
+        }
+        return i;
+    }
 }
