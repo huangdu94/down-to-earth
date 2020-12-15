@@ -1,4 +1,4 @@
-package work.huangdu.exploration.start_from_scratch.double_pointer.sliding_window;
+package work.huangdu.exploration.start_from_scratch.double_pointer.homonymous_sliding_window;
 
 import java.util.Arrays;
 

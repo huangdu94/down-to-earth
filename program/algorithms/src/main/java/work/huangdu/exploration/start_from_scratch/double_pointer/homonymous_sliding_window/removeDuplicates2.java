@@ -1,4 +1,4 @@
-package work.huangdu.exploration.start_from_scratch.double_pointer.sliding_window;
+package work.huangdu.exploration.start_from_scratch.double_pointer.homonymous_sliding_window;
 
 /**
  * 80. 删除排序数组中的重复项 II
