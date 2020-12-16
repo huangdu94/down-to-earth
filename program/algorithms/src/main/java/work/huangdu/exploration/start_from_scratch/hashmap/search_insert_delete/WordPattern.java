@@ -1,7 +1,6 @@
 package work.huangdu.exploration.start_from_scratch.hashmap.search_insert_delete;
 
-import java.util.HashSet;
-import java.util.Set;
+import java.util.*;
 
 /**
  * 290. 单词规律
@@ -84,6 +83,20 @@ public class WordPattern {
                 wordPattern[p] = t;
                 exist.add(t);
             } else if (!t.equals(wordPattern[p])) {
+                return false;
+            }
+        }
+        return true;
+    }
+
+    public boolean wordPattern3(String pattern, String s) {
+        String[] sArr = s.split("\\s");
+        if (pattern.length() != sArr.length) return false;
+        int n = pattern.length();
+        Map<Character, Integer> pMap = new HashMap<>();
+        Map<String, Integer> sMap = new HashMap<>();
+        for (int i = 0; i < n; i++) {
+            if (Objects.equals(pMap.put(pattern.charAt(i), i), sMap.put(sArr[i], i))) {
                 return false;
             }
         }
