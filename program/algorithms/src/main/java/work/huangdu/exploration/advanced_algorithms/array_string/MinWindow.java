@@ -212,4 +212,35 @@ public class MinWindow {
 
         return startIndex == -1 ? "" : s.substring(startIndex, startIndex + len);
     }
+
+    public String minWindow5(String s, String t) {
+        int[] countsT = new int[128], countsS = new int[128];
+        int ns = s.length(), nt = t.length(), satisfy = 0, start = 0, end = 0, minStart = -1, minLen = -1;
+        for (int i = 0; i < nt; i++) {
+            countsT[t.charAt(i)]++;
+        }
+        while (end < ns) {
+            char c = s.charAt(end);
+            if (++countsS[c] <= countsT[c]) {
+                satisfy++;
+            }
+            if (satisfy == nt) {
+                while (countsS[s.charAt(start)] > countsT[s.charAt(start)]) {
+                    countsS[s.charAt(start++)]--;
+                }
+                if (minStart == -1 || minLen > end - start + 1) {
+                    minStart = start;
+                    minLen = end - start + 1;
+                }
+            }
+            while (satisfy == nt || minStart != -1 && end - start + 1 >= minLen) {
+                if (--countsS[s.charAt(start)] < countsT[s.charAt(start)]) {
+                    satisfy--;
+                }
+                start++;
+            }
+            end++;
+        }
+        return minStart == -1 ? "" : s.substring(minStart, minStart + minLen);
+    }
 }
