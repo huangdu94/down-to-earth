@@ -59,4 +59,23 @@ public class OddEvenList {
         odd.next = evenHead;
         return head;
     }
+
+    public ListNode oddEvenList3(ListNode head) {
+        if (head == null || head.next == null) return head;
+        ListNode oddHead = head, evenHead = oddHead.next, oddTail = oddHead, evenTail = evenHead;
+        head = head.next.next;
+        while (head != null) {
+            oddTail.next = head;
+            oddTail = oddTail.next;
+            evenTail.next = head.next;
+            evenTail = evenTail.next;
+            head = head.next;
+            if (head != null) {
+                head = head.next;
+            }
+        }
+        oddTail.next = evenHead;
+        evenTail.next = null;
+        return oddHead;
+    }
 }
