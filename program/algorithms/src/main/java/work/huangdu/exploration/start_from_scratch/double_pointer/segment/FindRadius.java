@@ -25,8 +25,17 @@ package work.huangdu.exploration.start_from_scratch.double_pointer.segment;
  * @version 2020/12/20 13:15
  */
 public class FindRadius {
+    // 暴力法
     public int findRadius(int[] houses, int[] heaters) {
-        int max = Integer.MAX_VALUE, min, pHouse = 0, pHeater = 0;
-        return -1;
+        int radius = 0;
+        for (int house : houses) {
+            int min = Integer.MAX_VALUE;
+            for (int heater : heaters) {
+                min = Math.min(min, Math.abs(heater - house));
+                if (min < radius) break;
+            }
+            radius = Math.max(radius, min);
+        }
+        return radius;
     }
 }
