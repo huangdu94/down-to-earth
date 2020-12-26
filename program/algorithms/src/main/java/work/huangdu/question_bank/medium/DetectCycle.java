@@ -60,4 +60,27 @@ public class DetectCycle {
         }
         return null;
     }
+
+    /**
+     * a + b
+     * a + n*c + b
+     * n*c - b = a
+     * (n-1)*c + (c - b) = a
+     */
+    public ListNode detectCycle3(ListNode head) {
+        ListNode slow = head, fast = head;
+        while (fast != null && fast.next != null) {
+            slow = slow.next;
+            fast = fast.next.next;
+            if (slow == fast) {
+                ListNode p = head;
+                while (p != fast) {
+                    p = p.next;
+                    fast = fast.next;
+                }
+                return p;
+            }
+        }
+        return null;
+    }
 }

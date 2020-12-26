@@ -1,5 +1,8 @@
 package work.huangdu.exploration.advanced_algorithms.array_string;
 
+import java.util.HashSet;
+import java.util.Set;
+
 /**
  * 寻找重复数
  * 给定一个包含 n + 1 个整数的数组 nums，其数字都在 1 到 n 之间（包括 1 和 n），可知至少存在一个重复的整数。假设只有一个重复的整数，找出这个重复的数。
@@ -33,4 +36,43 @@ public class FindDuplicate {
     }
 
     // 其它方法 1.二分查找 2.二进制 3.快慢指针
+
+    public int findDuplicate2(int[] nums) {
+        Set<Integer> exists = new HashSet<>();
+        for (int num : nums) {
+            if (!exists.add(num)) {
+                return num;
+            }
+        }
+        return -1;
+    }
+
+    public int findDuplicate3(int[] nums) {
+        int n = nums.length;
+        for (int i = 0; i < n; i++) {
+            int index = Math.abs(nums[i]) - 1;
+            if (nums[index] > 0) {
+                nums[index] *= -1;
+            } else {
+                return index + 1;
+            }
+        }
+        return -1;
+    }
+
+    public int findDuplicate4(int[] nums) {
+        int slow = 0, fast = 0;
+        while (true) {
+            slow = nums[slow];
+            fast = nums[nums[fast]];
+            if (slow == fast) {
+                slow = 0;
+                while (slow != fast) {
+                    slow = nums[slow];
+                    fast = nums[fast];
+                }
+                return slow;
+            }
+        }
+    }
 }

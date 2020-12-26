@@ -50,4 +50,33 @@ public class ReorderList {
         reorderList.reorderList(head);
         System.out.println(head);
     }
+
+    public void reorderList2(ListNode head) {
+        if (head == null || head.next == null) return;
+        // 1. 快慢指针找中点
+        ListNode slow = head, fast = head;
+        while (fast != null && fast.next != null) {
+            slow = slow.next;
+            fast = fast.next.next;
+        }
+        ListNode head2 = slow.next;
+        slow.next = null;
+        // 2. 翻转后一半链表
+        ListNode pre = null, cur = head2;
+        while (cur != null) {
+            ListNode next = cur.next;
+            cur.next = pre;
+            pre = cur;
+            cur = next;
+        }
+        // 3. 合并两个链表
+        ListNode l1 = head, l2 = pre;
+        while (l1 != null && l2 != null) {
+            ListNode next = l1.next, next2 = l2.next;
+            l1.next = l2;
+            l2.next = next;
+            l1 = next;
+            l2 = next2;
+        }
+    }
 }
