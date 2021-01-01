@@ -36,4 +36,20 @@ public class CanPlaceFlowers {
         }
         return false;
     }
+
+    public boolean canPlaceFlowers2(int[] flowerbed, int n) {
+        if (n == 0) return true;
+        int i = 0, len = flowerbed.length, count = 0;
+        while (i < len) {
+            if (flowerbed[i] == 0) {
+                if (i + 1 >= len || flowerbed[i + 1] == 0) {
+                    if (++count >= n) return true;
+                } else {
+                    i++;
+                }
+            }
+            i += 2;
+        }
+        return false;
+    }
 }
