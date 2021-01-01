@@ -8,21 +8,15 @@ import java.util.List;
 import java.util.Queue;
 
 /**
+ * 101. 对称二叉树
  * 给定一个二叉树，检查它是否是镜像对称的。
- * <p>
- * <p>
- * <p>
  * 例如，二叉树 [1,2,2,3,4,4,3] 是对称的。
- * <p>
  * 1
  * / \
  * 2   2
  * / \ / \
  * 3  4 4  3
- * <p>
- * <p>
  * 但是下面这个 [1,2,2,null,3,null,3] 则不是镜像对称的:
- * <p>
  * 1
  * / \
  * 2   2
@@ -33,7 +27,7 @@ import java.util.Queue;
  * @version 2020/6/23 9:37
  */
 public class Symmetric {
-    public boolean isSymmetric(TreeNode root) {
+    public boolean isSymmetric2(TreeNode root) {
         if (root == null)
             return true;
         Queue<TreeNode> queue = new LinkedList<>();
@@ -60,5 +54,15 @@ public class Symmetric {
             }
         }
         return true;
+    }
+
+    public boolean isSymmetric(TreeNode root) {
+        return isSymmetric(root, root);
+    }
+
+    private boolean isSymmetric(TreeNode node1, TreeNode node2) {
+        if (node1 == null && node2 == null) return true;
+        if (node1 == null || node2 == null) return false;
+        return node1.val == node2.val && isSymmetric(node1.left, node2.right) && isSymmetric(node1.right, node2.left);
     }
 }

@@ -76,4 +76,10 @@ public class IsSameTree {
         q.right = new TreeNode(3);
         System.out.println(isSameTree.isSameTree(p, q));
     }
+
+    public boolean isSameTree3(TreeNode p, TreeNode q) {
+        if (p == null && q == null) return true;
+        if (p == null || q == null) return false;
+        return p.val == q.val && isSameTree3(p.left, q.left) && isSameTree3(p.right, q.right);
+    }
 }
