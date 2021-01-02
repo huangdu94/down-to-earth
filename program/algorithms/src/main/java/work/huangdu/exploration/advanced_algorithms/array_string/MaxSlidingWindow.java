@@ -1,9 +1,11 @@
 package work.huangdu.exploration.advanced_algorithms.array_string;
 
+import java.util.ArrayDeque;
 import java.util.Arrays;
+import java.util.Deque;
 
 /**
- * 滑动窗口最大值
+ * 239. 滑动窗口最大值
  * 给定一个数组 nums，有一个大小为 k 的滑动窗口从数组的最左侧移动到数组的最右侧。你只可以看到在滑动窗口内的 k 个数字。滑动窗口每次只向右移动一位。
  * 返回滑动窗口中的最大值。
  * 进阶：
@@ -70,5 +72,62 @@ public class MaxSlidingWindow {
         int[] nums = {1};
         MaxSlidingWindow maxSlidingWindow = new MaxSlidingWindow();
         System.out.println(Arrays.toString(maxSlidingWindow.maxSlidingWindow(nums, 1)));
+    }
+
+    public int[] maxSlidingWindow3(int[] nums, int k) {
+        int n = nums.length, index = 0, len = n - k + 1;
+        int[] result = new int[len];
+        Deque<Integer> numQueue = new ArrayDeque<>(), indexQueue = new ArrayDeque<>();
+        for (int i = 0; i < k - 1; i++) {
+            int num = nums[i];
+            while (!numQueue.isEmpty() && numQueue.peekLast() <= num) {
+                numQueue.removeLast();
+                indexQueue.removeLast();
+            }
+            numQueue.offer(num);
+            indexQueue.offer(i);
+        }
+        for (int i = k - 1; i < n; i++) {
+            int num = nums[i];
+            // 默认从last进，从first出
+            if (!indexQueue.isEmpty() && indexQueue.peek() == i - k) {
+                numQueue.remove();
+                indexQueue.remove();
+            }
+            while (!numQueue.isEmpty() && numQueue.peekLast() <= num) {
+                numQueue.removeLast();
+                indexQueue.removeLast();
+            }
+            numQueue.offer(num);
+            indexQueue.offer(i);
+            result[index++] = numQueue.peek();
+        }
+        return result;
+    }
+
+    public int[] maxSlidingWindow4(int[] nums, int k) {
+        int n = nums.length, index = 0;
+        int[] result = new int[n - k + 1];
+        Deque<Integer> queue = new ArrayDeque<>();
+        for (int i = 0; i < k - 1; i++) {
+            int num = nums[i];
+            while (!queue.isEmpty() && nums[queue.peekLast()] <= num) {
+                queue.removeLast();
+            }
+            queue.offer(i);
+        }
+        for (int i = k - 1; i < n; i++) {
+            int num = nums[i];
+            // 默认从last进，从first出
+            if (!queue.isEmpty() && queue.peek() == i - k) {
+                queue.remove();
+            }
+            while (!queue.isEmpty() && nums[queue.peekLast()] <= num) {
+                queue.removeLast();
+            }
+            queue.offer(i);
+            result[index++] = nums[queue.peek()];
+        }
+        return result;
     }
 }
