@@ -1,4 +1,4 @@
-package work.huangdu.question_bank.easy;
+package work.huangdu.exploration.start_from_scratch.tree.level_order;
 
 import work.huangdu.data_structure.TreeNode;
 
@@ -24,17 +24,17 @@ import java.util.Queue;
  */
 public class MinDepth {
 
-    public int minDepth(TreeNode root) {
+    public int minDepth2(TreeNode root) {
         if (root == null) return 0;
-        int res = 0;
+        int level = 0;
         Queue<TreeNode> queue = new ArrayDeque<>();
         queue.offer(root);
         while (!queue.isEmpty()) {
-            res++;
+            level++;
             int size = queue.size();
             for (int i = 0; i < size; i++) {
                 TreeNode cur = queue.remove();
-                if (cur.left == null && cur.right == null) return res;
+                if (cur.left == null && cur.right == null) return level;
                 if (cur.left != null) queue.offer(cur.left);
                 if (cur.right != null) queue.offer(cur.right);
             }
@@ -42,27 +42,13 @@ public class MinDepth {
         return -1;
     }
 
-    public int minDepth2(TreeNode root) {
+    public int minDepth(TreeNode root) {
         if (root == null) return 0;
-        int left = this.minDepth(root.left);
-        int right = this.minDepth(root.right);
-        if (left == 0 && right == 0) return 1;
-        if (right == 0) return left + 1;
-        if (left == 0) return right + 1;
-        return Math.min(left, right) + 1;
+        if (root.left == null && root.right == null) return 1;
+        if (root.left == null) return 1 + minDepth(root.right);
+        if (root.right == null) return 1 + minDepth(root.left);
+        return 1 + Math.min(minDepth(root.left), minDepth(root.right));
     }
-
-    /*public int minDepth(TreeNode root) {
-        if (root == null) return 0;
-        if (root.left == null && root.right == null)
-            return 1;
-        int min = -1;
-        if (root.left != null) min = this.minDepth(root.left);
-        if (root.right != null)
-            if (min == -1) min = this.minDepth(root.right);
-            else min = Math.min(min, this.minDepth(root.right));
-        return 1 + min;
-    }*/
 
     public static void main(String[] args) {
         TreeNode root = new TreeNode(1);

@@ -1,7 +1,6 @@
-package work.huangdu.question_bank.medium;
+package work.huangdu.exploration.start_from_scratch.tree.level_order;
 
 import work.huangdu.data_structure.TreeNode;
-import work.huangdu.question_bank.easy.HasPathSum;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -28,6 +27,7 @@ import java.util.List;
  * @author duhuang@iflytek.com
  * @version 2020/9/26 10:19
  * @see HasPathSum
+ * @see work.huangdu.question_bank.medium.PathSum3
  */
 public class PathSum2 {
     private final List<List<Integer>> res = new ArrayList<>();

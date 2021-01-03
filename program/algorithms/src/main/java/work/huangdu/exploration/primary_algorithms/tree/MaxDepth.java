@@ -2,7 +2,11 @@ package work.huangdu.exploration.primary_algorithms.tree;
 
 import work.huangdu.data_structure.TreeNode;
 
+import java.util.ArrayDeque;
+import java.util.Queue;
+
 /**
+ * 104. 二叉树的最大深度
  * 给定一个二叉树，找出其最大深度。
  * 二叉树的深度为根节点到最远叶子节点的最长路径上的节点数。
  * 说明: 叶子节点是指没有子节点的节点。
@@ -20,10 +24,28 @@ import work.huangdu.data_structure.TreeNode;
  */
 public class MaxDepth {
     public int maxDepth(TreeNode root) {
-        if (root == null)
-            return 0;
-        int leftDepth = maxDepth(root.left);
-        int rightDepth = maxDepth(root.right);
-        return leftDepth > rightDepth ? ++leftDepth : ++rightDepth;
+        if (root == null) return 0;
+        return Math.max(maxDepth(root.left), maxDepth(root.right)) + 1;
+    }
+
+    public int maxDepth2(TreeNode root) {
+        if (root == null) return 0;
+        int level = 0;
+        Queue<TreeNode> queue = new ArrayDeque<>();
+        queue.offer(root);
+        while (!queue.isEmpty()) {
+            int size = queue.size();
+            for (int i = 0; i < size; i++) {
+                TreeNode node = queue.poll();
+                if (node.left != null) {
+                    queue.offer(node.left);
+                }
+                if (node.right != null) {
+                    queue.offer(node.right);
+                }
+            }
+            level++;
+        }
+        return level;
     }
 }

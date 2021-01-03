@@ -27,6 +27,8 @@ import java.util.Map;
  *
  * @author duhuang@iflytek.com
  * @version 2020/9/26 10:59
+ * @see work.huangdu.exploration.start_from_scratch.tree.level_order.HasPathSum
+ * @see work.huangdu.exploration.start_from_scratch.tree.level_order.PathSum2
  */
 public class PathSum3 {
 //    private int count = 0;
