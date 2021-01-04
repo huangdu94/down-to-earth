@@ -1,4 +1,4 @@
-package work.huangdu.question_bank.medium;
+package work.huangdu.exploration.start_from_scratch.tree.level_order;
 
 import work.huangdu.data_structure.TreeNode;
 
@@ -41,7 +41,7 @@ import java.util.Queue;
 public class SumNumbers {
     private int sum = 0;
 
-    public int sumNumbers(TreeNode root) {
+    public int sumNumbers3(TreeNode root) {
         if (root == null) return sum;
         help(root, 0);
         return sum;
@@ -86,5 +86,20 @@ public class SumNumbers {
             }
         }
         return sum;
+    }
+
+    public int sumNumbers(TreeNode root) {
+        return sumNumbers(root, 0);
+    }
+
+    private int sumNumbers(TreeNode node, int number) {
+        if (node == null) return 0;
+        number = number * 10 + node.val;
+        if (node.left == null && node.right == null) {
+            return number;
+        }
+        int left = sumNumbers(node.left, number);
+        int right = sumNumbers(node.right, number);
+        return left + right;
     }
 }

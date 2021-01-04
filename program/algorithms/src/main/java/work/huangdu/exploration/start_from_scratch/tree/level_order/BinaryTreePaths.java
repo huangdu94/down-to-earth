@@ -1,4 +1,4 @@
-package work.huangdu.question_bank.easy;
+package work.huangdu.exploration.start_from_scratch.tree.level_order;
 
 import work.huangdu.data_structure.TreeNode;
 import javafx.util.Pair;
@@ -28,7 +28,7 @@ import java.util.Queue;
 public class BinaryTreePaths {
     private final List<String> res = new ArrayList<>();
 
-    public List<String> binaryTreePaths(TreeNode root) {
+    public List<String> binaryTreePaths2(TreeNode root) {
         //dfs(root, "");
         bfs(root);
         return res;
@@ -66,5 +66,25 @@ public class BinaryTreePaths {
                 queue.offer(new Pair<>(node.right, str));
             }
         }
+    }
+
+    private List<String> paths;
+
+    public List<String> binaryTreePaths(TreeNode root) {
+        this.paths = new ArrayList<>();
+        binaryTreePaths(root, "");
+        return paths;
+    }
+
+    private void binaryTreePaths(TreeNode node, String path) {
+        if (node == null) return;
+        path = path.concat(Integer.toString(node.val));
+        if (node.left == null && node.right == null) {
+            paths.add(path);
+            return;
+        }
+        path = path.concat("->");
+        binaryTreePaths(node.left, path);
+        binaryTreePaths(node.right, path);
     }
 }
