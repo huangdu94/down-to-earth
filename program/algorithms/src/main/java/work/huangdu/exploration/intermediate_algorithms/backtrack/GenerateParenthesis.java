@@ -16,7 +16,7 @@ import java.util.List;
  * "()()()"
  * ]
  *
- * @author duhuang@iflytek.com
+ * @author huangdu.hd@alibaba-inc.com
  * @version 2020/7/9 0:20
  */
 public class GenerateParenthesis {

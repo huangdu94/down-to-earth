@@ -22,7 +22,7 @@ package work.huangdu.exploration.start_from_scratch.binary.number_bit_operation;
  * 输入: 701
  * 输出: "ZY"
  *
- * @author duhuang@iflytek.com
+ * @author huangdu.hd@alibaba-inc.com
  * @version 2020/8/11 0:34
  */
 public class ConvertToTitle {

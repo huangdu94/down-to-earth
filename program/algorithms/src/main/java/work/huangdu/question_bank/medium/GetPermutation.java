@@ -21,7 +21,7 @@ package work.huangdu.question_bank.medium;
  * 输入: n = 4, k = 9
  * 输出: "2314"
  *
- * @author duhuang@iflytek.com
+ * @author huangdu.hd@alibaba-inc.com
  * @version 2020/9/5 10:15
  */
 public class GetPermutation {

@@ -15,7 +15,7 @@ import java.util.Set;
  * 提示：
  * 元音字母不包含字母 "y" 。
  *
- * @author duhuang@iflytek.com
+ * @author huangdu.hd@alibaba-inc.com
  * @version 2020/9/1 10:59
  */
 public class ReverseVowels {

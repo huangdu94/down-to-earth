@@ -21,7 +21,7 @@ import java.util.*;
  * 每一行砖块的宽度之和应该相等，并且不能超过 INT_MAX。
  * 每一行砖块的数量在 [1,10,000] 范围内， 墙的高度在 [1,10,000] 范围内， 总的砖块数量不超过 20,000。
  *
- * @author duhuang@iflytek.com
+ * @author huangdu.hd@alibaba-inc.com
  * @version 2020/11/6 17:25
  */
 public class LeastBricks {

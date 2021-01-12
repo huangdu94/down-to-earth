@@ -20,7 +20,7 @@ import java.util.*;
  * 你可以假定输入的先决条件中没有重复的边。
  * 1 <=numCourses <= 10^5
  *
- * @author duhuang@iflytek.com
+ * @author huangdu.hd@alibaba-inc.com
  * @version 2020/8/9 13:27
  */
 public class CanFinish {

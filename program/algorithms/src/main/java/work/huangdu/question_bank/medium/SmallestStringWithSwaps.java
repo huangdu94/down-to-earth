@@ -36,7 +36,7 @@ import java.util.PriorityQueue;
  * 0 <= pairs[i][0], pairs[i][1] < s.length
  * s 中只含有小写英文字母
  *
- * @author duhuang@iflytek.com
+ * @author huangdu.hd@alibaba-inc.com
  * @version 2021/1/11 12:16
  */
 public class SmallestStringWithSwaps {

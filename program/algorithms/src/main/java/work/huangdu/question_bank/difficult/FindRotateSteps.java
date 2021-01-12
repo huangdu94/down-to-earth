@@ -25,7 +25,7 @@ import java.util.List;
  * 两个字符串中都只有小写字符，并且均可能存在重复字符；
  * 字符串 key 一定可以由字符串 ring 旋转拼出。
  *
- * @author duhuang@iflytek.com
+ * @author huangdu.hd@alibaba-inc.com
  * @version 2020/11/11 0:18
  */
 public class FindRotateSteps {

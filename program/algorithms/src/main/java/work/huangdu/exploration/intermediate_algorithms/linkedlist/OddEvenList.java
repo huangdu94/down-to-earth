@@ -16,7 +16,7 @@ import work.huangdu.data_structure.ListNode;
  * 应当保持奇数节点和偶数节点的相对顺序。
  * 链表的第一个节点视为奇数节点，第二个节点视为偶数节点，以此类推。
  *
- * @author duhuang@iflytek.com
+ * @author huangdu.hd@alibaba-inc.com
  * @version 2020/7/4 19:14
  */
 public class OddEvenList {

@@ -6,7 +6,7 @@ import java.util.List;
 /**
  * 第 33 场双周赛
  *
- * @author duhuang@iflytek.com
+ * @author huangdu.hd@alibaba-inc.com
  * @version 2020/8/13 13:45
  */
 public class Solution33 {

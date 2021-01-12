@@ -29,7 +29,7 @@ import java.util.List;
  * "FizzBuzz"
  * ]
  *
- * @author duhuang@iflytek.com
+ * @author huangdu.hd@alibaba-inc.com
  * @version 2020/6/29 16:11
  */
 public class FizzBuzz {

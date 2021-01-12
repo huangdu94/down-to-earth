@@ -16,7 +16,7 @@ import java.util.TreeSet;
  * 输入: nums = [1,5,9,1,5,9], k = 2, t = 3
  * 输出: false
  *
- * @author duhuang@iflytek.com
+ * @author huangdu.hd@alibaba-inc.com
  * @version 2020/11/3 21:17
  * @see work.huangdu.exploration.primary_algorithms.array.ContainsDuplicate
  * @see work.huangdu.exploration.start_from_scratch.hashmap.index.ContainsNearbyAlmostDuplicate

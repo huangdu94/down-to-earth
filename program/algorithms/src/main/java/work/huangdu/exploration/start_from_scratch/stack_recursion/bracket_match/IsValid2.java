@@ -51,7 +51,7 @@ import java.util.Deque;
  * 注意:
  * 为简明起见，你可以假设输入的代码（包括提到的任意字符）只包含数字, 字母, '<','>','/','!','[',']'和' '。
  *
- * @author duhuang@iflytek.com
+ * @author huangdu.hd@alibaba-inc.com
  * @version 2020/10/26 10:14
  */
 public class IsValid2 {

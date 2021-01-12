@@ -34,7 +34,7 @@ import java.util.Arrays;
  * requests[i].length == 2
  * 0 <= starti <= endi < n
  *
- * @author duhuang@iflytek.com
+ * @author huangdu.hd@alibaba-inc.com
  * @version 2020/9/22 12:57
  */
 public class MaxSumRangeQuery {

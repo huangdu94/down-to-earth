@@ -17,7 +17,7 @@ import java.util.Map;
  * 输入: numerator = 2, denominator = 3
  * 输出: "0.(6)"
  *
- * @author duhuang@iflytek.com
+ * @author huangdu.hd@alibaba-inc.com
  * @version 2020/7/22 0:21
  */
 public class FractionToDecimal {

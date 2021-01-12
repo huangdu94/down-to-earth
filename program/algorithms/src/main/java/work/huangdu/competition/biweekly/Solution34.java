@@ -5,7 +5,7 @@ import java.util.Arrays;
 /**
  * 第 34 场双周赛
  *
- * @author duhuang@iflytek.com
+ * @author huangdu.hd@alibaba-inc.com
  * @version 2020/9/5 21:18
  */
 public class Solution34 {

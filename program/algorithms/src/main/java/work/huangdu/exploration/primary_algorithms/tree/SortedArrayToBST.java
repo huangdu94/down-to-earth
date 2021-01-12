@@ -17,7 +17,7 @@ import java.util.Queue;
  * /   /
  * -10  5
  *
- * @author duhuang@iflytek.com
+ * @author huangdu.hd@alibaba-inc.com
  * @version 2020/6/23 10:20
  */
 public class SortedArrayToBST {

@@ -24,7 +24,7 @@ package work.huangdu.exploration.primary_algorithms.array;
  * print(nums[i]);
  * }
  *
- * @author duhuang@iflytek.com
+ * @author huangdu.hd@alibaba-inc.com
  * @version 2020/7/26 15:02
  */
 public class RemoveDuplicates {

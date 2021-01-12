@@ -23,7 +23,7 @@ package work.huangdu.exploration.primary_algorithms.dynamic;
  * 2.  1 阶 + 2 阶
  * 3.  2 阶 + 1 阶
  *
- * @author duhuang@iflytek.com
+ * @author huangdu.hd@alibaba-inc.com
  * @version 2020/6/23 16:57
  */
 public class ClimbStairs {

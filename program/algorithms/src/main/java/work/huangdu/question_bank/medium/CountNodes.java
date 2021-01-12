@@ -19,7 +19,7 @@ import java.util.Queue;
  * *4  5 6
  * 输出: 6
  *
- * @author duhuang@iflytek.com
+ * @author huangdu.hd@alibaba-inc.com
  * @version 2020/11/24 12:10
  */
 public class CountNodes {

@@ -15,7 +15,7 @@ import java.util.List;
  * 进阶：
  * 你可以优化你的算法到 O(k) 空间复杂度吗？
  *
- * @author duhuang@iflytek.com
+ * @author huangdu.hd@alibaba-inc.com
  * @version 2020/8/9 18:12
  */
 public class GetRow {

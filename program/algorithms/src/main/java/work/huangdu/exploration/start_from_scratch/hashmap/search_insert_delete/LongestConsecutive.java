@@ -3,7 +3,7 @@ package work.huangdu.exploration.start_from_scratch.hashmap.search_insert_delete
 import java.util.*;
 
 /**
- * @author duhuang@iflytek.com
+ * @author huangdu.hd@alibaba-inc.com
  * @version 2020/10/31 12:33
  * @see work.huangdu.exploration.advanced_algorithms.array_string.LongestConsecutive
  */

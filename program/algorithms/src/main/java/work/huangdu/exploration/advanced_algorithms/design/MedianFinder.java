@@ -27,7 +27,7 @@ import java.util.PriorityQueue;
  * obj.addNum(num);
  * double param_2 = obj.findMedian();
  *
- * @author duhuang@iflytek.com
+ * @author huangdu.hd@alibaba-inc.com
  * @version 2020/9/7 16:43
  */
 public class MedianFinder {

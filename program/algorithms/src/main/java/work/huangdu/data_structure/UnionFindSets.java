@@ -3,7 +3,7 @@ package work.huangdu.data_structure;
 /**
  * union-find sets 并查集
  *
- * @author duhuang@iflytek.com
+ * @author huangdu.hd@alibaba-inc.com
  * @version 2020/9/4 10:31
  */
 public class UnionFindSets {

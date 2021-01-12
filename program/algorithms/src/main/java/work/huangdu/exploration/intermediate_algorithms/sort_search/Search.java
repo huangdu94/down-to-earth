@@ -14,7 +14,7 @@ package work.huangdu.exploration.intermediate_algorithms.sort_search;
  * 输入: nums = [4,5,6,7,0,1,2], target = 3
  * 输出: -1
  *
- * @author duhuang@iflytek.com
+ * @author huangdu.hd@alibaba-inc.com
  * @version 2020/7/12 15:50
  */
 public class Search {

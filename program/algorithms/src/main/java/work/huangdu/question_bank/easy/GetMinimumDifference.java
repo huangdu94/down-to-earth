@@ -23,7 +23,7 @@ import java.util.Deque;
  * 提示：
  * 树中至少有 2 个节点。
  *
- * @author duhuang@iflytek.com
+ * @author huangdu.hd@alibaba-inc.com
  * @version 2020/10/12 15:49
  */
 public class GetMinimumDifference {

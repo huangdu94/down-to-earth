@@ -10,7 +10,7 @@ package work.huangdu.exploration.primary_algorithms.array;
  * 必须在原数组上操作，不能拷贝额外的数组。
  * 尽量减少操作次数。
  *
- * @author duhuang@iflytek.com
+ * @author huangdu.hd@alibaba-inc.com
  * @version 2020/7/26 15:38
  */
 public class MoveZeroes {

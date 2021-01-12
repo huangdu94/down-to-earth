@@ -1,7 +1,7 @@
 package work.huangdu.exploration.start_from_scratch.double_pointer.segment;
 
 /**
- * @author duhuang@iflytek.com
+ * @author huangdu.hd@alibaba-inc.com
  * @version 2020/12/20 13:07
  */
 public class Merge {

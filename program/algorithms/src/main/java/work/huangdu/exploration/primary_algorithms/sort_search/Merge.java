@@ -11,7 +11,7 @@ package work.huangdu.exploration.primary_algorithms.sort_search;
  * nums2 = [2,5,6],       n = 3
  * 输出: [1,2,2,3,5,6]
  *
- * @author duhuang@iflytek.com
+ * @author huangdu.hd@alibaba-inc.com
  * @version 2020/6/23 15:05
  */
 public class Merge {

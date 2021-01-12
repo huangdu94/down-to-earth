@@ -12,7 +12,7 @@ package work.huangdu.exploration.start_from_scratch.binary.number_bit_operation;
  * 小猪喝完水后，必须有 m 分钟的冷却时间。在这段时间里，只允许观察，而不允许继续饮水。
  * 任何给定的桶都可以无限次采样（无限数量的猪）。
  *
- * @author duhuang@iflytek.com
+ * @author huangdu.hd@alibaba-inc.com
  * @version 2020/10/17 11:16
  */
 public class PoorPigs {

@@ -23,7 +23,7 @@ import java.util.Stack;
  * [15,7]
  * ]
  *
- * @author duhuang@iflytek.com
+ * @author huangdu.hd@alibaba-inc.com
  * @version 2020/7/5 19:30
  */
 public class ZigzagLevelOrder {

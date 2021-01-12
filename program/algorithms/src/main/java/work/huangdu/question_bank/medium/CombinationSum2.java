@@ -26,7 +26,7 @@ import java.util.*;
  * [5]
  * ]
  *
- * @author duhuang@iflytek.com
+ * @author huangdu.hd@alibaba-inc.com
  * @version 2020/9/10 9:44
  * @see CombinationSum
  */

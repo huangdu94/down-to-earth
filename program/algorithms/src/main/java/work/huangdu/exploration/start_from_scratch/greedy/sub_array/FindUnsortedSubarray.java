@@ -12,7 +12,7 @@ package work.huangdu.exploration.start_from_scratch.greedy.sub_array;
  * 输入的数组长度范围在 [1, 10,000]。
  * 输入的数组可能包含重复元素 ，所以升序的意思是<=。
  *
- * @author duhuang@iflytek.com
+ * @author huangdu.hd@alibaba-inc.com
  * @version 2020/11/18 13:12
  */
 public class FindUnsortedSubarray {

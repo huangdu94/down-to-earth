@@ -1,7 +1,7 @@
 package work.huangdu.exploration.primary_algorithms.dynamic;
 
 /**
- * @author duhuang@iflytek.com
+ * @author huangdu.hd@alibaba-inc.com
  * @version 2020/6/27 10:30
  */
 public class Test {

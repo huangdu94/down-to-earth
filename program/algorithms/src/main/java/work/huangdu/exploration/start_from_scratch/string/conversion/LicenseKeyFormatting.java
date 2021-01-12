@@ -19,7 +19,7 @@ package work.huangdu.exploration.start_from_scratch.string.conversion;
  * S 只包含字母数字（a-z，A-Z，0-9）以及破折号'-'
  * S 非空
  *
- * @author duhuang@iflytek.com
+ * @author huangdu.hd@alibaba-inc.com
  * @version 2020/10/2 11:59
  */
 public class LicenseKeyFormatting {

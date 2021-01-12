@@ -15,7 +15,7 @@ package work.huangdu.exploration.start_from_scratch.greedy.stack;
  * 1 <= s.length <= 104
  * s 由小写英文字母组成
  *
- * @author duhuang@iflytek.com
+ * @author huangdu.hd@alibaba-inc.com
  * @version 2020/11/22 19:55
  */
 public class RemoveDuplicateLetters {

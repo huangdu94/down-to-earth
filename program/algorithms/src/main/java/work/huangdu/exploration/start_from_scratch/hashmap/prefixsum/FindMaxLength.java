@@ -16,7 +16,7 @@ import java.util.Map;
  * 说明: [0, 1] (或 [1, 0]) 是具有相同数量0和1的最长连续子数组。
  * 注意: 给定的二进制数组的长度不会超过50000。
  *
- * @author duhuang@iflytek.com
+ * @author huangdu.hd@alibaba-inc.com
  * @version 2020/11/8 17:59
  */
 public class FindMaxLength {

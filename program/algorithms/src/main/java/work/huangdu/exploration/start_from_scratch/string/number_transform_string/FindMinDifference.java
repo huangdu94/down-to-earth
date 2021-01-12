@@ -12,7 +12,7 @@ import java.util.List;
  * 列表中时间数在 2~20000 之间。
  * 每个时间取值在 00:00~23:59 之间。
  *
- * @author duhuang@iflytek.com
+ * @author huangdu.hd@alibaba-inc.com
  * @version 2020/9/26 18:08
  */
 public class FindMinDifference {

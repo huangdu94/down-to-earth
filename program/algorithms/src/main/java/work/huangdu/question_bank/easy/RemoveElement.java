@@ -26,7 +26,7 @@ package work.huangdu.question_bank.easy;
  * print(nums[i]);
  * }
  *
- * @author duhuang@iflytek.com
+ * @author huangdu.hd@alibaba-inc.com
  * @version 2020/8/6 17:15
  * @see RemoveElements
  */

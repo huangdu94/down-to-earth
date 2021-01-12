@@ -12,7 +12,7 @@ import java.util.Random;
  * Codec codec = new Codec();
  * codec.decode(codec.encode(url));
  *
- * @author duhuang@iflytek.com
+ * @author huangdu.hd@alibaba-inc.com
  * @version 2020/9/25 11:00
  */
 public class Codec {

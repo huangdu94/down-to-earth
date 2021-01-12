@@ -22,7 +22,7 @@ import java.util.List;
  * [-2,  0, 0, 2]
  * ]
  *
- * @author duhuang@iflytek.com
+ * @author huangdu.hd@alibaba-inc.com
  * @version 2020/10/5 12:07
  * @see work.huangdu.exploration.primary_algorithms.array.TwoSum
  * @see TwoSum2

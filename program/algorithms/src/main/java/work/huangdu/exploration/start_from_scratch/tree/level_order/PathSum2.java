@@ -24,7 +24,7 @@ import java.util.List;
  * [5,8,4,5]
  * ]
  *
- * @author duhuang@iflytek.com
+ * @author huangdu.hd@alibaba-inc.com
  * @version 2020/9/26 10:19
  * @see HasPathSum
  * @see work.huangdu.question_bank.medium.PathSum3

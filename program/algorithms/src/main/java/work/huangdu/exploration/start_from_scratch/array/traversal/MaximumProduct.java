@@ -13,7 +13,7 @@ package work.huangdu.exploration.start_from_scratch.array.traversal;
  * 给定的整型数组长度范围是[3,10^4]，数组中所有的元素范围是[-1000, 1000]。
  * 输入的数组中任意三个数的乘积不会超出32位有符号整数的范围。
  *
- * @author duhuang@iflytek.com
+ * @author huangdu.hd@alibaba-inc.com
  * @version 2020/9/13 14:47
  */
 public class MaximumProduct {

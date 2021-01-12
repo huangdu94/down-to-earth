@@ -12,7 +12,7 @@ package work.huangdu.question_bank.easy;
  * 1 <= A.length <= 5000
  * 0 <= A[i] <= 5000
  *
- * @author duhuang@iflytek.com
+ * @author huangdu.hd@alibaba-inc.com
  * @version 2020/11/12 15:41
  */
 public class SortArrayByParity {

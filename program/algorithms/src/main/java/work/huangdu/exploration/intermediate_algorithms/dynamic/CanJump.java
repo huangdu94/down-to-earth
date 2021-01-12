@@ -14,7 +14,7 @@ package work.huangdu.exploration.intermediate_algorithms.dynamic;
  * 输出: false
  * 解释: 无论怎样，你总会到达索引为 3 的位置。但该位置的最大跳跃长度是 0 ， 所以你永远不可能到达最后一个位置。
  *
- * @author duhuang@iflytek.com
+ * @author huangdu.hd@alibaba-inc.com
  * @version 2020/7/20 17:27
  */
 public class CanJump {

@@ -23,7 +23,7 @@ import java.util.Arrays;
  * nums.length == 2 * n
  * -10^4 <= nums[i] <= 10^4
  *
- * @author duhuang@iflytek.com
+ * @author huangdu.hd@alibaba-inc.com
  * @version 2020/11/9 17:39
  */
 public class ArrayPairSum {

@@ -11,7 +11,7 @@ package work.huangdu.question_bank.difficult;
  * 输出: 3
  * 解释: 3个区间分别是: [0,0], [2,2], [0,2]，它们表示的和分别为: -2, -1, 2。
  *
- * @author duhuang@iflytek.com
+ * @author huangdu.hd@alibaba-inc.com
  * @version 2020/11/7 11:35
  */
 public class CountRangeSum {

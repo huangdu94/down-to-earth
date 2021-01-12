@@ -39,7 +39,7 @@ import java.util.List;
  * 输出:
  * []
  *
- * @author duhuang@iflytek.com
+ * @author huangdu.hd@alibaba-inc.com
  * @version 2020/9/3 14:42
  * @see WordBreak
  */

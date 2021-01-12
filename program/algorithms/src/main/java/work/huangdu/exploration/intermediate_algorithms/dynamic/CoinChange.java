@@ -15,7 +15,7 @@ import java.util.Arrays;
  * 说明:
  * 你可以认为每种硬币的数量是无限的。
  *
- * @author duhuang@iflytek.com
+ * @author huangdu.hd@alibaba-inc.com
  * @version 2020/7/20 17:29
  */
 public class CoinChange {

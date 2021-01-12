@@ -21,7 +21,7 @@ import java.util.Queue;
  * int param_3 = obj.top();
  * boolean param_4 = obj.empty();
  *
- * @author duhuang@iflytek.com
+ * @author huangdu.hd@alibaba-inc.com
  * @version 2020/8/15 11:58
  * @see MyQueue
  */

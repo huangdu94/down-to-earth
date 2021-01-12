@@ -29,7 +29,7 @@ package work.huangdu.exploration.start_from_scratch.array.roll_2d;
  * a 的范围是 [1,m]，b 的范围是 [1,n]。
  * 操作数目不超过 10000。
  *
- * @author duhuang@iflytek.com
+ * @author huangdu.hd@alibaba-inc.com
  * @version 2020/9/16 1:02
  */
 public class MaxCount {

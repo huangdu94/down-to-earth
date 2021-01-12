@@ -20,7 +20,7 @@ import java.util.Queue;
  * *  \     \
  * *   5     4       <---
  *
- * @author duhuang@iflytek.com
+ * @author huangdu.hd@alibaba-inc.com
  * @version 2021/1/4 10:20
  */
 public class RightSideView {

@@ -25,7 +25,7 @@ import java.util.Set;
  * 提示：
  * 0 <= c <= 2^31 - 1
  *
- * @author duhuang@iflytek.com
+ * @author huangdu.hd@alibaba-inc.com
  * @version 2020/10/31 13:30
  */
 public class JudgeSquareSum {

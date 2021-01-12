@@ -29,7 +29,7 @@ import java.util.Comparator;
  * points[i].length == 2
  * -2^31 <= xstart < xend <= 2^31 - 1
  *
- * @author duhuang@iflytek.com
+ * @author huangdu.hd@alibaba-inc.com
  * @version 2020/11/13 12:36
  */
 public class FindMinArrowShots {

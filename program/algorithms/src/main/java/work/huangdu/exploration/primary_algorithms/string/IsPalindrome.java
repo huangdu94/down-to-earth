@@ -11,7 +11,7 @@ package work.huangdu.exploration.primary_algorithms.string;
  * 输入: "race a car"
  * 输出: false
  *
- * @author duhuang@iflytek.com
+ * @author huangdu.hd@alibaba-inc.com
  * @version 2020/7/26 17:06
  */
 public class IsPalindrome {

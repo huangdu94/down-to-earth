@@ -18,7 +18,7 @@ import java.util.List;
  * S的长度在[1, 500]之间。
  * S只包含小写字母 'a' 到 'z' 。
  *
- * @author duhuang@iflytek.com
+ * @author huangdu.hd@alibaba-inc.com
  * @version 2020/10/22 12:31
  */
 public class PartitionLabels {

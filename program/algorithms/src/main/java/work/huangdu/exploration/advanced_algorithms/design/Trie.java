@@ -15,7 +15,7 @@ package work.huangdu.exploration.advanced_algorithms.design;
  * 你可以假设所有的输入都是由小写字母a-z构成的。
  * 保证所有输入均为非空字符串。
  *
- * @author duhuang@iflytek.com
+ * @author huangdu.hd@alibaba-inc.com
  * @version 2020/8/14 12:04
  */
 public class Trie {

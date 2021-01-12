@@ -14,7 +14,7 @@ import java.util.Arrays;
  * 输入: nums = [5,7,7,8,8,10], target = 6
  * 输出: [-1,-1]
  *
- * @author duhuang@iflytek.com
+ * @author huangdu.hd@alibaba-inc.com
  * @version 2020/7/12 15:49
  */
 public class SearchRange {

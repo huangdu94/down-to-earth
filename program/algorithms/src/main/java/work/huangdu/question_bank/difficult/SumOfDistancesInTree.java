@@ -22,7 +22,7 @@ import java.util.List;
  * 也就是 1 + 1 + 2 + 2 + 2 = 8。 因此，answer[0] = 8，以此类推。
  * 说明: 1 <= N <= 10000
  *
- * @author duhuang@iflytek.com
+ * @author huangdu.hd@alibaba-inc.com
  * @version 2020/10/6 13:40
  */
 public class SumOfDistancesInTree {

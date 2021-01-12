@@ -14,7 +14,7 @@ package work.huangdu.exploration.primary_algorithms.string;
  * 说明:
  * 所有输入只包含小写字母 a-z 。
  *
- * @author duhuang@iflytek.com
+ * @author huangdu.hd@alibaba-inc.com
  * @version 2020/7/26 17:45
  */
 public class LongestCommonPrefix {

@@ -26,7 +26,7 @@ import java.util.Arrays;
  * NumMatrix obj = new NumMatrix(matrix);
  * int param_1 = obj.sumRegion(row1,col1,row2,col2);
  *
- * @author duhuang@iflytek.com
+ * @author huangdu.hd@alibaba-inc.com
  * @version 2020/9/19 15:18
  */
 public class NumMatrix {

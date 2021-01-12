@@ -26,7 +26,7 @@ import java.util.Map;
  * int param_1 = obj.get(key);
  * obj.put(key,value);
  *
- * @author duhuang@iflytek.com
+ * @author huangdu.hd@alibaba-inc.com
  * @version 2020/9/4 15:55
  */
 public class LRUCache {

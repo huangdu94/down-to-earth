@@ -21,7 +21,7 @@ import work.huangdu.data_structure.ListNode;
  * 进阶：
  * 你能用 O(1)（即，常量）内存解决此问题吗？
  *
- * @author duhuang@iflytek.com
+ * @author huangdu.hd@alibaba-inc.com
  * @version 2020/7/26 18:25
  */
 public class HasCycle {

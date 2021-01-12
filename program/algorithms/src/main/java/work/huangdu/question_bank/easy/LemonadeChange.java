@@ -33,7 +33,7 @@ package work.huangdu.question_bank.easy;
  * 0 <= bills.length <= 10000
  * bills[i] 不是 5 就是 10 或是 20
  *
- * @author duhuang@iflytek.com
+ * @author huangdu.hd@alibaba-inc.com
  * @version 2020/12/10 12:38
  */
 public class LemonadeChange {

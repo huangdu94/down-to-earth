@@ -14,7 +14,7 @@ import java.util.Arrays;
  * 由于研究者有 3 篇论文每篇 至少 被引用了 3 次，其余两篇论文每篇被引用 不多于 3 次，所以她的 h 指数是 3。
  * 提示：如果 h 有多种可能的值，h 指数是其中最大的那个。
  *
- * @author duhuang@iflytek.com
+ * @author huangdu.hd@alibaba-inc.com
  * @version 2020/9/14 12:01
  */
 public class HIndex {

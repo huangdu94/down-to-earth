@@ -14,7 +14,7 @@ package work.huangdu.exploration.start_from_scratch.string.subsequence;
  * 后续挑战 :
  * 如果有大量输入的 S，称作S1, S2, ... , Sk 其中 k >= 10亿，你需要依次检查它们是否为 T 的子序列。在这种情况下，你会怎样改变代码？
  *
- * @author duhuang@iflytek.com
+ * @author huangdu.hd@alibaba-inc.com
  * @version 2020/9/30 12:51
  */
 public class IsSubsequence {

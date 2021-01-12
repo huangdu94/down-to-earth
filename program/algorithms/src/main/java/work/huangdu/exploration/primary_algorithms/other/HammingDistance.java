@@ -15,7 +15,7 @@ package work.huangdu.exploration.primary_algorithms.other;
  * ↑   ↑
  * 上面的箭头指出了对应二进制位不同的位置。
  *
- * @author duhuang@iflytek.com
+ * @author huangdu.hd@alibaba-inc.com
  * @version 2020/7/1 17:51
  */
 public class HammingDistance {

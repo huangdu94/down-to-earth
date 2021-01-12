@@ -26,7 +26,7 @@ import java.util.Queue;
  * -10000 < points[i][0] < 10000
  * -10000 < points[i][1] < 10000
  *
- * @author duhuang@iflytek.com
+ * @author huangdu.hd@alibaba-inc.com
  * @version 2020/11/9 16:13
  */
 public class KClosest {

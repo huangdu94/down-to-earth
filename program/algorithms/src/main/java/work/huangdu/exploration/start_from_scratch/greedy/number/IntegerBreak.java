@@ -16,7 +16,7 @@ import java.util.Map;
  * 解释: 10 = 3 + 3 + 4, 3 × 3 × 4 = 36。
  * 说明: 你可以假设 n 不小于 2 且不大于 58。
  *
- * @author duhuang@iflytek.com
+ * @author huangdu.hd@alibaba-inc.com
  * @version 2020/11/19 13:04
  */
 public class IntegerBreak {

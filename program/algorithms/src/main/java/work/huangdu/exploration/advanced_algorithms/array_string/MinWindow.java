@@ -13,7 +13,7 @@ import java.util.Map;
  * 如果 S 中不存这样的子串，则返回空字符串 ""。
  * 如果 S 中存在这样的子串，我们保证它是唯一的答案。
  *
- * @author duhuang@iflytek.com
+ * @author huangdu.hd@alibaba-inc.com
  * @version 2020/7/27 20:29
  */
 public class MinWindow {

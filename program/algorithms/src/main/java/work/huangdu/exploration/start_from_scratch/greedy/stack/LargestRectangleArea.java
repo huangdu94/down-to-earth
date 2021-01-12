@@ -1,7 +1,7 @@
 package work.huangdu.exploration.start_from_scratch.greedy.stack;
 
 /**
- * @author duhuang@iflytek.com
+ * @author huangdu.hd@alibaba-inc.com
  * @version 2020/12/4 12:55
  * @see work.huangdu.exploration.advanced_algorithms.other.LargestRectangleArea
  */

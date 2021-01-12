@@ -39,7 +39,7 @@ import java.util.List;
  * -2^31 <= nums[i] <= 2^31 - 1
  * nums 中的所有值都互不相同
  *
- * @author duhuang@iflytek.com
+ * @author huangdu.hd@alibaba-inc.com
  * @version 2020/11/12 20:01
  */
 public class SummaryRanges {

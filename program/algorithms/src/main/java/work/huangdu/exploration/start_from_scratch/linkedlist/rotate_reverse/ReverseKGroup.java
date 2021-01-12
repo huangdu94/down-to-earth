@@ -15,7 +15,7 @@ import work.huangdu.data_structure.ListNode;
  * 你的算法只能使用常数的额外空间。
  * 你不能只是单纯的改变节点内部的值，而是需要实际进行节点交换。
  *
- * @author duhuang@iflytek.com
+ * @author huangdu.hd@alibaba-inc.com
  * @version 2020/10/28 16:39
  */
 public class ReverseKGroup {

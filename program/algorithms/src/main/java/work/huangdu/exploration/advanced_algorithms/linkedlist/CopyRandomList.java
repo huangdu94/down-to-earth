@@ -31,7 +31,7 @@ import java.util.Map;
  * 节点数目不超过 1000 。
  * Java
  *
- * @author duhuang@iflytek.com
+ * @author huangdu.hd@alibaba-inc.com
  * @version 2020/8/4 9:58
  */
 public class CopyRandomList {

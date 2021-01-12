@@ -51,7 +51,7 @@ import java.util.List;
  * "do                  "
  * ]
  *
- * @author duhuang@iflytek.com
+ * @author huangdu.hd@alibaba-inc.com
  * @version 2020/10/3 9:56
  */
 public class FullJustify {

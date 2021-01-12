@@ -9,7 +9,7 @@ import work.huangdu.data_structure.ListNode;
  * 输入: 1->2->6->3->4->5->6, val = 6
  * 输出: 1->2->3->4->5
  *
- * @author duhuang@iflytek.com
+ * @author huangdu.hd@alibaba-inc.com
  * @version 2020/8/14 0:54
  * @see RemoveElement
  */

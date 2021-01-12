@@ -22,7 +22,7 @@ import work.huangdu.data_structure.TreeNode;
  * * 15  7
  * 输出: 42
  *
- * @author duhuang@iflytek.com
+ * @author huangdu.hd@alibaba-inc.com
  * @version 2020/8/9 10:29
  */
 public class MaxPathSum {

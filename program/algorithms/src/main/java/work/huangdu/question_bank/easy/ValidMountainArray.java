@@ -21,7 +21,7 @@ package work.huangdu.question_bank.easy;
  * 0 <= A.length <= 10000
  * 0 <= A[i] <= 10000
  *
- * @author duhuang@iflytek.com
+ * @author huangdu.hd@alibaba-inc.com
  * @version 2020/11/3 16:32
  */
 public class ValidMountainArray {

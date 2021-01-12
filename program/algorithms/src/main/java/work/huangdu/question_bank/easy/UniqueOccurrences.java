@@ -23,7 +23,7 @@ import java.util.Set;
  * 1 <= arr.length <= 1000
  * -1000 <= arr[i] <= 1000
  *
- * @author duhuang@iflytek.com
+ * @author huangdu.hd@alibaba-inc.com
  * @version 2020/10/28 12:30
  */
 public class UniqueOccurrences {

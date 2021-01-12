@@ -9,7 +9,7 @@ import work.huangdu.data_structure.ListNode;
  * 输入：1->2->4, 1->3->4
  * 输出：1->1->2->3->4->4
  *
- * @author duhuang@iflytek.com
+ * @author huangdu.hd@alibaba-inc.com
  * @version 2020/7/26 18:11
  */
 public class MergeTwoLists {

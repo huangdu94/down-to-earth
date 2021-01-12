@@ -19,7 +19,7 @@ import java.util.List;
  * [3,2,1]
  * ]
  *
- * @author duhuang@iflytek.com
+ * @author huangdu.hd@alibaba-inc.com
  * @version 2020/7/9 0:21
  */
 public class Permute {

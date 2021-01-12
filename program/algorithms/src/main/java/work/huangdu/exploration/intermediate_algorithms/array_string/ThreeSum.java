@@ -18,7 +18,7 @@ import java.util.*;
  * [-1, -1, 2]
  * ]
  *
- * @author duhuang@iflytek.com
+ * @author huangdu.hd@alibaba-inc.com
  * @version 2020/7/2 10:33
  * @see work.huangdu.exploration.primary_algorithms.array.TwoSum
  * @see TwoSum2

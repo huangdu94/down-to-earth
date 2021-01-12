@@ -32,7 +32,7 @@ import java.util.List;
  * candidate 中的每个元素都是独一无二的。
  * 1 <= target <= 500
  *
- * @author duhuang@iflytek.com
+ * @author huangdu.hd@alibaba-inc.com
  * @version 2020/9/9 12:46
  * @see CombinationSum2
  */

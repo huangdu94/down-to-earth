@@ -11,7 +11,7 @@ package work.huangdu.exploration.start_from_scratch.binary.number_bit_operation;
  * 输出: "-10"
  * 注意: 输入范围是 [-1e7, 1e7] 。
  *
- * @author duhuang@iflytek.com
+ * @author huangdu.hd@alibaba-inc.com
  * @version 2020/10/10 16:05
  */
 public class ConvertToBase7 {

@@ -29,7 +29,7 @@ import java.util.List;
  * 起始索引等于 1 的子串是 "ba", 它是 "ab" 的字母异位词。
  * 起始索引等于 2 的子串是 "ab", 它是 "ab" 的字母异位词。
  *
- * @author duhuang@iflytek.com
+ * @author huangdu.hd@alibaba-inc.com
  * @version 2020/12/15 16:29
  */
 public class FindAnagrams {

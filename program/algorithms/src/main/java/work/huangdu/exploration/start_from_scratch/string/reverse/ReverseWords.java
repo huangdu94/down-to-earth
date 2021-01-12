@@ -9,7 +9,7 @@ package work.huangdu.exploration.start_from_scratch.string.reverse;
  * 提示：
  * 在字符串中，每个单词由单个空格分隔，并且字符串中不会有任何额外的空格。
  *
- * @author duhuang@iflytek.com
+ * @author huangdu.hd@alibaba-inc.com
  * @version 2020/8/30 13:34
  */
 public class ReverseWords {

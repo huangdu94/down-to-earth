@@ -10,7 +10,7 @@ import work.huangdu.data_structure.ListNode;
  * 输入: head = 1->4->3->2->5->2, x = 3
  * 输出: 1->2->2->4->3->5
  *
- * @author duhuang@iflytek.com
+ * @author huangdu.hd@alibaba-inc.com
  * @version 2020/12/20 12:30
  */
 public class Partition {

@@ -12,7 +12,7 @@ package work.huangdu.exploration.start_from_scratch.array.change_move;
  * 只需要3次移动（注意每次移动会增加两个元素的值）：
  * [1,2,3]  =>  [2,3,3]  =>  [3,4,3]  =>  [4,4,4]
  *
- * @author duhuang@iflytek.com
+ * @author huangdu.hd@alibaba-inc.com
  * @version 2020/9/15 12:31
  */
 public class MinMoves {

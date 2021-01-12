@@ -16,7 +16,7 @@ package work.huangdu.exploration.start_from_scratch.string.character;
  * 输出: False
  * 注意: 输入是由大写和小写拉丁字母组成的非空单词。
  *
- * @author duhuang@iflytek.com
+ * @author huangdu.hd@alibaba-inc.com
  * @version 2020/9/19 22:11
  */
 public class DetectCapitalUse {

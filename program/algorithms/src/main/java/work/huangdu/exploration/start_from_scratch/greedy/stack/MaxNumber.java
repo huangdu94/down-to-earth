@@ -27,7 +27,7 @@ package work.huangdu.exploration.start_from_scratch.greedy.stack;
  * 输出:
  * [9, 8, 9]
  *
- * @author duhuang@iflytek.com
+ * @author huangdu.hd@alibaba-inc.com
  * @version 2020/12/2 18:49
  */
 public class MaxNumber {

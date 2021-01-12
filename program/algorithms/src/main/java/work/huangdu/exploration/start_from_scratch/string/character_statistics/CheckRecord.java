@@ -15,7 +15,7 @@ package work.huangdu.exploration.start_from_scratch.string.character_statistics;
  * 输入: "PPALLL"
  * 输出: False
  *
- * @author duhuang@iflytek.com
+ * @author huangdu.hd@alibaba-inc.com
  * @version 2020/9/25 10:12
  */
 public class CheckRecord {

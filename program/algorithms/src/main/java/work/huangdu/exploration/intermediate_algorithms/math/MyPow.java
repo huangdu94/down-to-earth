@@ -17,7 +17,7 @@ package work.huangdu.exploration.intermediate_algorithms.math;
  * -100.0 < x < 100.0
  * n 是 32 位有符号整数，其数值范围是 [−2^31, 2^31 − 1] 。
  *
- * @author duhuang@iflytek.com
+ * @author huangdu.hd@alibaba-inc.com
  * @version 2020/7/22 0:17
  */
 public class MyPow {

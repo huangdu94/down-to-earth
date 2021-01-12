@@ -19,7 +19,7 @@ import java.util.Queue;
  * 树的高度不会超过 1000
  * 树的节点总数在 [0, 10^4] 之间
  *
- * @author duhuang@iflytek.com
+ * @author huangdu.hd@alibaba-inc.com
  * @version 2021/1/4 10:55
  */
 public class LevelOrder2 {

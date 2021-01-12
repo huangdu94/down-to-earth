@@ -22,7 +22,7 @@ import java.util.Set;
  * 说明:
  * 你可以假设 s 和 t 具有相同的长度。
  *
- * @author duhuang@iflytek.com
+ * @author huangdu.hd@alibaba-inc.com
  * @version 2020/8/14 1:23
  */
 public class IsIsomorphic {

@@ -28,7 +28,7 @@ import work.huangdu.data_structure.TreeNode;
  * 每个节点的值介于0 和100之间。
  * 给定的树为二叉搜索树。
  *
- * @author duhuang@iflytek.com
+ * @author huangdu.hd@alibaba-inc.com
  * @version 2020/9/21 0:23
  */
 public class ConvertBST {

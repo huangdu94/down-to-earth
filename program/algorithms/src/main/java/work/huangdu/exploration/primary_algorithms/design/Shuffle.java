@@ -16,7 +16,7 @@ import java.util.Random;
  * // 随机返回数组[1,2,3]打乱后的结果。
  * solution.shuffle();
  *
- * @author duhuang@iflytek.com
+ * @author huangdu.hd@alibaba-inc.com
  * @version 2020/6/29 13:31
  */
 public class Shuffle {

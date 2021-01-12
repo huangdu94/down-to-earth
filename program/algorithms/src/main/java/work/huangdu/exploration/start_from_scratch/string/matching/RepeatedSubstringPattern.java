@@ -15,7 +15,7 @@ package work.huangdu.exploration.start_from_scratch.string.matching;
  * 输出: True
  * 解释: 可由子字符串 "abc" 重复四次构成。 (或者子字符串 "abcabc" 重复两次构成。)
  *
- * @author duhuang@iflytek.com
+ * @author huangdu.hd@alibaba-inc.com
  * @version 2020/8/24 0:10
  */
 public class RepeatedSubstringPattern {

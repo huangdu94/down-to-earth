@@ -21,7 +21,7 @@ package work.huangdu.exploration.start_from_scratch.string.number_transform_stri
  * 数组中每个元素的大小都在 [2, 1000] 之间。
  * 每个测试用例只有一个最优除法解。
  *
- * @author duhuang@iflytek.com
+ * @author huangdu.hd@alibaba-inc.com
  * @version 2020/9/27 14:59
  */
 public class OptimalDivision {

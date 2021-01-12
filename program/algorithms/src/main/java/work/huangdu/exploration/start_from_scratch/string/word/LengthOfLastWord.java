@@ -9,7 +9,7 @@ package work.huangdu.exploration.start_from_scratch.string.word;
  * 输入: "Hello World"
  * 输出: 5
  *
- * @author duhuang@iflytek.com
+ * @author huangdu.hd@alibaba-inc.com
  * @version 2020/9/21 11:28
  */
 public class LengthOfLastWord {

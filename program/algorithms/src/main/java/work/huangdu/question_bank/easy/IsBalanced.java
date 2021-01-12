@@ -26,7 +26,7 @@ import work.huangdu.data_structure.TreeNode;
  * *4   4
  * 返回 false 。
  *
- * @author duhuang@iflytek.com
+ * @author huangdu.hd@alibaba-inc.com
  * @version 2020/8/8 22:40
  */
 public class IsBalanced {

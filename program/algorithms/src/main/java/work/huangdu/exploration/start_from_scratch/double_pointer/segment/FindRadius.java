@@ -21,7 +21,7 @@ package work.huangdu.exploration.start_from_scratch.double_pointer.segment;
  * 1 <= houses.length, heaters.length <= 3 * 10^4
  * 1 <= houses[i], heaters[i] <= 10^9
  *
- * @author duhuang@iflytek.com
+ * @author huangdu.hd@alibaba-inc.com
  * @version 2020/12/20 13:15
  */
 public class FindRadius {

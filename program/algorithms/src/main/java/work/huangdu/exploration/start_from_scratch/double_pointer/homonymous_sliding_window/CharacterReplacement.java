@@ -21,7 +21,7 @@ package work.huangdu.exploration.start_from_scratch.double_pointer.homonymous_sl
  * 将中间的一个'A'替换为'B',字符串变为 "AABBBBA"。
  * 子串 "BBBB" 有最长重复字母, 答案为 4。
  *
- * @author duhuang@iflytek.com
+ * @author huangdu.hd@alibaba-inc.com
  * @version 2020/12/18 12:58
  */
 public class CharacterReplacement {

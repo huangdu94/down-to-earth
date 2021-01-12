@@ -24,7 +24,7 @@ package work.huangdu.exploration.intermediate_algorithms.math;
  * 致谢：
  * 特别感谢 @ts 添加此问题并创建所有测试用例。
  *
- * @author duhuang@iflytek.com
+ * @author huangdu.hd@alibaba-inc.com
  * @version 2020/7/22 0:16
  */
 public class TitleToNumber {

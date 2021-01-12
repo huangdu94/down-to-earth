@@ -29,7 +29,7 @@ import java.util.LinkedList;
  * 输入："/a//b////c/d//././/.."
  * 输出："/a/b/c"
  *
- * @author duhuang@iflytek.com
+ * @author huangdu.hd@alibaba-inc.com
  * @version 2020/10/22 13:25
  */
 public class SimplifyPath {

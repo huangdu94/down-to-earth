@@ -16,7 +16,7 @@ import java.util.Set;
  * 输出: 2
  * 解释: 13 = 4 + 9.
  *
- * @author duhuang@iflytek.com
+ * @author huangdu.hd@alibaba-inc.com
  * @version 2020/8/28 12:37
  */
 public class NumSquares {

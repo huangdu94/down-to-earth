@@ -21,7 +21,7 @@ package work.huangdu.exploration.intermediate_algorithms.dynamic;
  * 1 <= m, n <= 100
  * 题目数据保证答案小于等于 2 * 10 ^ 9
  *
- * @author duhuang@iflytek.com
+ * @author huangdu.hd@alibaba-inc.com
  * @version 2020/7/20 17:28
  */
 public class UniquePaths {

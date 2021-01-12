@@ -24,7 +24,7 @@ import java.util.Queue;
  * [15,7]
  * ]
  *
- * @author duhuang@iflytek.com
+ * @author huangdu.hd@alibaba-inc.com
  * @version 2020/6/22 17:42
  */
 public class LevelOrder {

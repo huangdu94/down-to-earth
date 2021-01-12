@@ -17,7 +17,7 @@ import java.util.Arrays;
  * 数组长度不超过1000。
  * 数组里整数的范围为 [0, 1000]。
  *
- * @author duhuang@iflytek.com
+ * @author huangdu.hd@alibaba-inc.com
  * @version 2020/12/14 12:59
  */
 public class TriangleNumber {

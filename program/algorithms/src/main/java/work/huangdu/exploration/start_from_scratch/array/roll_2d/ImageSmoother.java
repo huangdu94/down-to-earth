@@ -22,7 +22,7 @@ import java.util.Arrays;
  * 给定矩阵中的整数范围为 [0, 255]。
  * 矩阵的长和宽的范围均为 [1, 150]。
  *
- * @author duhuang@iflytek.com
+ * @author huangdu.hd@alibaba-inc.com
  * @version 2020/9/16 0:59
  */
 public class ImageSmoother {

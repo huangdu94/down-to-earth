@@ -20,7 +20,7 @@ package work.huangdu.exploration.start_from_scratch.greedy.array;
  * 注意:
  * 字符串大小将在 [1，100] 范围内。
  *
- * @author duhuang@iflytek.com
+ * @author huangdu.hd@alibaba-inc.com
  * @version 2020/11/15 16:58
  */
 public class CheckValidString {

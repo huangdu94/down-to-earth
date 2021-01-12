@@ -14,7 +14,7 @@ import java.util.Map;
  * 输入: [2,2,1,1,1,2,2]
  * 输出: 2
  *
- * @author duhuang@iflytek.com
+ * @author huangdu.hd@alibaba-inc.com
  * @version 2020/7/22 0:24
  */
 public class MajorityElement {

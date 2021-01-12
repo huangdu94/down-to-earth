@@ -21,7 +21,7 @@ package work.huangdu.question_bank.easy;
  * 提示：
  * 0 <= n <= 30
  *
- * @author duhuang@iflytek.com
+ * @author huangdu.hd@alibaba-inc.com
  * @version 2021/1/4 10:00
  */
 public class Fib {

@@ -15,7 +15,7 @@ package work.huangdu.exploration.start_from_scratch.hashmap.prefixsum;
  * 数组的长度不会超过 10,000 。
  * 你可以认为所有数字总和在 32 位有符号整数范围内。
  *
- * @author duhuang@iflytek.com
+ * @author huangdu.hd@alibaba-inc.com
  * @version 2020/11/7 12:54
  */
 public class CheckSubarraySum {

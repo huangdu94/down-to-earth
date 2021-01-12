@@ -35,7 +35,7 @@ package work.huangdu.exploration.primary_algorithms.string;
  * 解释: 数字 "-91283472332" 超过 32 位有符号整数范围。
  * 因此返回 INT_MIN (−2^31) 。
  *
- * @author duhuang@iflytek.com
+ * @author huangdu.hd@alibaba-inc.com
  * @version 2020/7/26 17:11
  */
 public class MyAtoi {

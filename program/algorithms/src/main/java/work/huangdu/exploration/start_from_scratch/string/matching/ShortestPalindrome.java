@@ -10,7 +10,7 @@ package work.huangdu.exploration.start_from_scratch.string.matching;
  * 输入: "abcd"
  * 输出: "dcbabcd"
  *
- * @author duhuang@iflytek.com
+ * @author huangdu.hd@alibaba-inc.com
  * @version 2020/8/29 20:45
  */
 public class ShortestPalindrome {

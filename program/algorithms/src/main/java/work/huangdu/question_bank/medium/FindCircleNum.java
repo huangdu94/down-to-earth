@@ -20,7 +20,7 @@ package work.huangdu.question_bank.medium;
  * isConnected[i][i] == 1
  * isConnected[i][j] == isConnected[j][i]
  *
- * @author duhuang@iflytek.com
+ * @author huangdu.hd@alibaba-inc.com
  * @version 2021/1/7 13:00
  */
 public class FindCircleNum {

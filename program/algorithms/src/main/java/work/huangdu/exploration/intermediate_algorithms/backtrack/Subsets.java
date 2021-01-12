@@ -20,7 +20,7 @@ import java.util.*;
  * []
  * ]
  *
- * @author duhuang@iflytek.com
+ * @author huangdu.hd@alibaba-inc.com
  * @version 2020/7/9 0:22
  */
 public class Subsets {

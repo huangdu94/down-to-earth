@@ -13,7 +13,7 @@ import java.util.Map;
  * canConstruct("aa", "ab") -> false
  * canConstruct("aa", "aab") -> true
  *
- * @author duhuang@iflytek.com
+ * @author huangdu.hd@alibaba-inc.com
  * @version 2020/9/23 21:53
  */
 public class CanConstruct {

@@ -3,7 +3,7 @@ package work.huangdu.data_structure;
 /**
  * Definition for a binary tree node.
  *
- * @author duhuang@iflytek.com
+ * @author huangdu.hd@alibaba-inc.com
  * @version 2020/8/12 17:33
  */
 public class TreeNode {

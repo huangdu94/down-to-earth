@@ -20,7 +20,7 @@ package work.huangdu.exploration.start_from_scratch.string.subsequence;
  * 两个字符串长度均处于区间 [1 - 100] 。
  * 字符串中的字符仅含有 'a'~'z' 。
  *
- * @author duhuang@iflytek.com
+ * @author huangdu.hd@alibaba-inc.com
  * @version 2020/9/30 13:04
  */
 public class FindLUSlength {

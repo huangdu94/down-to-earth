@@ -6,7 +6,7 @@ package work.huangdu.question_bank.medium;
  * 例如，字符串"+100"、"5e2"、"-123"、"3.1416"、"-1E-16"、"0123"都表示数值，
  * 但"12e"、"1a3.14"、"1.2.3"、"+-5"及"12e+5.4"都不是。
  *
- * @author duhuang@iflytek.com
+ * @author huangdu.hd@alibaba-inc.com
  * @version 2020/9/2 12:46
  */
 public class IsNumber {

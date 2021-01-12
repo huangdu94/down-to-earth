@@ -14,7 +14,7 @@ import java.util.Set;
  * 返回 2
  * 提示：你可以假定该字符串只包含小写字母。
  *
- * @author duhuang@iflytek.com
+ * @author huangdu.hd@alibaba-inc.com
  * @version 2020/7/26 16:59
  */
 public class FirstUniqChar {

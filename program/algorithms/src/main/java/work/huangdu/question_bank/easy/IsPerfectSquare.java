@@ -11,7 +11,7 @@ package work.huangdu.question_bank.easy;
  * 输入：14
  * 输出：False
  *
- * @author duhuang@iflytek.com
+ * @author huangdu.hd@alibaba-inc.com
  * @version 2020/9/2 15:58
  */
 public class IsPerfectSquare {

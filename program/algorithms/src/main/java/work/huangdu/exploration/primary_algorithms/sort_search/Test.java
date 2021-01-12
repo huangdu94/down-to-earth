@@ -3,7 +3,7 @@ package work.huangdu.exploration.primary_algorithms.sort_search;
 import java.util.Arrays;
 
 /**
- * @author duhuang@iflytek.com
+ * @author huangdu.hd@alibaba-inc.com
  * @version 2020/6/23 12:29
  */
 public class Test {

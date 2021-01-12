@@ -39,7 +39,7 @@ package work.huangdu.exploration.advanced_algorithms.backtrack;
  * p = "mis*is*p*."
  * 输出: false
  *
- * @author duhuang@iflytek.com
+ * @author huangdu.hd@alibaba-inc.com
  * @version 2020/8/19 22:49
  */
 public class Match {

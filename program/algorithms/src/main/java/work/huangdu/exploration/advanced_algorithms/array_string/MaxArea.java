@@ -9,7 +9,7 @@ package work.huangdu.exploration.advanced_algorithms.array_string;
  * 输入：[1,8,6,2,5,4,8,3,7]
  * 输出：49
  *
- * @author duhuang@iflytek.com
+ * @author huangdu.hd@alibaba-inc.com
  * @version 2020/7/27 14:12
  */
 public class MaxArea {

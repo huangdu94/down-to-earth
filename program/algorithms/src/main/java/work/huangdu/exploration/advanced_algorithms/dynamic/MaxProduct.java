@@ -12,7 +12,7 @@ package work.huangdu.exploration.advanced_algorithms.dynamic;
  * 输出: 0
  * 解释:结果不能为 2, 因为 [-2,-1] 不是子数组。
  *
- * @author duhuang@iflytek.com
+ * @author huangdu.hd@alibaba-inc.com
  * @version 2020/8/25 15:12
  */
 public class MaxProduct {

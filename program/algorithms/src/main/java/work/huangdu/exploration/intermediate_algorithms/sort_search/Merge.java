@@ -14,7 +14,7 @@ import java.util.Arrays;
  * 输出: [[1,5]]
  * 解释: 区间 [1,4] 和 [4,5] 可被视为重叠区间。
  *
- * @author duhuang@iflytek.com
+ * @author huangdu.hd@alibaba-inc.com
  * @version 2020/7/12 15:50
  */
 public class Merge {

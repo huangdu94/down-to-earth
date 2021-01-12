@@ -9,7 +9,7 @@ import java.util.Stack;
  * 1. 支持乘除法，并满足四则运算法则要求
  * 2. 支持空格(会自动忽略数字与符号之间的空格)
  *
- * @author duhuang@iflytek.com
+ * @author huangdu.hd@alibaba-inc.com
  * @version 2020/8/1 12:24
  */
 public class Calculator2 {

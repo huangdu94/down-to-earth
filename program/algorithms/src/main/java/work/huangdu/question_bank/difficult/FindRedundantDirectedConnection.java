@@ -28,7 +28,7 @@ import java.util.*;
  * 二维数组大小的在3到1000范围内。
  * 二维数组中的每个整数在1到N之间，其中 N 是二维数组的大小。
  *
- * @author duhuang@iflytek.com
+ * @author huangdu.hd@alibaba-inc.com
  * @version 2020/9/17 10:44
  */
 public class FindRedundantDirectedConnection {

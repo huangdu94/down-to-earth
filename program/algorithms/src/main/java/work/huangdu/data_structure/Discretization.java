@@ -10,7 +10,7 @@ import java.util.Set;
  * value -> id 二分查找 返回index+1
  * id -> value id - 1 作为index查
  *
- * @author duhuang@iflytek.com
+ * @author huangdu.hd@alibaba-inc.com
  * @version 2020/9/4 11:50
  */
 public class Discretization {

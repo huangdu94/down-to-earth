@@ -26,7 +26,7 @@ import java.util.Set;
  * 输入: s = "catsandog", wordDict = ["cats", "dog", "sand", "and", "cat"]
  * 输出: false
  *
- * @author duhuang@iflytek.com
+ * @author huangdu.hd@alibaba-inc.com
  * @version 2020/9/3 14:41
  * @see WordBreak2
  */

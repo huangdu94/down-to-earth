@@ -20,7 +20,7 @@ import java.util.Deque;
  * 你可以假设所给定的表达式都是有效的。
  * 请不要使用内置的库函数 eval。
  *
- * @author duhuang@iflytek.com
+ * @author huangdu.hd@alibaba-inc.com
  * @version 2020/10/23 20:25
  */
 public class Calculate {

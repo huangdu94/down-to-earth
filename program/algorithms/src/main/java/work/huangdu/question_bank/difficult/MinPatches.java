@@ -20,7 +20,7 @@ package work.huangdu.question_bank.difficult;
  * 输入: nums = [1,2,2], n = 5
  * 输出: 0
  *
- * @author duhuang@iflytek.com
+ * @author huangdu.hd@alibaba-inc.com
  * @version 2020/12/29 12:12
  */
 public class MinPatches {

@@ -11,7 +11,7 @@ package work.huangdu.exploration.intermediate_algorithms.array_string;
  * 输入: "cbbd"
  * 输出: "bb"
  *
- * @author duhuang@iflytek.com
+ * @author huangdu.hd@alibaba-inc.com
  * @version 2020/7/2 10:39
  */
 public class LongestPalindrome {

@@ -37,7 +37,7 @@ import java.util.Set;
  * -10^7 <= nums[i] <= 10^7
  * 0 <= k <= 10^7
  *
- * @author duhuang@iflytek.com
+ * @author huangdu.hd@alibaba-inc.com
  * @version 2020/11/1 18:25
  */
 public class FindPairs {

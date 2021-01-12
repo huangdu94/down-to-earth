@@ -15,7 +15,7 @@ import java.util.List;
  * ["a","a","b"]
  * ]
  *
- * @author duhuang@iflytek.com
+ * @author huangdu.hd@alibaba-inc.com
  * @version 2020/8/13 13:59
  */
 public class Partition {

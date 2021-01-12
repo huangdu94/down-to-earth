@@ -15,7 +15,7 @@ import java.util.List;
  * 输出:
  * [[5,0], [7,0], [5,2], [6,1], [4,4], [7,1]]
  *
- * @author duhuang@iflytek.com
+ * @author huangdu.hd@alibaba-inc.com
  * @version 2020/9/8 11:38
  */
 public class ReconstructQueue {

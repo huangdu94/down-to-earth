@@ -16,7 +16,7 @@ import java.util.Map;
  * 返回：
  * 2
  *
- * @author duhuang@iflytek.com
+ * @author huangdu.hd@alibaba-inc.com
  * @version 2020/11/2 19:24
  */
 public class GetMaxRepetitions {

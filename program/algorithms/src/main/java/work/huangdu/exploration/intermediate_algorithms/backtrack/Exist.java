@@ -20,7 +20,7 @@ package work.huangdu.exploration.intermediate_algorithms.backtrack;
  * 1 <= board[i].length <= 200
  * 1 <= word.length <= 10^3
  *
- * @author duhuang@iflytek.com
+ * @author huangdu.hd@alibaba-inc.com
  * @version 2020/7/9 0:24
  */
 public class Exist {

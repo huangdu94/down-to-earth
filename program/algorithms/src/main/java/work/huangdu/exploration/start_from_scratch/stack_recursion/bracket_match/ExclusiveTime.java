@@ -31,7 +31,7 @@ import java.util.List;
  * 函数允许被递归调用，直到运行结束。
  * 1 <= n <= 100
  *
- * @author duhuang@iflytek.com
+ * @author huangdu.hd@alibaba-inc.com
  * @version 2020/10/25 9:32
  */
 public class ExclusiveTime {

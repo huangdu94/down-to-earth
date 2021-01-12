@@ -19,7 +19,7 @@ import java.util.Queue;
  * 15   7
  * 返回它的最大深度 3 。
  *
- * @author duhuang@iflytek.com
+ * @author huangdu.hd@alibaba-inc.com
  * @version 2020/6/22 17:00
  */
 public class MaxDepth {

@@ -25,7 +25,7 @@ import java.util.Arrays;
  * 0 <= s.length <= 3 * 10^4
  * 1 <= g[i], s[j] <= 2^31 - 1
  *
- * @author duhuang@iflytek.com
+ * @author huangdu.hd@alibaba-inc.com
  * @version 2020/11/9 17:29
  */
 public class FindContentChildren {

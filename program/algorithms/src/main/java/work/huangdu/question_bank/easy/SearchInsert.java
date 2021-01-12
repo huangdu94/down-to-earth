@@ -17,7 +17,7 @@ package work.huangdu.question_bank.easy;
  * 输入: [1,3,5,6], 0
  * 输出: 0
  *
- * @author duhuang@iflytek.com
+ * @author huangdu.hd@alibaba-inc.com
  * @version 2020/8/7 10:41
  */
 public class SearchInsert {

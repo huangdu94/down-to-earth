@@ -19,7 +19,7 @@ package work.huangdu.exploration.start_from_scratch.greedy.subsequence;
  * 进阶:
  * 你能否用 O(n) 时间复杂度完成此题?
  *
- * @author duhuang@iflytek.com
+ * @author huangdu.hd@alibaba-inc.com
  * @version 2020/11/19 19:49
  */
 public class WiggleMaxLength {

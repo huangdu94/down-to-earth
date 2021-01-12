@@ -5,7 +5,7 @@ import java.math.BigInteger;
 /**
  * 第 204 场周赛
  *
- * @author duhuang@iflytek.com
+ * @author huangdu.hd@alibaba-inc.com
  * @version 2020/8/30 10:19
  */
 public class Solution204 {

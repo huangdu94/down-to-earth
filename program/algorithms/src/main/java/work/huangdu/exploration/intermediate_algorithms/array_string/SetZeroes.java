@@ -34,7 +34,7 @@ package work.huangdu.exploration.intermediate_algorithms.array_string;
  * 一个简单的改进方案是使用 O(m + n) 的额外空间，但这仍然不是最好的解决方案。
  * 你能想出一个常数空间的解决方案吗？
  *
- * @author duhuang@iflytek.com
+ * @author huangdu.hd@alibaba-inc.com
  * @version 2020/7/2 10:34
  */
 public class SetZeroes {

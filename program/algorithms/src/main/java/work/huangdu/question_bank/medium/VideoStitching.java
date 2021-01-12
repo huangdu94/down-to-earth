@@ -35,7 +35,7 @@ import java.util.Arrays;
  * 0 <= clips[i][0] <= clips[i][1] <= 100
  * 0 <= T <= 100
  *
- * @author duhuang@iflytek.com
+ * @author huangdu.hd@alibaba-inc.com
  * @version 2020/10/24 9:17
  */
 public class VideoStitching {

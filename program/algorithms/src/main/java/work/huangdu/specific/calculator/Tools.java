@@ -1,7 +1,7 @@
 package work.huangdu.specific.calculator;
 
 /**
- * @author duhuang@iflytek.com
+ * @author huangdu.hd@alibaba-inc.com
  * @version 2020/8/1 12:25
  */
 public class Tools {

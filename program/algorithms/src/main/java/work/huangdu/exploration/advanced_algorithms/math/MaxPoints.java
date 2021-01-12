@@ -32,7 +32,7 @@ import java.util.Set;
  * +------------------->
  * 0 1 2 3 4 5 6
  *
- * @author duhuang@iflytek.com
+ * @author huangdu.hd@alibaba-inc.com
  * @version 2020/9/7 20:35
  */
 public class MaxPoints {
