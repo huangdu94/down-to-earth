@@ -12,7 +12,7 @@ package work.huangdu.exploration.start_from_scratch.array.statistics;
  * 给定的数组是无序的。
  *
  * @author huangdu.hd@alibaba-inc.com
- * @version 2020/9/14 15:15
+ * @date 2020/9/14 15:15
  */
 public class FindErrorNums {
     public int[] findErrorNums(int[] nums) {

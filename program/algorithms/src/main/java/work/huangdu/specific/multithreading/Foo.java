@@ -31,7 +31,7 @@ package work.huangdu.specific.multithreading;
  * 你看到的输入格式主要是为了确保测试的全面性。
  *
  * @author huangdu.hd@alibaba-inc.com
- * @version 2020/8/28 14:47
+ * @date 2020/8/28 14:47
  */
 public class Foo {
     private volatile boolean second = false;

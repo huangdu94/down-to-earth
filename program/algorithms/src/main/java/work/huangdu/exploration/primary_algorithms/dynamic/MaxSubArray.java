@@ -11,7 +11,7 @@ package work.huangdu.exploration.primary_algorithms.dynamic;
  * 如果你已经实现复杂度为 O(n) 的解法，尝试使用更为精妙的分治法求解。
  *
  * @author huangdu.hd@alibaba-inc.com
- * @version 2020/6/29 9:23
+ * @date 2020/6/29 9:23
  */
 public class MaxSubArray {
     public int maxSubArray1(int[] nums) {

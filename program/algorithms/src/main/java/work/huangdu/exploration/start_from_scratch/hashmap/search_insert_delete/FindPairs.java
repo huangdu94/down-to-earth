@@ -38,7 +38,7 @@ import java.util.Set;
  * 0 <= k <= 10^7
  *
  * @author huangdu.hd@alibaba-inc.com
- * @version 2020/11/1 18:25
+ * @date 2020/11/1 18:25
  */
 public class FindPairs {
     public int findPairs(int[] nums, int k) {

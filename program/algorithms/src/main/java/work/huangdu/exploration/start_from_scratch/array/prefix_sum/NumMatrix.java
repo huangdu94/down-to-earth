@@ -27,7 +27,7 @@ import java.util.Arrays;
  * int param_1 = obj.sumRegion(row1,col1,row2,col2);
  *
  * @author huangdu.hd@alibaba-inc.com
- * @version 2020/9/19 15:18
+ * @date 2020/9/19 15:18
  */
 public class NumMatrix {
     private int[][] matrixSum;

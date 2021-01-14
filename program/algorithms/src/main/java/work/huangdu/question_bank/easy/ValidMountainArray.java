@@ -22,7 +22,7 @@ package work.huangdu.question_bank.easy;
  * 0 <= A[i] <= 10000
  *
  * @author huangdu.hd@alibaba-inc.com
- * @version 2020/11/3 16:32
+ * @date 2020/11/3 16:32
  */
 public class ValidMountainArray {
     public boolean validMountainArray(int[] A) {

@@ -29,7 +29,7 @@ import work.huangdu.data_structure.TreeNode;
  * 给定的树为二叉搜索树。
  *
  * @author huangdu.hd@alibaba-inc.com
- * @version 2020/9/21 0:23
+ * @date 2020/9/21 0:23
  */
 public class ConvertBST {
     public TreeNode convertBST1(TreeNode root) {

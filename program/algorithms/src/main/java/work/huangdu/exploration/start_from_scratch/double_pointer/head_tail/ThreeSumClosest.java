@@ -15,7 +15,7 @@ import java.util.Arrays;
  * -10^4 <= target <= 10^4
  *
  * @author huangdu.hd@alibaba-inc.com
- * @version 2020/12/7 13:11
+ * @date 2020/12/7 13:11
  */
 public class ThreeSumClosest {
     public int threeSumClosest(int[] nums, int target) {

@@ -15,7 +15,7 @@ import work.huangdu.question_bank.difficult.MaxProfit4;
  * 解释: 对应的交易状态为: [买入, 卖出, 冷冻期, 买入, 卖出]
  *
  * @author huangdu.hd@alibaba-inc.com
- * @version 2020/8/26 10:12
+ * @date 2020/8/26 10:12
  * @see work.huangdu.exploration.primary_algorithms.array.MaxProfit
  * @see work.huangdu.exploration.primary_algorithms.dynamic.MaxProfit
  * @see work.huangdu.question_bank.medium.MaxProfit

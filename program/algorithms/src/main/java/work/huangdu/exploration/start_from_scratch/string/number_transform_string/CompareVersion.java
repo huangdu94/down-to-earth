@@ -30,7 +30,7 @@ package work.huangdu.exploration.start_from_scratch.string.number_transform_stri
  * 版本字符串不以点开始或结束，并且其中不会有两个连续的点。
  *
  * @author huangdu.hd@alibaba-inc.com
- * @version 2020/9/28 21:38
+ * @date 2020/9/28 21:38
  */
 public class CompareVersion {
 

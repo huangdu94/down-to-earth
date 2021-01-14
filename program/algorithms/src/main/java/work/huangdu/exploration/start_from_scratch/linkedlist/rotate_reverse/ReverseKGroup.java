@@ -16,7 +16,7 @@ import work.huangdu.data_structure.ListNode;
  * 你不能只是单纯的改变节点内部的值，而是需要实际进行节点交换。
  *
  * @author huangdu.hd@alibaba-inc.com
- * @version 2020/10/28 16:39
+ * @date 2020/10/28 16:39
  */
 public class ReverseKGroup {
     public ListNode reverseKGroup(ListNode head, int k) {

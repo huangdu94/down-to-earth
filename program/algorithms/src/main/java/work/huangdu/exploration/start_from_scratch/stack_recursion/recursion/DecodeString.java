@@ -20,7 +20,7 @@ package work.huangdu.exploration.start_from_scratch.stack_recursion.recursion;
  * 输出："abccdcdcdxyz"
  *
  * @author huangdu.hd@alibaba-inc.com
- * @version 2020/10/26 18:24
+ * @date 2020/10/26 18:24
  */
 public class DecodeString {
     private int i = 0;

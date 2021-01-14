@@ -14,7 +14,7 @@ import java.util.Map;
  * canConstruct("aa", "aab") -> true
  *
  * @author huangdu.hd@alibaba-inc.com
- * @version 2020/9/23 21:53
+ * @date 2020/9/23 21:53
  */
 public class CanConstruct {
     public boolean canConstruct(String ransomNote, String magazine) {

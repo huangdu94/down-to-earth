@@ -25,7 +25,7 @@ package work.huangdu.question_bank.easy;
  * name 和 typed 的字符都是小写字母。
  *
  * @author huangdu.hd@alibaba-inc.com
- * @version 2020/10/21 9:23
+ * @date 2020/10/21 9:23
  */
 public class IsLongPressedName {
     public boolean isLongPressedName(String name, String typed) {

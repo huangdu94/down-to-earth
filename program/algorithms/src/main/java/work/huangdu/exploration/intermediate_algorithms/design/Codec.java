@@ -20,7 +20,7 @@ import java.util.*;
  * 说明: 不要使用类的成员 / 全局 / 静态变量来存储状态，你的序列化和反序列化算法应该是无状态的。
  *
  * @author huangdu.hd@alibaba-inc.com
- * @version 2020/7/20 22:53
+ * @date 2020/7/20 22:53
  */
 public class Codec {
     // Encodes a tree to a single string.

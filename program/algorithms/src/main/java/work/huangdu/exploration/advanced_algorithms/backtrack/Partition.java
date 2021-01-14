@@ -16,7 +16,7 @@ import java.util.List;
  * ]
  *
  * @author huangdu.hd@alibaba-inc.com
- * @version 2020/8/13 13:59
+ * @date 2020/8/13 13:59
  */
 public class Partition {
     private final List<List<String>> res = new ArrayList<>();

@@ -19,7 +19,7 @@ import java.util.*;
  * ]
  *
  * @author huangdu.hd@alibaba-inc.com
- * @version 2020/7/2 10:33
+ * @date 2020/7/2 10:33
  * @see work.huangdu.exploration.primary_algorithms.array.TwoSum
  * @see TwoSum2
  * @see FourSumCount

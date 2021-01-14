@@ -32,7 +32,7 @@ package work.huangdu.exploration.start_from_scratch.array.transform_2d;
  * 给定的 r 和 c 都是正数。
  *
  * @author huangdu.hd@alibaba-inc.com
- * @version 2020/9/18 17:35
+ * @date 2020/9/18 17:35
  */
 public class MatrixReshape {
     public int[][] matrixReshape(int[][] nums, int r, int c) {

@@ -12,7 +12,7 @@ package work.huangdu.exploration.primary_algorithms.string;
  * 输出: false
  *
  * @author huangdu.hd@alibaba-inc.com
- * @version 2020/7/26 17:06
+ * @date 2020/7/26 17:06
  */
 public class IsPalindrome {
     public boolean isPalindrome(String s) {

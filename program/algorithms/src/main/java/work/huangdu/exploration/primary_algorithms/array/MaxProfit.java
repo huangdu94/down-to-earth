@@ -30,7 +30,7 @@ import java.util.HashSet;
  * 0 <= prices[i]<= 10 ^ 4
  *
  * @author huangdu.hd@alibaba-inc.com
- * @version 2020/7/26 15:08
+ * @date 2020/7/26 15:08
  * @see work.huangdu.exploration.primary_algorithms.dynamic.MaxProfit
  * @see work.huangdu.question_bank.medium.MaxProfit
  * @see work.huangdu.exploration.advanced_algorithms.dynamic.MaxProfit

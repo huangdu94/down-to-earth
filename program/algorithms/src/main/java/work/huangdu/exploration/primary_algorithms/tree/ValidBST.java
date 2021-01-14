@@ -34,7 +34,7 @@ import java.util.List;
  * 根节点的值为 5 ，但是其右子节点值为 4 。
  *
  * @author huangdu.hd@alibaba-inc.com
- * @version 2020/6/22 17:18
+ * @date 2020/6/22 17:18
  */
 public class ValidBST {
     private List<Integer> list = new LinkedList<>();

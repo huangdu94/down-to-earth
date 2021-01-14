@@ -40,7 +40,7 @@ package work.huangdu.exploration.advanced_algorithms.backtrack;
  * 输出: false
  *
  * @author huangdu.hd@alibaba-inc.com
- * @version 2020/8/19 22:49
+ * @date 2020/8/19 22:49
  */
 public class Match {
     public boolean isMatch(String s, String p) {

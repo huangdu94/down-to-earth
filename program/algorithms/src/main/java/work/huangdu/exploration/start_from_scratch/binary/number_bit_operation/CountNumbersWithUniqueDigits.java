@@ -9,7 +9,7 @@ package work.huangdu.exploration.start_from_scratch.binary.number_bit_operation;
  * 解释: 答案应为除去 11,22,33,44,55,66,77,88,99 外，在 [0,100) 区间内的所有数字。
  *
  * @author huangdu.hd@alibaba-inc.com
- * @version 2020/10/19 15:34
+ * @date 2020/10/19 15:34
  */
 public class CountNumbersWithUniqueDigits {
     public int countNumbersWithUniqueDigits(int n) {

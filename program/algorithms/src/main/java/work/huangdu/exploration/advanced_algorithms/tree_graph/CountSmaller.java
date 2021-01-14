@@ -18,7 +18,7 @@ import java.util.*;
  * 1 的右侧有 0 个更小的元素
  *
  * @author huangdu.hd@alibaba-inc.com
- * @version 2020/8/11 11:33
+ * @date 2020/8/11 11:33
  */
 public class CountSmaller {
     /**

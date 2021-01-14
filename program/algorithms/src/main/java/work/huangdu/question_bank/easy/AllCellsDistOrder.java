@@ -28,7 +28,7 @@ import java.util.Arrays;
  * 0 <= c0 < C
  *
  * @author huangdu.hd@alibaba-inc.com
- * @version 2020/11/17 18:35
+ * @date 2020/11/17 18:35
  */
 public class AllCellsDistOrder {
     // 时间复杂度 nlog(n)

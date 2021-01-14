@@ -17,7 +17,7 @@ package work.huangdu.exploration.start_from_scratch.array.change_move;
  * - 10 ^ 5 <= nums[i] <= 10 ^ 5
  *
  * @author huangdu.hd@alibaba-inc.com
- * @version 2020/9/15 12:33
+ * @date 2020/9/15 12:33
  */
 public class CheckPossibility {
     public boolean checkPossibility(int[] nums) {

@@ -26,7 +26,7 @@ import java.util.Set;
  * 你是否可以不用额外空间解决此题？
  *
  * @author huangdu.hd@alibaba-inc.com
- * @version 2020/10/10 10:02
+ * @date 2020/10/10 10:02
  */
 public class DetectCycle {
     // 使用额外空间

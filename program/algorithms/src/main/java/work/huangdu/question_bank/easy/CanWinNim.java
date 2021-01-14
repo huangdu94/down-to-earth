@@ -11,7 +11,7 @@ package work.huangdu.question_bank.easy;
  * 因为无论你拿走 1 块、2 块 还是 3 块石头，最后一块石头总是会被你的朋友拿走。
  *
  * @author huangdu.hd@alibaba-inc.com
- * @version 2020/8/27 18:53
+ * @date 2020/8/27 18:53
  */
 public class CanWinNim {
     /*

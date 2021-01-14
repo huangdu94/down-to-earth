@@ -27,7 +27,7 @@ import java.util.Queue;
  * -10000 < points[i][1] < 10000
  *
  * @author huangdu.hd@alibaba-inc.com
- * @version 2020/11/9 16:13
+ * @date 2020/11/9 16:13
  */
 public class KClosest {
     // 堆，时间复杂度 o(nlog k)

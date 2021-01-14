@@ -36,7 +36,7 @@ package work.huangdu.exploration.primary_algorithms.string;
  * 因此返回 INT_MIN (−2^31) 。
  *
  * @author huangdu.hd@alibaba-inc.com
- * @version 2020/7/26 17:11
+ * @date 2020/7/26 17:11
  */
 public class MyAtoi {
     public static int INTEGER_MAX_DIVIDE10 = Integer.MAX_VALUE / 10;

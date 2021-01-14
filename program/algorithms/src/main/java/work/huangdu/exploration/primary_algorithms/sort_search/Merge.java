@@ -12,7 +12,7 @@ package work.huangdu.exploration.primary_algorithms.sort_search;
  * 输出: [1,2,2,3,5,6]
  *
  * @author huangdu.hd@alibaba-inc.com
- * @version 2020/6/23 15:05
+ * @date 2020/6/23 15:05
  */
 public class Merge {
     public void merge(int[] nums1, int m, int[] nums2, int n) {

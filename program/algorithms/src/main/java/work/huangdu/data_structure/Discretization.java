@@ -11,7 +11,7 @@ import java.util.Set;
  * id -> value id - 1 作为index查
  *
  * @author huangdu.hd@alibaba-inc.com
- * @version 2020/9/4 11:50
+ * @date 2020/9/4 11:50
  */
 public class Discretization {
     // 离散数组

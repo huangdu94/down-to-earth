@@ -17,7 +17,7 @@ package work.huangdu.question_bank.medium;
  * leaves 中只包含字符 'r' 和字符 'y'
  *
  * @author huangdu.hd@alibaba-inc.com
- * @version 2020/10/1 10:57
+ * @date 2020/10/1 10:57
  */
 public class MinimumOperations {
     public int minimumOperations3(String leaves) {

@@ -19,7 +19,7 @@ import java.util.*;
  * while (i.hasNext()) v[f()] = i.next();
  *
  * @author huangdu.hd@alibaba-inc.com
- * @version 2020/9/7 15:25
+ * @date 2020/9/7 15:25
  */
 public class NestedIterator implements Iterator<Integer> {
 

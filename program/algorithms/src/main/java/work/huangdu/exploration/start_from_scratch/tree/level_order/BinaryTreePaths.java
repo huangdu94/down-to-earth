@@ -23,7 +23,7 @@ import java.util.Queue;
  * 解释: 所有根节点到叶子节点的路径为: 1->2->5, 1->3
  *
  * @author huangdu.hd@alibaba-inc.com
- * @version 2020/8/16 0:38
+ * @date 2020/8/16 0:38
  */
 public class BinaryTreePaths {
     private final List<String> res = new ArrayList<>();

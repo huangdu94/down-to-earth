@@ -36,7 +36,7 @@ import java.util.Arrays;
  * 0 <= T <= 100
  *
  * @author huangdu.hd@alibaba-inc.com
- * @version 2020/10/24 9:17
+ * @date 2020/10/24 9:17
  */
 public class VideoStitching {
     // 动态规划 时间复杂度o(n*T) 空间复杂度o(T)

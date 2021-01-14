@@ -15,7 +15,7 @@ import java.util.Set;
  * 提示：你可以假定该字符串只包含小写字母。
  *
  * @author huangdu.hd@alibaba-inc.com
- * @version 2020/7/26 16:59
+ * @date 2020/7/26 16:59
  */
 public class FirstUniqChar {
     public int firstUniqChar(String s) {

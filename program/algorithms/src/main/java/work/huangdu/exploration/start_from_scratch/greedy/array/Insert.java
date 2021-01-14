@@ -16,7 +16,7 @@ import java.util.Arrays;
  * 注意：输入类型已在 2019 年 4 月 15 日更改。请重置为默认代码定义以获取新的方法签名。
  *
  * @author huangdu.hd@alibaba-inc.com
- * @version 2020/11/4 12:18
+ * @date 2020/11/4 12:18
  */
 public class Insert {
     public int[][] insert(int[][] intervals, int[] newInterval) {

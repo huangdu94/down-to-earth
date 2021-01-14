@@ -22,7 +22,7 @@ package work.huangdu.exploration.start_from_scratch.double_pointer.segment;
  * 1 <= houses[i], heaters[i] <= 10^9
  *
  * @author huangdu.hd@alibaba-inc.com
- * @version 2020/12/20 13:15
+ * @date 2020/12/20 13:15
  */
 public class FindRadius {
     // 暴力法

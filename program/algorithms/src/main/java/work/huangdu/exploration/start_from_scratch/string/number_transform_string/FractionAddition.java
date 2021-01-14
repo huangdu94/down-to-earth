@@ -26,7 +26,7 @@ import java.util.List;
  * 最终结果的分子与分母保证是 32 位整数范围内的有效整数。
  *
  * @author huangdu.hd@alibaba-inc.com
- * @version 2020/9/27 9:23
+ * @date 2020/9/27 9:23
  */
 public class FractionAddition {
     public String fractionAddition(String expression) {

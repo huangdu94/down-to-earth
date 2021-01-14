@@ -17,7 +17,7 @@ package work.huangdu.exploration.start_from_scratch.array.rotate;
  * 所以 F(0), F(1), F(2), F(3) 中的最大值是 F(3) = 26 。
  *
  * @author huangdu.hd@alibaba-inc.com
- * @version 2020/9/16 13:29
+ * @date 2020/9/16 13:29
  */
 public class MaxRotateFunction {
     public int maxRotateFunction(int[] A) {

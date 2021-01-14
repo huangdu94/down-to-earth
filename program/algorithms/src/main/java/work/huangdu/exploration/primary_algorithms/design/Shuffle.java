@@ -17,7 +17,7 @@ import java.util.Random;
  * solution.shuffle();
  *
  * @author huangdu.hd@alibaba-inc.com
- * @version 2020/6/29 13:31
+ * @date 2020/6/29 13:31
  */
 public class Shuffle {
     private final int[] nums;

@@ -20,7 +20,7 @@ import java.util.List;
  * ]
  *
  * @author huangdu.hd@alibaba-inc.com
- * @version 2020/7/9 0:21
+ * @date 2020/7/9 0:21
  */
 public class Permute {
     public List<List<Integer>> permute(int[] nums) {

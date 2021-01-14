@@ -13,7 +13,7 @@ import work.huangdu.data_structure.ListNode;
  * 给定链表 1->2->3->4->5, 重新排列为 1->5->2->4->3.
  *
  * @author huangdu.hd@alibaba-inc.com
- * @version 2020/10/20 12:26
+ * @date 2020/10/20 12:26
  */
 public class ReorderList {
     public void reorderList(ListNode head) {

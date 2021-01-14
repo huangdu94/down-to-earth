@@ -24,7 +24,7 @@ import java.util.Arrays;
  * -10^4 <= nums[i] <= 10^4
  *
  * @author huangdu.hd@alibaba-inc.com
- * @version 2020/11/9 17:39
+ * @date 2020/11/9 17:39
  */
 public class ArrayPairSum {
     public int arrayPairSum(int[] nums) {

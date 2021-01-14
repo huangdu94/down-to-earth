@@ -21,7 +21,7 @@ import java.util.*;
  * ]
  *
  * @author huangdu.hd@alibaba-inc.com
- * @version 2020/7/9 0:22
+ * @date 2020/7/9 0:22
  */
 public class Subsets {
     public List<List<Integer>> subsets2(int[] nums) {

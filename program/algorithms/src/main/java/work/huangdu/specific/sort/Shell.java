@@ -12,7 +12,7 @@ import java.util.Arrays;
  * 1959年Shell发明，第一个突破O(n^2)的排序算法，是简单插入排序的改进版。它与插入排序的不同之处在于，它会优先比较距离较远的元素。希尔排序又叫缩小增量排序。
  *
  * @author huangdu.hd@alibaba-inc.com
- * @version 2020/7/16 19:54
+ * @date 2020/7/16 19:54
  */
 public class Shell {
     public static void sort(int[] nums) {

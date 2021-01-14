@@ -4,7 +4,7 @@ package work.huangdu.data_structure;
  * Definition for singly-linked list.
  *
  * @author huangdu.hd@alibaba-inc.com
- * @version 2020/8/13 13:45
+ * @date 2020/8/13 13:45
  */
 public class ListNode {
     public int val;

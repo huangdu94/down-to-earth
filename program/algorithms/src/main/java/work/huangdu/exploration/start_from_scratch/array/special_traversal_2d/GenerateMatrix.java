@@ -13,7 +13,7 @@ package work.huangdu.exploration.start_from_scratch.array.special_traversal_2d;
  * ]
  *
  * @author huangdu.hd@alibaba-inc.com
- * @version 2020/9/17 15:23
+ * @date 2020/9/17 15:23
  */
 public class GenerateMatrix {
     private int[][] res;

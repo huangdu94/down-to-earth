@@ -20,7 +20,7 @@ import java.util.Arrays;
  * 随后，在第 5 天 (股票价格 = 0) 的时候买入，在第 6 天 (股票价格 = 3) 的时候卖出, 这笔交易所能获得利润 = 3-0 = 3 。
  *
  * @author huangdu.hd@alibaba-inc.com
- * @version 2020/8/26 22:04
+ * @date 2020/8/26 22:04
  * @see work.huangdu.exploration.primary_algorithms.array.MaxProfit
  * @see work.huangdu.exploration.primary_algorithms.dynamic.MaxProfit
  * @see work.huangdu.question_bank.medium.MaxProfit

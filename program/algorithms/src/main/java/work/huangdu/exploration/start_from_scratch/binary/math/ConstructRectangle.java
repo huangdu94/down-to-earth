@@ -17,7 +17,7 @@ package work.huangdu.exploration.start_from_scratch.binary.math;
  * 你设计的页面的长度和宽度必须都是正整数。
  *
  * @author huangdu.hd@alibaba-inc.com
- * @version 2020/10/20 13:35
+ * @date 2020/10/20 13:35
  */
 public class ConstructRectangle {
     public int[] constructRectangle(int area) {

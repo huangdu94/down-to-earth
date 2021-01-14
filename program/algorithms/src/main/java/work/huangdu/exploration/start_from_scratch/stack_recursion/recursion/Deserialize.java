@@ -24,7 +24,7 @@ import java.util.List;
  * *         a. 一个 integer 包含值 789
  *
  * @author huangdu.hd@alibaba-inc.com
- * @version 2020/10/26 14:11
+ * @date 2020/10/26 14:11
  */
 public class Deserialize {
     private int i = 0;

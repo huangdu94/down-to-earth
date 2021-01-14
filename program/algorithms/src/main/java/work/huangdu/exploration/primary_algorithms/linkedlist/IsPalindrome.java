@@ -15,7 +15,7 @@ import work.huangdu.data_structure.ListNode;
  * 你能否用 O(n) 时间复杂度和 O(1) 空间复杂度解决此题？
  *
  * @author huangdu.hd@alibaba-inc.com
- * @version 2020/7/26 18:20
+ * @date 2020/7/26 18:20
  */
 public class IsPalindrome {
     public boolean isPalindrome3(ListNode head) {

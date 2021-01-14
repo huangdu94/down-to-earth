@@ -16,7 +16,7 @@ import java.util.Deque;
  * 注意: 输入数组的长度不会超过 10000。
  *
  * @author huangdu.hd@alibaba-inc.com
- * @version 2020/11/20 13:42
+ * @date 2020/11/20 13:42
  */
 public class NextGreaterElements2 {
     public int[] nextGreaterElements(int[] nums) {

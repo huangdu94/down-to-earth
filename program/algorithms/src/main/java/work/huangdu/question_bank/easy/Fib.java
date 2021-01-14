@@ -22,7 +22,7 @@ package work.huangdu.question_bank.easy;
  * 0 <= n <= 30
  *
  * @author huangdu.hd@alibaba-inc.com
- * @version 2021/1/4 10:00
+ * @date 2021/1/4 10:00
  */
 public class Fib {
     public int fib(int n) {

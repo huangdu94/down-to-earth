@@ -21,7 +21,7 @@ import java.util.Deque;
  * 请不要使用内置的库函数 eval。
  *
  * @author huangdu.hd@alibaba-inc.com
- * @version 2020/10/23 20:25
+ * @date 2020/10/23 20:25
  */
 public class Calculate {
     private int index = 0;

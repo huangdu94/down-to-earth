@@ -4,7 +4,7 @@ import java.util.*;
 
 /**
  * @author huangdu.hd@alibaba-inc.com
- * @version 2020/10/31 12:33
+ * @date 2020/10/31 12:33
  * @see work.huangdu.exploration.advanced_algorithms.array_string.LongestConsecutive
  */
 public class LongestConsecutive {

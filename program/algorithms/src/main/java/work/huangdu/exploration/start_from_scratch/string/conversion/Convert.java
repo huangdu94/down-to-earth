@@ -23,7 +23,7 @@ package work.huangdu.exploration.start_from_scratch.string.conversion;
  * T     S     G
  *
  * @author huangdu.hd@alibaba-inc.com
- * @version 2020/10/3 8:51
+ * @date 2020/10/3 8:51
  */
 public class Convert {
     public String convert(String s, int numRows) {

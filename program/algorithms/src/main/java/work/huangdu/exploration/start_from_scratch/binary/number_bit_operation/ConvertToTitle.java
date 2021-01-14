@@ -23,7 +23,7 @@ package work.huangdu.exploration.start_from_scratch.binary.number_bit_operation;
  * 输出: "ZY"
  *
  * @author huangdu.hd@alibaba-inc.com
- * @version 2020/8/11 0:34
+ * @date 2020/8/11 0:34
  */
 public class ConvertToTitle {
     // Math.log(Integer.MAX_VALUE) / Math.log(26) = 6.595127660011333 < 7

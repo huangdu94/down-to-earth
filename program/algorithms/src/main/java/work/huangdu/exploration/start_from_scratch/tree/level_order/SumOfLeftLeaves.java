@@ -14,7 +14,7 @@ import work.huangdu.data_structure.TreeNode;
  * 在这个二叉树中，有两个左叶子，分别是 9 和 15，所以返回 24
  *
  * @author huangdu.hd@alibaba-inc.com
- * @version 2020/9/19 10:23
+ * @date 2020/9/19 10:23
  */
 public class SumOfLeftLeaves {
     private int sum = 0;

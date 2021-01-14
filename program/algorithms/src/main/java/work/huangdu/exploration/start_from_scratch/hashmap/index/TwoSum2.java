@@ -17,7 +17,7 @@ import work.huangdu.exploration.start_from_scratch.hashmap.statistics.FourSum;
  * 解释: 2 与 7 之和等于目标数 9 。因此 index1 = 1, index2 = 2 。
  *
  * @author huangdu.hd@alibaba-inc.com
- * @version 2020/8/11 0:19
+ * @date 2020/8/11 0:19
  * @see work.huangdu.exploration.primary_algorithms.array.TwoSum
  * @see ThreeSum
  * @see FourSumCount

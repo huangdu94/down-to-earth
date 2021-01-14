@@ -16,7 +16,7 @@ import work.huangdu.data_structure.TreeNode;
  * 注意：两结点之间的路径长度是以它们之间边的数目表示。
  *
  * @author huangdu.hd@alibaba-inc.com
- * @version 2021/1/1 19:47
+ * @date 2021/1/1 19:47
  */
 public class DiameterOfBinaryTree {
     // public int diameterOfBinaryTree(TreeNode root) {

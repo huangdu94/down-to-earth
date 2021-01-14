@@ -20,7 +20,7 @@ import java.util.Queue;
  * 输出: 6
  *
  * @author huangdu.hd@alibaba-inc.com
- * @version 2020/11/24 12:10
+ * @date 2020/11/24 12:10
  */
 public class CountNodes {
     // 最优解 先看看最深的一层是多少层，那么根据最深的一层是多少层可以得到节点数量可能值的范围

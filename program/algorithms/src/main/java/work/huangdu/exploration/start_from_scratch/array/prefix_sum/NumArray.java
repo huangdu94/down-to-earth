@@ -16,7 +16,7 @@ package work.huangdu.exploration.start_from_scratch.array.prefix_sum;
  * int param_1 = obj.sumRange(i,j);
  *
  * @author huangdu.hd@alibaba-inc.com
- * @version 2020/8/29 21:48
+ * @date 2020/8/29 21:48
  */
 public class NumArray {
     /*

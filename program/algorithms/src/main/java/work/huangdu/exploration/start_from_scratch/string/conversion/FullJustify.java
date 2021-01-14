@@ -52,7 +52,7 @@ import java.util.List;
  * ]
  *
  * @author huangdu.hd@alibaba-inc.com
- * @version 2020/10/3 9:56
+ * @date 2020/10/3 9:56
  */
 public class FullJustify {
     public List<String> fullJustify(String[] words, int maxWidth) {

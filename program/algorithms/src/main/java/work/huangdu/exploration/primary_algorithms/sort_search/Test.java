@@ -4,7 +4,7 @@ import java.util.Arrays;
 
 /**
  * @author huangdu.hd@alibaba-inc.com
- * @version 2020/6/23 12:29
+ * @date 2020/6/23 12:29
  */
 public class Test {
     public static void main(String[] args) {

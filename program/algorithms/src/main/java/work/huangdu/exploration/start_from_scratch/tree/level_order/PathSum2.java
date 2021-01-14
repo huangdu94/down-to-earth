@@ -25,7 +25,7 @@ import java.util.List;
  * ]
  *
  * @author huangdu.hd@alibaba-inc.com
- * @version 2020/9/26 10:19
+ * @date 2020/9/26 10:19
  * @see HasPathSum
  * @see work.huangdu.question_bank.medium.PathSum3
  */

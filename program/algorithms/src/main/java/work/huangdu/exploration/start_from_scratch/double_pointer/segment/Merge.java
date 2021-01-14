@@ -2,7 +2,7 @@ package work.huangdu.exploration.start_from_scratch.double_pointer.segment;
 
 /**
  * @author huangdu.hd@alibaba-inc.com
- * @version 2020/12/20 13:07
+ * @date 2020/12/20 13:07
  */
 public class Merge {
     public void merge(int[] nums1, int m, int[] nums2, int n) {

@@ -16,7 +16,7 @@ package work.huangdu.exploration.start_from_scratch.string.character_statistics;
  * 输出: False
  *
  * @author huangdu.hd@alibaba-inc.com
- * @version 2020/9/25 10:12
+ * @date 2020/9/25 10:12
  */
 public class CheckRecord {
     public boolean checkRecord(String s) {

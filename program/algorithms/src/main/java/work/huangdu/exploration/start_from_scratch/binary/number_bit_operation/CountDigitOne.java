@@ -9,7 +9,7 @@ package work.huangdu.exploration.start_from_scratch.binary.number_bit_operation;
  * 解释: 数字 1 出现在以下数字中: 1, 10, 11, 12, 13 。
  *
  * @author huangdu.hd@alibaba-inc.com
- * @version 2020/10/19 16:15
+ * @date 2020/10/19 16:15
  */
 public class CountDigitOne {
     // 111

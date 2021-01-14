@@ -18,7 +18,7 @@ import java.util.Arrays;
  * 数组里整数的范围为 [0, 1000]。
  *
  * @author huangdu.hd@alibaba-inc.com
- * @version 2020/12/14 12:59
+ * @date 2020/12/14 12:59
  */
 public class TriangleNumber {
     public int triangleNumber(int[] nums) {

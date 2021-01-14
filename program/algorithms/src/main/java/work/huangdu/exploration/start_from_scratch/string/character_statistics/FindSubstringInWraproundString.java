@@ -19,7 +19,7 @@ package work.huangdu.exploration.start_from_scratch.string.character_statistics;
  * 解释: 在字符串 S 中有六个子串“z”、“a”、“b”、“za”、“ab”、“zab”。.
  *
  * @author huangdu.hd@alibaba-inc.com
- * @version 2020/9/25 10:50
+ * @date 2020/9/25 10:50
  */
 public class FindSubstringInWraproundString {
     // len表示以当前字符结尾的最长递增子串的长度，map数组里存的是当前状态以a-z字母结尾的最长子串长度。每访问一个字符，则首先更新len值，连续的则len+1， 否则len等于1。然后将len值与map里对应的值比较，大于的话说明有新的以当前字母结尾的子串，更新sum的值。

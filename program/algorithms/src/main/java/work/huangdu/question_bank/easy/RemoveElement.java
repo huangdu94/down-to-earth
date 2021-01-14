@@ -27,7 +27,7 @@ package work.huangdu.question_bank.easy;
  * }
  *
  * @author huangdu.hd@alibaba-inc.com
- * @version 2020/8/6 17:15
+ * @date 2020/8/6 17:15
  * @see RemoveElements
  */
 public class RemoveElement {

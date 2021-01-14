@@ -36,7 +36,7 @@ import java.util.Queue;
  * 因此，数字总和 = 495 + 491 + 40 = 1026.
  *
  * @author huangdu.hd@alibaba-inc.com
- * @version 2020/10/29 0:09
+ * @date 2020/10/29 0:09
  */
 public class SumNumbers {
     private int sum = 0;

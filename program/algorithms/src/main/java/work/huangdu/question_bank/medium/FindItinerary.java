@@ -18,7 +18,7 @@ import java.util.*;
  * 解释: 另一种有效的行程是 ["JFK","SFO","ATL","JFK","ATL","SFO"]。但是它自然排序更大更靠后。
  *
  * @author huangdu.hd@alibaba-inc.com
- * @version 2020/8/27 0:37
+ * @date 2020/8/27 0:37
  */
 public class FindItinerary {
     public List<String> findItinerary(List<List<String>> tickets) {

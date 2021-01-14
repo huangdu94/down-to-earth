@@ -21,7 +21,7 @@ import java.util.List;
  * ]
  *
  * @author huangdu.hd@alibaba-inc.com
- * @version 2020/7/1 21:55
+ * @date 2020/7/1 21:55
  */
 public class Generate {
     public List<List<Integer>> generate(int numRows) {

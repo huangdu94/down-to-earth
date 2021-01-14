@@ -30,7 +30,7 @@ package work.huangdu.exploration.start_from_scratch.array.roll_2d;
  * 操作数目不超过 10000。
  *
  * @author huangdu.hd@alibaba-inc.com
- * @version 2020/9/16 1:02
+ * @date 2020/9/16 1:02
  */
 public class MaxCount {
     public int maxCount(int m, int n, int[][] ops) {

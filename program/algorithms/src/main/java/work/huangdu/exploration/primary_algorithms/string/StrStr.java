@@ -15,7 +15,7 @@ package work.huangdu.exploration.primary_algorithms.string;
  * 对于本题而言，当 needle 是空字符串时我们应当返回 0 。这与C语言的 strstr() 以及 Java的 indexOf() 定义相符。
  *
  * @author huangdu.hd@alibaba-inc.com
- * @version 2020/7/26 17:17
+ * @date 2020/7/26 17:17
  */
 public class StrStr {
     // KMP算法

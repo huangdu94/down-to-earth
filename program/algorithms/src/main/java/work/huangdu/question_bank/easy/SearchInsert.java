@@ -18,7 +18,7 @@ package work.huangdu.question_bank.easy;
  * 输出: 0
  *
  * @author huangdu.hd@alibaba-inc.com
- * @version 2020/8/7 10:41
+ * @date 2020/8/7 10:41
  */
 public class SearchInsert {
     // 二分查找法

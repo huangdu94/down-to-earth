@@ -35,7 +35,7 @@ import java.util.Arrays;
  * 0 <= starti <= endi < n
  *
  * @author huangdu.hd@alibaba-inc.com
- * @version 2020/9/22 12:57
+ * @date 2020/9/22 12:57
  */
 public class MaxSumRangeQuery {
     public int maxSumRangeQuery(int[] nums, int[][] requests) {

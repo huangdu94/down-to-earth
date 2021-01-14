@@ -20,7 +20,7 @@ package work.huangdu.question_bank.easy;
  * *int guess(int num);
  *
  * @author huangdu.hd@alibaba-inc.com
- * @version 2020/9/5 22:14
+ * @date 2020/9/5 22:14
  */
 public class GuessNumber {
 

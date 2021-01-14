@@ -15,7 +15,7 @@ package work.huangdu.exploration.start_from_scratch.binary.number_bit_operation;
  * 数组的长度不超过 10^4。
  *
  * @author huangdu.hd@alibaba-inc.com
- * @version 2020/10/15 12:41
+ * @date 2020/10/15 12:41
  */
 public class TotalHammingDistance {
     // 暴力超时

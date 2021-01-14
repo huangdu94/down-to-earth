@@ -12,7 +12,7 @@ import java.util.List;
  * 输出: ["255.255.11.135", "255.255.111.35"]
  *
  * @author huangdu.hd@alibaba-inc.com
- * @version 2020/8/9 0:43
+ * @date 2020/8/9 0:43
  */
 public class RestoreIpAddresses {
     public List<String> restoreIpAddresses(String s) {

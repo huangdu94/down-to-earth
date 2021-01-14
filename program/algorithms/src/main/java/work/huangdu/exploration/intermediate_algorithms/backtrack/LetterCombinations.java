@@ -16,7 +16,7 @@ import java.util.List;
  * 尽管上面的答案是按字典序排列的，但是你可以任意选择答案输出的顺序。
  *
  * @author huangdu.hd@alibaba-inc.com
- * @version 2020/7/9 0:19
+ * @date 2020/7/9 0:19
  */
 public class LetterCombinations {
     private static final char[][] dictionary = {

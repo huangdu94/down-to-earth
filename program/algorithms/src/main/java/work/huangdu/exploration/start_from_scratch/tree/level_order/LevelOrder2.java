@@ -20,7 +20,7 @@ import java.util.Queue;
  * 树的节点总数在 [0, 10^4] 之间
  *
  * @author huangdu.hd@alibaba-inc.com
- * @version 2021/1/4 10:55
+ * @date 2021/1/4 10:55
  */
 public class LevelOrder2 {
     public List<List<Integer>> levelOrder(Node root) {

@@ -33,7 +33,7 @@ import java.util.List;
  * 1 <= target <= 500
  *
  * @author huangdu.hd@alibaba-inc.com
- * @version 2020/9/9 12:46
+ * @date 2020/9/9 12:46
  * @see CombinationSum2
  */
 public class CombinationSum {

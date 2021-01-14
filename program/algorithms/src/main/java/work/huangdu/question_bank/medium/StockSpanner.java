@@ -34,7 +34,7 @@ import java.util.List;
  * int param_1 = obj.next(price);
  *
  * @author huangdu.hd@alibaba-inc.com
- * @version 2020/8/26 15:11
+ * @date 2020/8/26 15:11
  */
 /*public class StockSpanner {
     private final LinkedList<Integer> priceList;

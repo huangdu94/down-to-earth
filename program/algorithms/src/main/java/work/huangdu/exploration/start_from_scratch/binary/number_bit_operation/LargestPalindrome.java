@@ -12,7 +12,7 @@ package work.huangdu.exploration.start_from_scratch.binary.number_bit_operation;
  * n 的取值范围为 [1,8]。
  *
  * @author huangdu.hd@alibaba-inc.com
- * @version 2020/10/5 13:35
+ * @date 2020/10/5 13:35
  */
 public class LargestPalindrome {
     public int largestPalindrome(int n) {

@@ -15,7 +15,7 @@ package work.huangdu.exploration.intermediate_algorithms.other;
  * n 的取值范围为 [0, 100]。
  *
  * @author huangdu.hd@alibaba-inc.com
- * @version 2020/7/22 0:25
+ * @date 2020/7/22 0:25
  */
 public class LeastInterval {
     /**

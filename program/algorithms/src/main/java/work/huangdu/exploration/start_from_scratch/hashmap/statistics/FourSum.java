@@ -23,7 +23,7 @@ import java.util.List;
  * ]
  *
  * @author huangdu.hd@alibaba-inc.com
- * @version 2020/10/5 12:07
+ * @date 2020/10/5 12:07
  * @see work.huangdu.exploration.primary_algorithms.array.TwoSum
  * @see TwoSum2
  * @see ThreeSum

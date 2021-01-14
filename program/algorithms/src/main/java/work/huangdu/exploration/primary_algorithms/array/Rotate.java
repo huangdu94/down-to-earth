@@ -21,7 +21,7 @@ package work.huangdu.exploration.primary_algorithms.array;
  * 要求使用空间复杂度为 O(1) 的 原地 算法。
  *
  * @author huangdu.hd@alibaba-inc.com
- * @version 2020/7/26 15:09
+ * @date 2020/7/26 15:09
  */
 public class Rotate {
     public void rotate(int[] nums, int k) {

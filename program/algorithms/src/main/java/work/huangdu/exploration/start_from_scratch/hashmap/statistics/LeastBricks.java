@@ -22,7 +22,7 @@ import java.util.*;
  * 每一行砖块的数量在 [1,10,000] 范围内， 墙的高度在 [1,10,000] 范围内， 总的砖块数量不超过 20,000。
  *
  * @author huangdu.hd@alibaba-inc.com
- * @version 2020/11/6 17:25
+ * @date 2020/11/6 17:25
  */
 public class LeastBricks {
     public int leastBricks(List<List<Integer>> wall) {

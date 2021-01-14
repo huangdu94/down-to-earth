@@ -12,7 +12,7 @@ package work.huangdu.exploration.start_from_scratch.binary.number_bit_operation;
  * 如果有多个结果，返回最小的那个。
  *
  * @author huangdu.hd@alibaba-inc.com
- * @version 2020/10/5 13:44
+ * @date 2020/10/5 13:44
  */
 public class NearestPalindromic {
     public String nearestPalindromic(String n) {

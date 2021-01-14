@@ -13,7 +13,7 @@ import java.util.Arrays;
  * 注意优化版冒泡排序时间复杂度最好才是O(n)
  *
  * @author huangdu.hd@alibaba-inc.com
- * @version 2020/7/16 17:32
+ * @date 2020/7/16 17:32
  */
 public class Bubble {
     public static void sort(int[] nums) {

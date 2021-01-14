@@ -15,7 +15,7 @@ package work.huangdu.exploration.intermediate_algorithms.math;
  * 由于返回类型是整数，小数部分将被舍去。
  *
  * @author huangdu.hd@alibaba-inc.com
- * @version 2020/7/22 0:19
+ * @date 2020/7/22 0:19
  */
 public class MySqrt {
     public int mySqrt2(int x) {

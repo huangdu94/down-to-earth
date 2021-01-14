@@ -15,7 +15,7 @@ package work.huangdu.exploration.advanced_algorithms.dynamic;
  * coins =  3*1*5      +  3*5*8    +  1*3*8      + 1*8*1   = 167
  *
  * @author huangdu.hd@alibaba-inc.com
- * @version 2020/9/4 15:20
+ * @date 2020/9/4 15:20
  */
 public class MaxCoins {
     /*    private List<Integer> numList;

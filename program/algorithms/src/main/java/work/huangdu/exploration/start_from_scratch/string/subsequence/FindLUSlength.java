@@ -21,7 +21,7 @@ package work.huangdu.exploration.start_from_scratch.string.subsequence;
  * 字符串中的字符仅含有 'a'~'z' 。
  *
  * @author huangdu.hd@alibaba-inc.com
- * @version 2020/9/30 13:04
+ * @date 2020/9/30 13:04
  */
 public class FindLUSlength {
     public int findLUSlength(String a, String b) {

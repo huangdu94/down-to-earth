@@ -6,7 +6,7 @@ import java.util.Arrays;
  * 第205场周赛
  *
  * @author huangdu.hd@alibaba-inc.com
- * @version 2020/9/6 10:10
+ * @date 2020/9/6 10:10
  */
 public class Solution205 {
     /**

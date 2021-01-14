@@ -19,7 +19,7 @@ import java.util.PriorityQueue;
  * 输出: 1->1->2->3->4->4->5->6
  *
  * @author huangdu.hd@alibaba-inc.com
- * @version 2020/7/28 19:51
+ * @date 2020/7/28 19:51
  */
 public class MergeKLists {
     // 暴力解 每一次遍历列表的每一个节点找到最小的 时间复杂度o(k^2*n) 其中k为链表条数,n为链表平均长度

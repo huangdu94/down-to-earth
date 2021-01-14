@@ -18,7 +18,7 @@ import java.util.Set;
  * 1^2 + 0^2 + 0^2 = 1
  *
  * @author huangdu.hd@alibaba-inc.com
- * @version 2020/7/22 0:13
+ * @date 2020/7/22 0:13
  */
 public class IsHappy {
     public boolean isHappy(int n) {

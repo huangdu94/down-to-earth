@@ -34,7 +34,7 @@ import work.huangdu.data_structure.TreeNode;
  * -1000 <= Node.val <= 1000
  *
  * @author huangdu.hd@alibaba-inc.com
- * @version 2020/12/27 13:12
+ * @date 2020/12/27 13:12
  */
 public class FindTilt {
     private int slopeSum = 0;

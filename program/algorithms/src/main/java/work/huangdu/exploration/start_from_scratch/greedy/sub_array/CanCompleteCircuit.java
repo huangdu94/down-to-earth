@@ -36,7 +36,7 @@ package work.huangdu.exploration.start_from_scratch.greedy.sub_array;
  * 因此，无论怎样，你都不可能绕环路行驶一周。
  *
  * @author huangdu.hd@alibaba-inc.com
- * @version 2020/11/17 20:15
+ * @date 2020/11/17 20:15
  */
 public class CanCompleteCircuit {
     public int canCompleteCircuit(int[] gas, int[] cost) {

@@ -13,7 +13,7 @@ import work.huangdu.data_structure.ListNode;
  * 原因：342 + 465 = 807
  *
  * @author huangdu.hd@alibaba-inc.com
- * @version 2020/7/4 19:12
+ * @date 2020/7/4 19:12
  */
 public class AddTwoNumbers {
     public ListNode addTwoNumbers(ListNode l1, ListNode l2) {

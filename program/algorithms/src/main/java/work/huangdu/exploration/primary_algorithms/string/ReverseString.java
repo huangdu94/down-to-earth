@@ -13,7 +13,7 @@ package work.huangdu.exploration.primary_algorithms.string;
  * 输出：["h","a","n","n","a","H"]
  *
  * @author huangdu.hd@alibaba-inc.com
- * @version 2020/7/26 16:43
+ * @date 2020/7/26 16:43
  */
 public class ReverseString {
     public void reverseString(char[] s) {

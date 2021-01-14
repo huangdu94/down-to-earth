@@ -32,7 +32,7 @@ import java.util.Map;
  * Java
  *
  * @author huangdu.hd@alibaba-inc.com
- * @version 2020/8/4 9:58
+ * @date 2020/8/4 9:58
  */
 public class CopyRandomList {
     public Node copyRandomList(Node head) {

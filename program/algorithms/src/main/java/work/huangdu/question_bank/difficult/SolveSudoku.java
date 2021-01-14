@@ -20,7 +20,7 @@ import java.util.List;
  * 给定数独永远是 9x9 形式的。
  *
  * @author huangdu.hd@alibaba-inc.com
- * @version 2020/9/15 9:54
+ * @date 2020/9/15 9:54
  */
 public class SolveSudoku {
     // 一个int数字32位使用低27位，1-9行，10-18列，19-27宫

@@ -21,7 +21,7 @@ package work.huangdu.question_bank.medium;
  * isConnected[i][j] == isConnected[j][i]
  *
  * @author huangdu.hd@alibaba-inc.com
- * @version 2021/1/7 13:00
+ * @date 2021/1/7 13:00
  */
 public class FindCircleNum {
     public int findCircleNum(int[][] isConnected) {

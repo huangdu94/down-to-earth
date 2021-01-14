@@ -30,7 +30,7 @@ import java.util.List;
  * ]
  *
  * @author huangdu.hd@alibaba-inc.com
- * @version 2020/6/29 16:11
+ * @date 2020/6/29 16:11
  */
 public class FizzBuzz {
     public List<String> fizzBuzz(int n) {

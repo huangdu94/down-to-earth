@@ -21,7 +21,7 @@ import work.huangdu.data_structure.ListNode;
  * 不要从你的函数中返回任何结果。
  *
  * @author huangdu.hd@alibaba-inc.com
- * @version 2020/7/26 17:48
+ * @date 2020/7/26 17:48
  */
 public class DeleteNode {
     public void deleteNode(ListNode node) {

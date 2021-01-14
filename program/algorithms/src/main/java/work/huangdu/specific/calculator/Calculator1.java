@@ -7,7 +7,7 @@ import java.util.Stack;
  * 输入的这个算式只包含加减法，而且不存在空格(只包含正数)
  *
  * @author huangdu.hd@alibaba-inc.com
- * @version 2020/8/1 11:46
+ * @date 2020/8/1 11:46
  */
 public class Calculator1 {
     public int calculate(String s) {

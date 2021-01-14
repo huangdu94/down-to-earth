@@ -10,7 +10,7 @@ import java.util.Stack;
  * 2. 支持空格(会自动忽略数字与符号之间的空格)
  *
  * @author huangdu.hd@alibaba-inc.com
- * @version 2020/8/1 12:24
+ * @date 2020/8/1 12:24
  */
 public class Calculator2 {
     public int calculate(String s) {

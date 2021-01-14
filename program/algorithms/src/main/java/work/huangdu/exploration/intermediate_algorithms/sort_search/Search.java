@@ -15,7 +15,7 @@ package work.huangdu.exploration.intermediate_algorithms.sort_search;
  * 输出: -1
  *
  * @author huangdu.hd@alibaba-inc.com
- * @version 2020/7/12 15:50
+ * @date 2020/7/12 15:50
  */
 public class Search {
     public int search(int[] nums, int target) {

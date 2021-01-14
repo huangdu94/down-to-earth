@@ -26,7 +26,7 @@ import java.util.List;
  * 字符串 key 一定可以由字符串 ring 旋转拼出。
  *
  * @author huangdu.hd@alibaba-inc.com
- * @version 2020/11/11 0:18
+ * @date 2020/11/11 0:18
  */
 public class FindRotateSteps {
     // 回溯超时

@@ -17,7 +17,7 @@ import java.util.Arrays;
  * A 已按非递减顺序排序。
  *
  * @author huangdu.hd@alibaba-inc.com
- * @version 2020/10/16 12:23
+ * @date 2020/10/16 12:23
  */
 public class SortedSquares {
     // 1. 暴力 先求平方 再排序 时间复杂度o(nlog n)

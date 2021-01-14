@@ -14,7 +14,7 @@ package work.huangdu.exploration.start_from_scratch.array.traversal;
  * 输入的数组中任意三个数的乘积不会超出32位有符号整数的范围。
  *
  * @author huangdu.hd@alibaba-inc.com
- * @version 2020/9/13 14:47
+ * @date 2020/9/13 14:47
  */
 public class MaximumProduct {
     // 暴力解超时

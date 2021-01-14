@@ -29,7 +29,7 @@ import java.util.*;
  * 二维数组中的每个整数在1到N之间，其中 N 是二维数组的大小。
  *
  * @author huangdu.hd@alibaba-inc.com
- * @version 2020/9/17 10:44
+ * @date 2020/9/17 10:44
  */
 public class FindRedundantDirectedConnection {
     // 官方解 并查集。

@@ -17,7 +17,7 @@ import java.util.*;
  * s[i] 为 'A'、'C'、'G' 或 'T'
  *
  * @author huangdu.hd@alibaba-inc.com
- * @version 2020/12/15 10:43
+ * @date 2020/12/15 10:43
  */
 public class FindRepeatedDnaSequences {
     private static final Map<Character, Integer> dictionary = new HashMap<>();

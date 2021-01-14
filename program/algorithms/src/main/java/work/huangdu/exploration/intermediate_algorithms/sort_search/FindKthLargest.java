@@ -16,7 +16,7 @@ import java.util.PriorityQueue;
  * 你可以假设 k 总是有效的，且 1 ≤ k ≤ 数组的长度。
  *
  * @author huangdu.hd@alibaba-inc.com
- * @version 2020/7/12 15:46
+ * @date 2020/7/12 15:46
  */
 public class FindKthLargest {
     public int findKthLargest(int[] nums, int k) {

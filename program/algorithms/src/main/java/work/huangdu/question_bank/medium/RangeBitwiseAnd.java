@@ -11,7 +11,7 @@ package work.huangdu.question_bank.medium;
  * 输出: 0
  *
  * @author huangdu.hd@alibaba-inc.com
- * @version 2020/8/23 0:10
+ * @date 2020/8/23 0:10
  */
 public class RangeBitwiseAnd {
     // 暴力 0到Integer.MAX超时

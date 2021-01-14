@@ -25,7 +25,7 @@ import java.util.Queue;
  * ]
  *
  * @author huangdu.hd@alibaba-inc.com
- * @version 2020/6/22 17:42
+ * @date 2020/6/22 17:42
  */
 public class LevelOrder {
     public List<List<Integer>> levelOrder3(TreeNode root) {

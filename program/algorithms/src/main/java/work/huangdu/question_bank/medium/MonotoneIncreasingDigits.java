@@ -19,7 +19,7 @@ import java.util.List;
  * 说明: N 是在 [0, 10^9] 范围内的一个整数。
  *
  * @author huangdu.hd@alibaba-inc.com
- * @version 2020/12/15 9:53
+ * @date 2020/12/15 9:53
  */
 public class MonotoneIncreasingDigits {
     public int monotoneIncreasingDigits(int n) {

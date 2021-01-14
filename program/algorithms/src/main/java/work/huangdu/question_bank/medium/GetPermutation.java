@@ -22,7 +22,7 @@ package work.huangdu.question_bank.medium;
  * 输出: "2314"
  *
  * @author huangdu.hd@alibaba-inc.com
- * @version 2020/9/5 10:15
+ * @date 2020/9/5 10:15
  */
 public class GetPermutation {
     private static final int[] factorial = {1, 2, 6, 24, 120, 720, 5040, 40320};

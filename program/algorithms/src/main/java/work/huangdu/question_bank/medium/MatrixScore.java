@@ -18,7 +18,7 @@ package work.huangdu.question_bank.medium;
  * A[i][j] 是 0 或 1
  *
  * @author huangdu.hd@alibaba-inc.com
- * @version 2020/12/7 12:43
+ * @date 2020/12/7 12:43
  */
 public class MatrixScore {
     public int matrixScore(int[][] A) {

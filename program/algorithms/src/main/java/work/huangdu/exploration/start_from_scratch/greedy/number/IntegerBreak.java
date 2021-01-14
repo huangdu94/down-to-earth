@@ -17,7 +17,7 @@ import java.util.Map;
  * 说明: 你可以假设 n 不小于 2 且不大于 58。
  *
  * @author huangdu.hd@alibaba-inc.com
- * @version 2020/11/19 13:04
+ * @date 2020/11/19 13:04
  */
 public class IntegerBreak {
     // 动态规划 可以写一写。 数学方法懒得看。

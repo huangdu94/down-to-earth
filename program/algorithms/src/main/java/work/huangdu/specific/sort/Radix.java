@@ -15,7 +15,7 @@ import java.util.List;
  * 难以支持负数
  *
  * @author huangdu.hd@alibaba-inc.com
- * @version 2020/7/18 19:32
+ * @date 2020/7/18 19:32
  */
 public class Radix {
     private static final int[] maxDigitTable = {9, 99, 999, 9999, 99999, 999999, 9999999,

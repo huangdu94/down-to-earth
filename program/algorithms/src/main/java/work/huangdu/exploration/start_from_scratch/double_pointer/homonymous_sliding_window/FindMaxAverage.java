@@ -12,7 +12,7 @@ package work.huangdu.exploration.start_from_scratch.double_pointer.homonymous_sl
  * 所给数据范围 [-10,000，10,000]。
  *
  * @author huangdu.hd@alibaba-inc.com
- * @version 2020/12/15 12:30
+ * @date 2020/12/15 12:30
  */
 public class FindMaxAverage {
     public double findMaxAverage(int[] nums, int k) {

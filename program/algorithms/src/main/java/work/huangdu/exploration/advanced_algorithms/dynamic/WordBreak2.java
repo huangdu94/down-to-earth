@@ -40,7 +40,7 @@ import java.util.List;
  * []
  *
  * @author huangdu.hd@alibaba-inc.com
- * @version 2020/9/3 14:42
+ * @date 2020/9/3 14:42
  * @see WordBreak
  */
 public class WordBreak2 {

@@ -25,7 +25,7 @@ package work.huangdu.exploration.primary_algorithms.array;
  * }
  *
  * @author huangdu.hd@alibaba-inc.com
- * @version 2020/7/26 15:02
+ * @date 2020/7/26 15:02
  */
 public class RemoveDuplicates {
     public int removeDuplicates(int[] nums) {

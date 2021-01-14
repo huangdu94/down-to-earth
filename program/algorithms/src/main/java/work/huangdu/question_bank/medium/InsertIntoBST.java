@@ -35,7 +35,7 @@ import work.huangdu.data_structure.TreeNode;
  * 新值和原始二叉搜索树中的任意节点值都不同
  *
  * @author huangdu.hd@alibaba-inc.com
- * @version 2020/9/30 12:26
+ * @date 2020/9/30 12:26
  */
 public class InsertIntoBST {
     public TreeNode insertIntoBST(TreeNode root, int val) {

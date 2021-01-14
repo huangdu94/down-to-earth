@@ -18,7 +18,7 @@ package work.huangdu.question_bank.easy;
  * 每一个 cost[i] 将会是一个Integer类型，范围为 [0, 999]。
  *
  * @author huangdu.hd@alibaba-inc.com
- * @version 2020/12/21 12:56
+ * @date 2020/12/21 12:56
  */
 public class MinCostClimbingStairs {
     public int minCostClimbingStairs(int[] cost) {

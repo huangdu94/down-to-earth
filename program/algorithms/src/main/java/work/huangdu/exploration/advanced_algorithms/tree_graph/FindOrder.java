@@ -26,7 +26,7 @@ import java.util.*;
  * 拓扑排序也可以通过BFS完成。
  *
  * @author huangdu.hd@alibaba-inc.com
- * @version 2020/8/9 13:29
+ * @date 2020/8/9 13:29
  */
 public class FindOrder {
     // 几点优化：

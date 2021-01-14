@@ -30,7 +30,7 @@ import java.util.*;
  * 解释:endWord "cog" 不在字典中，所以无法进行转换。
  *
  * @author huangdu.hd@alibaba-inc.com
- * @version 2020/8/4 12:06
+ * @date 2020/8/4 12:06
  */
 public class LadderLength {
     // 学习点:

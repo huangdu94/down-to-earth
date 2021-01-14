@@ -24,7 +24,7 @@ package work.huangdu.exploration.primary_algorithms.dynamic;
  * 3.  2 阶 + 1 阶
  *
  * @author huangdu.hd@alibaba-inc.com
- * @version 2020/6/23 16:57
+ * @date 2020/6/23 16:57
  */
 public class ClimbStairs {
     public int climbStairs(int n) {

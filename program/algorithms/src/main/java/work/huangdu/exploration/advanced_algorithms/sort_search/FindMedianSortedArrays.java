@@ -15,7 +15,7 @@ package work.huangdu.exploration.advanced_algorithms.sort_search;
  * 则中位数是 (2 + 3)/2 = 2.5
  *
  * @author huangdu.hd@alibaba-inc.com
- * @version 2020/8/21 11:41
+ * @date 2020/8/21 11:41
  */
 public class FindMedianSortedArrays {
     // 时间复杂度o(m+n)

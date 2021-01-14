@@ -27,7 +27,7 @@ import java.util.Set;
  * 输出: false
  *
  * @author huangdu.hd@alibaba-inc.com
- * @version 2020/9/3 14:41
+ * @date 2020/9/3 14:41
  * @see WordBreak2
  */
 public class WordBreak {

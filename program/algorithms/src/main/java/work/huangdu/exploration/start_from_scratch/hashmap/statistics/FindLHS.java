@@ -14,7 +14,7 @@ import java.util.Map;
  * 说明: 输入的数组长度最大不超过20,000.
  *
  * @author huangdu.hd@alibaba-inc.com
- * @version 2020/11/6 16:57
+ * @date 2020/11/6 16:57
  */
 public class FindLHS {
     public int findLHS(int[] nums) {

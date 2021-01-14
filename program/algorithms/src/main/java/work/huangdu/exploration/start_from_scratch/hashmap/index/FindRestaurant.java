@@ -28,7 +28,7 @@ import java.util.Map;
  * 两个列表都没有重复的元素。
  *
  * @author huangdu.hd@alibaba-inc.com
- * @version 2020/11/4 19:08
+ * @date 2020/11/4 19:08
  */
 public class FindRestaurant {
     public String[] findRestaurant(String[] list1, String[] list2) {

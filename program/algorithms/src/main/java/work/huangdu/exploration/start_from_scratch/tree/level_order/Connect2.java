@@ -28,7 +28,7 @@ import java.util.Queue;
  * -100 <= node.val <= 100
  *
  * @author huangdu.hd@alibaba-inc.com
- * @version 2020/9/28 9:27
+ * @date 2020/9/28 9:27
  * @see Connect
  */
 public class Connect2 {

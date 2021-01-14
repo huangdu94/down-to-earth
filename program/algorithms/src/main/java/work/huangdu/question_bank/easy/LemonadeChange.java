@@ -34,7 +34,7 @@ package work.huangdu.question_bank.easy;
  * bills[i] 不是 5 就是 10 或是 20
  *
  * @author huangdu.hd@alibaba-inc.com
- * @version 2020/12/10 12:38
+ * @date 2020/12/10 12:38
  */
 public class LemonadeChange {
     public boolean lemonadeChange(int[] bills) {

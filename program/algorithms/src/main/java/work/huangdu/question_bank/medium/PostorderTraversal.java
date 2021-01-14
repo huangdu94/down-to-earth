@@ -21,7 +21,7 @@ import java.util.List;
  * 进阶: 递归算法很简单，你可以通过迭代算法完成吗？
  *
  * @author huangdu.hd@alibaba-inc.com
- * @version 2020/9/29 9:54
+ * @date 2020/9/29 9:54
  */
 public class PostorderTraversal {
     private final List<Integer> res = new ArrayList<>();

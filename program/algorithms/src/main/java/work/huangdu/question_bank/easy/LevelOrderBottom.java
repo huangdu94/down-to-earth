@@ -22,7 +22,7 @@ import java.util.*;
  * ]
  *
  * @author huangdu.hd@alibaba-inc.com
- * @version 2020/8/8 22:25
+ * @date 2020/8/8 22:25
  */
 public class LevelOrderBottom {
     private final List<List<Integer>> list = new ArrayList<>();

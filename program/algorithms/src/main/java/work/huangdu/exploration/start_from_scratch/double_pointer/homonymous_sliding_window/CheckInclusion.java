@@ -16,7 +16,7 @@ package work.huangdu.exploration.start_from_scratch.double_pointer.homonymous_sl
  * 两个字符串的长度都在 [1, 10,000] 之间
  *
  * @author huangdu.hd@alibaba-inc.com
- * @version 2020/12/16 10:48
+ * @date 2020/12/16 10:48
  */
 public class CheckInclusion {
     public boolean checkInclusion(String s1, String s2) {

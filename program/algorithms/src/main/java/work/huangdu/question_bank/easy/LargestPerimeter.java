@@ -23,7 +23,7 @@ import java.util.Arrays;
  * 1 <= A[i] <= 10^6
  *
  * @author huangdu.hd@alibaba-inc.com
- * @version 2020/11/29 10:25
+ * @date 2020/11/29 10:25
  */
 public class LargestPerimeter {
     public int largestPerimeter(int[] A) {

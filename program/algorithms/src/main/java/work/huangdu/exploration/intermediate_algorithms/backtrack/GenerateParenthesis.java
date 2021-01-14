@@ -17,7 +17,7 @@ import java.util.List;
  * ]
  *
  * @author huangdu.hd@alibaba-inc.com
- * @version 2020/7/9 0:20
+ * @date 2020/7/9 0:20
  */
 public class GenerateParenthesis {
     public List<String> generateParenthesis(int n) {

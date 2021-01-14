@@ -18,7 +18,7 @@ import java.util.*;
  * 不考虑答案输出的顺序。
  *
  * @author huangdu.hd@alibaba-inc.com
- * @version 2020/7/2 10:37
+ * @date 2020/7/2 10:37
  */
 public class GroupAnagrams {
     public List<List<String>> groupAnagrams(String[] strs) {

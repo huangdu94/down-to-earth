@@ -24,7 +24,7 @@ import java.util.List;
  * 进阶：你可以不使用额外的空间吗？（假设由递归产生的隐式调用栈的开销不被计算在内）
  *
  * @author huangdu.hd@alibaba-inc.com
- * @version 2020/9/24 13:04
+ * @date 2020/9/24 13:04
  */
 public class FindMode {
     private List<Integer> numList;

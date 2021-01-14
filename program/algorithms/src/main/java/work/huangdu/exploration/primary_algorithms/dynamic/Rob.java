@@ -18,7 +18,7 @@ package work.huangdu.exploration.primary_algorithms.dynamic;
  * 0 <= nums[i] <= 400
  *
  * @author huangdu.hd@alibaba-inc.com
- * @version 2020/6/29 12:50
+ * @date 2020/6/29 12:50
  */
 public class Rob {
     public int rob(int[] nums) {

@@ -35,7 +35,7 @@ package work.huangdu.exploration.start_from_scratch.string.number_transform_stri
  * 1 <= len(chars) <= 1000。
  *
  * @author huangdu.hd@alibaba-inc.com
- * @version 2020/9/28 16:44
+ * @date 2020/9/28 16:44
  */
 public class Compress {
     public int compress(char[] chars) {

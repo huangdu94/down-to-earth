@@ -22,7 +22,7 @@ package work.huangdu.exploration.start_from_scratch.string.reverse;
  * 请选用 C 语言的用户尝试使用 O(1) 额外空间复杂度的原地解法。
  *
  * @author huangdu.hd@alibaba-inc.com
- * @version 2020/9/21 14:02
+ * @date 2020/9/21 14:02
  */
 public class ReverseWords2 {
     public String reverseWords(String s) {

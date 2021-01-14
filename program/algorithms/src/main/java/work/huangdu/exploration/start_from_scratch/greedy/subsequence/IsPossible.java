@@ -25,7 +25,7 @@ package work.huangdu.exploration.start_from_scratch.greedy.subsequence;
  * 输入的数组长度范围为 [1, 10000]
  *
  * @author huangdu.hd@alibaba-inc.com
- * @version 2020/11/19 18:35
+ * @date 2020/11/19 18:35
  */
 public class IsPossible {
     public boolean isPossible(int[] nums) {

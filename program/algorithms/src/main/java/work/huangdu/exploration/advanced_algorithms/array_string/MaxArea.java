@@ -10,7 +10,7 @@ package work.huangdu.exploration.advanced_algorithms.array_string;
  * 输出：49
  *
  * @author huangdu.hd@alibaba-inc.com
- * @version 2020/7/27 14:12
+ * @date 2020/7/27 14:12
  */
 public class MaxArea {
     // 暴力解(时间复杂度o(n^2))

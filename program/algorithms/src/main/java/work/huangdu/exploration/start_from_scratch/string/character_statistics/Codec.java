@@ -13,7 +13,7 @@ import java.util.Random;
  * codec.decode(codec.encode(url));
  *
  * @author huangdu.hd@alibaba-inc.com
- * @version 2020/9/25 11:00
+ * @date 2020/9/25 11:00
  */
 public class Codec {
     private static final String prefix = "http://tinyurl.com/";

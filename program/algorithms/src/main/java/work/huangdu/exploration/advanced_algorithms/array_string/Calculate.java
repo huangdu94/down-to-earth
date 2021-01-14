@@ -21,7 +21,7 @@ import java.util.List;
  * 请不要使用内置的库函数 eval。
  *
  * @author huangdu.hd@alibaba-inc.com
- * @version 2020/7/27 19:17
+ * @date 2020/7/27 19:17
  */
 public class Calculate {
     private static final List<Character> symbolList = Arrays.asList('+', '-', '*', '/');

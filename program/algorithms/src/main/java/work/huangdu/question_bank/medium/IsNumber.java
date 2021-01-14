@@ -7,7 +7,7 @@ package work.huangdu.question_bank.medium;
  * 但"12e"、"1a3.14"、"1.2.3"、"+-5"及"12e+5.4"都不是。
  *
  * @author huangdu.hd@alibaba-inc.com
- * @version 2020/9/2 12:46
+ * @date 2020/9/2 12:46
  */
 public class IsNumber {
     // 有限状态自动机

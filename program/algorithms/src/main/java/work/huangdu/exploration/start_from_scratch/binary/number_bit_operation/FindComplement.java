@@ -17,7 +17,7 @@ package work.huangdu.exploration.start_from_scratch.binary.number_bit_operation;
  * 你可以假定二进制数不包含前导零位。
  *
  * @author huangdu.hd@alibaba-inc.com
- * @version 2020/10/14 13:14
+ * @date 2020/10/14 13:14
  */
 public class FindComplement {
     private static final int[] mask = {

@@ -27,7 +27,7 @@ import java.util.Map;
  * obj.put(key,value);
  *
  * @author huangdu.hd@alibaba-inc.com
- * @version 2020/9/4 15:55
+ * @date 2020/9/4 15:55
  */
 public class LRUCache {
     /*private final int capacity;

@@ -12,7 +12,7 @@ package work.huangdu.exploration.intermediate_algorithms.array_string;
  * 输出: "bb"
  *
  * @author huangdu.hd@alibaba-inc.com
- * @version 2020/7/2 10:39
+ * @date 2020/7/2 10:39
  */
 public class LongestPalindrome {
     public String longestPalindrome(String s) {

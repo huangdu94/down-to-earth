@@ -24,7 +24,7 @@ package work.huangdu.exploration.start_from_scratch.double_pointer.fast_slow;
  * 你能写出时间时间复杂度为 O(n) 和额外空间复杂度为 O(1) 的算法吗？
  *
  * @author huangdu.hd@alibaba-inc.com
- * @version 2020/12/26 21:18
+ * @date 2020/12/26 21:18
  */
 public class CircularArrayLoop {
     public boolean circularArrayLoop(int[] nums) {

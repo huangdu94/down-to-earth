@@ -13,7 +13,7 @@ package work.huangdu.exploration.start_from_scratch.array.change_move;
  * [1,2,3]  =>  [2,3,3]  =>  [3,4,3]  =>  [4,4,4]
  *
  * @author huangdu.hd@alibaba-inc.com
- * @version 2020/9/15 12:31
+ * @date 2020/9/15 12:31
  */
 public class MinMoves {
     public int minMoves(int[] nums) {

@@ -17,7 +17,7 @@ import java.util.Arrays;
  * 你能用O(n) 时间复杂度和 / 或原地 O(1) 额外空间来实现吗？
  *
  * @author huangdu.hd@alibaba-inc.com
- * @version 2020/8/21 11:37
+ * @date 2020/8/21 11:37
  */
 public class WiggleSort {
     /*

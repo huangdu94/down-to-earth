@@ -14,7 +14,7 @@ package work.huangdu.question_bank.medium;
  * S 只包含小写字母并且长度在[1, 500]区间内。
  *
  * @author huangdu.hd@alibaba-inc.com
- * @version 2020/11/30 0:12
+ * @date 2020/11/30 0:12
  */
 public class ReorganizeString {
     public String reorganizeString(String s) {

@@ -21,7 +21,7 @@ package work.huangdu.exploration.start_from_scratch.string.number_transform_stri
  * 说明: 你可以假设秘密数字和朋友的猜测数都只包含数字，并且它们的长度永远相等。
  *
  * @author huangdu.hd@alibaba-inc.com
- * @version 2020/8/27 19:05
+ * @date 2020/8/27 19:05
  */
 public class GetHint {
     public String getHint(String secret, String guess) {

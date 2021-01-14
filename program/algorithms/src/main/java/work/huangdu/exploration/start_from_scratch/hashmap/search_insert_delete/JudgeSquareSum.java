@@ -26,7 +26,7 @@ import java.util.Set;
  * 0 <= c <= 2^31 - 1
  *
  * @author huangdu.hd@alibaba-inc.com
- * @version 2020/10/31 13:30
+ * @date 2020/10/31 13:30
  */
 public class JudgeSquareSum {
     private static final Set<Integer> set = new HashSet<>();

@@ -23,7 +23,7 @@ import java.util.Set;
  * 你可以假设 s 和 t 具有相同的长度。
  *
  * @author huangdu.hd@alibaba-inc.com
- * @version 2020/8/14 1:23
+ * @date 2020/8/14 1:23
  */
 public class IsIsomorphic {
     public boolean isIsomorphic(String s, String t) {

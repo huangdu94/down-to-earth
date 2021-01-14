@@ -18,7 +18,7 @@ import java.util.Map;
  * 所有运动员的成绩都不相同。
  *
  * @author huangdu.hd@alibaba-inc.com
- * @version 2020/9/26 17:44
+ * @date 2020/9/26 17:44
  */
 public class FindRelativeRanks {
     public String[] findRelativeRanks(int[] nums) {

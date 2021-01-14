@@ -18,7 +18,7 @@ package work.huangdu.exploration.start_from_scratch.greedy.array;
  * 第三个孩子只得到 1 颗糖果，这已满足上述两个条件。
  *
  * @author huangdu.hd@alibaba-inc.com
- * @version 2020/11/10 12:58
+ * @date 2020/11/10 12:58
  */
 public class Candy {
     public int candy(int[] ratings) {

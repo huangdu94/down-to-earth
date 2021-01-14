@@ -29,7 +29,7 @@ import java.util.Queue;
  * 输出: false
  *
  * @author huangdu.hd@alibaba-inc.com
- * @version 2020/8/7 11:22
+ * @date 2020/8/7 11:22
  */
 public class IsSameTree {
     // 1. 迭代

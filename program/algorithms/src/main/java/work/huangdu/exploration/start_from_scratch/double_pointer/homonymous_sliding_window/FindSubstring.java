@@ -24,7 +24,7 @@ import java.util.Map;
  * 输出：[]
  *
  * @author huangdu.hd@alibaba-inc.com
- * @version 2020/12/19 15:50
+ * @date 2020/12/19 15:50
  */
 public class FindSubstring {
     public List<Integer> findSubstring(String s, String[] words) {

@@ -16,7 +16,7 @@ package work.huangdu.exploration.advanced_algorithms.design;
  * 保证所有输入均为非空字符串。
  *
  * @author huangdu.hd@alibaba-inc.com
- * @version 2020/8/14 12:04
+ * @date 2020/8/14 12:04
  */
 public class Trie {
     /**

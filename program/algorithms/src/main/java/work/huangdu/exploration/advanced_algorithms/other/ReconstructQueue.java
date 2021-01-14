@@ -16,7 +16,7 @@ import java.util.List;
  * [[5,0], [7,0], [5,2], [6,1], [4,4], [7,1]]
  *
  * @author huangdu.hd@alibaba-inc.com
- * @version 2020/9/8 11:38
+ * @date 2020/9/8 11:38
  */
 public class ReconstructQueue {
     public int[][] reconstructQueue1(int[][] people) {

@@ -16,7 +16,7 @@ package work.huangdu.exploration.start_from_scratch.greedy.array;
  * n 是非负整数，且不会超过输入数组的大小。
  *
  * @author huangdu.hd@alibaba-inc.com
- * @version 2020/11/8 18:30
+ * @date 2020/11/8 18:30
  */
 public class CanPlaceFlowers {
     public boolean canPlaceFlowers(int[] flowerbed, int n) {

@@ -23,7 +23,7 @@ import java.util.Set;
  * k^n 最大可能为 4096。
  *
  * @author huangdu.hd@alibaba-inc.com
- * @version 2020/8/27 22:25
+ * @date 2020/8/27 22:25
  */
 public class CrackSafe {
     private char[] res;

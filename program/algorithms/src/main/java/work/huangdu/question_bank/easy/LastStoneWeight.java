@@ -22,7 +22,7 @@ import java.util.PriorityQueue;
  * 1 <= stones[i] <= 1000
  *
  * @author huangdu.hd@alibaba-inc.com
- * @version 2020/12/30 9:13
+ * @date 2020/12/30 9:13
  */
 public class LastStoneWeight {
     public int lastStoneWeight(int[] stones) {

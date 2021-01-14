@@ -15,7 +15,7 @@ package work.huangdu.question_bank.easy;
  * 0 <= A[i] <= 1000
  *
  * @author huangdu.hd@alibaba-inc.com
- * @version 2020/11/12 17:25
+ * @date 2020/11/12 17:25
  */
 public class SortArrayByParityII {
     // 双指针法

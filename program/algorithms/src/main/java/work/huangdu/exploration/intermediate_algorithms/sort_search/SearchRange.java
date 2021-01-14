@@ -15,7 +15,7 @@ import java.util.Arrays;
  * 输出: [-1,-1]
  *
  * @author huangdu.hd@alibaba-inc.com
- * @version 2020/7/12 15:49
+ * @date 2020/7/12 15:49
  */
 public class SearchRange {
     public int[] searchRange3(int[] nums, int target) {

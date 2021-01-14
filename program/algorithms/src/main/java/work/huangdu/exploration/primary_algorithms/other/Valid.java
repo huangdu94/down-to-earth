@@ -28,7 +28,7 @@ import java.util.Stack;
  * 输出: true
  *
  * @author huangdu.hd@alibaba-inc.com
- * @version 2020/7/1 22:19
+ * @date 2020/7/1 22:19
  */
 public class Valid {
     private static final Map<Character, Character> map = new HashMap<>();

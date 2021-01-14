@@ -27,7 +27,7 @@ import java.util.List;
  * 皇后彼此不能相互攻击，也就是说：任何两个皇后都不能处于同一条横行、纵行或斜线上。
  *
  * @author huangdu.hd@alibaba-inc.com
- * @version 2020/9/3 9:52
+ * @date 2020/9/3 9:52
  */
 public class SolveNQueens {
     private int n;

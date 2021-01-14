@@ -16,7 +16,7 @@ import java.util.LinkedList;
  * 输出：7 -> 8 -> 0 -> 7
  *
  * @author huangdu.hd@alibaba-inc.com
- * @version 2020/10/29 12:56
+ * @date 2020/10/29 12:56
  */
 public class AddTwoNumbers2 {
     public ListNode addTwoNumbers(ListNode l1, ListNode l2) {

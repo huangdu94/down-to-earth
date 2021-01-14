@@ -15,7 +15,7 @@ import java.util.List;
  * [2,3]
  *
  * @author huangdu.hd@alibaba-inc.com
- * @version 2020/9/14 14:30
+ * @date 2020/9/14 14:30
  */
 public class FindDuplicates {
     public List<Integer> findDuplicates(int[] nums) {

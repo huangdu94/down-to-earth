@@ -29,7 +29,7 @@ package work.huangdu.exploration.advanced_algorithms.array_string;
  * 本题中，我们使用二维数组来表示面板。原则上，面板是无限的，但当活细胞侵占了面板边界时会造成问题。你将如何解决这些问题？
  *
  * @author huangdu.hd@alibaba-inc.com
- * @version 2020/7/27 14:27
+ * @date 2020/7/27 14:27
  */
 public class GameOfLife {
     public void gameOfLife(int[][] board) {

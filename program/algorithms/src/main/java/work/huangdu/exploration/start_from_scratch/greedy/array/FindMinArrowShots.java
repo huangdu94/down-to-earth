@@ -30,7 +30,7 @@ import java.util.Comparator;
  * -2^31 <= xstart < xend <= 2^31 - 1
  *
  * @author huangdu.hd@alibaba-inc.com
- * @version 2020/11/13 12:36
+ * @date 2020/11/13 12:36
  */
 public class FindMinArrowShots {
     public int findMinArrowShots(int[][] points) {

@@ -29,7 +29,7 @@ package work.huangdu.exploration.start_from_scratch.double_pointer.homonymous_sl
  * nums 按递增顺序排列
  *
  * @author huangdu.hd@alibaba-inc.com
- * @version 2020/12/13 10:24
+ * @date 2020/12/13 10:24
  */
 public class removeDuplicates2 {
     public int removeDuplicates(int[] nums) {

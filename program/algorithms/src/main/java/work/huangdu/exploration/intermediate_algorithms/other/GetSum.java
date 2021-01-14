@@ -11,7 +11,7 @@ package work.huangdu.exploration.intermediate_algorithms.other;
  * 输出: 1
  *
  * @author huangdu.hd@alibaba-inc.com
- * @version 2020/7/22 0:22
+ * @date 2020/7/22 0:22
  */
 public class GetSum {
     /*public int getSum(int a, int b) {

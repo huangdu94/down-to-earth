@@ -19,7 +19,7 @@ package work.huangdu.exploration.intermediate_algorithms.sort_search;
  * 你的解法应该是 O(logN) 时间复杂度的。
  *
  * @author huangdu.hd@alibaba-inc.com
- * @version 2020/7/12 15:47
+ * @date 2020/7/12 15:47
  */
 public class FindPeakElement {
     public int findPeakElement(int[] nums) {

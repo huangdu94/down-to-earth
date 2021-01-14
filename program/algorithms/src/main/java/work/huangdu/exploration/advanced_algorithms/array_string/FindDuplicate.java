@@ -19,7 +19,7 @@ import java.util.Set;
  * 数组中只有一个重复的数字，但它可能不止重复出现一次。
  *
  * @author huangdu.hd@alibaba-inc.com
- * @version 2020/7/27 19:16
+ * @date 2020/7/27 19:16
  */
 public class FindDuplicate {
     // 交换法 把每一个数字都交换到与之数字对应的index位置上 交换停止后输出index为0的数

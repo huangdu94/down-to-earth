@@ -22,7 +22,7 @@ import java.util.Queue;
  * boolean param_4 = obj.empty();
  *
  * @author huangdu.hd@alibaba-inc.com
- * @version 2020/8/15 11:58
+ * @date 2020/8/15 11:58
  * @see MyQueue
  */
 public class MyStack {

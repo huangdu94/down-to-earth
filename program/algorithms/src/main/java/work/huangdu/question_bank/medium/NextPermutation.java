@@ -11,7 +11,7 @@ package work.huangdu.question_bank.medium;
  * 1,1,5 → 1,5,1
  *
  * @author huangdu.hd@alibaba-inc.com
- * @version 2020/11/10 12:22
+ * @date 2020/11/10 12:22
  */
 public class NextPermutation {
     public void nextPermutation(int[] nums) {

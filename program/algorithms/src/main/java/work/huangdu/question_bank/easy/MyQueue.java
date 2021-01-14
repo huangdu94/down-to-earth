@@ -29,7 +29,7 @@ import java.util.LinkedList;
  * boolean param_4 = obj.empty();
  *
  * @author huangdu.hd@alibaba-inc.com
- * @version 2020/8/15 13:51
+ * @date 2020/8/15 13:51
  * @see MyStack
  */
 public class MyQueue {

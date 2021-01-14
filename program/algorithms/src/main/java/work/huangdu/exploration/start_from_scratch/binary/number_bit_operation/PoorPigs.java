@@ -13,7 +13,7 @@ package work.huangdu.exploration.start_from_scratch.binary.number_bit_operation;
  * 任何给定的桶都可以无限次采样（无限数量的猪）。
  *
  * @author huangdu.hd@alibaba-inc.com
- * @version 2020/10/17 11:16
+ * @date 2020/10/17 11:16
  */
 public class PoorPigs {
     public int poorPigs(int buckets, int minutesToDie, int minutesToTest) {

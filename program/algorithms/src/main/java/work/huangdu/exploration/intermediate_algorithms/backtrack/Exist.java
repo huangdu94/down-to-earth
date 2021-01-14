@@ -21,7 +21,7 @@ package work.huangdu.exploration.intermediate_algorithms.backtrack;
  * 1 <= word.length <= 10^3
  *
  * @author huangdu.hd@alibaba-inc.com
- * @version 2020/7/9 0:24
+ * @date 2020/7/9 0:24
  */
 public class Exist {
     public boolean exist(char[][] board, String word) {

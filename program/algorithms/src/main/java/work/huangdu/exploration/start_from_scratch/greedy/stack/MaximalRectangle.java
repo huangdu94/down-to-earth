@@ -26,7 +26,7 @@ package work.huangdu.exploration.start_from_scratch.greedy.stack;
  * matrix[i][j] 为 '0' 或 '1'
  *
  * @author huangdu.hd@alibaba-inc.com
- * @version 2020/12/4 13:31
+ * @date 2020/12/4 13:31
  * @see work.huangdu.exploration.advanced_algorithms.other.LargestRectangleArea
  */
 public class MaximalRectangle {

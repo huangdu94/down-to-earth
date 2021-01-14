@@ -10,7 +10,7 @@ package work.huangdu.exploration.start_from_scratch.string.high_precision_calcul
  * 你不能使用任何內建 BigInteger 库， 也不能直接将输入的字符串转换为整数形式
  *
  * @author huangdu.hd@alibaba-inc.com
- * @version 2020/8/13 12:29
+ * @date 2020/8/13 12:29
  */
 public class AddStrings {
     public String addStrings(String num1, String num2) {

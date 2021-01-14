@@ -14,7 +14,7 @@ import java.util.Arrays;
  * 说明: 输出结果可能非常大，所以你需要返回一个字符串而不是整数。
  *
  * @author huangdu.hd@alibaba-inc.com
- * @version 2020/8/6 16:28
+ * @date 2020/8/6 16:28
  */
 public class LargestNumber {
     public String largestNumber(int[] nums) {

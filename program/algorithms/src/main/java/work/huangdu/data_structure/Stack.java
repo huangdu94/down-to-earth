@@ -6,7 +6,7 @@ import java.util.EmptyStackException;
  * The Stack class represents a last-in-first-out (LIFO) stack of objects.
  *
  * @author huangdu.hd@alibaba-inc.com
- * @version 2020/8/14 0:10
+ * @date 2020/8/14 0:10
  */
 public class Stack<T> {
     private final Node head = new Node();

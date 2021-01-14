@@ -22,7 +22,7 @@ import java.util.*;
  * 如果 nums2 的元素存储在磁盘上，磁盘内存是有限的，并且你不能一次加载所有的元素到内存中，你该怎么办？
  *
  * @author huangdu.hd@alibaba-inc.com
- * @version 2020/7/26 15:20
+ * @date 2020/7/26 15:20
  * @see Intersection
  */
 public class Intersect {

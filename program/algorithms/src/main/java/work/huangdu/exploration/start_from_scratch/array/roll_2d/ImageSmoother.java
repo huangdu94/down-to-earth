@@ -23,7 +23,7 @@ import java.util.Arrays;
  * 矩阵的长和宽的范围均为 [1, 150]。
  *
  * @author huangdu.hd@alibaba-inc.com
- * @version 2020/9/16 0:59
+ * @date 2020/9/16 0:59
  */
 public class ImageSmoother {
     public int[][] imageSmoother(int[][] M) {

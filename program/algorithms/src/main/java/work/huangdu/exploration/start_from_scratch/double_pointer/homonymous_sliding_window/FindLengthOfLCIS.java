@@ -18,7 +18,7 @@ package work.huangdu.exploration.start_from_scratch.double_pointer.homonymous_sl
  * -10^9 <= nums[i] <= 10^9
  *
  * @author huangdu.hd@alibaba-inc.com
- * @version 2020/12/15 13:48
+ * @date 2020/12/15 13:48
  */
 public class FindLengthOfLCIS {
     public int findLengthOfLCIS(int[] nums) {

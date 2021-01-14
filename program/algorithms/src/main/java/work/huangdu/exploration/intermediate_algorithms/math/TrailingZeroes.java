@@ -14,7 +14,7 @@ package work.huangdu.exploration.intermediate_algorithms.math;
  * 说明: 你算法的时间复杂度应为 O(log n) 。
  *
  * @author huangdu.hd@alibaba-inc.com
- * @version 2020/7/22 0:15
+ * @date 2020/7/22 0:15
  */
 public class TrailingZeroes {
     public int trailingZeroes(int n) {

@@ -16,7 +16,7 @@ package work.huangdu.exploration.start_from_scratch.hashmap.prefixsum;
  * 你可以认为所有数字总和在 32 位有符号整数范围内。
  *
  * @author huangdu.hd@alibaba-inc.com
- * @version 2020/11/7 12:54
+ * @date 2020/11/7 12:54
  */
 public class CheckSubarraySum {
     public boolean checkSubarraySum(int[] nums, int k) {

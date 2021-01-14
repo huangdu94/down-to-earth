@@ -14,7 +14,7 @@ import java.util.*;
  * 给定数组中可能包含重复数字，相等的数字应该被视为递增的一种情况。
  *
  * @author huangdu.hd@alibaba-inc.com
- * @version 2020/8/25 0:09
+ * @date 2020/8/25 0:09
  */
 public class FindSubsequences {
     private int len;

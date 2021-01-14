@@ -2,7 +2,7 @@ package work.huangdu.exploration.primary_algorithms.dynamic;
 
 /**
  * @author huangdu.hd@alibaba-inc.com
- * @version 2020/6/27 10:30
+ * @date 2020/6/27 10:30
  */
 public class Test {
     public static void main(String[] args) {

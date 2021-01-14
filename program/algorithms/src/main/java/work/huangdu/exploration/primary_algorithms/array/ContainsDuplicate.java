@@ -18,7 +18,7 @@ import java.util.Set;
  * 输出: true
  *
  * @author huangdu.hd@alibaba-inc.com
- * @version 2020/7/26 15:15
+ * @date 2020/7/26 15:15
  * @see work.huangdu.exploration.start_from_scratch.hashmap.index.ContainsNearbyDuplicate
  * @see work.huangdu.exploration.start_from_scratch.hashmap.index.ContainsNearbyAlmostDuplicate
  */

@@ -24,7 +24,7 @@ import java.util.Arrays;
  * 如果最终两个玩家的分数相等，那么玩家 1 仍为赢家。
  *
  * @author huangdu.hd@alibaba-inc.com
- * @version 2020/9/1 10:01
+ * @date 2020/9/1 10:01
  */
 public class PredictTheWinner {
     private int[][] memo;

@@ -15,7 +15,7 @@ import java.util.List;
  * [5,6]
  *
  * @author huangdu.hd@alibaba-inc.com
- * @version 2020/9/14 15:03
+ * @date 2020/9/14 15:03
  */
 public class FindDisappearedNumbers {
     public List<Integer> findDisappearedNumbers1(int[] nums) {

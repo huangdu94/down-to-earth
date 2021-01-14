@@ -19,7 +19,7 @@ package work.huangdu.exploration.intermediate_algorithms.math;
  * 假设我们的环境只能存储 32 位有符号整数，其数值范围是 [−2^31,  2^31 − 1]。本题中，如果除法结果溢出，则返回 2^31 − 1。
  *
  * @author huangdu.hd@alibaba-inc.com
- * @version 2020/7/22 0:20
+ * @date 2020/7/22 0:20
  */
 public class Divide {
     public int divide3(int dividend, int divisor) {

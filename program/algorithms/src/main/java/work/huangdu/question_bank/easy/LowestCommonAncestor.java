@@ -20,7 +20,7 @@ import work.huangdu.data_structure.TreeNode;
  * p、q 为不同节点且均存在于给定的二叉搜索树中。
  *
  * @author huangdu.hd@alibaba-inc.com
- * @version 2020/8/15 14:41
+ * @date 2020/8/15 14:41
  * @see work.huangdu.exploration.advanced_algorithms.tree_graph.LowestCommonAncestor
  */
 public class LowestCommonAncestor {

@@ -13,7 +13,7 @@ import java.util.List;
  * 插入、删除、替换任一字符都算作一次修改。
  *
  * @author huangdu.hd@alibaba-inc.com
- * @version 2020/11/16 0:24
+ * @date 2020/11/16 0:24
  */
 public class StrongPasswordChecker {
     public int strongPasswordChecker(String password) {

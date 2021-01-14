@@ -20,7 +20,7 @@ import java.util.List;
  * A[i][j] 是小写字母
  *
  * @author huangdu.hd@alibaba-inc.com
- * @version 2020/10/14 12:25
+ * @date 2020/10/14 12:25
  */
 public class CommonChars {
     public List<String> commonChars(String[] A) {

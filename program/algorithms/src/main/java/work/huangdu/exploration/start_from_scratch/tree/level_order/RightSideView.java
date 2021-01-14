@@ -21,7 +21,7 @@ import java.util.Queue;
  * *   5     4       <---
  *
  * @author huangdu.hd@alibaba-inc.com
- * @version 2021/1/4 10:20
+ * @date 2021/1/4 10:20
  */
 public class RightSideView {
     public List<Integer> rightSideView(TreeNode root) {

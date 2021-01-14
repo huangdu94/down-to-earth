@@ -17,7 +17,7 @@ import java.util.List;
  * 输出: -1->0->3->4->5
  *
  * @author huangdu.hd@alibaba-inc.com
- * @version 2020/8/3 14:59
+ * @date 2020/8/3 14:59
  */
 public class SortList {
     // 首先想到归并排序，快慢指针找链表终点

@@ -17,7 +17,7 @@ import java.util.List;
  * 输出: [[1,2,6], [1,3,5], [2,3,4]]
  *
  * @author huangdu.hd@alibaba-inc.com
- * @version 2020/9/11 9:19
+ * @date 2020/9/11 9:19
  */
 public class CombinationSum3 {
     private int n;

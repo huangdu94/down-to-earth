@@ -17,7 +17,7 @@ import work.huangdu.data_structure.TreeNode;
  * 输出: 6
  *
  * @author huangdu.hd@alibaba-inc.com
- * @version 2021/1/1 18:10
+ * @date 2021/1/1 18:10
  */
 public class CountNodes {
     public int countNodes(TreeNode root) {

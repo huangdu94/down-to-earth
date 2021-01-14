@@ -16,7 +16,7 @@ package work.huangdu.question_bank.medium;
  * 解释: 数组不能分割成两个元素和相等的子集.
  *
  * @author huangdu.hd@alibaba-inc.com
- * @version 2020/10/11 20:54
+ * @date 2020/10/11 20:54
  */
 public class CanPartition {
     public boolean canPartition(int[] nums) {

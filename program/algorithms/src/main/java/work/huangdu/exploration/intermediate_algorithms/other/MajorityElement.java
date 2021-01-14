@@ -15,7 +15,7 @@ import java.util.Map;
  * 输出: 2
  *
  * @author huangdu.hd@alibaba-inc.com
- * @version 2020/7/22 0:24
+ * @date 2020/7/22 0:24
  */
 public class MajorityElement {
     // 投票算法最优

@@ -6,7 +6,7 @@ import java.util.List;
  * Definition a trie.
  *
  * @author huangdu.hd@alibaba-inc.com
- * @version 2020/8/14 17:08
+ * @date 2020/8/14 17:08
  */
 public class Trie {
     /**

@@ -21,7 +21,7 @@ import work.huangdu.exploration.intermediate_algorithms.design.Codec;
  * 每个节点的值都是 0。
  *
  * @author huangdu.hd@alibaba-inc.com
- * @version 2020/9/22 9:56
+ * @date 2020/9/22 9:56
  */
 public class MinCameraCover {
     public int minCameraCover(TreeNode root) {

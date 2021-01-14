@@ -27,7 +27,7 @@ import work.huangdu.data_structure.ListNode;
  * 程序尽量满足 O(n) 时间复杂度，且仅用 O(1) 内存。
  *
  * @author huangdu.hd@alibaba-inc.com
- * @version 2020/7/4 19:16
+ * @date 2020/7/4 19:16
  */
 public class GetIntersectionNode {
     public ListNode getIntersectionNode(ListNode headA, ListNode headB) {

@@ -15,7 +15,7 @@ package work.huangdu.exploration.start_from_scratch.string.character_statistics;
  * 解释：机器人向左移动两次。它最终位于原点的左侧，距原点有两次 “移动” 的距离。我们返回 false，因为它在移动结束时没有返回原点。
  *
  * @author huangdu.hd@alibaba-inc.com
- * @version 2020/9/24 19:36
+ * @date 2020/9/24 19:36
  */
 public class JudgeCircle {
     public boolean judgeCircle(String moves) {

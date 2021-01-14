@@ -20,7 +20,7 @@ import java.util.Set;
  * 数组中数字的大小在范围[-100,000, 100,000]内。
  *
  * @author huangdu.hd@alibaba-inc.com
- * @version 2020/11/10 12:48
+ * @date 2020/11/10 12:48
  */
 public class DistributeCandies {
     public int distributeCandies(int[] candies) {

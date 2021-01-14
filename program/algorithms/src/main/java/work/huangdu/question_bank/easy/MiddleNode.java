@@ -20,7 +20,7 @@ import work.huangdu.data_structure.ListNode;
  * 给定链表的结点数介于 1 和 100 之间。
  *
  * @author huangdu.hd@alibaba-inc.com
- * @version 2020/10/20 13:00
+ * @date 2020/10/20 13:00
  */
 public class MiddleNode {
     public ListNode middleNode(ListNode head) {

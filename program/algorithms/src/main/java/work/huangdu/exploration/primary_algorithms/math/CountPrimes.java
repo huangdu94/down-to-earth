@@ -5,7 +5,7 @@ package work.huangdu.exploration.primary_algorithms.math;
  * 统计所有小于非负整数 n 的质数的数量。
  *
  * @author huangdu.hd@alibaba-inc.com
- * @version 2020/6/29 17:21
+ * @date 2020/6/29 17:21
  */
 public class CountPrimes {
     public int countPrimes(int n) {

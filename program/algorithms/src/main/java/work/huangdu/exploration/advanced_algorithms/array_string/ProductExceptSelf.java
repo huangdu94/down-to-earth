@@ -12,7 +12,7 @@ package work.huangdu.exploration.advanced_algorithms.array_string;
  * 你可以在常数空间复杂度内完成这个题目吗？（ 出于对空间复杂度分析的目的，输出数组不被视为额外空间。）
  *
  * @author huangdu.hd@alibaba-inc.com
- * @version 2020/7/26 19:22
+ * @date 2020/7/26 19:22
  */
 public class ProductExceptSelf {
     // 使用除法版(题目要求不能使用除法但想不到别的)

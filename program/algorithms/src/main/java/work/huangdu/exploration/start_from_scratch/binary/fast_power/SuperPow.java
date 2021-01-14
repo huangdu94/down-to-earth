@@ -11,7 +11,7 @@ package work.huangdu.exploration.start_from_scratch.binary.fast_power;
  * 输出: 1024
  *
  * @author huangdu.hd@alibaba-inc.com
- * @version 2020/10/21 10:33
+ * @date 2020/10/21 10:33
  */
 public class SuperPow {
     public int superPow(int a, int[] b) {

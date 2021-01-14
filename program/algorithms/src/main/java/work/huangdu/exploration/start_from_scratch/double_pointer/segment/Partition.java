@@ -11,7 +11,7 @@ import work.huangdu.data_structure.ListNode;
  * 输出: 1->2->2->4->3->5
  *
  * @author huangdu.hd@alibaba-inc.com
- * @version 2020/12/20 12:30
+ * @date 2020/12/20 12:30
  */
 public class Partition {
     public ListNode partition(ListNode head, int x) {

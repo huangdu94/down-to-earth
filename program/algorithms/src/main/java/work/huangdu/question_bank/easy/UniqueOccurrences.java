@@ -24,7 +24,7 @@ import java.util.Set;
  * -1000 <= arr[i] <= 1000
  *
  * @author huangdu.hd@alibaba-inc.com
- * @version 2020/10/28 12:30
+ * @date 2020/10/28 12:30
  */
 public class UniqueOccurrences {
     public boolean uniqueOccurrences(int[] arr) {

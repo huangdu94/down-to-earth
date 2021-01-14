@@ -21,7 +21,7 @@ import java.util.Queue;
  * * -10  5
  *
  * @author huangdu.hd@alibaba-inc.com
- * @version 2020/8/18 13:03
+ * @date 2020/8/18 13:03
  */
 public class SortedListToBST {
     // 分治+中序遍历 最优解

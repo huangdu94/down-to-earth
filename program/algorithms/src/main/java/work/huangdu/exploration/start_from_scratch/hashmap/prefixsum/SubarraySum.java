@@ -14,7 +14,7 @@ import java.util.Map;
  * 数组中元素的范围是 [-1000, 1000] ，且整数 k 的范围是 [-1e7, 1e7]。
  *
  * @author huangdu.hd@alibaba-inc.com
- * @version 2020/11/8 15:24
+ * @date 2020/11/8 15:24
  */
 public class SubarraySum {
     // 暴力法 o(n^2)

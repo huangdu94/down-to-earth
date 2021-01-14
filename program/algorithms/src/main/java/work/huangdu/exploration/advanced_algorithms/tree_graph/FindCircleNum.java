@@ -27,7 +27,7 @@ import work.huangdu.data_structure.UnionFindSets;
  * 如果有M[i][j] = 1，则有M[j][i] = 1。
  *
  * @author huangdu.hd@alibaba-inc.com
- * @version 2020/8/9 10:47
+ * @date 2020/8/9 10:47
  */
 public class FindCircleNum {
     public int findCircleNum(int[][] M) {

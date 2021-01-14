@@ -46,7 +46,7 @@ import java.util.Deque;
  * 1 <= Node.val <= 10^5
  *
  * @author huangdu.hd@alibaba-inc.com
- * @version 2020/10/27 14:48
+ * @date 2020/10/27 14:48
  */
 public class Flatten {
     public Node flatten(Node head) {

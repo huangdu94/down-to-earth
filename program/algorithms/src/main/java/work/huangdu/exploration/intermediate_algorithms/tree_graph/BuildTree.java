@@ -20,7 +20,7 @@ import java.util.Stack;
  * 15   7
  *
  * @author huangdu.hd@alibaba-inc.com
- * @version 2020/7/5 19:31
+ * @date 2020/7/5 19:31
  */
 public class BuildTree {
     public TreeNode buildTree(int[] preorder, int[] inorder) {

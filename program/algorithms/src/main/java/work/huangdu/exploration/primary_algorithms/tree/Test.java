@@ -6,7 +6,7 @@ import work.huangdu.data_structure.TreeNode;
  * 测试类
  *
  * @author huangdu.hd@alibaba-inc.com
- * @version 2020/6/22 17:02
+ * @date 2020/6/22 17:02
  */
 public class Test {
     public static TreeNode generateTree(int[] input) {

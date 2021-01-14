@@ -45,7 +45,7 @@ package work.huangdu.exploration.primary_algorithms.array;
  * 给定数独永远是 9x9 形式的。
  *
  * @author huangdu.hd@alibaba-inc.com
- * @version 2020/7/26 16:14
+ * @date 2020/7/26 16:14
  */
 public class IsValidSudoku {
     public boolean isValidSudoku(char[][] board) {

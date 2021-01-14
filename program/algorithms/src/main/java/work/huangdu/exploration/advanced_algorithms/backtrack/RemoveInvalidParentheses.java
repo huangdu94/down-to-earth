@@ -20,7 +20,7 @@ import java.util.Set;
  * 输出: [""]
  *
  * @author huangdu.hd@alibaba-inc.com
- * @version 2020/8/17 11:08
+ * @date 2020/8/17 11:08
  */
 public class RemoveInvalidParentheses {
     /*

@@ -14,7 +14,7 @@ import work.huangdu.data_structure.ListNode;
  * 你能尝试使用一趟扫描实现吗？
  *
  * @author huangdu.hd@alibaba-inc.com
- * @version 2020/7/26 17:53
+ * @date 2020/7/26 17:53
  */
 public class RemoveNthFromEnd {
     public ListNode removeNthFromEnd(ListNode head, int n) {

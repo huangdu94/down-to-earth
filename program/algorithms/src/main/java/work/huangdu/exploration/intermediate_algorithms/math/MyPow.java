@@ -18,7 +18,7 @@ package work.huangdu.exploration.intermediate_algorithms.math;
  * n 是 32 位有符号整数，其数值范围是 [−2^31, 2^31 − 1] 。
  *
  * @author huangdu.hd@alibaba-inc.com
- * @version 2020/7/22 0:17
+ * @date 2020/7/22 0:17
  */
 public class MyPow {
     // 复杂度o(1)

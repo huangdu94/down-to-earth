@@ -37,7 +37,7 @@ import java.util.PriorityQueue;
  * s 中只含有小写英文字母
  *
  * @author huangdu.hd@alibaba-inc.com
- * @version 2021/1/11 12:16
+ * @date 2021/1/11 12:16
  */
 public class SmallestStringWithSwaps {
     public String smallestStringWithSwaps(String s, List<List<Integer>> pairs) {

@@ -23,7 +23,7 @@ package work.huangdu.exploration.start_from_scratch.string.number_transform_stri
  * 输出: "No solution"
  *
  * @author huangdu.hd@alibaba-inc.com
- * @version 2020/9/27 12:57
+ * @date 2020/9/27 12:57
  */
 public class SolveEquation {
     public String solveEquation(String equation) {

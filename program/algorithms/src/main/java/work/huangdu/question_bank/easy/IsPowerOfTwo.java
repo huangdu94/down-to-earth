@@ -21,7 +21,7 @@ import java.util.Set;
  * 输出: false
  *
  * @author huangdu.hd@alibaba-inc.com
- * @version 2020/8/15 13:13
+ * @date 2020/8/15 13:13
  * @see IsPowerOfThree
  * @see IsPowerOfFour
  */

@@ -19,7 +19,7 @@ package work.huangdu.exploration.start_from_scratch.binary.number_bit_operation;
  * 第11个数字在序列 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, ... 里是0，它是10的一部分。
  *
  * @author huangdu.hd@alibaba-inc.com
- * @version 2020/10/19 15:45
+ * @date 2020/10/19 15:45
  */
 public class FindNthDigit {
     // 1位的数9个

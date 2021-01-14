@@ -19,7 +19,7 @@ import java.util.List;
  * ]
  *
  * @author huangdu.hd@alibaba-inc.com
- * @version 2020/9/8 10:51
+ * @date 2020/9/8 10:51
  */
 public class Combine {
     private int n;

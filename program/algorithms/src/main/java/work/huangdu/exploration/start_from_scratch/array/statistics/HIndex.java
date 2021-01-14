@@ -15,7 +15,7 @@ import java.util.Arrays;
  * 提示：如果 h 有多种可能的值，h 指数是其中最大的那个。
  *
  * @author huangdu.hd@alibaba-inc.com
- * @version 2020/9/14 12:01
+ * @date 2020/9/14 12:01
  */
 public class HIndex {
     public int hIndex(int[] citations) {

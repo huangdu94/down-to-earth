@@ -24,7 +24,7 @@ import java.util.Deque;
  * 树中至少有 2 个节点。
  *
  * @author huangdu.hd@alibaba-inc.com
- * @version 2020/10/12 15:49
+ * @date 2020/10/12 15:49
  */
 public class GetMinimumDifference {
     private int pre = -1;

@@ -21,7 +21,7 @@ import java.util.*;
  * 1 <=numCourses <= 10^5
  *
  * @author huangdu.hd@alibaba-inc.com
- * @version 2020/8/9 13:27
+ * @date 2020/8/9 13:27
  */
 public class CanFinish {
 

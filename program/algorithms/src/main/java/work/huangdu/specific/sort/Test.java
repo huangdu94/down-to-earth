@@ -5,7 +5,7 @@ import java.util.Random;
 
 /**
  * @author huangdu.hd@alibaba-inc.com
- * @version 2020/7/16 17:42
+ * @date 2020/7/16 17:42
  */
 public class Test {
     public static void main(String[] args) {

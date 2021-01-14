@@ -43,7 +43,7 @@ import java.util.List;
  * 输出: false
  *
  * @author huangdu.hd@alibaba-inc.com
- * @version 2020/8/15 11:50
+ * @date 2020/8/15 11:50
  */
 public class IsMatch {
     public boolean isMatch(String s, String p) {

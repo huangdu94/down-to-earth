@@ -11,7 +11,7 @@ package work.huangdu.exploration.start_from_scratch.string.matching;
  * 输出: "dcbabcd"
  *
  * @author huangdu.hd@alibaba-inc.com
- * @version 2020/8/29 20:45
+ * @date 2020/8/29 20:45
  */
 public class ShortestPalindrome {
     public String shortestPalindrome2(String s) {

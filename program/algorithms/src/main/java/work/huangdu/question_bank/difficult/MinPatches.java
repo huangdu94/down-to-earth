@@ -21,7 +21,7 @@ package work.huangdu.question_bank.difficult;
  * 输出: 0
  *
  * @author huangdu.hd@alibaba-inc.com
- * @version 2020/12/29 12:12
+ * @date 2020/12/29 12:12
  */
 public class MinPatches {
     public int minPatches(int[] nums, int n) {

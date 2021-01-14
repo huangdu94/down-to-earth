@@ -28,7 +28,7 @@ import java.util.Deque;
  * 1 <= k <= nums.length
  *
  * @author huangdu.hd@alibaba-inc.com
- * @version 2020/7/27 20:27
+ * @date 2020/7/27 20:27
  */
 public class MaxSlidingWindow {
     // 时间复杂度依然不是线性，但相比暴力解大大优化

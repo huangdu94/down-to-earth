@@ -27,7 +27,7 @@ import java.util.*;
  * ]
  *
  * @author huangdu.hd@alibaba-inc.com
- * @version 2020/9/10 9:44
+ * @date 2020/9/10 9:44
  * @see CombinationSum
  */
 public class CombinationSum2 {

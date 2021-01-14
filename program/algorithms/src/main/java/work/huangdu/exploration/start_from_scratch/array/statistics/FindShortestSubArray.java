@@ -22,7 +22,7 @@ import java.util.Arrays;
  * nums[i] 是一个在0到49,999范围内的整数。
  *
  * @author huangdu.hd@alibaba-inc.com
- * @version 2020/9/14 15:31
+ * @date 2020/9/14 15:31
  */
 public class FindShortestSubArray {
     public static final int LEN = 50000;

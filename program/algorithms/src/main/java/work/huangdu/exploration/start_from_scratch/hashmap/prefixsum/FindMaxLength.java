@@ -17,7 +17,7 @@ import java.util.Map;
  * 注意: 给定的二进制数组的长度不会超过50000。
  *
  * @author huangdu.hd@alibaba-inc.com
- * @version 2020/11/8 17:59
+ * @date 2020/11/8 17:59
  */
 public class FindMaxLength {
     // 遇到1加1，遇到0减1

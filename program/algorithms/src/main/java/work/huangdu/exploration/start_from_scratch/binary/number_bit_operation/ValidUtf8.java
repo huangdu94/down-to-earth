@@ -28,7 +28,7 @@ package work.huangdu.exploration.start_from_scratch.binary.number_bit_operation;
  * 但第二个延续字节不以 10 开头，所以是不符合规则的。
  *
  * @author huangdu.hd@alibaba-inc.com
- * @version 2020/10/17 9:59
+ * @date 2020/10/17 9:59
  */
 public class ValidUtf8 {
     public boolean validUtf8(int[] data) {

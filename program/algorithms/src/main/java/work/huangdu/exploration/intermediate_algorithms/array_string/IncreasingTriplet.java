@@ -15,7 +15,7 @@ package work.huangdu.exploration.intermediate_algorithms.array_string;
  * 输出: false
  *
  * @author huangdu.hd@alibaba-inc.com
- * @version 2020/7/2 10:40
+ * @date 2020/7/2 10:40
  */
 public class IncreasingTriplet {
     public boolean increasingTriplet(int[] nums) {

@@ -18,7 +18,7 @@ import java.util.*;
  * 我们可以不考虑输出结果的顺序。
  *
  * @author huangdu.hd@alibaba-inc.com
- * @version 2020/9/2 13:56
+ * @date 2020/9/2 13:56
  * @see Intersect
  */
 public class Intersection {

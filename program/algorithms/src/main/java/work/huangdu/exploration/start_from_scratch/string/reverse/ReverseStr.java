@@ -13,7 +13,7 @@ package work.huangdu.exploration.start_from_scratch.string.reverse;
  * 给定字符串的长度和 k 在 [1, 10000] 范围内。
  *
  * @author huangdu.hd@alibaba-inc.com
- * @version 2020/9/21 13:48
+ * @date 2020/9/21 13:48
  */
 public class ReverseStr {
     public String reverseStr(String s, int k) {

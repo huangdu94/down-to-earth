@@ -4,7 +4,7 @@ import work.huangdu.exploration.primary_algorithms.array.RotateMap;
 
 /**
  * @author huangdu.hd@alibaba-inc.com
- * @version 2020/9/18 17:45
+ * @date 2020/9/18 17:45
  * @see RotateMap
  */
 public class Rotate {

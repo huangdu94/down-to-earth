@@ -21,7 +21,7 @@ import java.util.Map;
  * 请注意，你的答案必须是 子串 的长度，"pwke" 是一个子序列，不是子串。
  *
  * @author huangdu.hd@alibaba-inc.com
- * @version 2020/7/2 10:38
+ * @date 2020/7/2 10:38
  */
 public class LengthOfLongestSubstring {
     public int lengthOfLongestSubstring(String s) {

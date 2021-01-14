@@ -4,7 +4,7 @@ package work.huangdu.data_structure;
  * Binary Indexed Trees 树状数组
  *
  * @author huangdu.hd@alibaba-inc.com
- * @version 2020/9/4 10:52
+ * @date 2020/9/4 10:52
  */
 public class BinaryIndexedTree {
     // 树状数组

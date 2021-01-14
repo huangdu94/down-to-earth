@@ -16,7 +16,7 @@ package work.huangdu.exploration.start_from_scratch.string.high_precision_calcul
  * 不能使用任何标准库的大数类型（比如 BigInteger）或直接将输入转换为整数来处理。
  *
  * @author huangdu.hd@alibaba-inc.com
- * @version 2020/8/13 10:22
+ * @date 2020/8/13 10:22
  */
 public class Multiply {
 

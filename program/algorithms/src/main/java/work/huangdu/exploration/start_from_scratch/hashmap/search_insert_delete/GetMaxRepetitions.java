@@ -17,7 +17,7 @@ import java.util.Map;
  * 2
  *
  * @author huangdu.hd@alibaba-inc.com
- * @version 2020/11/2 19:24
+ * @date 2020/11/2 19:24
  */
 public class GetMaxRepetitions {
     public int getMaxRepetitions(String s1, int n1, String s2, int n2) {

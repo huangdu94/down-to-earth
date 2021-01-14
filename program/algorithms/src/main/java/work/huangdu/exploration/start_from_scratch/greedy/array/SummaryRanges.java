@@ -40,7 +40,7 @@ import java.util.List;
  * nums 中的所有值都互不相同
  *
  * @author huangdu.hd@alibaba-inc.com
- * @version 2020/11/12 20:01
+ * @date 2020/11/12 20:01
  */
 public class SummaryRanges {
     public List<String> summaryRanges(int[] nums) {

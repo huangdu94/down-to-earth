@@ -19,7 +19,7 @@ package work.huangdu.exploration.start_from_scratch.string.character_statistics;
  * s 只包含“0”或“1”字符。
  *
  * @author huangdu.hd@alibaba-inc.com
- * @version 2020/9/25 10:30
+ * @date 2020/9/25 10:30
  */
 public class CountBinarySubstrings {
     public int countBinarySubstrings(String s) {

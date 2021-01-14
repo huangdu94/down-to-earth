@@ -22,7 +22,7 @@ package work.huangdu.exploration.intermediate_algorithms.dynamic;
  * 题目数据保证答案小于等于 2 * 10 ^ 9
  *
  * @author huangdu.hd@alibaba-inc.com
- * @version 2020/7/20 17:28
+ * @date 2020/7/20 17:28
  */
 public class UniquePaths {
     public int uniquePaths(int m, int n) {

@@ -10,7 +10,7 @@ import work.huangdu.data_structure.ListNode;
  * 输出: 1->2->3->4->5
  *
  * @author huangdu.hd@alibaba-inc.com
- * @version 2020/8/14 0:54
+ * @date 2020/8/14 0:54
  * @see RemoveElement
  */
 public class RemoveElements {

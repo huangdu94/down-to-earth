@@ -31,7 +31,7 @@ import java.util.*;
  * 注意'A'和'a'被认为是两种不同的字符。
  *
  * @author huangdu.hd@alibaba-inc.com
- * @version 2020/9/24 20:45
+ * @date 2020/9/24 20:45
  */
 public class FrequencySort {
     public String frequencySort(String s) {

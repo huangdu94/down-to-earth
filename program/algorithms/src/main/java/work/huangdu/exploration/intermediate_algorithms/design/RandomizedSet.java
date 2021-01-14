@@ -26,7 +26,7 @@ import java.util.*;
  * randomSet.getRandom();
  *
  * @author huangdu.hd@alibaba-inc.com
- * @version 2020/7/20 22:57
+ * @date 2020/7/20 22:57
  */
 public class RandomizedSet {
     private static final int INIT_LEN = 100;

@@ -26,7 +26,7 @@ import java.util.Arrays;
  * 1 <= g[i], s[j] <= 2^31 - 1
  *
  * @author huangdu.hd@alibaba-inc.com
- * @version 2020/11/9 17:29
+ * @date 2020/11/9 17:29
  */
 public class FindContentChildren {
     public int findContentChildren(int[] g, int[] s) {

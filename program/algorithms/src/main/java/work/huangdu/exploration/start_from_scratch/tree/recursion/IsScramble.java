@@ -39,7 +39,7 @@ package work.huangdu.exploration.start_from_scratch.tree.recursion;
  * 输出: false
  *
  * @author huangdu.hd@alibaba-inc.com
- * @version 2021/1/1 17:13
+ * @date 2021/1/1 17:13
  */
 public class IsScramble {
     public boolean isScramble(String s1, String s2) {

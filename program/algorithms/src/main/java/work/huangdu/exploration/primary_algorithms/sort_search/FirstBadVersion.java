@@ -18,7 +18,7 @@ package work.huangdu.exploration.primary_algorithms.sort_search;
  * 所以，4 是第一个错误的版本。
  *
  * @author huangdu.hd@alibaba-inc.com
- * @version 2020/6/23 11:22
+ * @date 2020/6/23 11:22
  */
 public class FirstBadVersion extends VersionControl {
     public FirstBadVersion(int count, int firstVersion) {

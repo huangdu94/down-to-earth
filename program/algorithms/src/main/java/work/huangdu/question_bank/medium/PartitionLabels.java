@@ -19,7 +19,7 @@ import java.util.List;
  * S只包含小写字母 'a' 到 'z' 。
  *
  * @author huangdu.hd@alibaba-inc.com
- * @version 2020/10/22 12:31
+ * @date 2020/10/22 12:31
  */
 public class PartitionLabels {
     public List<Integer> partitionLabels(String S) {

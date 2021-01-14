@@ -13,7 +13,7 @@ import work.huangdu.data_structure.ListNode;
  * 输出: 2->3
  *
  * @author huangdu.hd@alibaba-inc.com
- * @version 2020/12/14 11:30
+ * @date 2020/12/14 11:30
  */
 public class DeleteDuplicates2 {
     public ListNode deleteDuplicates(ListNode head) {

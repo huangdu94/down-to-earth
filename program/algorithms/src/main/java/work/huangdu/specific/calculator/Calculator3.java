@@ -11,7 +11,7 @@ import static work.huangdu.specific.calculator.Tools.isDigit;
  * 1. 支持括号
  *
  * @author huangdu.hd@alibaba-inc.com
- * @version 2020/8/1 12:24
+ * @date 2020/8/1 12:24
  */
 public class Calculator3 {
     // 全局index，记录已经处理到哪个字符了

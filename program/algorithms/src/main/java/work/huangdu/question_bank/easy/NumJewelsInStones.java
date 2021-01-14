@@ -15,7 +15,7 @@ package work.huangdu.question_bank.easy;
  * J 中的字符不重复。
  *
  * @author huangdu.hd@alibaba-inc.com
- * @version 2020/10/2 9:49
+ * @date 2020/10/2 9:49
  */
 public class NumJewelsInStones {
     public int numJewelsInStones(String J, String S) {

@@ -23,7 +23,7 @@ import java.util.List;
  * 说明: 1 <= N <= 10000
  *
  * @author huangdu.hd@alibaba-inc.com
- * @version 2020/10/6 13:40
+ * @date 2020/10/6 13:40
  */
 public class SumOfDistancesInTree {
     private List<List<Integer>> graph;

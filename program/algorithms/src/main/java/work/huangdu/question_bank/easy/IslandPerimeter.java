@@ -18,7 +18,7 @@ import java.util.Deque;
  * 解释: 它的周长是下面图片中的 16 个黄色的边：
  *
  * @author huangdu.hd@alibaba-inc.com
- * @version 2020/10/30 12:45
+ * @date 2020/10/30 12:45
  */
 public class IslandPerimeter {
     private int sum = 0;

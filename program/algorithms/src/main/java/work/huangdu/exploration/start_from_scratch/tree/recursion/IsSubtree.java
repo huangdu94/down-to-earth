@@ -33,7 +33,7 @@ import work.huangdu.data_structure.TreeNode;
  * 返回 false。
  *
  * @author huangdu.hd@alibaba-inc.com
- * @version 2020/12/27 13:25
+ * @date 2020/12/27 13:25
  */
 public class IsSubtree {
     public boolean isSubtree(TreeNode s, TreeNode t) {

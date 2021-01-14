@@ -13,7 +13,7 @@ import java.util.List;
  * 每个时间取值在 00:00~23:59 之间。
  *
  * @author huangdu.hd@alibaba-inc.com
- * @version 2020/9/26 18:08
+ * @date 2020/9/26 18:08
  */
 public class FindMinDifference {
     public int findMinDifference(List<String> timePoints) {

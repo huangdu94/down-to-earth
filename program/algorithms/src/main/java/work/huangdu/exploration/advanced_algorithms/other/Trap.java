@@ -12,7 +12,7 @@ import java.util.Deque;
  * 输出: 6
  *
  * @author huangdu.hd@alibaba-inc.com
- * @version 2020/9/8 11:43
+ * @date 2020/9/8 11:43
  */
 public class Trap {
     public int trap1(int[] height) {

@@ -30,7 +30,7 @@ import java.util.LinkedList;
  * 输出："/a/b/c"
  *
  * @author huangdu.hd@alibaba-inc.com
- * @version 2020/10/22 13:25
+ * @date 2020/10/22 13:25
  */
 public class SimplifyPath {
     public String simplifyPath(String path) {

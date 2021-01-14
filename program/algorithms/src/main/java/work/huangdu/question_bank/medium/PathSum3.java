@@ -26,7 +26,7 @@ import java.util.Map;
  * 3.  -3 -> 11
  *
  * @author huangdu.hd@alibaba-inc.com
- * @version 2020/9/26 10:59
+ * @date 2020/9/26 10:59
  * @see work.huangdu.exploration.start_from_scratch.tree.level_order.HasPathSum
  * @see work.huangdu.exploration.start_from_scratch.tree.level_order.PathSum2
  */

@@ -45,7 +45,7 @@ import java.util.Queue;
  * 简单起见，未提及的规则在这个问题中可被忽略。例如，当游戏结束时你不需要挖出所有地雷，考虑所有你可能赢得游戏或标记方块的情况。
  *
  * @author huangdu.hd@alibaba-inc.com
- * @version 2020/8/20 0:06
+ * @date 2020/8/20 0:06
  */
 public class UpdateBoard {
     public char[][] updateBoard(char[][] board, int[] click) {

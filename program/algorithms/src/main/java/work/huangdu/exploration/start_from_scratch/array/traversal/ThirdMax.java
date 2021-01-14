@@ -18,7 +18,7 @@ package work.huangdu.exploration.start_from_scratch.array.traversal;
  * 存在两个值为2的数，它们都排第二。
  *
  * @author huangdu.hd@alibaba-inc.com
- * @version 2020/9/13 14:32
+ * @date 2020/9/13 14:32
  */
 public class ThirdMax {
     public int thirdMax(int[] nums) {

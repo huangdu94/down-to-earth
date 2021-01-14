@@ -31,7 +31,7 @@ import java.util.List;
  * s 仅含小写英文字母
  *
  * @author huangdu.hd@alibaba-inc.com
- * @version 2021/1/5 17:18
+ * @date 2021/1/5 17:18
  */
 public class LargeGroupPositions {
     public List<List<Integer>> largeGroupPositions(String s) {

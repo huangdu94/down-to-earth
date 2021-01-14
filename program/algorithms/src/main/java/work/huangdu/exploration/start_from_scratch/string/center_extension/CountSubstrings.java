@@ -16,7 +16,7 @@ package work.huangdu.exploration.start_from_scratch.string.center_extension;
  * 输入的字符串长度不会超过 1000 。
  *
  * @author huangdu.hd@alibaba-inc.com
- * @version 2020/8/19 10:12
+ * @date 2020/8/19 10:12
  */
 public class CountSubstrings {
     // 学习马拉车算法

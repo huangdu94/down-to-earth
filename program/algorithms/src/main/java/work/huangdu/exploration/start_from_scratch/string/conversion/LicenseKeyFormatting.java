@@ -20,7 +20,7 @@ package work.huangdu.exploration.start_from_scratch.string.conversion;
  * S 非空
  *
  * @author huangdu.hd@alibaba-inc.com
- * @version 2020/10/2 11:59
+ * @date 2020/10/2 11:59
  */
 public class LicenseKeyFormatting {
     public String licenseKeyFormatting(String S, int K) {
