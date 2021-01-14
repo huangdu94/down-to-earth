@@ -1,4 +1,4 @@
-package work.huangdu.unread;
+package work.huangdu.question_bank.difficult;
 
 import java.util.*;
 
@@ -18,13 +18,14 @@ import java.util.*;
  * 输出：[]
  * 解释：与示例 1 大致相同，但是在排序后的列表中，4 必须放在 6 的前面。
  * 提示：
- * 1 <= m <= n <= 3 * 104
+ * 1 <= m <= n <= 3 * 10^4
  * group.length == beforeItems.length == n
  * -1 <= group[i] <= m - 1
  * 0 <= beforeItems[i].length <= n - 1
  * 0 <= beforeItems[i][j] <= n - 1
  * i != beforeItems[i][j]
  * beforeItems[i] 不含重复元素
+ *
  * @author huangdu.hd@alibaba-inc.com
  * @date 2021/1/12 19:59
  */
@@ -121,5 +122,22 @@ public class SortItems {
             return res;
         }
         return new ArrayList<>();
+    }
+
+    public static void main(String[] args) {
+        SortItems st = new SortItems();
+        int n = 8;
+        int m = 2;
+        int[] group = {-1, -1, 1, 0, 0, 1, 0, -1};
+        List<List<Integer>> beforeItems = new ArrayList<>(n);
+        beforeItems.add(new ArrayList<>());
+        beforeItems.add(Arrays.asList(6));
+        beforeItems.add(Arrays.asList(5));
+        beforeItems.add(Arrays.asList(6));
+        beforeItems.add(Arrays.asList(3, 6));
+        beforeItems.add(new ArrayList<>());
+        beforeItems.add(new ArrayList<>());
+        beforeItems.add(new ArrayList<>());
+        System.out.println(Arrays.toString(st.sortItems(n, m, group, beforeItems)));
     }
 }
