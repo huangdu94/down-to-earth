@@ -1,4 +1,4 @@
-package work.huangdu.unread;
+package work.huangdu.question_bank.difficult;
 
 /**
  * 803. 打砖块
@@ -56,21 +56,19 @@ package work.huangdu.unread;
  */
 public class HitBricks {
 
-    private int rows;
-    private int cols;
+    private int m;
+    private int n;
 
     public static final int[][] DIRECTIONS = {{0, 1}, {1, 0}, {-1, 0}, {0, -1}};
 
     public int[] hitBricks(int[][] grid, int[][] hits) {
-        this.rows = grid.length;
-        this.cols = grid[0].length;
+        this.m = grid.length;
+        this.n = grid[0].length;
 
         // 第 1 步：把 grid 中的砖头全部击碎，通常算法问题不能修改输入数据，这一步非必需，可以认为是一种答题规范
-        int[][] copy = new int[rows][cols];
-        for (int i = 0; i < rows; i++) {
-            for (int j = 0; j < cols; j++) {
-                copy[i][j] = grid[i][j];
-            }
+        int[][] copy = new int[m][n];
+        for (int i = 0; i < m; i++) {
+            System.arraycopy(grid[i], 0, copy[i], 0, n);
         }
 
         // 把 copy 中的砖头全部击碎
@@ -79,27 +77,27 @@ public class HitBricks {
         }
 
         // 第 2 步：建图，把砖块和砖块的连接关系输入并查集，size 表示二维网格的大小，也表示虚拟的「屋顶」在并查集中的编号
-        int size = rows * cols;
-        UnionFind unionFind = new UnionFind(size + 1);
+        int size = m * n;
+        UnionFindSet ufs = new UnionFindSet(size + 1);
 
         // 将下标为 0 的这一行的砖块与「屋顶」相连
-        for (int j = 0; j < cols; j++) {
+        for (int j = 0; j < n; j++) {
             if (copy[0][j] == 1) {
-                unionFind.union(j, size);
+                ufs.union(j, size);
             }
         }
 
         // 其余网格，如果是砖块向上、向左看一下，如果也是砖块，在并查集中进行合并
-        for (int i = 1; i < rows; i++) {
-            for (int j = 0; j < cols; j++) {
+        for (int i = 1; i < m; i++) {
+            for (int j = 0; j < n; j++) {
                 if (copy[i][j] == 1) {
                     // 如果上方也是砖块
                     if (copy[i - 1][j] == 1) {
-                        unionFind.union(getIndex(i - 1, j), getIndex(i, j));
+                        ufs.union(getIndex(i - 1, j), getIndex(i, j));
                     }
                     // 如果左边也是砖块
                     if (j > 0 && copy[i][j - 1] == 1) {
-                        unionFind.union(getIndex(i, j - 1), getIndex(i, j));
+                        ufs.union(getIndex(i, j - 1), getIndex(i, j));
                     }
                 }
             }
@@ -111,36 +109,30 @@ public class HitBricks {
         for (int i = hitsLen - 1; i >= 0; i--) {
             int x = hits[i][0];
             int y = hits[i][1];
-
             // 注意：这里不能用 copy，语义上表示，如果原来在 grid 中，这一块是空白，这一步不会产生任何砖块掉落
             // 逆向补回的时候，与屋顶相连的砖块数量也肯定不会增加
             if (grid[x][y] == 0) {
                 continue;
             }
-
             // 补回之前与屋顶相连的砖块数
-            int origin = unionFind.getSize(size);
-
+            int origin = ufs.getSize(size);
             // 注意：如果补回的这个结点在第 1 行，要告诉并查集它与屋顶相连（逻辑同第 2 步）
             if (x == 0) {
-                unionFind.union(y, size);
+                ufs.union(y, size);
             }
-
             // 在 4 个方向上看一下，如果相邻的 4 个方向有砖块，合并它们
             for (int[] direction : DIRECTIONS) {
                 int newX = x + direction[0];
                 int newY = y + direction[1];
 
                 if (inArea(newX, newY) && copy[newX][newY] == 1) {
-                    unionFind.union(getIndex(x, y), getIndex(newX, newY));
+                    ufs.union(getIndex(x, y), getIndex(newX, newY));
                 }
             }
-
             // 补回之后与屋顶相连的砖块数
-            int current = unionFind.getSize(size);
+            int current = ufs.getSize(size);
             // 减去的 1 是逆向补回的砖块（正向移除的砖块），与 0 比较大小，是因为存在一种情况，添加当前砖块，不会使得与屋顶连接的砖块数更多
             res[i] = Math.max(0, current - origin - 1);
-
             // 真正补上这个砖块
             copy[x][y] = 1;
         }
@@ -149,38 +141,29 @@ public class HitBricks {
 
     /**
      * 输入坐标在二维网格中是否越界
-     *
-     * @param x
-     * @param y
-     * @return
      */
     private boolean inArea(int x, int y) {
-        return x >= 0 && x < rows && y >= 0 && y < cols;
+        return x >= 0 && x < m && y >= 0 && y < n;
     }
 
     /**
      * 二维坐标转换为一维坐标
-     *
-     * @param x
-     * @param y
-     * @return
      */
     private int getIndex(int x, int y) {
-        return x * cols + y;
+        return x * n + y;
     }
 
-    private class UnionFind {
-
+    private static class UnionFindSet {
         /**
          * 当前结点的父亲结点
          */
-        private int[] parent;
+        private final int[] parent;
         /**
          * 以当前结点为根结点的子树的结点总数
          */
-        private int[] size;
+        private final int[] size;
 
-        public UnionFind(int n) {
+        public UnionFindSet(int n) {
             parent = new int[n];
             size = new int[n];
             for (int i = 0; i < n; i++) {
@@ -191,9 +174,6 @@ public class HitBricks {
 
         /**
          * 路径压缩，只要求每个不相交集合的「根结点」的子树包含的结点总数数值正确即可，因此在路径压缩的过程中不用维护数组 size
-         *
-         * @param x
-         * @return
          */
         public int find(int x) {
             if (x != parent[x]) {
@@ -205,7 +185,6 @@ public class HitBricks {
         public void union(int x, int y) {
             int rootX = find(x);
             int rootY = find(y);
-
             if (rootX == rootY) {
                 return;
             }
@@ -215,7 +194,7 @@ public class HitBricks {
         }
 
         /**
-         * @param x
+         * @param x 节点号
          * @return x 在并查集的根结点的子树包含的结点总数
          */
         public int getSize(int x) {
