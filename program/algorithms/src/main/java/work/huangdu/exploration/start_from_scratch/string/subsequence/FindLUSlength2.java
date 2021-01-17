@@ -14,7 +14,7 @@ import java.util.*;
  * 所有给定的字符串长度不会超过 10 。
  * 给定字符串列表的长度将在 [2, 50 ] 之间。
  *
- * @author huangdu.hd@alibaba-inc.com
+ * @author yiyun (huangdu.hd@alibaba-inc.com)
  * @date 2020/9/30 13:06
  */
 public class FindLUSlength2 {

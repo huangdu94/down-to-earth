@@ -32,7 +32,7 @@ import work.huangdu.data_structure.TreeNode;
  * *  1   2
  * 返回 false。
  *
- * @author huangdu.hd@alibaba-inc.com
+ * @author yiyun (huangdu.hd@alibaba-inc.com)
  * @date 2020/12/27 13:25
  */
 public class IsSubtree {

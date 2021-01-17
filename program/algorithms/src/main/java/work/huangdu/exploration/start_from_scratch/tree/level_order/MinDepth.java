@@ -19,7 +19,7 @@ import java.util.Queue;
  * *   15   7
  * 返回它的最小深度  2.
  *
- * @author huangdu.hd@alibaba-inc.com
+ * @author yiyun (huangdu.hd@alibaba-inc.com)
  * @date 2020/8/8 22:55
  */
 public class MinDepth {

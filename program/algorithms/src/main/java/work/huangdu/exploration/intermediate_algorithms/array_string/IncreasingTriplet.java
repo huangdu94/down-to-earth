@@ -14,7 +14,7 @@ package work.huangdu.exploration.intermediate_algorithms.array_string;
  * 输入: [5,4,3,2,1]
  * 输出: false
  *
- * @author huangdu.hd@alibaba-inc.com
+ * @author yiyun (huangdu.hd@alibaba-inc.com)
  * @date 2020/7/2 10:40
  */
 public class IncreasingTriplet {

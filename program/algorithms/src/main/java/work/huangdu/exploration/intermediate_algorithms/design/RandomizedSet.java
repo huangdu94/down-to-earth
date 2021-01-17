@@ -25,7 +25,7 @@ import java.util.*;
  * // 由于 2 是集合中唯一的数字，getRandom 总是返回 2 。
  * randomSet.getRandom();
  *
- * @author huangdu.hd@alibaba-inc.com
+ * @author yiyun (huangdu.hd@alibaba-inc.com)
  * @date 2020/7/20 22:57
  */
 public class RandomizedSet {

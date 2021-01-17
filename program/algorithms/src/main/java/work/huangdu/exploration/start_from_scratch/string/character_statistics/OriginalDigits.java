@@ -14,7 +14,7 @@ package work.huangdu.exploration.start_from_scratch.string.character_statistics;
  * 输入: "fviefuro"
  * 输出: "45" (fourfive)
  *
- * @author huangdu.hd@alibaba-inc.com
+ * @author yiyun (huangdu.hd@alibaba-inc.com)
  * @date 2020/9/24 20:47
  */
 public class OriginalDigits {

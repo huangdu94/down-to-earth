@@ -14,7 +14,7 @@ package work.huangdu.exploration.start_from_scratch.binary.number_bit_operation;
  * 数组中元素的范围为从 0到 10^9。
  * 数组的长度不超过 10^4。
  *
- * @author huangdu.hd@alibaba-inc.com
+ * @author yiyun (huangdu.hd@alibaba-inc.com)
  * @date 2020/10/15 12:41
  */
 public class TotalHammingDistance {

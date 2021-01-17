@@ -13,7 +13,7 @@ package work.huangdu.question_bank.medium;
  * 注意:
  * S 只包含小写字母并且长度在[1, 500]区间内。
  *
- * @author huangdu.hd@alibaba-inc.com
+ * @author yiyun (huangdu.hd@alibaba-inc.com)
  * @date 2020/11/30 0:12
  */
 public class ReorganizeString {

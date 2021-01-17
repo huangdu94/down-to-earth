@@ -23,7 +23,7 @@ import work.huangdu.question_bank.difficult.MaxProfit4;
  * 0 < prices[i] < 50000.
  * 0 <= fee < 50000.
  *
- * @author huangdu.hd@alibaba-inc.com
+ * @author yiyun (huangdu.hd@alibaba-inc.com)
  * @date 2020/8/26 21:27
  * @see work.huangdu.exploration.primary_algorithms.array.MaxProfit
  * @see work.huangdu.exploration.primary_algorithms.dynamic.MaxProfit

@@ -11,7 +11,7 @@ package work.huangdu.exploration.advanced_algorithms.array_string;
  * 进阶：
  * 你可以在常数空间复杂度内完成这个题目吗？（ 出于对空间复杂度分析的目的，输出数组不被视为额外空间。）
  *
- * @author huangdu.hd@alibaba-inc.com
+ * @author yiyun (huangdu.hd@alibaba-inc.com)
  * @date 2020/7/26 19:22
  */
 public class ProductExceptSelf {

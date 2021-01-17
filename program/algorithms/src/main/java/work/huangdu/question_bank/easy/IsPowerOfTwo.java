@@ -20,7 +20,7 @@ import java.util.Set;
  * 输入: 218
  * 输出: false
  *
- * @author huangdu.hd@alibaba-inc.com
+ * @author yiyun (huangdu.hd@alibaba-inc.com)
  * @date 2020/8/15 13:13
  * @see IsPowerOfThree
  * @see IsPowerOfFour

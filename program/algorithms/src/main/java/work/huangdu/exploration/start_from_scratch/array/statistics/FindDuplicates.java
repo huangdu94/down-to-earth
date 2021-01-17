@@ -14,7 +14,7 @@ import java.util.List;
  * 输出:
  * [2,3]
  *
- * @author huangdu.hd@alibaba-inc.com
+ * @author yiyun (huangdu.hd@alibaba-inc.com)
  * @date 2020/9/14 14:30
  */
 public class FindDuplicates {

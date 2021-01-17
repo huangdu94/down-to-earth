@@ -3,7 +3,7 @@ package work.huangdu.data_structure;
 /**
  * Trie node.
  *
- * @author huangdu.hd@alibaba-inc.com
+ * @author yiyun (huangdu.hd@alibaba-inc.com)
  * @date 2020/8/14 17:46
  */
 public class TrieNode {

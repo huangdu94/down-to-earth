@@ -10,7 +10,7 @@ import static work.huangdu.specific.calculator.Tools.isDigit;
  * 相比于Calculator2多了一个功能
  * 1. 支持括号
  *
- * @author huangdu.hd@alibaba-inc.com
+ * @author yiyun (huangdu.hd@alibaba-inc.com)
  * @date 2020/8/1 12:24
  */
 public class Calculator3 {

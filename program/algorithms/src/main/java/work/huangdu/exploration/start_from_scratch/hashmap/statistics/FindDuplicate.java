@@ -31,7 +31,7 @@ import java.util.Map;
  * 修改后的解决方案的时间复杂度是多少？其中最耗时的部分和消耗内存的部分是什么？如何优化？
  * 如何确保您发现的重复文件不是误报？
  *
- * @author huangdu.hd@alibaba-inc.com
+ * @author yiyun (huangdu.hd@alibaba-inc.com)
  * @date 2020/11/6 20:38
  */
 public class FindDuplicate {

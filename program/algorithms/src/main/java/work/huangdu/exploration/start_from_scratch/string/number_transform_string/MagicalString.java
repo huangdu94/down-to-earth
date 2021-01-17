@@ -17,7 +17,7 @@ package work.huangdu.exploration.start_from_scratch.string.number_transform_stri
  * 输出：3
  * 解释：神奇字符串 S 的前 6 个元素是 “12211”，它包含三个 1，因此返回 3。
  *
- * @author huangdu.hd@alibaba-inc.com
+ * @author yiyun (huangdu.hd@alibaba-inc.com)
  * @date 2020/9/28 22:07
  */
 public class MagicalString {

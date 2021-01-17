@@ -18,7 +18,7 @@ import java.util.List;
  * 输出: 299
  * 说明: N 是在 [0, 10^9] 范围内的一个整数。
  *
- * @author huangdu.hd@alibaba-inc.com
+ * @author yiyun (huangdu.hd@alibaba-inc.com)
  * @date 2020/12/15 9:53
  */
 public class MonotoneIncreasingDigits {

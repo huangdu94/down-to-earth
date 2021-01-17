@@ -17,7 +17,7 @@ package work.huangdu.question_bank.easy;
  * cost 的长度将会在 [2, 1000]。
  * 每一个 cost[i] 将会是一个Integer类型，范围为 [0, 999]。
  *
- * @author huangdu.hd@alibaba-inc.com
+ * @author yiyun (huangdu.hd@alibaba-inc.com)
  * @date 2020/12/21 12:56
  */
 public class MinCostClimbingStairs {

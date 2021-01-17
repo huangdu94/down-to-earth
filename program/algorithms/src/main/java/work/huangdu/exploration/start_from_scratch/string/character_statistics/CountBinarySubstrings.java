@@ -18,7 +18,7 @@ package work.huangdu.exploration.start_from_scratch.string.character_statistics;
  * s.length 在1到50,000之间。
  * s 只包含“0”或“1”字符。
  *
- * @author huangdu.hd@alibaba-inc.com
+ * @author yiyun (huangdu.hd@alibaba-inc.com)
  * @date 2020/9/25 10:30
  */
 public class CountBinarySubstrings {

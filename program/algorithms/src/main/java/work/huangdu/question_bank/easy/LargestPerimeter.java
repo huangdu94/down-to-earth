@@ -22,7 +22,7 @@ import java.util.Arrays;
  * 3 <= A.length <= 10000
  * 1 <= A[i] <= 10^6
  *
- * @author huangdu.hd@alibaba-inc.com
+ * @author yiyun (huangdu.hd@alibaba-inc.com)
  * @date 2020/11/29 10:25
  */
 public class LargestPerimeter {

@@ -51,7 +51,7 @@ package work.huangdu.unread;
  * 0 <= yi <= n - 1
  * 所有 (xi, yi) 互不相同
  *
- * @author huangdu.hd@alibaba-inc.com
+ * @author yiyun (huangdu.hd@alibaba-inc.com)
  * @date 2021/1/16
  */
 public class HitBricks {

@@ -10,7 +10,7 @@ package work.huangdu.question_bank.medium;
  * 3,2,1 → 1,2,3
  * 1,1,5 → 1,5,1
  *
- * @author huangdu.hd@alibaba-inc.com
+ * @author yiyun (huangdu.hd@alibaba-inc.com)
  * @date 2020/11/10 12:22
  */
 public class NextPermutation {

@@ -19,7 +19,7 @@ import java.util.Set;
  * 提示：
  * 你的算法的时间复杂度应为O(n)，并且只能使用常数级别的额外空间。
  *
- * @author huangdu.hd@alibaba-inc.com
+ * @author yiyun (huangdu.hd@alibaba-inc.com)
  * @date 2020/7/27 14:28
  */
 public class FirstMissingPositive {

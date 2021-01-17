@@ -16,7 +16,7 @@ package work.huangdu.exploration.start_from_scratch.binary.number_bit_operation;
  * 给定的整数保证在 32 位带符号整数的范围内。
  * 你可以假定二进制数不包含前导零位。
  *
- * @author huangdu.hd@alibaba-inc.com
+ * @author yiyun (huangdu.hd@alibaba-inc.com)
  * @date 2020/10/14 13:14
  */
 public class FindComplement {

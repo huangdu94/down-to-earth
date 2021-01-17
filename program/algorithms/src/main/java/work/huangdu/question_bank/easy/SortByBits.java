@@ -32,7 +32,7 @@ import java.util.Arrays;
  * 1 <= arr.length <= 500
  * 0 <= arr[i] <= 10^4
  *
- * @author huangdu.hd@alibaba-inc.com
+ * @author yiyun (huangdu.hd@alibaba-inc.com)
  * @date 2020/11/6 11:50
  */
 public class SortByBits {

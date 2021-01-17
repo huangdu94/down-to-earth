@@ -33,7 +33,7 @@ import java.util.List;
  * 解释: 输入为: [5,1,4,null,null,3,6]。
  * 根节点的值为 5 ，但是其右子节点值为 4 。
  *
- * @author huangdu.hd@alibaba-inc.com
+ * @author yiyun (huangdu.hd@alibaba-inc.com)
  * @date 2020/6/22 17:18
  */
 public class ValidBST {

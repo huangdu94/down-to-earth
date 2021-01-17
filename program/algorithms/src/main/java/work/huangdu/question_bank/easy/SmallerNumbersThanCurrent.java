@@ -27,7 +27,7 @@ import java.util.Comparator;
  * 2 <= nums.length <= 500
  * 0 <= nums[i] <= 100
  *
- * @author huangdu.hd@alibaba-inc.com
+ * @author yiyun (huangdu.hd@alibaba-inc.com)
  * @date 2020/10/26 1:28
  */
 public class SmallerNumbersThanCurrent {

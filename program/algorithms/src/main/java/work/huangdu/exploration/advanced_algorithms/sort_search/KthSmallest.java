@@ -19,7 +19,7 @@ import java.util.Queue;
  * 提示：
  * 你可以假设 k 的值永远是有效的，1 ≤ k ≤ n^2。
  *
- * @author huangdu.hd@alibaba-inc.com
+ * @author yiyun (huangdu.hd@alibaba-inc.com)
  * @date 2020/8/21 11:39
  */
 public class KthSmallest {

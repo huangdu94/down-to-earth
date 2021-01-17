@@ -30,7 +30,7 @@ package work.huangdu.specific.multithreading;
  * 尽管输入中的数字似乎暗示了顺序，但是我们并不保证线程在操作系统中的调度顺序。
  * 你看到的输入格式主要是为了确保测试的全面性。
  *
- * @author huangdu.hd@alibaba-inc.com
+ * @author yiyun (huangdu.hd@alibaba-inc.com)
  * @date 2020/8/28 14:47
  */
 public class Foo {

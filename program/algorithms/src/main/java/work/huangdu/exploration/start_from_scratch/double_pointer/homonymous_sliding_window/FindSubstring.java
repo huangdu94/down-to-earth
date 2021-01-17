@@ -23,7 +23,7 @@ import java.util.Map;
  * words = ["word","good","best","word"]
  * 输出：[]
  *
- * @author huangdu.hd@alibaba-inc.com
+ * @author yiyun (huangdu.hd@alibaba-inc.com)
  * @date 2020/12/19 15:50
  */
 public class FindSubstring {

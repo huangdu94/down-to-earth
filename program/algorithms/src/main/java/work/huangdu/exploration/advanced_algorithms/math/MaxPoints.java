@@ -32,7 +32,7 @@ import java.util.Set;
  * +------------------->
  * 0 1 2 3 4 5 6
  *
- * @author huangdu.hd@alibaba-inc.com
+ * @author yiyun (huangdu.hd@alibaba-inc.com)
  * @date 2020/9/7 20:35
  */
 public class MaxPoints {
@@ -81,13 +81,13 @@ public class MaxPoints {
         int deltaX = p1[0] - p2[0];
         int deltaY = p1[1] - p2[1];
         int slopeGcd = computeGcd(deltaX, deltaY);
-        int slopeDenominator = deltaY / slopeGcd;
-        int slopeNumerator = deltaX / slopeGcd;
-        int interceptDenominator = p1[1] * slopeNumerator - p1[0] * slopeDenominator;
-        int interceptGcd = computeGcd(interceptDenominator, slopeNumerator);
-        interceptDenominator = interceptDenominator / interceptGcd;
-        int interceptNumerator = slopeNumerator / interceptGcd;
-        return sb.append(slopeDenominator).append('/').append(slopeNumerator).append("x+").append(interceptDenominator).append('/').append(interceptNumerator).toString();
+        int slopeNumerator = deltaY / slopeGcd;
+        int slopeDenominator = deltaX / slopeGcd;
+        int interceptNumerator = p1[1] * slopeDenominator - p1[0] * slopeNumerator;
+        int interceptGcd = computeGcd(interceptNumerator, slopeDenominator);
+        interceptNumerator = interceptNumerator / interceptGcd;
+        int interceptDenominator = slopeDenominator / interceptGcd;
+        return sb.append(slopeNumerator).append('/').append(slopeDenominator).append("x+").append(interceptNumerator).append('/').append(interceptDenominator).toString();
     }
 
     /**

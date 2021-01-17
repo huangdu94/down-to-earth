@@ -17,7 +17,7 @@ package work.huangdu.exploration.start_from_scratch.greedy.array;
  * 解释: 你可以分别给这三个孩子分发 1、2、1 颗糖果。
  * 第三个孩子只得到 1 颗糖果，这已满足上述两个条件。
  *
- * @author huangdu.hd@alibaba-inc.com
+ * @author yiyun (huangdu.hd@alibaba-inc.com)
  * @date 2020/11/10 12:58
  */
 public class Candy {

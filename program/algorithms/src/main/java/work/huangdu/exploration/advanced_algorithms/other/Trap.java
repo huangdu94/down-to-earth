@@ -11,7 +11,7 @@ import java.util.Deque;
  * 输入: [0,1,0,2,1,0,1,3,2,1,2,1]
  * 输出: 6
  *
- * @author huangdu.hd@alibaba-inc.com
+ * @author yiyun (huangdu.hd@alibaba-inc.com)
  * @date 2020/9/8 11:43
  */
 public class Trap {

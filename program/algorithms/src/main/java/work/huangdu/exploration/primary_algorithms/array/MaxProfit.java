@@ -29,7 +29,7 @@ import java.util.HashSet;
  * 1 <= prices.length <= 3 * 10 ^ 4
  * 0 <= prices[i]<= 10 ^ 4
  *
- * @author huangdu.hd@alibaba-inc.com
+ * @author yiyun (huangdu.hd@alibaba-inc.com)
  * @date 2020/7/26 15:08
  * @see work.huangdu.exploration.primary_algorithms.dynamic.MaxProfit
  * @see work.huangdu.question_bank.medium.MaxProfit

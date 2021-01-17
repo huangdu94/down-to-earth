@@ -4,7 +4,7 @@ package work.huangdu.exploration.primary_algorithms.math;
  * 204. 计数质数
  * 统计所有小于非负整数 n 的质数的数量。
  *
- * @author huangdu.hd@alibaba-inc.com
+ * @author yiyun (huangdu.hd@alibaba-inc.com)
  * @date 2020/6/29 17:21
  */
 public class CountPrimes {

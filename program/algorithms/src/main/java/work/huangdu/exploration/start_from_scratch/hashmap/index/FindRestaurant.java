@@ -27,7 +27,7 @@ import java.util.Map;
  * 下标从0开始，到列表的长度减1。
  * 两个列表都没有重复的元素。
  *
- * @author huangdu.hd@alibaba-inc.com
+ * @author yiyun (huangdu.hd@alibaba-inc.com)
  * @date 2020/11/4 19:08
  */
 public class FindRestaurant {

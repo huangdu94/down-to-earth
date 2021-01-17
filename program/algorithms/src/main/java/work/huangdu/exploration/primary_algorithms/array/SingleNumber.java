@@ -12,7 +12,7 @@ package work.huangdu.exploration.primary_algorithms.array;
  * 输入: [4,1,2,1,2]
  * 输出: 4
  *
- * @author huangdu.hd@alibaba-inc.com
+ * @author yiyun (huangdu.hd@alibaba-inc.com)
  * @date 2020/7/26 15:19
  */
 public class SingleNumber {

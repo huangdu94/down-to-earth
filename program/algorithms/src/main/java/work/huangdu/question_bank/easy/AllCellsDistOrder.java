@@ -27,7 +27,7 @@ import java.util.Arrays;
  * 0 <= r0 < R
  * 0 <= c0 < C
  *
- * @author huangdu.hd@alibaba-inc.com
+ * @author yiyun (huangdu.hd@alibaba-inc.com)
  * @date 2020/11/17 18:35
  */
 public class AllCellsDistOrder {

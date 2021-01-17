@@ -15,7 +15,7 @@ import java.util.Arrays;
  * 解释：这是因为新的区间 [4,8] 与 [3,5],[6,7],[8,10] 重叠。
  * 注意：输入类型已在 2019 年 4 月 15 日更改。请重置为默认代码定义以获取新的方法签名。
  *
- * @author huangdu.hd@alibaba-inc.com
+ * @author yiyun (huangdu.hd@alibaba-inc.com)
  * @date 2020/11/4 12:18
  */
 public class Insert {

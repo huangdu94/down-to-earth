@@ -33,7 +33,7 @@ import work.huangdu.data_structure.TreeNode;
  * 树中节点数目的范围在 [0, 10^4] 内
  * -1000 <= Node.val <= 1000
  *
- * @author huangdu.hd@alibaba-inc.com
+ * @author yiyun (huangdu.hd@alibaba-inc.com)
  * @date 2020/12/27 13:12
  */
 public class FindTilt {

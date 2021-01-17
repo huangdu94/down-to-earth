@@ -16,7 +16,7 @@ package work.huangdu.exploration.start_from_scratch.array.change_move;
  * 1 <= n <= 10 ^ 4
  * - 10 ^ 5 <= nums[i] <= 10 ^ 5
  *
- * @author huangdu.hd@alibaba-inc.com
+ * @author yiyun (huangdu.hd@alibaba-inc.com)
  * @date 2020/9/15 12:33
  */
 public class CheckPossibility {

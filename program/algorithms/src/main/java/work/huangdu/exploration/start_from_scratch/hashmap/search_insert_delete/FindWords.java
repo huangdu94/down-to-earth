@@ -16,7 +16,7 @@ import java.util.Set;
  * 你可以重复使用键盘上同一字符。
  * 你可以假设输入的字符串将只包含字母。
  *
- * @author huangdu.hd@alibaba-inc.com
+ * @author yiyun (huangdu.hd@alibaba-inc.com)
  * @date 2020/11/1 18:06
  */
 public class FindWords {

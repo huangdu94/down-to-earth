@@ -17,7 +17,7 @@ import java.util.Set;
  * 输入: [1,1,1,3,3,4,3,2,4,2]
  * 输出: true
  *
- * @author huangdu.hd@alibaba-inc.com
+ * @author yiyun (huangdu.hd@alibaba-inc.com)
  * @date 2020/7/26 15:15
  * @see work.huangdu.exploration.start_from_scratch.hashmap.index.ContainsNearbyDuplicate
  * @see work.huangdu.exploration.start_from_scratch.hashmap.index.ContainsNearbyAlmostDuplicate

@@ -27,7 +27,7 @@ package work.huangdu.exploration.start_from_scratch.greedy.array;
  * n 的范围是 [1, 10000]。
  * 在每台超级洗衣机中，衣物数量的范围是 [0, 1e5]。
  *
- * @author huangdu.hd@alibaba-inc.com
+ * @author yiyun (huangdu.hd@alibaba-inc.com)
  * @date 2020/11/16 10:29
  */
 public class FindMinMoves {

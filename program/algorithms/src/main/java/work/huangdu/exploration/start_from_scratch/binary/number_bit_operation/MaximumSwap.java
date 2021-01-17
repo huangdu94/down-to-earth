@@ -16,7 +16,7 @@ import java.util.Arrays;
  * 注意:
  * 给定数字的范围是 [0, 10^8]
  *
- * @author huangdu.hd@alibaba-inc.com
+ * @author yiyun (huangdu.hd@alibaba-inc.com)
  * @date 2020/10/18 11:18
  */
 public class MaximumSwap {

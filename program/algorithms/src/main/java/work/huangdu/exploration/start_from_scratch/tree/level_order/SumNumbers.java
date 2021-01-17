@@ -35,7 +35,7 @@ import java.util.Queue;
  * 从根到叶子节点路径 4->0 代表数字 40.
  * 因此，数字总和 = 495 + 491 + 40 = 1026.
  *
- * @author huangdu.hd@alibaba-inc.com
+ * @author yiyun (huangdu.hd@alibaba-inc.com)
  * @date 2020/10/29 0:09
  */
 public class SumNumbers {

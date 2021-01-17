@@ -18,7 +18,7 @@ import java.util.Set;
  * 输入: nums = [1,2,3,1,2,3], k = 2
  * 输出: false
  *
- * @author huangdu.hd@alibaba-inc.com
+ * @author yiyun (huangdu.hd@alibaba-inc.com)
  * @date 2020/8/14 11:33
  * @see work.huangdu.exploration.primary_algorithms.array.ContainsDuplicate
  * @see work.huangdu.exploration.start_from_scratch.hashmap.index.ContainsNearbyAlmostDuplicate

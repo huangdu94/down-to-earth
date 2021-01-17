@@ -20,7 +20,7 @@ import java.util.List;
  * [1,4,6,4,1]
  * ]
  *
- * @author huangdu.hd@alibaba-inc.com
+ * @author yiyun (huangdu.hd@alibaba-inc.com)
  * @date 2020/7/1 21:55
  */
 public class Generate {

@@ -16,7 +16,7 @@ import java.util.*;
  * 0 <= s.length <= 10^5
  * s[i] 为 'A'、'C'、'G' 或 'T'
  *
- * @author huangdu.hd@alibaba-inc.com
+ * @author yiyun (huangdu.hd@alibaba-inc.com)
  * @date 2020/12/15 10:43
  */
 public class FindRepeatedDnaSequences {

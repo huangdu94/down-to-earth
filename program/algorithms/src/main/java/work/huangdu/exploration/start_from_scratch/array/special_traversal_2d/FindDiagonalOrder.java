@@ -17,7 +17,7 @@ import java.util.Arrays;
  * 说明:
  * 给定矩阵中的元素总数不会超过 100000 。
  *
- * @author huangdu.hd@alibaba-inc.com
+ * @author yiyun (huangdu.hd@alibaba-inc.com)
  * @date 2020/9/17 15:24
  */
 public class FindDiagonalOrder {

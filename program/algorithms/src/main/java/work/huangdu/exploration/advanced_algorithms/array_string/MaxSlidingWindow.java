@@ -27,7 +27,7 @@ import java.util.Deque;
  * -10^4 <= nums[i] <= 10^4
  * 1 <= k <= nums.length
  *
- * @author huangdu.hd@alibaba-inc.com
+ * @author yiyun (huangdu.hd@alibaba-inc.com)
  * @date 2020/7/27 20:27
  */
 public class MaxSlidingWindow {

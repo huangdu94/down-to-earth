@@ -15,7 +15,7 @@ import work.huangdu.data_structure.TreeNode;
  * 返回 3, 它的长度是路径 [4,2,1,3] 或者 [5,2,1,3]。
  * 注意：两结点之间的路径长度是以它们之间边的数目表示。
  *
- * @author huangdu.hd@alibaba-inc.com
+ * @author yiyun (huangdu.hd@alibaba-inc.com)
  * @date 2021/1/1 19:47
  */
 public class DiameterOfBinaryTree {

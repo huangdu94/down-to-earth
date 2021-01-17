@@ -41,7 +41,7 @@ import java.util.*;
  * 由于图是无向的，如果节点 p 是节点 q 的邻居，那么节点 q 也必须是节点 p 的邻居。
  * 图是连通图，你可以从给定节点访问到所有节点。
  *
- * @author huangdu.hd@alibaba-inc.com
+ * @author yiyun (huangdu.hd@alibaba-inc.com)
  * @date 2020/8/12 0:02
  */
 public class CloneGraph {

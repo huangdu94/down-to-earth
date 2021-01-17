@@ -21,7 +21,7 @@ import java.util.Arrays;
  * nums.length 在1到50,000区间范围内。
  * nums[i] 是一个在0到49,999范围内的整数。
  *
- * @author huangdu.hd@alibaba-inc.com
+ * @author yiyun (huangdu.hd@alibaba-inc.com)
  * @date 2020/9/14 15:31
  */
 public class FindShortestSubArray {

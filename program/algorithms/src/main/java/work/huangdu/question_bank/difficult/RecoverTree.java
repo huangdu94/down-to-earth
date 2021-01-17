@@ -37,7 +37,7 @@ import java.util.Stack;
  * 使用 O(n) 空间复杂度的解法很容易实现。
  * 你能想出一个只使用常数空间的解决方案吗？
  *
- * @author huangdu.hd@alibaba-inc.com
+ * @author yiyun (huangdu.hd@alibaba-inc.com)
  * @date 2020/8/8 10:57
  */
 public class RecoverTree {

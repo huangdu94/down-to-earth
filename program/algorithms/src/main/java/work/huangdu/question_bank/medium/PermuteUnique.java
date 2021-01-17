@@ -16,7 +16,7 @@ import java.util.*;
  * [2,1,1]
  * ]
  *
- * @author huangdu.hd@alibaba-inc.com
+ * @author yiyun (huangdu.hd@alibaba-inc.com)
  * @date 2020/9/18 16:38
  * @see Permute
  */

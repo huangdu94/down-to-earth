@@ -15,7 +15,7 @@ package work.huangdu.exploration.start_from_scratch.string.high_precision_calcul
  * num1 和 num2 均不以零开头，除非是数字 0 本身。
  * 不能使用任何标准库的大数类型（比如 BigInteger）或直接将输入转换为整数来处理。
  *
- * @author huangdu.hd@alibaba-inc.com
+ * @author yiyun (huangdu.hd@alibaba-inc.com)
  * @date 2020/8/13 10:22
  */
 public class Multiply {

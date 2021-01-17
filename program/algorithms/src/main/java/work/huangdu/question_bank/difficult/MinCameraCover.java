@@ -20,7 +20,7 @@ import work.huangdu.exploration.intermediate_algorithms.design.Codec;
  * 给定树的节点数的范围是 [1, 1000]。
  * 每个节点的值都是 0。
  *
- * @author huangdu.hd@alibaba-inc.com
+ * @author yiyun (huangdu.hd@alibaba-inc.com)
  * @date 2020/9/22 9:56
  */
 public class MinCameraCover {

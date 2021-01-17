@@ -13,7 +13,7 @@ package work.huangdu.exploration.start_from_scratch.double_pointer.head_tail;
  * 注意:
  * 字符串只包含从 a-z 的小写字母。字符串的最大长度是50000。
  *
- * @author huangdu.hd@alibaba-inc.com
+ * @author yiyun (huangdu.hd@alibaba-inc.com)
  * @date 2020/12/5 11:44
  */
 public class ValidPalindrome {

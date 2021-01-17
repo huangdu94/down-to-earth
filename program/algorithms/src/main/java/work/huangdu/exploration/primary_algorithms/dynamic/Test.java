@@ -1,7 +1,7 @@
 package work.huangdu.exploration.primary_algorithms.dynamic;
 
 /**
- * @author huangdu.hd@alibaba-inc.com
+ * @author yiyun (huangdu.hd@alibaba-inc.com)
  * @date 2020/6/27 10:30
  */
 public class Test {

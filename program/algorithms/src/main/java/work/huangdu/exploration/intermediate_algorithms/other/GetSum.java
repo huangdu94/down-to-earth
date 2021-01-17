@@ -10,7 +10,7 @@ package work.huangdu.exploration.intermediate_algorithms.other;
  * 输入: a = -2, b = 3
  * 输出: 1
  *
- * @author huangdu.hd@alibaba-inc.com
+ * @author yiyun (huangdu.hd@alibaba-inc.com)
  * @date 2020/7/22 0:22
  */
 public class GetSum {

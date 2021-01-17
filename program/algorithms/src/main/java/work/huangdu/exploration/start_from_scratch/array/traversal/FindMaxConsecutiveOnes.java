@@ -11,7 +11,7 @@ package work.huangdu.exploration.start_from_scratch.array.traversal;
  * 输入的数组只包含 0 和1。
  * 输入数组的长度是正整数，且不超过 10,000。
  *
- * @author huangdu.hd@alibaba-inc.com
+ * @author yiyun (huangdu.hd@alibaba-inc.com)
  * @date 2020/9/13 13:53
  */
 public class FindMaxConsecutiveOnes {

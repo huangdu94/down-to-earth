@@ -9,7 +9,7 @@ import work.huangdu.data_structure.ListNode;
  * 示例:
  * 给定 1->2->3->4, 你应该返回 2->1->4->3.
  *
- * @author huangdu.hd@alibaba-inc.com
+ * @author yiyun (huangdu.hd@alibaba-inc.com)
  * @date 2020/10/13 12:26
  */
 public class SwapPairs {

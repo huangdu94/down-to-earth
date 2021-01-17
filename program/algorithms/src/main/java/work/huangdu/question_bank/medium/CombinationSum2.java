@@ -26,7 +26,7 @@ import java.util.*;
  * [5]
  * ]
  *
- * @author huangdu.hd@alibaba-inc.com
+ * @author yiyun (huangdu.hd@alibaba-inc.com)
  * @date 2020/9/10 9:44
  * @see CombinationSum
  */

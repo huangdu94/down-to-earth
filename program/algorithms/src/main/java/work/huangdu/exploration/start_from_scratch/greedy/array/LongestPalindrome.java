@@ -14,7 +14,7 @@ package work.huangdu.exploration.start_from_scratch.greedy.array;
  * 解释:
  * 我们可以构造的最长的回文串是"dccaccd", 它的长度是 7。
  *
- * @author huangdu.hd@alibaba-inc.com
+ * @author yiyun (huangdu.hd@alibaba-inc.com)
  * @date 2020/8/20 17:19
  */
 public class LongestPalindrome {

@@ -34,7 +34,7 @@ import java.util.Map;
  * 1 <= Cj.length, Dj.length <= 5
  * Ai, Bi, Cj, Dj 由小写英文字母与数字组成
  *
- * @author huangdu.hd@alibaba-inc.com
+ * @author yiyun (huangdu.hd@alibaba-inc.com)
  * @date 2021/1/6 11:12
  */
 public class CalcEquation {

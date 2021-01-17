@@ -21,7 +21,7 @@ import java.util.PriorityQueue;
  * 1 <= stones.length <= 30
  * 1 <= stones[i] <= 1000
  *
- * @author huangdu.hd@alibaba-inc.com
+ * @author yiyun (huangdu.hd@alibaba-inc.com)
  * @date 2020/12/30 9:13
  */
 public class LastStoneWeight {

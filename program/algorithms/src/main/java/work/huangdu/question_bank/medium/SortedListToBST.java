@@ -20,7 +20,7 @@ import java.util.Queue;
  * *   /   /
  * * -10  5
  *
- * @author huangdu.hd@alibaba-inc.com
+ * @author yiyun (huangdu.hd@alibaba-inc.com)
  * @date 2020/8/18 13:03
  */
 public class SortedListToBST {

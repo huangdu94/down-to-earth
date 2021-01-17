@@ -18,7 +18,7 @@ import java.util.PriorityQueue;
  * ]
  * 输出: 1->1->2->3->4->4->5->6
  *
- * @author huangdu.hd@alibaba-inc.com
+ * @author yiyun (huangdu.hd@alibaba-inc.com)
  * @date 2020/7/28 19:51
  */
 public class MergeKLists {

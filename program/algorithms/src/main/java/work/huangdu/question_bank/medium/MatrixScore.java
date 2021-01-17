@@ -17,7 +17,7 @@ package work.huangdu.question_bank.medium;
  * 1 <= A[0].length <= 20
  * A[i][j] 是 0 或 1
  *
- * @author huangdu.hd@alibaba-inc.com
+ * @author yiyun (huangdu.hd@alibaba-inc.com)
  * @date 2020/12/7 12:43
  */
 public class MatrixScore {

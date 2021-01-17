@@ -15,7 +15,7 @@ import java.util.Deque;
  * 第二个 1 的下一个最大的数需要循环搜索，结果也是 2。
  * 注意: 输入数组的长度不会超过 10000。
  *
- * @author huangdu.hd@alibaba-inc.com
+ * @author yiyun (huangdu.hd@alibaba-inc.com)
  * @date 2020/11/20 13:42
  */
 public class NextGreaterElements2 {

@@ -27,7 +27,7 @@ import java.util.Queue;
  * 树中的节点数小于 6000
  * -100 <= node.val <= 100
  *
- * @author huangdu.hd@alibaba-inc.com
+ * @author yiyun (huangdu.hd@alibaba-inc.com)
  * @date 2020/9/28 9:27
  * @see Connect
  */

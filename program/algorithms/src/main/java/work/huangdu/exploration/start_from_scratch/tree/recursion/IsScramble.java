@@ -38,7 +38,7 @@ package work.huangdu.exploration.start_from_scratch.tree.recursion;
  * 输入: s1 = "abcde", s2 = "caebd"
  * 输出: false
  *
- * @author huangdu.hd@alibaba-inc.com
+ * @author yiyun (huangdu.hd@alibaba-inc.com)
  * @date 2021/1/1 17:13
  */
 public class IsScramble {

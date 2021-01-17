@@ -20,7 +20,7 @@ import java.util.Deque;
  * 输出: True
  * 解释: 序列中有 3 个132模式的的子序列: [-1, 3, 2], [-1, 3, 0] 和 [-1, 2, 0].
  *
- * @author huangdu.hd@alibaba-inc.com
+ * @author yiyun (huangdu.hd@alibaba-inc.com)
  * @date 2020/11/21 14:34
  */
 public class Find132pattern {

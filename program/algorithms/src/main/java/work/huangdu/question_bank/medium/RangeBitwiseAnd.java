@@ -10,7 +10,7 @@ package work.huangdu.question_bank.medium;
  * 输入: [0,1]
  * 输出: 0
  *
- * @author huangdu.hd@alibaba-inc.com
+ * @author yiyun (huangdu.hd@alibaba-inc.com)
  * @date 2020/8/23 0:10
  */
 public class RangeBitwiseAnd {

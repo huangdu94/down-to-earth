@@ -19,7 +19,7 @@ import java.util.Stack;
  * /  \
  * 15   7
  *
- * @author huangdu.hd@alibaba-inc.com
+ * @author yiyun (huangdu.hd@alibaba-inc.com)
  * @date 2020/7/5 19:31
  */
 public class BuildTree {

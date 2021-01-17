@@ -20,7 +20,7 @@ import java.util.*;
  * []
  * ]
  *
- * @author huangdu.hd@alibaba-inc.com
+ * @author yiyun (huangdu.hd@alibaba-inc.com)
  * @date 2020/7/9 0:22
  */
 public class Subsets {

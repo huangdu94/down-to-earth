@@ -16,7 +16,7 @@ package work.huangdu.exploration.start_from_scratch.binary.math;
  * 给定的面积不大于 10,000,000 且为正整数。
  * 你设计的页面的长度和宽度必须都是正整数。
  *
- * @author huangdu.hd@alibaba-inc.com
+ * @author yiyun (huangdu.hd@alibaba-inc.com)
  * @date 2020/10/20 13:35
  */
 public class ConstructRectangle {

@@ -33,7 +33,7 @@ import java.util.List;
  * StockSpanner obj = new StockSpanner();
  * int param_1 = obj.next(price);
  *
- * @author huangdu.hd@alibaba-inc.com
+ * @author yiyun (huangdu.hd@alibaba-inc.com)
  * @date 2020/8/26 15:11
  */
 /*public class StockSpanner {

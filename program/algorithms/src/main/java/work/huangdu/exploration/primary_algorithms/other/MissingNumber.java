@@ -12,7 +12,7 @@ package work.huangdu.exploration.primary_algorithms.other;
  * 说明:
  * 你的算法应具有线性时间复杂度。你能否仅使用额外常数空间来实现?
  *
- * @author huangdu.hd@alibaba-inc.com
+ * @author yiyun (huangdu.hd@alibaba-inc.com)
  * @date 2020/7/1 23:10
  */
 public class MissingNumber {

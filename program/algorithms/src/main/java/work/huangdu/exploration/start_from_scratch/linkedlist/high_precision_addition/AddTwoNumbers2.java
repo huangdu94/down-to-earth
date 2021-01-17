@@ -15,7 +15,7 @@ import java.util.LinkedList;
  * 输入：(7 -> 2 -> 4 -> 3) + (5 -> 6 -> 4)
  * 输出：7 -> 8 -> 0 -> 7
  *
- * @author huangdu.hd@alibaba-inc.com
+ * @author yiyun (huangdu.hd@alibaba-inc.com)
  * @date 2020/10/29 12:56
  */
 public class AddTwoNumbers2 {

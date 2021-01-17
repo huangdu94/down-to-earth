@@ -27,7 +27,7 @@ import java.util.*;
  * 输出: 3
  * 解释: 每座岛屿只能由水平和/或竖直方向上相邻的陆地连接而成。
  *
- * @author huangdu.hd@alibaba-inc.com
+ * @author yiyun (huangdu.hd@alibaba-inc.com)
  * @date 2020/7/7 18:58
  */
 public class NumIslands {

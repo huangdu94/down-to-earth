@@ -51,7 +51,7 @@ import java.util.List;
  * "do                  "
  * ]
  *
- * @author huangdu.hd@alibaba-inc.com
+ * @author yiyun (huangdu.hd@alibaba-inc.com)
  * @date 2020/10/3 9:56
  */
 public class FullJustify {

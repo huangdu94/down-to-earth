@@ -42,7 +42,7 @@ import java.util.List;
  * p = "a*c?b"
  * 输出: false
  *
- * @author huangdu.hd@alibaba-inc.com
+ * @author yiyun (huangdu.hd@alibaba-inc.com)
  * @date 2020/8/15 11:50
  */
 public class IsMatch {

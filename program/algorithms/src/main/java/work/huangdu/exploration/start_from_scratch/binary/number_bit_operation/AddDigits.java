@@ -10,7 +10,7 @@ package work.huangdu.exploration.start_from_scratch.binary.number_bit_operation;
  * 进阶:
  * 你可以不使用循环或者递归，且在 O(1) 时间复杂度内解决这个问题吗？
  *
- * @author huangdu.hd@alibaba-inc.com
+ * @author yiyun (huangdu.hd@alibaba-inc.com)
  * @date 2020/8/16 0:39
  */
 public class AddDigits {

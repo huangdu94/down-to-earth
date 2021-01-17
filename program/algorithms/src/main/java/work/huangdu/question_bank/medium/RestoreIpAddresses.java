@@ -11,7 +11,7 @@ import java.util.List;
  * 输入: "25525511135"
  * 输出: ["255.255.11.135", "255.255.111.35"]
  *
- * @author huangdu.hd@alibaba-inc.com
+ * @author yiyun (huangdu.hd@alibaba-inc.com)
  * @date 2020/8/9 0:43
  */
 public class RestoreIpAddresses {

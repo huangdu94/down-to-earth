@@ -5,7 +5,7 @@ import work.huangdu.data_structure.TreeNode;
 /**
  * 测试类
  *
- * @author huangdu.hd@alibaba-inc.com
+ * @author yiyun (huangdu.hd@alibaba-inc.com)
  * @date 2020/6/22 17:02
  */
 public class Test {

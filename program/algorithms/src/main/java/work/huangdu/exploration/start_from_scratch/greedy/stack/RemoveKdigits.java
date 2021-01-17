@@ -19,7 +19,7 @@ package work.huangdu.exploration.start_from_scratch.greedy.stack;
  * 输出: "0"
  * 解释: 从原数字移除所有的数字，剩余为空就是0。
  *
- * @author huangdu.hd@alibaba-inc.com
+ * @author yiyun (huangdu.hd@alibaba-inc.com)
  * @date 2020/11/15 13:13
  */
 public class RemoveKdigits {

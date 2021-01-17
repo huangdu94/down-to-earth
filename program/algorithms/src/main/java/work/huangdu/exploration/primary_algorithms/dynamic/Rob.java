@@ -17,7 +17,7 @@ package work.huangdu.exploration.primary_algorithms.dynamic;
  * 0 <= nums.length <= 100
  * 0 <= nums[i] <= 400
  *
- * @author huangdu.hd@alibaba-inc.com
+ * @author yiyun (huangdu.hd@alibaba-inc.com)
  * @date 2020/6/29 12:50
  */
 public class Rob {

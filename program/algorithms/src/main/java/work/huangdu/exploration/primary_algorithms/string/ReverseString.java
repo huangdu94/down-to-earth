@@ -12,7 +12,7 @@ package work.huangdu.exploration.primary_algorithms.string;
  * 输入：["H","a","n","n","a","h"]
  * 输出：["h","a","n","n","a","H"]
  *
- * @author huangdu.hd@alibaba-inc.com
+ * @author yiyun (huangdu.hd@alibaba-inc.com)
  * @date 2020/7/26 16:43
  */
 public class ReverseString {

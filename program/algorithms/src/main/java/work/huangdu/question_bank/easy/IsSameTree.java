@@ -28,7 +28,7 @@ import java.util.Queue;
  * *       [1,2,1],   [1,1,2]
  * 输出: false
  *
- * @author huangdu.hd@alibaba-inc.com
+ * @author yiyun (huangdu.hd@alibaba-inc.com)
  * @date 2020/8/7 11:22
  */
 public class IsSameTree {

@@ -15,7 +15,7 @@ package work.huangdu.exploration.start_from_scratch.double_pointer.homonymous_sl
  * 输入的字符串只包含小写字母
  * 两个字符串的长度都在 [1, 10,000] 之间
  *
- * @author huangdu.hd@alibaba-inc.com
+ * @author yiyun (huangdu.hd@alibaba-inc.com)
  * @date 2020/12/16 10:48
  */
 public class CheckInclusion {

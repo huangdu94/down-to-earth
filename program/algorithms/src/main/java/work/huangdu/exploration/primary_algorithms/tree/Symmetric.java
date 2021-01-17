@@ -23,7 +23,7 @@ import java.util.Queue;
  * \   \
  * 3    3
  *
- * @author huangdu.hd@alibaba-inc.com
+ * @author yiyun (huangdu.hd@alibaba-inc.com)
  * @date 2020/6/23 9:37
  */
 public class Symmetric {

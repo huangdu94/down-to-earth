@@ -22,7 +22,7 @@ import java.util.List;
  * 输入: -1->5->3->4->0
  * 输出: -1->0->3->4->5
  *
- * @author huangdu.hd@alibaba-inc.com
+ * @author yiyun (huangdu.hd@alibaba-inc.com)
  * @date 2020/11/20 12:45
  */
 public class InsertionSortList {

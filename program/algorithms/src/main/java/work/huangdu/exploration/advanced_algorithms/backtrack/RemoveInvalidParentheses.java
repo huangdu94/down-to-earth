@@ -19,7 +19,7 @@ import java.util.Set;
  * 输入: ")("
  * 输出: [""]
  *
- * @author huangdu.hd@alibaba-inc.com
+ * @author yiyun (huangdu.hd@alibaba-inc.com)
  * @date 2020/8/17 11:08
  */
 public class RemoveInvalidParentheses {

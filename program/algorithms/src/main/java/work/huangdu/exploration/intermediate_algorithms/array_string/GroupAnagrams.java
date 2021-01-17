@@ -17,7 +17,7 @@ import java.util.*;
  * 所有输入均为小写字母。
  * 不考虑答案输出的顺序。
  *
- * @author huangdu.hd@alibaba-inc.com
+ * @author yiyun (huangdu.hd@alibaba-inc.com)
  * @date 2020/7/2 10:37
  */
 public class GroupAnagrams {

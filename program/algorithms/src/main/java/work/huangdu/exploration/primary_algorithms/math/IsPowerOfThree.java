@@ -21,7 +21,7 @@ import work.huangdu.question_bank.easy.IsPowerOfTwo;
  * 进阶：
  * 你能不使用循环或者递归来完成本题吗？
  *
- * @author huangdu.hd@alibaba-inc.com
+ * @author yiyun (huangdu.hd@alibaba-inc.com)
  * @date 2020/7/1 16:15
  * @see IsPowerOfTwo
  * @see IsPowerOfFour

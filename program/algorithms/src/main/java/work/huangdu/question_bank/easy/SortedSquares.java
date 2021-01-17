@@ -16,7 +16,7 @@ import java.util.Arrays;
  * -10000 <= A[i] <= 10000
  * A 已按非递减顺序排序。
  *
- * @author huangdu.hd@alibaba-inc.com
+ * @author yiyun (huangdu.hd@alibaba-inc.com)
  * @date 2020/10/16 12:23
  */
 public class SortedSquares {

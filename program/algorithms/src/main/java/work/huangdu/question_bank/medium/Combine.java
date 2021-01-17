@@ -18,7 +18,7 @@ import java.util.List;
  * [1,4],
  * ]
  *
- * @author huangdu.hd@alibaba-inc.com
+ * @author yiyun (huangdu.hd@alibaba-inc.com)
  * @date 2020/9/8 10:51
  */
 public class Combine {

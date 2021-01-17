@@ -9,7 +9,7 @@ package work.huangdu.exploration.start_from_scratch.string.high_precision_calcul
  * num1 和num2 都不包含任何前导零
  * 你不能使用任何內建 BigInteger 库， 也不能直接将输入的字符串转换为整数形式
  *
- * @author huangdu.hd@alibaba-inc.com
+ * @author yiyun (huangdu.hd@alibaba-inc.com)
  * @date 2020/8/13 12:29
  */
 public class AddStrings {

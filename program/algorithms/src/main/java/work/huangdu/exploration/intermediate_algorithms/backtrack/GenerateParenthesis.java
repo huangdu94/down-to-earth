@@ -16,7 +16,7 @@ import java.util.List;
  * "()()()"
  * ]
  *
- * @author huangdu.hd@alibaba-inc.com
+ * @author yiyun (huangdu.hd@alibaba-inc.com)
  * @date 2020/7/9 0:20
  */
 public class GenerateParenthesis {

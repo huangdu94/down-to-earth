@@ -14,7 +14,7 @@ package work.huangdu.question_bank.easy;
  * A.length % 2 == 0
  * 0 <= A[i] <= 1000
  *
- * @author huangdu.hd@alibaba-inc.com
+ * @author yiyun (huangdu.hd@alibaba-inc.com)
  * @date 2020/11/12 17:25
  */
 public class SortArrayByParityII {

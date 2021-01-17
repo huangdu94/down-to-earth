@@ -12,7 +12,7 @@ import work.huangdu.data_structure.ListNode;
  * 进阶:
  * 你可以迭代或递归地反转链表。你能否用两种方法解决这道题？
  *
- * @author huangdu.hd@alibaba-inc.com
+ * @author yiyun (huangdu.hd@alibaba-inc.com)
  * @date 2020/7/26 18:06
  */
 public class ReverseList {

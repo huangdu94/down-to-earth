@@ -20,7 +20,7 @@ package work.huangdu.exploration.start_from_scratch.binary.number_bit_operation;
  * 1 是丑数。
  * 输入不会超过 32 位有符号整数的范围: [−2^31,  2^31 − 1]。
  *
- * @author huangdu.hd@alibaba-inc.com
+ * @author yiyun (huangdu.hd@alibaba-inc.com)
  * @date 2020/8/16 0:40
  */
 public class IsUgly {

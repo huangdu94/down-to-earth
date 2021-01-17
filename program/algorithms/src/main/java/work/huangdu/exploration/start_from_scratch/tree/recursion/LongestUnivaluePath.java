@@ -26,7 +26,7 @@ import work.huangdu.data_structure.TreeNode;
  * 2
  * 注意: 给定的二叉树不超过10000个结点。 树的高度不超过1000。
  *
- * @author huangdu.hd@alibaba-inc.com
+ * @author yiyun (huangdu.hd@alibaba-inc.com)
  * @date 2021/1/2 10:09
  */
 public class LongestUnivaluePath {

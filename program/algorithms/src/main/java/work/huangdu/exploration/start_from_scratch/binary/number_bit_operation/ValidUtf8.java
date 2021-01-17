@@ -27,7 +27,7 @@ package work.huangdu.exploration.start_from_scratch.binary.number_bit_operation;
  * 下一个字节是开头为 10 的延续字节，这是正确的。
  * 但第二个延续字节不以 10 开头，所以是不符合规则的。
  *
- * @author huangdu.hd@alibaba-inc.com
+ * @author yiyun (huangdu.hd@alibaba-inc.com)
  * @date 2020/10/17 9:59
  */
 public class ValidUtf8 {

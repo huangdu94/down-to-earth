@@ -3,7 +3,7 @@ package work.huangdu.exploration.primary_algorithms.array;
 import java.math.BigInteger;
 
 /**
- * @author huangdu.hd@alibaba-inc.com
+ * @author yiyun (huangdu.hd@alibaba-inc.com)
  * @date 2020/7/26 15:31
  */
 public class PlusOne {

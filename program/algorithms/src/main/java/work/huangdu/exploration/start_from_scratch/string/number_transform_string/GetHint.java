@@ -20,7 +20,7 @@ package work.huangdu.exploration.start_from_scratch.string.number_transform_stri
  * 解释: 朋友猜测数中的第一个 1 是公牛，第二个或第三个 1 可被视为奶牛。
  * 说明: 你可以假设秘密数字和朋友的猜测数都只包含数字，并且它们的长度永远相等。
  *
- * @author huangdu.hd@alibaba-inc.com
+ * @author yiyun (huangdu.hd@alibaba-inc.com)
  * @date 2020/8/27 19:05
  */
 public class GetHint {

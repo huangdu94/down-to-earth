@@ -20,7 +20,7 @@ import java.util.List;
  * 字典的大小不会超过 1000。
  * 所有输入的字符串长度不会超过 1000。
  *
- * @author huangdu.hd@alibaba-inc.com
+ * @author yiyun (huangdu.hd@alibaba-inc.com)
  * @date 2020/9/30 13:07
  */
 public class FindLongestWord {

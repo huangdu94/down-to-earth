@@ -19,7 +19,7 @@ package work.huangdu.exploration.start_from_scratch.binary.number_bit_operation;
  * 输出:
  * "ffffffff"
  *
- * @author huangdu.hd@alibaba-inc.com
+ * @author yiyun (huangdu.hd@alibaba-inc.com)
  * @date 2020/10/18 10:50
  */
 public class ToHex {

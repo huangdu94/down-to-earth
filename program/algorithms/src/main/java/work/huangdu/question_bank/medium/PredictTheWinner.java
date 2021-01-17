@@ -23,7 +23,7 @@ import java.util.Arrays;
  * 数组里所有分数都为非负数且不会大于 10000000 。
  * 如果最终两个玩家的分数相等，那么玩家 1 仍为赢家。
  *
- * @author huangdu.hd@alibaba-inc.com
+ * @author yiyun (huangdu.hd@alibaba-inc.com)
  * @date 2020/9/1 10:01
  */
 public class PredictTheWinner {

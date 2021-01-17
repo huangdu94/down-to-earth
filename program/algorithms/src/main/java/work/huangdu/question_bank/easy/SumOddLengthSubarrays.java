@@ -30,7 +30,7 @@ package work.huangdu.question_bank.easy;
  * 1 <= arr.length <= 100
  * 1 <= arr[i] <= 1000
  *
- * @author huangdu.hd@alibaba-inc.com
+ * @author yiyun (huangdu.hd@alibaba-inc.com)
  * @date 2020/9/19 23:45
  */
 public class SumOddLengthSubarrays {

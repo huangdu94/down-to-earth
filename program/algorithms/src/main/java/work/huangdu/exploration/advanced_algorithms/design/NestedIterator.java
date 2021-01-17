@@ -18,7 +18,7 @@ import java.util.*;
  * NestedIterator i = new NestedIterator(nestedList);
  * while (i.hasNext()) v[f()] = i.next();
  *
- * @author huangdu.hd@alibaba-inc.com
+ * @author yiyun (huangdu.hd@alibaba-inc.com)
  * @date 2020/9/7 15:25
  */
 public class NestedIterator implements Iterator<Integer> {

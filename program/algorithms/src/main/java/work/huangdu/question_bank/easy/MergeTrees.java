@@ -23,7 +23,7 @@ import work.huangdu.data_structure.TreeNode;
  * * 	 5   4   7
  * 注意: 合并必须从两个树的根节点开始。
  *
- * @author huangdu.hd@alibaba-inc.com
+ * @author yiyun (huangdu.hd@alibaba-inc.com)
  * @date 2020/9/23 16:10
  */
 public class MergeTrees {

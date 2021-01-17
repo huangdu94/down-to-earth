@@ -14,7 +14,7 @@ package work.huangdu.exploration.intermediate_algorithms.other;
  * 任务的总个数为 [1, 10000]。
  * n 的取值范围为 [0, 100]。
  *
- * @author huangdu.hd@alibaba-inc.com
+ * @author yiyun (huangdu.hd@alibaba-inc.com)
  * @date 2020/7/22 0:25
  */
 public class LeastInterval {

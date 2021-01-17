@@ -16,7 +16,7 @@ package work.huangdu.exploration.start_from_scratch.string.number_transform_stri
  * 输入: 1234567891
  * 输出: "One Billion Two Hundred Thirty Four Million Five Hundred Sixty Seven Thousand Eight Hundred Ninety One"
  *
- * @author huangdu.hd@alibaba-inc.com
+ * @author yiyun (huangdu.hd@alibaba-inc.com)
  * @date 2020/9/29 10:35
  */
 public class NumberToWords {

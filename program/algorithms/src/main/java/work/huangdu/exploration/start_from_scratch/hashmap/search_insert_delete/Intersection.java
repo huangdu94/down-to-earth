@@ -17,7 +17,7 @@ import java.util.*;
  * 输出结果中的每个元素一定是唯一的。
  * 我们可以不考虑输出结果的顺序。
  *
- * @author huangdu.hd@alibaba-inc.com
+ * @author yiyun (huangdu.hd@alibaba-inc.com)
  * @date 2020/9/2 13:56
  * @see Intersect
  */

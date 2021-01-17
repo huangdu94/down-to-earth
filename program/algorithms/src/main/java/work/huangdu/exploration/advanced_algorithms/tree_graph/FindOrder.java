@@ -25,7 +25,7 @@ import java.util.*;
  * 通过 DFS 进行拓扑排序 - 一个关于Coursera的精彩视频教程（21分钟），介绍拓扑排序的基本概念。
  * 拓扑排序也可以通过BFS完成。
  *
- * @author huangdu.hd@alibaba-inc.com
+ * @author yiyun (huangdu.hd@alibaba-inc.com)
  * @date 2020/8/9 13:29
  */
 public class FindOrder {

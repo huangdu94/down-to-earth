@@ -22,7 +22,7 @@ import java.util.Map;
  * *     /  \
  * *    15   7
  *
- * @author huangdu.hd@alibaba-inc.com
+ * @author yiyun (huangdu.hd@alibaba-inc.com)
  * @date 2020/9/25 16:02
  * @see work.huangdu.exploration.intermediate_algorithms.tree_graph.BuildTree
  */

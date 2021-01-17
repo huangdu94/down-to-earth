@@ -18,7 +18,7 @@ import work.huangdu.question_bank.difficult.MaxProfit4;
  * 输出: 0
  * 解释: 在这种情况下, 没有交易完成, 所以最大利润为 0。
  *
- * @author huangdu.hd@alibaba-inc.com
+ * @author yiyun (huangdu.hd@alibaba-inc.com)
  * @date 2020/6/27 10:15
  * @see work.huangdu.exploration.primary_algorithms.array.MaxProfit
  * @see work.huangdu.question_bank.medium.MaxProfit

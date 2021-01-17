@@ -14,7 +14,7 @@ import java.util.List;
  * 输出:
  * [5,6]
  *
- * @author huangdu.hd@alibaba-inc.com
+ * @author yiyun (huangdu.hd@alibaba-inc.com)
  * @date 2020/9/14 15:03
  */
 public class FindDisappearedNumbers {

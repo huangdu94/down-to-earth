@@ -44,7 +44,7 @@ package work.huangdu.exploration.primary_algorithms.array;
  * 给定数独序列只包含数字 1-9 和字符 '.' 。
  * 给定数独永远是 9x9 形式的。
  *
- * @author huangdu.hd@alibaba-inc.com
+ * @author yiyun (huangdu.hd@alibaba-inc.com)
  * @date 2020/7/26 16:14
  */
 public class IsValidSudoku {

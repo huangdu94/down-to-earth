@@ -21,7 +21,7 @@ package work.huangdu.exploration.start_from_scratch.string.reverse;
  * 进阶：
  * 请选用 C 语言的用户尝试使用 O(1) 额外空间复杂度的原地解法。
  *
- * @author huangdu.hd@alibaba-inc.com
+ * @author yiyun (huangdu.hd@alibaba-inc.com)
  * @date 2020/9/21 14:02
  */
 public class ReverseWords2 {

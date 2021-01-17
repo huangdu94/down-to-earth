@@ -24,7 +24,7 @@ package work.huangdu.exploration.start_from_scratch.binary.math;
  * 提示：
  * 1 <= num <= 10^8
  *
- * @author huangdu.hd@alibaba-inc.com
+ * @author yiyun (huangdu.hd@alibaba-inc.com)
  * @date 2020/10/20 16:46
  */
 public class CheckPerfectNumber {

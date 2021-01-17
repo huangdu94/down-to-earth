@@ -27,7 +27,7 @@ import java.util.Stack;
  * 输入: "{[]}"
  * 输出: true
  *
- * @author huangdu.hd@alibaba-inc.com
+ * @author yiyun (huangdu.hd@alibaba-inc.com)
  * @date 2020/7/1 22:19
  */
 public class Valid {

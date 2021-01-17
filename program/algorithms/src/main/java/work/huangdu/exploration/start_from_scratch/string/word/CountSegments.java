@@ -9,7 +9,7 @@ package work.huangdu.exploration.start_from_scratch.string.word;
  * 输出: 5
  * 解释: 这里的单词是指连续的不是空格的字符，所以 "Hello," 算作 1 个单词。
  *
- * @author huangdu.hd@alibaba-inc.com
+ * @author yiyun (huangdu.hd@alibaba-inc.com)
  * @date 2020/9/21 13:18
  */
 public class CountSegments {

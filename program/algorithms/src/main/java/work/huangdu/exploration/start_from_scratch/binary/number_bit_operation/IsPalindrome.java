@@ -17,7 +17,7 @@ package work.huangdu.exploration.start_from_scratch.binary.number_bit_operation;
  * 进阶:
  * 你能不将整数转为字符串来解决这个问题吗？
  *
- * @author huangdu.hd@alibaba-inc.com
+ * @author yiyun (huangdu.hd@alibaba-inc.com)
  * @date 2020/8/6 16:55
  */
 public class IsPalindrome {

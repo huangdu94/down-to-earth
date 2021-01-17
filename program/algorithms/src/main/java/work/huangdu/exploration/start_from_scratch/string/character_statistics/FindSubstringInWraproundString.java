@@ -18,7 +18,7 @@ package work.huangdu.exploration.start_from_scratch.string.character_statistics;
  * 输出: 6
  * 解释: 在字符串 S 中有六个子串“z”、“a”、“b”、“za”、“ab”、“zab”。.
  *
- * @author huangdu.hd@alibaba-inc.com
+ * @author yiyun (huangdu.hd@alibaba-inc.com)
  * @date 2020/9/25 10:50
  */
 public class FindSubstringInWraproundString {

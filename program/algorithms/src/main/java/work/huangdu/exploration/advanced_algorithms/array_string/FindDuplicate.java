@@ -18,7 +18,7 @@ import java.util.Set;
  * 时间复杂度小于 O(n^2) 。
  * 数组中只有一个重复的数字，但它可能不止重复出现一次。
  *
- * @author huangdu.hd@alibaba-inc.com
+ * @author yiyun (huangdu.hd@alibaba-inc.com)
  * @date 2020/7/27 19:16
  */
 public class FindDuplicate {

@@ -22,7 +22,7 @@ import work.huangdu.data_structure.TreeNode;
  * 提示：
  * 给定的数组的大小在 [1, 1000] 之间。
  *
- * @author huangdu.hd@alibaba-inc.com
+ * @author yiyun (huangdu.hd@alibaba-inc.com)
  * @date 2021/1/2 9:56
  */
 public class ConstructMaximumBinaryTree {

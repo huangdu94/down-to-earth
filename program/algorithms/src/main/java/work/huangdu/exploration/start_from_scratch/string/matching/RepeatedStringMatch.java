@@ -22,7 +22,7 @@ package work.huangdu.exploration.start_from_scratch.string.matching;
  * 1 <= b.length <= 10^4
  * a 和 b 由小写英文字母组成
  *
- * @author huangdu.hd@alibaba-inc.com
+ * @author yiyun (huangdu.hd@alibaba-inc.com)
  * @date 2020/10/4 19:33
  */
 public class RepeatedStringMatch {

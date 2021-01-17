@@ -19,7 +19,7 @@ package work.huangdu.exploration.start_from_scratch.array.roll_2d;
  * 进阶:
  * 你可以用一次扫描算法，只使用O(1)额外空间，并且不修改甲板的值来解决这个问题吗？
  *
- * @author huangdu.hd@alibaba-inc.com
+ * @author yiyun (huangdu.hd@alibaba-inc.com)
  * @date 2020/9/16 1:02
  */
 public class CountBattleships {

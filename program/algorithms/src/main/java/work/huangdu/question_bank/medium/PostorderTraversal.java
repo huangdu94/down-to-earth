@@ -20,7 +20,7 @@ import java.util.List;
  * 输出: [3,2,1]
  * 进阶: 递归算法很简单，你可以通过迭代算法完成吗？
  *
- * @author huangdu.hd@alibaba-inc.com
+ * @author yiyun (huangdu.hd@alibaba-inc.com)
  * @date 2020/9/29 9:54
  */
 public class PostorderTraversal {

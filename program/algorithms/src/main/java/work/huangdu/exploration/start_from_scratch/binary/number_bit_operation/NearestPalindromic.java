@@ -11,7 +11,7 @@ package work.huangdu.exploration.start_from_scratch.binary.number_bit_operation;
  * n 是由字符串表示的正整数，其长度不超过18。
  * 如果有多个结果，返回最小的那个。
  *
- * @author huangdu.hd@alibaba-inc.com
+ * @author yiyun (huangdu.hd@alibaba-inc.com)
  * @date 2020/10/5 13:44
  */
 public class NearestPalindromic {

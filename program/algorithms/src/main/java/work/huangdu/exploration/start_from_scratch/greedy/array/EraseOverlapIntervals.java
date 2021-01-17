@@ -21,7 +21,7 @@ import java.util.Arrays;
  * 输出: 0
  * 解释: 你不需要移除任何区间，因为它们已经是无重叠的了。
  *
- * @author huangdu.hd@alibaba-inc.com
+ * @author yiyun (huangdu.hd@alibaba-inc.com)
  * @date 2020/11/14 12:20
  */
 public class EraseOverlapIntervals {

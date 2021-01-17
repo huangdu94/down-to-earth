@@ -26,7 +26,7 @@ package work.huangdu.question_bank.medium;
  * 更新(2017-09-26):
  * 我们已经重新检查了问题描述及测试用例，明确图是无向 图。对于有向图详见冗余连接II。对于造成任何不便，我们深感歉意。
  *
- * @author huangdu.hd@alibaba-inc.com
+ * @author yiyun (huangdu.hd@alibaba-inc.com)
  * @date 2021/1/13
  */
 public class FindRedundantConnection {

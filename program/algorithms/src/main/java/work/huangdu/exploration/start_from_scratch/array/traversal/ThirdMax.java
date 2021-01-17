@@ -17,7 +17,7 @@ package work.huangdu.exploration.start_from_scratch.array.traversal;
  * 解释: 注意，要求返回第三大的数，是指第三大且唯一出现的数。
  * 存在两个值为2的数，它们都排第二。
  *
- * @author huangdu.hd@alibaba-inc.com
+ * @author yiyun (huangdu.hd@alibaba-inc.com)
  * @date 2020/9/13 14:32
  */
 public class ThirdMax {
