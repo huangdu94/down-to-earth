@@ -1,5 +1,7 @@
 package work.huangdu.question_bank.easy;
 
+import sun.plugin.javascript.navig.Link;
+
 import java.util.*;
 
 /**
@@ -32,7 +34,7 @@ import java.util.*;
  * @date 2021/1/22
  */
 public class AddToArrayForm {
-    public List<Integer> addToArrayForm(int[] A, int K) {
+    public List<Integer> addToArrayForm2(int[] A, int K) {
         int a_n = A.length;
         List<Integer> result = new ArrayList<>(a_n);
         while (K != 0) {
@@ -56,6 +58,18 @@ public class AddToArrayForm {
             add = sum / 10;
         }
         Collections.reverse(result);
+        return result;
+    }
+
+    public List<Integer> addToArrayForm(int[] A, int K) {
+        int n = A.length;
+        LinkedList<Integer> result = new LinkedList<>();
+        int i = n - 1;
+        while (i >= 0 || K != 0) {
+            K += (i >= 0 ? A[i--] : 0);
+            result.addFirst(K % 10);
+            K /= 10;
+        }
         return result;
     }
 
