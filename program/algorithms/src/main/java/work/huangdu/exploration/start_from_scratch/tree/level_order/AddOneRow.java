@@ -2,6 +2,9 @@ package work.huangdu.exploration.start_from_scratch.tree.level_order;
 
 import work.huangdu.data_structure.TreeNode;
 
+import java.util.ArrayDeque;
+import java.util.Queue;
+
 /**
  * 623. 在二叉树中增加一行
  * 给定一个二叉树，根节点为第1层，深度为 1。在其第 d 层追加一行值为 v 的节点。
@@ -53,7 +56,33 @@ import work.huangdu.data_structure.TreeNode;
  */
 public class AddOneRow {
     public TreeNode addOneRow(TreeNode root, int v, int d) {
-        // TODO
-        return null;
+        if (d == 1) {
+            TreeNode newRoot = new TreeNode(v);
+            newRoot.left = root;
+            return newRoot;
+        }
+        int level = 1;
+        Queue<TreeNode> queue = new ArrayDeque<>();
+        queue.offer(root);
+        while (++level < d) {
+            int size = queue.size();
+            for (int i = 0; i < size; i++) {
+                TreeNode node = queue.remove();
+                if (node.left != null) {
+                    queue.offer(node.left);
+                }
+                if (node.right != null) {
+                    queue.offer(node.right);
+                }
+            }
+        }
+        while (!queue.isEmpty()) {
+            TreeNode node = queue.remove(), originLeft = node.left, originRight = node.right;
+            node.left = new TreeNode(v);
+            node.right = new TreeNode(v);
+            node.left.left = originLeft;
+            node.right.right = originRight;
+        }
+        return root;
     }
 }
