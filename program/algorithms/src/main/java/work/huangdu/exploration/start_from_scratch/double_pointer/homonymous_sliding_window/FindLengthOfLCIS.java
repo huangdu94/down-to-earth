@@ -21,7 +21,7 @@ package work.huangdu.exploration.start_from_scratch.double_pointer.homonymous_sl
  * @date 2020/12/15 13:48
  */
 public class FindLengthOfLCIS {
-    public int findLengthOfLCIS(int[] nums) {
+    public int findLengthOfLCIS2(int[] nums) {
         if (nums.length == 0) return 0;
         int n = nums.length, len = 1, max = 1;
         for (int i = 1; i < n; i++) {
@@ -33,5 +33,17 @@ public class FindLengthOfLCIS {
             }
         }
         return Math.max(max, len);
+    }
+
+    public int findLengthOfLCIS(int[] nums) {
+        if (nums.length == 0) return 0;
+        int n = nums.length, start = 0, max = 1;
+        for (int i = 1; i < n; i++) {
+            if (nums[i] <= nums[i - 1]) {
+                max = Math.max(max, i - start);
+                start = i;
+            }
+        }
+        return Math.max(max, n - start);
     }
 }
