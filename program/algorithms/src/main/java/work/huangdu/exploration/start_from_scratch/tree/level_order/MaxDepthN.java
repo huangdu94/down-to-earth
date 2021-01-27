@@ -1,7 +1,5 @@
 package work.huangdu.exploration.start_from_scratch.tree.level_order;
 
-import java.util.List;
-
 /**
  * 559. N 叉树的最大深度
  * 给定一个 N 叉树，找到其最大深度。

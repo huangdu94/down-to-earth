@@ -1,4 +1,4 @@
-package work.huangdu.question_bank.easy;
+package work.huangdu.exploration.start_from_scratch.tree.level_order;
 
 import work.huangdu.data_structure.TreeNode;
 
