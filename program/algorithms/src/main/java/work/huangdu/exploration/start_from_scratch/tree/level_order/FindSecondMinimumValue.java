@@ -2,6 +2,9 @@ package work.huangdu.exploration.start_from_scratch.tree.level_order;
 
 import work.huangdu.data_structure.TreeNode;
 
+import java.util.ArrayDeque;
+import java.util.Queue;
+
 /**
  * 671. 二叉树中第二小的节点
  * 给定一个非空特殊的二叉树，每个节点都是正数，并且每个节点的子节点数量只能为 2 或 0。如果一个节点有两个子节点的话，那么该节点的值等于两个子节点中较小的一个。
@@ -25,7 +28,29 @@ import work.huangdu.data_structure.TreeNode;
  */
 public class FindSecondMinimumValue {
     public int findSecondMinimumValue(TreeNode root) {
-        //TODO
-        return -1;
+        int rootVal = root.val, secondMin = -1;
+        Queue<TreeNode> queue = new ArrayDeque<>();
+        queue.offer(root);
+        while (!queue.isEmpty()) {
+            root = queue.poll();
+            if (root.left != null) {
+                int rootLeftVal = root.left.val, rootRightVal = root.right.val;
+                if (rootLeftVal != rootVal) {
+                    if (secondMin == -1 || secondMin > rootLeftVal) {
+                        secondMin = rootLeftVal;
+                    }
+                } else {
+                    queue.offer(root.left);
+                }
+                if (rootRightVal != rootVal) {
+                    if (secondMin == -1 || secondMin > rootRightVal) {
+                        secondMin = rootRightVal;
+                    }
+                } else {
+                    queue.offer(root.right);
+                }
+            }
+        }
+        return secondMin;
     }
 }
