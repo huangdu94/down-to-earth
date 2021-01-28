@@ -1,4 +1,4 @@
-package work.huangdu.question_bank.medium;
+package work.huangdu.exploration.start_from_scratch.tree.preorder;
 
 import work.huangdu.data_structure.TreeNode;
 
@@ -24,40 +24,26 @@ import java.util.List;
  * @date 2020/10/27 11:26
  */
 public class PreorderTraversal {
-    private final List<Integer> res = new ArrayList<>();
-
-    public List<Integer> preorderTraversal2(TreeNode root) {
-        preorder(root);
-        return res;
-    }
-
-    private void preorder(TreeNode node) {
-        if (node == null) return;
-        res.add(node.val);
-        preorder(node.left);
-        preorder(node.right);
-    }
-
-    public List<Integer> preorderTraversal3(TreeNode root) {
-        List<Integer> res = new ArrayList<>();
-        Deque<TreeNode> stack = new ArrayDeque<>();
-        TreeNode cur = root;
-        while (!stack.isEmpty() || cur != null) {
-            while (cur != null) {
-                res.add(cur.val);
-                stack.push(cur);
-                cur = cur.left;
-            }
-            cur = stack.pop().right;
-        }
-        return res;
-    }
-
     public List<Integer> preorderTraversal(TreeNode root) {
-        List<Integer> res = new ArrayList<>();
+        List<Integer> result = new ArrayList<>();
+        // 1. 递归
+        // preorder(result, root);
+
+        // 2. 栈
+        // Deque<TreeNode> stack = new ArrayDeque<>();
+        // while (root != null || !stack.isEmpty()) {
+        //     while (root != null) {
+        //         result.add(root.val);
+        //         stack.push(root);
+        //         root = root.left;
+        //     }
+        //     root = stack.remove().right;
+        // }
+
+        // 3. 莫里斯遍历
         while (root != null) {
             if (root.left == null) {
-                res.add(root.val);
+                result.add(root.val);
                 root = root.right;
             } else {
                 TreeNode prev = root.left;
@@ -65,7 +51,7 @@ public class PreorderTraversal {
                     prev = prev.right;
                 }
                 if (prev.right == null) {
-                    res.add(root.val);
+                    result.add(root.val);
                     prev.right = root;
                     root = root.left;
                 } else {
@@ -74,6 +60,13 @@ public class PreorderTraversal {
                 }
             }
         }
-        return res;
+        return result;
+    }
+
+    private void preorder(List<Integer> result, TreeNode root) {
+        if (root == null) return;
+        result.add(root.val);
+        preorder(result, root.left);
+        preorder(result, root.right);
     }
 }
