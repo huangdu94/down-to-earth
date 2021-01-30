@@ -35,7 +35,7 @@ import java.util.List;
  * @date 2021/1/30
  */
 public class SwimInWater {
-    public int swimInWater(int[][] grid) {
+    public int swimInWater2(int[][] grid) {
         int col = grid.length, n = col * col, edgeListSize = (n - col) << 1;
         List<int[]> edgeList = new ArrayList<>(edgeListSize);
         for (int i = 0; i < col; i++) {
@@ -55,6 +55,31 @@ public class SwimInWater {
             ufs.union(edge[0], edge[1]);
             if (ufs.isConnected()) {
                 return edge[2];
+            }
+        }
+        return -1;
+    }
+
+    public int swimInWater(int[][] grid) {
+        int col = grid.length, n = col * col;
+        int[] index = new int[n];
+        for (int i = 0; i < col; i++) {
+            for (int j = 0; j < col; j++) {
+                index[grid[i][j]] = i * col + j;
+            }
+        }
+        int[][] directions = {{-1, 0}, {1, 0}, {0, -1}, {0, 1}};
+        UnionFindSet ufs = new UnionFindSet(n);
+        for (int t = 0; t < n; t++) {
+            int id = index[t], i = index[t] / col, j = index[t] % col;
+            for (int[] direction : directions) {
+                int x = i + direction[0], y = j + direction[1];
+                if (x < col && x >= 0 && y < col && y >= 0 && grid[x][y] < t) {
+                    ufs.union(id, x * col + y);
+                    if (ufs.isConnected()) {
+                        return t;
+                    }
+                }
             }
         }
         return -1;
