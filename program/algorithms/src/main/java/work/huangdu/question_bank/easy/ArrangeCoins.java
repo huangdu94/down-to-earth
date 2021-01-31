@@ -25,18 +25,50 @@ package work.huangdu.question_bank.easy;
  * @date 2021/1/30
  */
 public class ArrangeCoins {
-    // 二分
     public int arrangeCoins(int n) {
         if (n == 0) return 0;
-        return 1;
+        int l = 0, r = 65536, result = 0;
+        while (l <= r) {
+            int mid = l + (r - l) / 2;
+            long count = (long) (mid + 1) * mid / 2;
+            if (count == n) {
+                return mid;
+            } else if (count < n) {
+                result = mid;
+                l = mid + 1;
+            } else {
+                r = mid - 1;
+            }
+        }
+        return result;
+    }
+
+    // 二分
+    public int arrangeCoins2(int n) {
+        if (n == 0) return 0;
+        int l = 0, r = 65536;
+        while (r - l > 1) {
+            int mid = l + (r - l) / 2;
+            long count = count(mid);
+            if (count == n) {
+                return mid;
+            } else if (count < n) {
+                l = mid;
+            } else {
+                r = mid - 1;
+            }
+        }
+        return count(r) > n ? l : r;
+    }
+
+    private long count(int level) {
+        return (long) (level + 1) * level / 2;
     }
 
     public static void main(String[] args) {
-        for (long k = 1; k < 70000; k++) {
-            System.out.println((1 + k) * k / 2);
-        }
-        long max = Integer.MAX_VALUE;
-        System.out.println(max);
-        //TODO
+//        System.out.println(Math.sqrt((long) Integer.MAX_VALUE * 2));
+//        long k = 65535;
+//        System.out.println((1 + k) * k / 2 < Integer.MAX_VALUE);
+        System.out.println(new ArrangeCoins().arrangeCoins(5));
     }
 }
