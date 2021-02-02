@@ -54,8 +54,57 @@ public class CharacterReplacement {
         return max;
     }
 
+    public int characterReplacement1(String s, int k) {
+        // 假设s不为null且k不为负数
+        // n为0时，此判断条件成立，n>=1、27、53...时，最大的字母至少为1+n/27个
+        // if (k >= n - 1 - n / 27) return n;
+        int n = s.length(), maxLen = 0, maxCount = 0, l = 0, r = 0;
+        int[] counts = new int[26];
+        while (r < n) {
+            while (r <= n && maxCount + k >= r - l) {
+                if (r < n) {
+                    maxCount = Math.max(maxCount, ++counts[s.charAt(r) - 'A']);
+                }
+                r++;
+            }
+            maxLen = Math.max(maxLen, r - l - 1);
+            while (maxCount + k < r - l) {
+                counts[s.charAt(l++) - 'A']--;
+            }
+        }
+        return maxLen;
+    }
+
+    public int characterReplacement2(String s, int k) {
+        int n = s.length(), maxLen = 0, maxCount = 0, l = 0, r = 0;
+        int[] counts = new int[26];
+        while (r < n) {
+            maxCount = Math.max(maxCount, ++counts[s.charAt(r++) - 'A']);
+            while (maxCount + k < r - l) {
+                counts[s.charAt(l++) - 'A']--;
+            }
+            maxLen = Math.max(maxLen, r - l);
+        }
+        return maxLen;
+    }
+
+    public int characterReplacement3(String s, int k) {
+        int n = s.length(), maxCount = 0, l = 0, r = 0;
+        int[] counts = new int[26];
+        while (r < n) {
+            maxCount = Math.max(maxCount, ++counts[s.charAt(r++) - 'A']);
+            if (maxCount + k < r - l) {
+                counts[s.charAt(l++) - 'A']--;
+            }
+        }
+        return r - l;
+    }
+
     public static void main(String[] args) {
         CharacterReplacement cp = new CharacterReplacement();
-        System.out.println(cp.characterReplacement("ABAB", 2));
+        String s = "AAAA";
+        int k = 0;
+        int result = cp.characterReplacement(s, k);
+        System.out.println(result);
     }
 }
