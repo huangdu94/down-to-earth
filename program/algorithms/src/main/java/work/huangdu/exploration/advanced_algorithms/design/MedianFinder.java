@@ -5,7 +5,7 @@ import java.util.Comparator;
 import java.util.PriorityQueue;
 
 /**
- * 数据流的中位数
+ * 295. 数据流的中位数
  * 中位数是有序列表中间的数。如果列表长度是偶数，中位数则是中间两个数的平均值。
  * 例如，
  * [2,3,4]的中位数是 3
@@ -63,8 +63,8 @@ public class MedianFinder {
 
     public double findMedian() {
         int mid = size / 2;
-        if (size % 2 == 0) {
-            return (array[mid - 1] + array[mid]) / 2.0;
+        if ((size & 1) == 0) {
+            return ((double) array[mid - 1] + array[mid]) / 2;
         }
         return array[mid];
     }
