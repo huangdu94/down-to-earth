@@ -1,5 +1,7 @@
 package work.huangdu.exploration.start_from_scratch.double_pointer.homonymous_sliding_window;
 
+import java.util.Arrays;
+
 /**
  * 643. 子数组最大平均数 I
  * 给定 n 个整数，找出平均数最大且长度为 k 的连续子数组，并输出该最大平均数。
@@ -32,5 +34,29 @@ public class FindMaxAverage {
 
     public static void main(String[] args) {
         System.out.println(new FindMaxAverage().findMaxAverage(new int[]{1, 12, -5, -6, 50, 3}, 4));
+    }
+
+    public double findMaxAverage2(int[] nums, int k) {
+        int n = nums.length, cur = Arrays.stream(nums).limit(k).sum(), max = cur;
+        for (int i = k; i < n; i++) {
+            cur += (nums[i] - nums[i - k]);
+            max = Math.max(max, cur);
+        }
+        return (double) max / k;
+    }
+
+    public double findMaxAverage3(int[] nums, int k) {
+        int n = nums.length, cur = 0, max;
+        for (int i = 0; i < k; i++) {
+            cur += nums[i];
+        }
+        max = cur;
+        for (int i = k; i < n; i++) {
+            cur += (nums[i] - nums[i - k]);
+            if (max < cur) {
+                max = cur;
+            }
+        }
+        return (double) max / k;
     }
 }
