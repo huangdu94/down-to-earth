@@ -60,8 +60,9 @@ public class PreorderN {
         while (!stack.isEmpty()) {
             Node node = stack.pollLast();
             output.add(node.val);
-            Collections.reverse(node.children);
-            stack.addAll(node.children);
+            for (int i = node.children.size() - 1; i >= 0; i--) {
+                stack.addLast(node.children.get(i));
+            }
         }
         return output;
     }
@@ -83,4 +84,4 @@ class Node {
         val = _val;
         children = _children;
     }
-};
+}
