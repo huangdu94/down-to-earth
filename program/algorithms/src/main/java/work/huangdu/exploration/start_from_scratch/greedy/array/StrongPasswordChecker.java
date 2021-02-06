@@ -61,8 +61,11 @@ public class StrongPasswordChecker {
             // 需要insert
             int needInsert = 6 - len;
             // 1. 如果需要插入2个或2个以上，仅考虑插入的数量就可以满足密码要求
-            // 2. 如果只需要插入1个，仅一种情况就是五位密码都相同，此时需要insert一次，update一次，其它情况均只需要操作needInsert次
-            if (needInsert == 1 && !continuousList.isEmpty() && continuousList.get(0) == 5) {
+            // 2. 如果只需要插入1个，以下两种情况需要insert一次，update一次，其它情况均只需要操作1次：
+            //      a. 连续五个相同的字母
+            //      b. 虽然不是五个相同的字母，但是字符种类只有一种
+            // 综上： 如果只需要插入1个字母，且字符种类只有一种时需要操作2次。其它情况均只需要考虑需要插入的个数即可
+            if (needInsert == 1 && needChangeByKind == 2) {
                 return 2;
             }
             return needInsert;
@@ -124,6 +127,7 @@ public class StrongPasswordChecker {
 
     public static void main(String[] args) {
         StrongPasswordChecker spc = new StrongPasswordChecker();
-        System.out.println(spc.strongPasswordChecker("aaaaaaaabbbbbbbaaaaaaaaaaaaaaaaaaaaa"));
+        //System.out.println(spc.strongPasswordChecker("aaaaaaaabbbbbbbaaaaaaaaaaaaaaaaaaaaa"));
+        System.out.println(spc.strongPasswordChecker("aabaa"));
     }
 }
