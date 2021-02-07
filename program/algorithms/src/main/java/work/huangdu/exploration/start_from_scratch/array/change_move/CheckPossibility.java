@@ -28,13 +28,37 @@ public class CheckPossibility {
             if (nums[i] > nums[i + 1]) {
                 if (change) return false;
                 // 两种改法：
-                // 1. nums[i]=nums[i + 1] nums[i]减小 这样的话需要保证 nums[i]>=num[i-1]
+                // 1. nums[i]=nums[i + 1] nums[i]减小 这样的话需要保证 nums[i+1]>=num[i-1]
                 // 2. nums[i + 1]=nums[i] nums[i+1]增大 继续判断即可
                 // 如果第一种可以优先使用第一种改法，因为第一种改法不影响后面原本可能正确的
                 if (i != 0 && nums[i - 1] > nums[i + 1]) {
                     nums[i + 1] = nums[i];
                 }
                 change = true;
+            }
+        }
+        return true;
+    }
+
+    public boolean checkPossibility2(int[] nums) {
+        int n = nums.length;
+        boolean changed = false;
+        for (int i = 0; i < n - 1; i++) {
+            // 遇到这种情况要么把nums[i]调小，要么把nums[i+1]调大
+            // 1. 如果i=0，nums[i]可以调的无限小，根据贪心调nums[i]即可
+            // 2. 如果i=n-2，nums[i+1]可以调的无限大，根据贪心调nums[i+1]即可
+            // 3. 如果i的范围(0,n-2)，要保证nums[i-1]<=nums[i+1](可以把nums[i]调到nums[i-1])或nums[i]<=nums[i+2](可以把nums[i+1]调到nums[i+2])
+            if (nums[i] > nums[i + 1]) {
+                if (i == 0) {
+                    if (changed) return false;
+                } else if (i == n - 2) {
+                    return !changed;
+                } else {
+                    if (changed || nums[i - 1] > nums[i + 1] && nums[i] > nums[i + 2]) return false;
+                    // 贪心，因为nums[i]已经满足要求，所以即使可以通过调nums[i]解决，能调nums[i+1]解决的机会也不能放过
+                    if (nums[i] <= nums[i + 2]) i++;
+                }
+                changed = true;
             }
         }
         return true;
