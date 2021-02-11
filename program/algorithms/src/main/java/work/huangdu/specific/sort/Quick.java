@@ -69,7 +69,7 @@ public class Quick {
         // 基准数归位
         arr[l] = arr[i];
         arr[i] = pivot;
-        quick(arr, l, i);
-        quick(arr, i + 1, r);
+        quick2(arr, l, i);
+        quick2(arr, i + 1, r);
     }
 }
