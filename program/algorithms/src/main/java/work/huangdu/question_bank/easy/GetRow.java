@@ -125,6 +125,19 @@ public class GetRow {
         return list;
     }
 
+    public List<Integer> getRow4(int rowIndex) {
+        List<Integer> list = new ArrayList<>(++rowIndex);
+        for (int i = 0; i < rowIndex; i++) {
+            list.add(1);
+        }
+        for (int i = 2; i < rowIndex; i++) {
+            for (int j = rowIndex - i; j < rowIndex - 1; j++) {
+                list.set(j, list.get(j) + list.get(j + 1));
+            }
+        }
+        return list;
+    }
+
     public static void main(String[] args) {
         GetRow getRow = new GetRow();
         for (int k = 0; k <= 33; k++) {
