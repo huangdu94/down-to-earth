@@ -52,4 +52,42 @@ public class FindDisappearedNumbers {
         }
         return res;
     }
+
+    // 遍历两次次，第一次标记，第二次查看哪些地方没被标记，则为缺失的
+    public List<Integer> findDisappearedNumbers4(int[] nums) {
+        int n = nums.length;
+        List<Integer> result = new ArrayList<>();
+        for (int i = 0; i < n; i++) {
+            int index = Math.abs(nums[i]) - 1;
+            if (nums[index] > 0) {
+                nums[index] *= -1;
+            }
+        }
+        for (int i = 0; i < n; i++) {
+            if (nums[i] > 0) {
+                result.add(i + 1);
+            }
+        }
+        return result;
+    }
+
+    // 交换法，把每个数字交换到自己应该在的位置上，
+    // 每一次交换一直交换到需要被交换的位置已经是正确的数字位置，第二次遍历查看哪些位置上不是正确的数字则为缺失
+    public List<Integer> findDisappearedNumbers3(int[] nums) {
+        int n = nums.length;
+        List<Integer> result = new ArrayList<>();
+        for (int i = 0; i < n; i++) {
+            while (nums[i] != i + 1 && nums[i] != nums[nums[i] - 1]) {
+                int temp = nums[nums[i] - 1];
+                nums[nums[i] - 1] = nums[i];
+                nums[i] = temp;
+            }
+        }
+        for (int i = 0; i < n; i++) {
+            if (nums[i] != i + 1) {
+                result.add(i + 1);
+            }
+        }
+        return result;
+    }
 }
