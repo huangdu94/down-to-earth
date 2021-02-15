@@ -30,4 +30,19 @@ public class FindMaxConsecutiveOnes {
         if (count > max) max = count;
         return max;
     }
+
+    public int findMaxConsecutiveOnes2(int[] nums) {
+        int n = nums.length, i = 0, max = 0;
+        while (i < n) {
+            while (i < n && nums[i] == 0) {
+                i++;
+            }
+            int start = i;
+            while (i < n && nums[i] == 1) {
+                i++;
+            }
+            max = Math.max(max, i - start);
+        }
+        return max;
+    }
 }
