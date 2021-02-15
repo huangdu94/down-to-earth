@@ -1,4 +1,4 @@
-package work.huangdu.question_bank.easy;
+package work.huangdu.exploration.start_from_scratch.tree.inorder_binary_search_tree;
 
 import work.huangdu.data_structure.TreeNode;
 
@@ -58,11 +58,11 @@ public class ConvertBST {
         int sum = 0;
         TreeNode cur = root;
         while (cur != null) {
-            TreeNode prev = cur.right;
-            if (prev == null) {
+            if (cur.right == null) {
                 cur.val = (sum += cur.val);
                 cur = cur.left;
             } else {
+                TreeNode prev = cur.right;
                 while (prev.left != null && prev.left != cur) {
                     prev = prev.left;
                 }

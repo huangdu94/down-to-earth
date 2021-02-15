@@ -1,4 +1,4 @@
-package work.huangdu.question_bank.easy;
+package work.huangdu.exploration.start_from_scratch.tree.inorder_binary_search_tree;
 
 import work.huangdu.data_structure.TreeNode;
 
@@ -27,6 +27,36 @@ import java.util.Deque;
  * @date 2020/10/12 15:49
  */
 public class GetMinimumDifference {
+    public int getMinimumDifference(TreeNode root) {
+        int preVal = -1, min = Integer.MAX_VALUE;
+        while (root != null) {
+            if (root.left == null) {
+                if (preVal != -1) {
+                    min = Math.min(min, root.val - preVal);
+                }
+                preVal = root.val;
+                root = root.right;
+            } else {
+                TreeNode prev = root.left;
+                while (prev.right != null && prev.right != root) {
+                    prev = prev.right;
+                }
+                if (prev.right == null) {
+                    prev.right = root;
+                    root = root.left;
+                } else {
+                    if (preVal != -1) {
+                        min = Math.min(min, root.val - preVal);
+                    }
+                    preVal = root.val;
+                    prev.right = null;
+                    root = root.right;
+                }
+            }
+        }
+        return min;
+    }
+
     private int pre = -1;
     private int min = Integer.MAX_VALUE;
 
@@ -70,7 +100,7 @@ public class GetMinimumDifference {
         return min;
     }
 
-    public int getMinimumDifference(TreeNode root) {
+    public int getMinimumDifference4(TreeNode root) {
         int pre = -1, min = Integer.MAX_VALUE;
         TreeNode cur = root;
         while (cur != null) {
@@ -112,4 +142,5 @@ public class GetMinimumDifference {
         GetMinimumDifference difference = new GetMinimumDifference();
         System.out.println(difference.getMinimumDifference(root));
     }
+
 }
