@@ -7,7 +7,7 @@ import java.util.List;
 import java.util.Stack;
 
 /**
- * 二叉搜索树中第K小的元素
+ * 230. 二叉搜索树中第K小的元素
  * 给定一个二叉搜索树，编写一个函数 kthSmallest 来查找其中第 k 个最小的元素。
  * 说明：
  * 你可以假设 k 总是有效的，1 ≤ k ≤ 二叉搜索树元素个数。
@@ -38,23 +38,22 @@ import java.util.Stack;
 public class KthSmallest {
     public int kthSmallest(TreeNode root, int k) {
         List<Integer> inorder = new ArrayList<>();
-        TreeNode pre;
         TreeNode cur = root;
         while (cur != null) {
             if (cur.left == null) {
                 inorder.add(cur.val);
                 cur = cur.right;
             } else {
-                pre = cur.left;
-                while (pre.right != null && pre.right != cur) {
-                    pre = pre.right;
+                TreeNode prev = cur.left;
+                while (prev.right != null && prev.right != cur) {
+                    prev = prev.right;
                 }
-                if (pre.right == null) {
-                    pre.right = cur;
+                if (prev.right == null) {
+                    prev.right = cur;
                     cur = cur.left;
                 } else {
                     inorder.add(cur.val);
-                    pre.right = null;
+                    prev.right = null;
                     cur = cur.right;
                 }
             }
