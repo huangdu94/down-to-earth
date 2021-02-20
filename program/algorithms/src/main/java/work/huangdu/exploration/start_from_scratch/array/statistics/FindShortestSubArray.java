@@ -1,6 +1,6 @@
 package work.huangdu.exploration.start_from_scratch.array.statistics;
 
-import java.util.Arrays;
+import java.util.*;
 
 /**
  * 697. 数组的度
@@ -57,4 +57,34 @@ public class FindShortestSubArray {
         int[] nums = {1};
         System.out.println(findShortestSubArray.findShortestSubArray(nums));
     }
+
+    public int findShortestSubArray2(int[] nums) {
+        Map<Integer, Integer> counts = new HashMap<>();
+        int maxCount = 0;
+        for (int num : nums) {
+            maxCount = Math.max(maxCount, counts.merge(num, 1, Integer::sum));
+        }
+        Set<Integer> maxCountNumSet = new HashSet<>();
+        for (Map.Entry<Integer, Integer> entry : counts.entrySet()) {
+            if (entry.getValue() == maxCount) {
+                maxCountNumSet.add(entry.getKey());
+            }
+        }
+        Map<Integer, Integer> start = new HashMap<>(maxCountNumSet.size()), end = new HashMap<>(maxCountNumSet.size());
+        for (int i = 0, n = nums.length; i < n; i++) {
+            int num = nums[i];
+            if (maxCountNumSet.contains(num)) {
+                if (!start.containsKey(num)) {
+                    start.put(num, i);
+                }
+                end.put(num, i);
+            }
+        }
+        int minLen = Integer.MAX_VALUE;
+        for (int num : maxCountNumSet) {
+            minLen = Math.min(minLen, end.get(num) - start.get(num) + 1);
+        }
+        return minLen;
+    }
+
 }
