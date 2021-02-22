@@ -1,4 +1,4 @@
-package work.huangdu.question_bank.easy;
+package work.huangdu.exploration.start_from_scratch.tree.inorder_binary_search_tree;
 
 import work.huangdu.data_structure.TreeNode;
 
@@ -30,7 +30,7 @@ import work.huangdu.data_structure.TreeNode;
  * @date 2020/8/8 22:40
  */
 public class IsBalanced {
-    public boolean isBalanced2(TreeNode root) {
+    public boolean isBalanced(TreeNode root) {
         return balanced(root) != -1;
     }
 
@@ -44,13 +44,22 @@ public class IsBalanced {
         return -1;
     }*/
 
-    private int balanced(TreeNode node) {
-        if (node == null) return 0;
-        int leftHeight, rightHeight;
-        if ((leftHeight = balanced(node.left)) == -1
-                || (rightHeight = balanced(node.right)) == -1
-                || Math.abs(leftHeight - rightHeight) > 1)
-            return -1;
-        return Math.max(leftHeight, rightHeight) + 1;
+//    private int balanced(TreeNode node) {
+//        if (node == null) return 0;
+//        int leftHeight, rightHeight;
+//        if ((leftHeight = balanced(node.left)) == -1
+//                || (rightHeight = balanced(node.right)) == -1
+//                || Math.abs(leftHeight - rightHeight) > 1)
+//            return -1;
+//        return Math.max(leftHeight, rightHeight) + 1;
+//    }
+
+    private int balanced(TreeNode root) {
+        if (root == null) return 0;
+        int left, right;
+        if ((left = balanced(root.left)) != -1 && (right = balanced(root.right)) != -1 && Math.abs(left - right) <= 1) {
+            return Math.max(left, right) + 1;
+        }
+        return -1;
     }
 }

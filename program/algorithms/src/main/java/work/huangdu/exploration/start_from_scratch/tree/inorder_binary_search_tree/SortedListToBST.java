@@ -1,4 +1,4 @@
-package work.huangdu.question_bank.medium;
+package work.huangdu.exploration.start_from_scratch.tree.inorder_binary_search_tree;
 
 import work.huangdu.data_structure.ListNode;
 import work.huangdu.data_structure.TreeNode;
@@ -14,14 +14,14 @@ import java.util.Queue;
  * 示例:
  * 给定的有序链表： [-10, -3, 0, 5, 9],
  * 一个可能的答案是：[0, -3, 9, -10, null, 5], 它可以表示下面这个高度平衡二叉搜索树：
- * *      0
- * *     / \
- * *   -3   9
- * *   /   /
- * * -10  5
+ * *       0
+ * *      / \
+ * *    -3   9
+ * *    /   /
+ * *  -10  5
  *
  * @author yiyun (huangdu.hd@alibaba-inc.com)
- * @date 2020/8/18 13:03
+ * @date 2021/2/22
  */
 public class SortedListToBST {
     // 分治+中序遍历 最优解
@@ -75,24 +75,24 @@ public class SortedListToBST {
         return sortedListToBST(head, null);
     }
 
-    public TreeNode sortedListToBST(ListNode head, ListNode tail) {
-        if (head == tail) return null;
-        if (head.next == tail) return new TreeNode(head.val);
-        ListNode mid = findMid(head, tail);
-        TreeNode root = new TreeNode(mid.val);
-        root.left = sortedListToBST(head, mid);
-        root.right = sortedListToBST(mid.next, tail);
-        return root;
-    }
-
-    private ListNode findMid(ListNode left, ListNode right) {
-        ListNode slow = left, fast = left;
-        while (fast != right && fast.next != right) {
-            slow = slow.next;
-            fast = fast.next.next;
-        }
-        return slow;
-    }
+//    public TreeNode sortedListToBST(ListNode head, ListNode tail) {
+//        if (head == tail) return null;
+//        if (head.next == tail) return new TreeNode(head.val);
+//        ListNode mid = findMid(head, tail);
+//        TreeNode root = new TreeNode(mid.val);
+//        root.left = sortedListToBST(head, mid);
+//        root.right = sortedListToBST(mid.next, tail);
+//        return root;
+//    }
+//
+//    private ListNode findMid(ListNode left, ListNode right) {
+//        ListNode slow = left, fast = left;
+//        while (fast != right && fast.next != right) {
+//            slow = slow.next;
+//            fast = fast.next.next;
+//        }
+//        return slow;
+//    }
 
     private ListNode current;
 
@@ -116,5 +116,27 @@ public class SortedListToBST {
         current = current.next;
         root.right = inorder(n - 1 - (n >> 1));
         return root;
+    }
+
+    public TreeNode sortedListToBST4(ListNode head) {
+        return sortedListToBST(head, null);
+    }
+
+    private TreeNode sortedListToBST(ListNode head, ListNode tail) {
+        if (head == tail) return null;
+        ListNode mid = getMid(head, tail);
+        TreeNode root = new TreeNode(mid.val);
+        root.left = sortedListToBST(head, mid);
+        root.right = sortedListToBST(mid.next, tail);
+        return root;
+    }
+
+    private ListNode getMid(ListNode head, ListNode tail) {
+        ListNode slow = head, fast = head.next;
+        while (fast != tail && fast.next != tail) {
+            slow = slow.next;
+            fast = fast.next.next;
+        }
+        return slow;
     }
 }
