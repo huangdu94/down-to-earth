@@ -1,6 +1,5 @@
 package work.huangdu.exploration.start_from_scratch.tree.inorder_binary_search_tree;
 
-
 import work.huangdu.data_structure.TreeNode;
 
 import java.util.*;
@@ -33,66 +32,24 @@ import java.util.*;
  */
 public class GenerateTrees {
     public List<TreeNode> generateTrees(int n) {
-        // TODO
-        if (n == 1) return Collections.singletonList(new TreeNode(1));
-        List<List<Integer>> permutes = permute(n);
-        Set<TreeNode> result = new HashSet<>();
-        for (List<Integer> permute : permutes) {
-            TreeNode root = null, cur = null;
-            for (Integer num : permute) {
-                if (root == null) {
-                    root = new TreeNode(num);
-                    cur = root;
-                } else {
-                    while (true) {
-                        if (num > cur.val) {
-                            if (cur.right == null) {
-                                cur.right = new TreeNode(num);
-                                break;
-                            }
-                            cur = cur.right;
-                        } else {
-                            if (cur.left == null) {
-                                cur.left = new TreeNode(num);
-                                break;
-                            }
-                            cur = cur.left;
-                        }
-                    }
+        return generateTrees(1, n);
+    }
+
+    private List<TreeNode> generateTrees(int start, int end) {
+        List<TreeNode> roots = new ArrayList<>();
+        if (start > end) {
+            roots.add(null);
+            return roots;
+        }
+        for (int i = start; i <= end; i++) {
+            List<TreeNode> lefts = generateTrees(start, i - 1);
+            List<TreeNode> rights = generateTrees(i + 1, end);
+            for (TreeNode left : lefts) {
+                for (TreeNode right : rights) {
+                    roots.add(new TreeNode(i, left, right));
                 }
             }
-            result.add(root);
         }
-        return new ArrayList<>(result);
-    }
-
-    private List<List<Integer>> permute(int n) {
-        int[] nums = new int[n];
-        for (int i = 0; i < n; i++) {
-            nums[i] = i + 1;
-        }
-        List<List<Integer>> permutes = new ArrayList<>();
-        this.backtrack(nums, 0, permutes, new ArrayList<>());
-        return permutes;
-    }
-
-    private void backtrack(int[] nums, int index, List<List<Integer>> permutes, List<Integer> permute) {
-        if (index == nums.length) {
-            permutes.add(new ArrayList<>(permute));
-            return;
-        }
-        for (int i = index; i < nums.length; i++) {
-            permute.add(nums[i]);
-            swap(nums, index, i);
-            backtrack(nums, index + 1, permutes, permute);
-            permute.remove(index);
-            swap(nums, index, i);
-        }
-    }
-
-    private void swap(int[] nums, int a, int b) {
-        int temp = nums[a];
-        nums[a] = nums[b];
-        nums[b] = temp;
+        return roots;
     }
 }
