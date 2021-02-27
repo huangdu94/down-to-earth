@@ -56,7 +56,7 @@ public class LongestSubstring {
 
     public static void main(String[] args) {
         LongestSubstring ls = new LongestSubstring();
-        String s = "bbaaacbda";
+        String s = "bbaaacbd";
         int k = 3;
         int result = ls.longestSubstring(s, k);
         System.out.println(result);
