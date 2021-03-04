@@ -51,4 +51,22 @@ public class MatrixReshape {
         }
         return res;
     }
+
+    public int[][] matrixReshape2(int[][] nums, int r, int c) {
+        int row = nums.length, col = nums[0].length;
+        if (row * col != r * c || r == row) return nums;
+        int[][] newMatrix = new int[r][c];
+        int i0 = 0, j0 = 0;
+        for (int i = 0; i < row; i++) {
+            for (int j = 0; j < col; j++) {
+                newMatrix[i0][j0] = nums[i][j];
+                j0++;
+                if (j0 == c) {
+                    j0 = 0;
+                    i0++;
+                }
+            }
+        }
+        return newMatrix;
+    }
 }

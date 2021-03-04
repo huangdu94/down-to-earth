@@ -38,4 +38,30 @@ public class CheckInclusion {
         }
         return false;
     }
+
+    public boolean checkInclusion2(String s1, String s2) {
+        int n1 = s1.length(), n2 = s2.length();
+        if (n1 > n2) return false;
+        int[] counts = new int[128];
+        for (int i = 0; i < n1; i++) {
+            counts[s1.charAt(i)]++;
+            counts[s2.charAt(i)]--;
+        }
+        if (allZero(counts)) return true;
+        for (int i = n1; i < n2; i++) {
+            counts[s2.charAt(i - n1)]++;
+            counts[s2.charAt(i)]--;
+            if (allZero(counts)) return true;
+        }
+        return false;
+    }
+
+    private boolean allZero(int[] arr) {
+        for (int i = 'a'; i <= 'z'; i++) {
+            if (arr[i] != 0) {
+                return false;
+            }
+        }
+        return true;
+    }
 }
