@@ -4,9 +4,13 @@ import java.util.ArrayDeque;
 import java.util.Arrays;
 import java.util.Deque;
 
+import work.huangdu.temp.NextGreaterElements;
+
 /**
  * 503. 下一个更大元素 II
- * 给定一个循环数组（最后一个元素的下一个元素是数组的第一个元素），输出每个元素的下一个更大元素。数字 x 的下一个更大的元素是按数组遍历顺序，这个数字之后的第一个比它更大的数，这意味着你应该循环地搜索它的下一个更大的数。如果不存在，则输出 -1。
+ * 给定一个循环数组（最后一个元素的下一个元素是数组的第一个元素），输出每个元素的下一个更大元素。数字 x
+ * 的下一个更大的元素是按数组遍历顺序，这个数字之后的第一个比它更大的数，这意味着你应该循环地搜索它的下一个更大的数。如果不存在，则输出
+ * -1。
  * 示例 1:
  * 输入: [1,2,1]
  * 输出: [2,-1,2]
@@ -20,7 +24,7 @@ import java.util.Deque;
  */
 public class NextGreaterElements2 {
     public int[] nextGreaterElements(int[] nums) {
-        if (nums.length == 0) return new int[0];
+        if (nums.length == 0) { return new int[0]; }
         int n = nums.length, max = Integer.MIN_VALUE;
         int[] res = new int[n];
         Deque<int[]> stack = new ArrayDeque<>();
@@ -33,7 +37,7 @@ public class NextGreaterElements2 {
             while (!stack.isEmpty() && stack.peek()[0] < num) {
                 res[stack.pop()[1]] = num;
             }
-            stack.push(new int[]{num, i});
+            stack.push(new int[] {num, i});
         }
         // 再从头开始转，遇到max后结束，这一轮num值没必要再压栈，因为已经赋值过了
         // 只有栈顶元素的值不为max的时候才有必要继续转
@@ -57,7 +61,7 @@ public class NextGreaterElements2 {
     }
 
     public int[] nextGreaterElements2(int[] nums) {
-        if (nums.length == 0) return new int[0];
+        if (nums.length == 0) { return new int[0]; }
         int n = nums.length, max = Integer.MIN_VALUE, top = 0;
         int[] res = new int[n], stack = new int[n];
         // 先转一圈
@@ -90,6 +94,57 @@ public class NextGreaterElements2 {
             res[stack[--top]] = -1;
         }
         return res;
+    }
+
+    // 暴力
+    public int[] nextGreaterElements3(int[] nums) {
+        int n = nums.length, max = Integer.MIN_VALUE;
+        int[] result = new int[n];
+        // 先遍历一遍找最大值
+        for (int num : nums) {
+            if (max < num) {
+                max = num;
+            }
+        }
+        // 如果是最大值的话直接赋值-1，否则向右找
+        for (int i = 0; i < n; i++) {
+            int num = nums[i];
+            if (num == max) {
+                result[i] = -1;
+                continue;
+            }
+            int next = (i == n - 1 ? 0 : i + 1);
+            while (nums[next] <= num) {
+                next++;
+                if (next == n) { next = 0;}
+            }
+            result[i] = nums[next];
+        }
+        return result;
+    }
+
+    // 单调栈
+    public int[] nextGreaterElements4(int[] nums) {
+        int n = nums.length;
+        Deque<Integer> stack = new ArrayDeque<>();
+        int[] result = new int[n];
+        for (int i = 0; i < n; i++) {
+            int num = nums[i];
+            while (!stack.isEmpty() && nums[stack.peek()] < num) {
+                result[stack.pop()] = num;
+            }
+            stack.push(i);
+        }
+        for (int i = 0; i < n - 1; i++) {
+            int num = nums[i];
+            while (!stack.isEmpty() && nums[stack.peek()] < num) {
+                result[stack.pop()] = num;
+            }
+        }
+        while (!stack.isEmpty()) {
+            result[stack.pop()] = -1;
+        }
+        return result;
     }
 
     public static void main(String[] args) {
