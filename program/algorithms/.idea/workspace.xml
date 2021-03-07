@@ -1,0 +1,1378 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="BranchesTreeState">
+    <expand>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="LOCAL_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="GROUP_NODE:origin" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+    </expand>
+    <select />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="4c4d5feb-b0b8-4cec-acac-915d262b0650" name="Default Changelist" comment="每日一题。">
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/work/huangdu/competition/biweekly/Solution33.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/work/huangdu/competition/biweekly/Solution34.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/work/huangdu/competition/weekly/Solution203.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/work/huangdu/competition/weekly/Solution204.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/work/huangdu/competition/weekly/Solution205.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/work/huangdu/competition/weekly/Solution209.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/work/huangdu/competition/weekly/Solution218.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/work/huangdu/competition/weekly/Solution219.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/work/huangdu/data_structure/BinaryIndexedTree.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/work/huangdu/data_structure/Discretization.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/work/huangdu/data_structure/DoublyListNode.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/work/huangdu/data_structure/ListNode.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/work/huangdu/data_structure/Stack.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/work/huangdu/data_structure/TreeNode.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/work/huangdu/data_structure/Trie.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/work/huangdu/data_structure/TrieNode.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/work/huangdu/data_structure/UnionFindSets.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/work/huangdu/exploration/advanced_algorithms/array_string/Calculate.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/work/huangdu/exploration/advanced_algorithms/array_string/FindDuplicate.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/work/huangdu/exploration/advanced_algorithms/array_string/FirstMissingPositive.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/work/huangdu/exploration/advanced_algorithms/array_string/FourSumCount.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/work/huangdu/exploration/advanced_algorithms/array_string/GameOfLife.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/work/huangdu/exploration/advanced_algorithms/array_string/LongestConsecutive.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/work/huangdu/exploration/advanced_algorithms/array_string/MaxArea.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/work/huangdu/exploration/advanced_algorithms/array_string/MaxSlidingWindow.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/work/huangdu/exploration/advanced_algorithms/array_string/MinWindow.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/work/huangdu/exploration/advanced_algorithms/array_string/ProductExceptSelf.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/work/huangdu/exploration/advanced_algorithms/array_string/SpiralOrder.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/work/huangdu/exploration/advanced_algorithms/backtrack/FindWords.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/work/huangdu/exploration/advanced_algorithms/backtrack/IsMatch.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/work/huangdu/exploration/advanced_algorithms/backtrack/Match.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/work/huangdu/exploration/advanced_algorithms/backtrack/Partition.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/work/huangdu/exploration/advanced_algorithms/backtrack/RemoveInvalidParentheses.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/work/huangdu/exploration/advanced_algorithms/design/LRUCache.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/work/huangdu/exploration/advanced_algorithms/design/MedianFinder.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/work/huangdu/exploration/advanced_algorithms/design/NestedIterator.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/work/huangdu/exploration/advanced_algorithms/design/Trie.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/work/huangdu/exploration/advanced_algorithms/dynamic/MaxCoins.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/work/huangdu/exploration/advanced_algorithms/dynamic/MaxProduct.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/work/huangdu/exploration/advanced_algorithms/dynamic/MaxProfit.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/work/huangdu/exploration/advanced_algorithms/dynamic/NumSquares.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/work/huangdu/exploration/advanced_algorithms/dynamic/WordBreak.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/work/huangdu/exploration/advanced_algorithms/dynamic/WordBreak2.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/work/huangdu/exploration/advanced_algorithms/linkedlist/CopyRandomList.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/work/huangdu/exploration/advanced_algorithms/linkedlist/MergeKLists.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/work/huangdu/exploration/advanced_algorithms/linkedlist/SortList.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/work/huangdu/exploration/advanced_algorithms/math/LargestNumber.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/work/huangdu/exploration/advanced_algorithms/math/MaxPoints.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/work/huangdu/exploration/advanced_algorithms/other/GetSkyline.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/work/huangdu/exploration/advanced_algorithms/other/LargestRectangleArea.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/work/huangdu/exploration/advanced_algorithms/other/ReconstructQueue.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/work/huangdu/exploration/advanced_algorithms/other/Trap.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/work/huangdu/exploration/advanced_algorithms/sort_search/FindMedianSortedArrays.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/work/huangdu/exploration/advanced_algorithms/sort_search/KthSmallest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/work/huangdu/exploration/advanced_algorithms/sort_search/WiggleSort.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/work/huangdu/exploration/advanced_algorithms/tree_graph/CanFinish.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/work/huangdu/exploration/advanced_algorithms/tree_graph/CountSmaller.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/work/huangdu/exploration/advanced_algorithms/tree_graph/FindCircleNum.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/work/huangdu/exploration/advanced_algorithms/tree_graph/FindOrder.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/work/huangdu/exploration/advanced_algorithms/tree_graph/LadderLength.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/work/huangdu/exploration/advanced_algorithms/tree_graph/LongestIncreasingPath.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/work/huangdu/exploration/advanced_algorithms/tree_graph/LowestCommonAncestor.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/work/huangdu/exploration/advanced_algorithms/tree_graph/MaxPathSum.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/work/huangdu/exploration/advanced_algorithms/tree_graph/Solve.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/work/huangdu/exploration/intermediate_algorithms/array_string/GroupAnagrams.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/work/huangdu/exploration/intermediate_algorithms/array_string/IncreasingTriplet.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/work/huangdu/exploration/intermediate_algorithms/array_string/LengthOfLongestSubstring.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/work/huangdu/exploration/intermediate_algorithms/array_string/LongestPalindrome.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/work/huangdu/exploration/intermediate_algorithms/array_string/SetZeroes.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/work/huangdu/exploration/intermediate_algorithms/array_string/ThreeSum.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/work/huangdu/exploration/intermediate_algorithms/backtrack/Exist.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/work/huangdu/exploration/intermediate_algorithms/backtrack/GenerateParenthesis.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/work/huangdu/exploration/intermediate_algorithms/backtrack/LetterCombinations.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/work/huangdu/exploration/intermediate_algorithms/backtrack/Permute.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/work/huangdu/exploration/intermediate_algorithms/backtrack/Subsets.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/work/huangdu/exploration/intermediate_algorithms/design/Codec.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/work/huangdu/exploration/intermediate_algorithms/design/RandomizedSet.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/work/huangdu/exploration/intermediate_algorithms/dynamic/CanJump.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/work/huangdu/exploration/intermediate_algorithms/dynamic/CoinChange.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/work/huangdu/exploration/intermediate_algorithms/dynamic/LengthOfLIS.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/work/huangdu/exploration/intermediate_algorithms/dynamic/UniquePaths.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/work/huangdu/exploration/intermediate_algorithms/linkedlist/AddTwoNumbers.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/work/huangdu/exploration/intermediate_algorithms/linkedlist/GetIntersectionNode.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/work/huangdu/exploration/intermediate_algorithms/linkedlist/OddEvenList.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/work/huangdu/exploration/intermediate_algorithms/math/Divide.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/work/huangdu/exploration/intermediate_algorithms/math/FractionToDecimal.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/work/huangdu/exploration/intermediate_algorithms/math/IsHappy.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/work/huangdu/exploration/intermediate_algorithms/math/MyPow.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/work/huangdu/exploration/intermediate_algorithms/math/MySqrt.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/work/huangdu/exploration/intermediate_algorithms/math/TitleToNumber.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/work/huangdu/exploration/intermediate_algorithms/math/TrailingZeroes.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/work/huangdu/exploration/intermediate_algorithms/other/EvalRPN.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/work/huangdu/exploration/intermediate_algorithms/other/GetSum.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/work/huangdu/exploration/intermediate_algorithms/other/LeastInterval.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/work/huangdu/exploration/intermediate_algorithms/other/MajorityElement.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/work/huangdu/exploration/intermediate_algorithms/sort_search/FindKthLargest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/work/huangdu/exploration/intermediate_algorithms/sort_search/FindPeakElement.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/work/huangdu/exploration/intermediate_algorithms/sort_search/Merge.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/work/huangdu/exploration/intermediate_algorithms/sort_search/Search.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/work/huangdu/exploration/intermediate_algorithms/sort_search/SearchMatrix.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/work/huangdu/exploration/intermediate_algorithms/sort_search/SearchRange.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/work/huangdu/exploration/intermediate_algorithms/sort_search/SortColors.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/work/huangdu/exploration/intermediate_algorithms/sort_search/TopKFrequent.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/work/huangdu/exploration/intermediate_algorithms/tree_graph/BuildTree.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/work/huangdu/exploration/intermediate_algorithms/tree_graph/Connect.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/work/huangdu/exploration/intermediate_algorithms/tree_graph/InorderTraversal.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/work/huangdu/exploration/intermediate_algorithms/tree_graph/KthSmallest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/work/huangdu/exploration/intermediate_algorithms/tree_graph/NumIslands.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/work/huangdu/exploration/intermediate_algorithms/tree_graph/ZigzagLevelOrder.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/work/huangdu/exploration/primary_algorithms/array/ContainsDuplicate.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/work/huangdu/exploration/primary_algorithms/array/Intersect.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/work/huangdu/exploration/primary_algorithms/array/IsValidSudoku.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/work/huangdu/exploration/primary_algorithms/array/MaxProfit.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/work/huangdu/exploration/primary_algorithms/array/MoveZeroes.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/work/huangdu/exploration/primary_algorithms/array/PlusOne.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/work/huangdu/exploration/primary_algorithms/array/RemoveDuplicates.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/work/huangdu/exploration/primary_algorithms/array/Rotate.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/work/huangdu/exploration/primary_algorithms/array/RotateMap.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/work/huangdu/exploration/primary_algorithms/array/SingleNumber.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/work/huangdu/exploration/primary_algorithms/array/TwoSum.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/work/huangdu/exploration/primary_algorithms/design/MinStack.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/work/huangdu/exploration/primary_algorithms/design/Shuffle.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/work/huangdu/exploration/primary_algorithms/dynamic/ClimbStairs.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/work/huangdu/exploration/primary_algorithms/dynamic/MaxProfit.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/work/huangdu/exploration/primary_algorithms/dynamic/MaxSubArray.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/work/huangdu/exploration/primary_algorithms/dynamic/Rob.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/work/huangdu/exploration/primary_algorithms/dynamic/Test.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/work/huangdu/exploration/primary_algorithms/linkedlist/DeleteNode.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/work/huangdu/exploration/primary_algorithms/linkedlist/HasCycle.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/work/huangdu/exploration/primary_algorithms/linkedlist/IsPalindrome.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/work/huangdu/exploration/primary_algorithms/linkedlist/MergeTwoLists.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/work/huangdu/exploration/primary_algorithms/linkedlist/RemoveNthFromEnd.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/work/huangdu/exploration/primary_algorithms/linkedlist/ReverseList.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/work/huangdu/exploration/primary_algorithms/math/CountPrimes.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/work/huangdu/exploration/primary_algorithms/math/FizzBuzz.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/work/huangdu/exploration/primary_algorithms/math/IsPowerOfThree.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/work/huangdu/exploration/primary_algorithms/math/RomanToInt.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/work/huangdu/exploration/primary_algorithms/other/Generate.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/work/huangdu/exploration/primary_algorithms/other/HammingDistance.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/work/huangdu/exploration/primary_algorithms/other/HammingWeight.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/work/huangdu/exploration/primary_algorithms/other/MissingNumber.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/work/huangdu/exploration/primary_algorithms/other/ReverseBits.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/work/huangdu/exploration/primary_algorithms/other/Valid.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/work/huangdu/exploration/primary_algorithms/sort_search/FirstBadVersion.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/work/huangdu/exploration/primary_algorithms/sort_search/Merge.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/work/huangdu/exploration/primary_algorithms/sort_search/Test.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/work/huangdu/exploration/primary_algorithms/string/CountAndSay.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/work/huangdu/exploration/primary_algorithms/string/FirstUniqChar.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/work/huangdu/exploration/primary_algorithms/string/IsAnagram.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/work/huangdu/exploration/primary_algorithms/string/IsPalindrome.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/work/huangdu/exploration/primary_algorithms/string/LongestCommonPrefix.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/work/huangdu/exploration/primary_algorithms/string/MyAtoi.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/work/huangdu/exploration/primary_algorithms/string/Reverse.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/work/huangdu/exploration/primary_algorithms/string/ReverseString.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/work/huangdu/exploration/primary_algorithms/string/StrStr.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/work/huangdu/exploration/primary_algorithms/tree/LevelOrder.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/work/huangdu/exploration/primary_algorithms/tree/MaxDepth.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/work/huangdu/exploration/primary_algorithms/tree/SortedArrayToBST.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/work/huangdu/exploration/primary_algorithms/tree/Symmetric.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/work/huangdu/exploration/primary_algorithms/tree/Test.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/work/huangdu/exploration/primary_algorithms/tree/ValidBST.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/work/huangdu/exploration/start_from_scratch/array/change_move/CheckPossibility.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/work/huangdu/exploration/start_from_scratch/array/change_move/MinMoves.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/work/huangdu/exploration/start_from_scratch/array/change_move/MoveZeroes.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/work/huangdu/exploration/start_from_scratch/array/prefix_sum/NumArray.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/work/huangdu/exploration/start_from_scratch/array/prefix_sum/NumMatrix.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/work/huangdu/exploration/start_from_scratch/array/prefix_sum/ProductExceptSelf.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/work/huangdu/exploration/start_from_scratch/array/roll_2d/CountBattleships.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/work/huangdu/exploration/start_from_scratch/array/roll_2d/Generate.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/work/huangdu/exploration/start_from_scratch/array/roll_2d/GetRow.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/work/huangdu/exploration/start_from_scratch/array/roll_2d/ImageSmoother.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/work/huangdu/exploration/start_from_scratch/array/roll_2d/MaxCount.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/work/huangdu/exploration/start_from_scratch/array/rotate/MaxRotateFunction.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/work/huangdu/exploration/start_from_scratch/array/rotate/Rotate.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/work/huangdu/exploration/start_from_scratch/array/special_traversal_2d/FindDiagonalOrder.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/work/huangdu/exploration/start_from_scratch/array/special_traversal_2d/GenerateMatrix.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/work/huangdu/exploration/start_from_scratch/array/special_traversal_2d/SpiralOrder.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/work/huangdu/exploration/start_from_scratch/array/statistics/FindDisappearedNumbers.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/work/huangdu/exploration/start_from_scratch/array/statistics/FindDuplicates.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/work/huangdu/exploration/start_from_scratch/array/statistics/FindErrorNums.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/work/huangdu/exploration/start_from_scratch/array/statistics/FindShortestSubArray.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/work/huangdu/exploration/start_from_scratch/array/statistics/FirstMissingPositive.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/work/huangdu/exploration/start_from_scratch/array/statistics/HIndex.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/work/huangdu/exploration/start_from_scratch/array/transform_2d/GameOfLife.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/work/huangdu/exploration/start_from_scratch/array/transform_2d/MatrixReshape.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/work/huangdu/exploration/start_from_scratch/array/transform_2d/Rotate.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/work/huangdu/exploration/start_from_scratch/array/transform_2d/SetZeroes.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/work/huangdu/exploration/start_from_scratch/array/traversal/FindMaxConsecutiveOnes.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/work/huangdu/exploration/start_from_scratch/array/traversal/FindPoisonedDuration.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/work/huangdu/exploration/start_from_scratch/array/traversal/MaximumProduct.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/work/huangdu/exploration/start_from_scratch/array/traversal/ThirdMax.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/work/huangdu/exploration/start_from_scratch/binary/fast_power/MyPow.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/work/huangdu/exploration/start_from_scratch/binary/fast_power/SuperPow.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/work/huangdu/exploration/start_from_scratch/binary/math/CheckPerfectNumber.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/work/huangdu/exploration/start_from_scratch/binary/math/ConstructRectangle.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/work/huangdu/exploration/start_from_scratch/binary/math/Divide.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/work/huangdu/exploration/start_from_scratch/binary/number_bit_operation/AddDigits.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/work/huangdu/exploration/start_from_scratch/binary/number_bit_operation/BulbSwitch.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/work/huangdu/exploration/start_from_scratch/binary/number_bit_operation/ConvertToBase7.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/work/huangdu/exploration/start_from_scratch/binary/number_bit_operation/ConvertToTitle.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/work/huangdu/exploration/start_from_scratch/binary/number_bit_operation/CountDigitOne.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/work/huangdu/exploration/start_from_scratch/binary/number_bit_operation/CountNumbersWithUniqueDigits.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/work/huangdu/exploration/start_from_scratch/binary/number_bit_operation/FindComplement.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/work/huangdu/exploration/start_from_scratch/binary/number_bit_operation/FindNthDigit.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/work/huangdu/exploration/start_from_scratch/binary/number_bit_operation/HammingDistance.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/work/huangdu/exploration/start_from_scratch/binary/number_bit_operation/HammingWeight.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/work/huangdu/exploration/start_from_scratch/binary/number_bit_operation/HasAlternatingBits.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/work/huangdu/exploration/start_from_scratch/binary/number_bit_operation/IsPalindrome.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/work/huangdu/exploration/start_from_scratch/binary/number_bit_operation/IsPowerOfFour.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/work/huangdu/exploration/start_from_scratch/binary/number_bit_operation/IsPowerOfThree.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/work/huangdu/exploration/start_from_scratch/binary/number_bit_operation/IsPowerOfTwo.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/work/huangdu/exploration/start_from_scratch/binary/number_bit_operation/IsUgly.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/work/huangdu/exploration/start_from_scratch/binary/number_bit_operation/LargestPalindrome.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/work/huangdu/exploration/start_from_scratch/binary/number_bit_operation/MaximumSwap.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/work/huangdu/exploration/start_from_scratch/binary/number_bit_operation/NearestPalindromic.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/work/huangdu/exploration/start_from_scratch/binary/number_bit_operation/PoorPigs.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/work/huangdu/exploration/start_from_scratch/binary/number_bit_operation/Reverse.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/work/huangdu/exploration/start_from_scratch/binary/number_bit_operation/ReverseBits.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/work/huangdu/exploration/start_from_scratch/binary/number_bit_operation/TitleToNumber.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/work/huangdu/exploration/start_from_scratch/binary/number_bit_operation/ToHex.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/work/huangdu/exploration/start_from_scratch/binary/number_bit_operation/TotalHammingDistance.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/work/huangdu/exploration/start_from_scratch/binary/number_bit_operation/TrailingZeroes.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/work/huangdu/exploration/start_from_scratch/binary/number_bit_operation/ValidUtf8.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/work/huangdu/exploration/start_from_scratch/double_pointer/fast_slow/CircularArrayLoop.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/work/huangdu/exploration/start_from_scratch/double_pointer/fast_slow/DetectCycle.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/work/huangdu/exploration/start_from_scratch/double_pointer/fast_slow/FindDuplicate.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/work/huangdu/exploration/start_from_scratch/double_pointer/fast_slow/HasCycle.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/work/huangdu/exploration/start_from_scratch/double_pointer/fast_slow/IsPalindrome.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/work/huangdu/exploration/start_from_scratch/double_pointer/fast_slow/ReorderList.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/work/huangdu/exploration/start_from_scratch/double_pointer/head_tail/FourSum.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/work/huangdu/exploration/start_from_scratch/double_pointer/head_tail/MaxArea.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/work/huangdu/exploration/start_from_scratch/double_pointer/head_tail/ReverseVowels.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/work/huangdu/exploration/start_from_scratch/double_pointer/head_tail/ThreeSum.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/work/huangdu/exploration/start_from_scratch/double_pointer/head_tail/ThreeSumClosest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/work/huangdu/exploration/start_from_scratch/double_pointer/head_tail/Trap.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/work/huangdu/exploration/start_from_scratch/double_pointer/head_tail/TwoSum.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/work/huangdu/exploration/start_from_scratch/double_pointer/head_tail/ValidPalindrome.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/work/huangdu/exploration/start_from_scratch/double_pointer/homonymous_sliding_window/CharacterReplacement.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/work/huangdu/exploration/start_from_scratch/double_pointer/homonymous_sliding_window/CheckInclusion.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/work/huangdu/exploration/start_from_scratch/double_pointer/homonymous_sliding_window/DeleteDuplicates.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/work/huangdu/exploration/start_from_scratch/double_pointer/homonymous_sliding_window/DeleteDuplicates2.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/work/huangdu/exploration/start_from_scratch/double_pointer/homonymous_sliding_window/FindAnagrams.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/work/huangdu/exploration/start_from_scratch/double_pointer/homonymous_sliding_window/FindLengthOfLCIS.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/work/huangdu/exploration/start_from_scratch/double_pointer/homonymous_sliding_window/FindMaxAverage.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/work/huangdu/exploration/start_from_scratch/double_pointer/homonymous_sliding_window/FindRepeatedDnaSequences.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/work/huangdu/exploration/start_from_scratch/double_pointer/homonymous_sliding_window/FindSubstring.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/work/huangdu/exploration/start_from_scratch/double_pointer/homonymous_sliding_window/LengthOfLongestSubstring.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/work/huangdu/exploration/start_from_scratch/double_pointer/homonymous_sliding_window/MinSubArrayLen.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/work/huangdu/exploration/start_from_scratch/double_pointer/homonymous_sliding_window/MinWindow.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/work/huangdu/exploration/start_from_scratch/double_pointer/homonymous_sliding_window/RemoveDuplicates.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/work/huangdu/exploration/start_from_scratch/double_pointer/homonymous_sliding_window/RemoveElement.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/work/huangdu/exploration/start_from_scratch/double_pointer/homonymous_sliding_window/TriangleNumber.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/work/huangdu/exploration/start_from_scratch/double_pointer/homonymous_sliding_window/removeDuplicates2.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/work/huangdu/exploration/start_from_scratch/double_pointer/segment/FindRadius.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/work/huangdu/exploration/start_from_scratch/double_pointer/segment/GetIntersectionNode.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/work/huangdu/exploration/start_from_scratch/double_pointer/segment/Merge.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/work/huangdu/exploration/start_from_scratch/double_pointer/segment/OddEvenList.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/work/huangdu/exploration/start_from_scratch/double_pointer/segment/Partition.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/work/huangdu/exploration/start_from_scratch/greedy/array/ArrayPairSum.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/work/huangdu/exploration/start_from_scratch/greedy/array/CanPlaceFlowers.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/work/huangdu/exploration/start_from_scratch/greedy/array/Candy.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/work/huangdu/exploration/start_from_scratch/greedy/array/CheckValidString.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/work/huangdu/exploration/start_from_scratch/greedy/array/DistributeCandies.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/work/huangdu/exploration/start_from_scratch/greedy/array/EraseOverlapIntervals.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/work/huangdu/exploration/start_from_scratch/greedy/array/FindContentChildren.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/work/huangdu/exploration/start_from_scratch/greedy/array/FindKthLargest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/work/huangdu/exploration/start_from_scratch/greedy/array/FindLongestChain.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/work/huangdu/exploration/start_from_scratch/greedy/array/FindMinArrowShots.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/work/huangdu/exploration/start_from_scratch/greedy/array/FindMinMoves.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/work/huangdu/exploration/start_from_scratch/greedy/array/Insert.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/work/huangdu/exploration/start_from_scratch/greedy/array/LargestNumber.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/work/huangdu/exploration/start_from_scratch/greedy/array/LeastInterval.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/work/huangdu/exploration/start_from_scratch/greedy/array/LongestPalindrome.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/work/huangdu/exploration/start_from_scratch/greedy/array/MajorityElement.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/work/huangdu/exploration/start_from_scratch/greedy/array/MaxProfit.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/work/huangdu/exploration/start_from_scratch/greedy/array/MaxProfit2.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/work/huangdu/exploration/start_from_scratch/greedy/array/Merge.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/work/huangdu/exploration/start_from_scratch/greedy/array/PredictPartyVictory.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/work/huangdu/exploration/start_from_scratch/greedy/array/ReconstructQueue.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/work/huangdu/exploration/start_from_scratch/greedy/array/Rotate.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/work/huangdu/exploration/start_from_scratch/greedy/array/SortColors.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/work/huangdu/exploration/start_from_scratch/greedy/array/StrongPasswordChecker.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/work/huangdu/exploration/start_from_scratch/greedy/array/SummaryRanges.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/work/huangdu/exploration/start_from_scratch/greedy/array/WiggleSort.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/work/huangdu/exploration/start_from_scratch/greedy/number/IntegerBreak.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/work/huangdu/exploration/start_from_scratch/greedy/stack/Find132pattern.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/work/huangdu/exploration/start_from_scratch/greedy/stack/LargestRectangleArea.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/work/huangdu/exploration/start_from_scratch/greedy/stack/MaxNumber.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/work/huangdu/exploration/start_from_scratch/greedy/stack/MaximalRectangle.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/work/huangdu/exploration/start_from_scratch/greedy/stack/NextGreaterElement.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/work/huangdu/exploration/start_from_scratch/greedy/stack/NextGreaterElements2.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/work/huangdu/exploration/start_from_scratch/greedy/stack/RemoveDuplicateLetters.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/work/huangdu/exploration/start_from_scratch/greedy/stack/RemoveKdigits.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/work/huangdu/exploration/start_from_scratch/greedy/sub_array/CanCompleteCircuit.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/work/huangdu/exploration/start_from_scratch/greedy/sub_array/FindUnsortedSubarray.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/work/huangdu/exploration/start_from_scratch/greedy/sub_array/MaxProduct.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/work/huangdu/exploration/start_from_scratch/greedy/sub_array/MaxSubArray.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/work/huangdu/exploration/start_from_scratch/greedy/subsequence/IncreasingTriplet.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/work/huangdu/exploration/start_from_scratch/greedy/subsequence/IsPossible.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/work/huangdu/exploration/start_from_scratch/greedy/subsequence/WiggleMaxLength.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/work/huangdu/exploration/start_from_scratch/hashmap/index/ContainsNearbyAlmostDuplicate.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/work/huangdu/exploration/start_from_scratch/hashmap/index/ContainsNearbyDuplicate.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/work/huangdu/exploration/start_from_scratch/hashmap/index/FindRestaurant.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/work/huangdu/exploration/start_from_scratch/hashmap/index/TwoSum.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/work/huangdu/exploration/start_from_scratch/hashmap/index/TwoSum2.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/work/huangdu/exploration/start_from_scratch/hashmap/prefixsum/CheckSubarraySum.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/work/huangdu/exploration/start_from_scratch/hashmap/prefixsum/FindMaxLength.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/work/huangdu/exploration/start_from_scratch/hashmap/prefixsum/SubarraySum.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/work/huangdu/exploration/start_from_scratch/hashmap/search_insert_delete/ContainsDuplicate.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/work/huangdu/exploration/start_from_scratch/hashmap/search_insert_delete/CopyRandomList.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/work/huangdu/exploration/start_from_scratch/hashmap/search_insert_delete/FindPairs.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/work/huangdu/exploration/start_from_scratch/hashmap/search_insert_delete/FindWords.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/work/huangdu/exploration/start_from_scratch/hashmap/search_insert_delete/FractionToDecimal.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/work/huangdu/exploration/start_from_scratch/hashmap/search_insert_delete/GetMaxRepetitions.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/work/huangdu/exploration/start_from_scratch/hashmap/search_insert_delete/Intersection.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/work/huangdu/exploration/start_from_scratch/hashmap/search_insert_delete/IsHappy.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/work/huangdu/exploration/start_from_scratch/hashmap/search_insert_delete/IsIsomorphic.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/work/huangdu/exploration/start_from_scratch/hashmap/search_insert_delete/JudgeSquareSum.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/work/huangdu/exploration/start_from_scratch/hashmap/search_insert_delete/LongestConsecutive.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/work/huangdu/exploration/start_from_scratch/hashmap/search_insert_delete/WordPattern.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/work/huangdu/exploration/start_from_scratch/hashmap/statistics/FindDuplicate.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/work/huangdu/exploration/start_from_scratch/hashmap/statistics/FindLHS.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/work/huangdu/exploration/start_from_scratch/hashmap/statistics/FourSum.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/work/huangdu/exploration/start_from_scratch/hashmap/statistics/FourSumCount.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/work/huangdu/exploration/start_from_scratch/hashmap/statistics/Intersect2.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/work/huangdu/exploration/start_from_scratch/hashmap/statistics/LeastBricks.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/work/huangdu/exploration/start_from_scratch/linkedlist/delete/DeleteNode.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/work/huangdu/exploration/start_from_scratch/linkedlist/delete/RemoveNthFromEnd.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/work/huangdu/exploration/start_from_scratch/linkedlist/delete/removeElements.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/work/huangdu/exploration/start_from_scratch/linkedlist/high_precision_addition/AddTwoNumbers.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/work/huangdu/exploration/start_from_scratch/linkedlist/high_precision_addition/AddTwoNumbers2.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/work/huangdu/exploration/start_from_scratch/linkedlist/merge/MergeKLists.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/work/huangdu/exploration/start_from_scratch/linkedlist/merge/MergeTwoLists.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/work/huangdu/exploration/start_from_scratch/linkedlist/rotate_reverse/ReverseBetween.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/work/huangdu/exploration/start_from_scratch/linkedlist/rotate_reverse/ReverseKGroup.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/work/huangdu/exploration/start_from_scratch/linkedlist/rotate_reverse/ReverseList.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/work/huangdu/exploration/start_from_scratch/linkedlist/rotate_reverse/RotateRight.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/work/huangdu/exploration/start_from_scratch/linkedlist/rotate_reverse/SwapPairs.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/work/huangdu/exploration/start_from_scratch/linkedlist/traversal/Flatten.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/work/huangdu/exploration/start_from_scratch/stack_recursion/bracket_match/ExclusiveTime.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/work/huangdu/exploration/start_from_scratch/stack_recursion/bracket_match/IsValid.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/work/huangdu/exploration/start_from_scratch/stack_recursion/bracket_match/IsValid2.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/work/huangdu/exploration/start_from_scratch/stack_recursion/bracket_match/LongestValidParentheses.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/work/huangdu/exploration/start_from_scratch/stack_recursion/calculator/Calculate.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/work/huangdu/exploration/start_from_scratch/stack_recursion/calculator/Calculate2.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/work/huangdu/exploration/start_from_scratch/stack_recursion/calculator/EvalRPN.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/work/huangdu/exploration/start_from_scratch/stack_recursion/recursion/DecodeString.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/work/huangdu/exploration/start_from_scratch/stack_recursion/recursion/Deserialize.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/work/huangdu/exploration/start_from_scratch/stack_recursion/recursion/NestedIterator.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/work/huangdu/exploration/start_from_scratch/stack_recursion/visited_last_element/CalPoints.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/work/huangdu/exploration/start_from_scratch/stack_recursion/visited_last_element/SimplifyPath.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/work/huangdu/exploration/start_from_scratch/string/center_extension/CountSubstrings.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/work/huangdu/exploration/start_from_scratch/string/center_extension/LongestPalindrome.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/work/huangdu/exploration/start_from_scratch/string/character/DetectCapitalUse.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/work/huangdu/exploration/start_from_scratch/string/character_statistics/CanConstruct.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/work/huangdu/exploration/start_from_scratch/string/character_statistics/CheckRecord.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/work/huangdu/exploration/start_from_scratch/string/character_statistics/Codec.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/work/huangdu/exploration/start_from_scratch/string/character_statistics/CountBinarySubstrings.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/work/huangdu/exploration/start_from_scratch/string/character_statistics/FindSubstringInWraproundString.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/work/huangdu/exploration/start_from_scratch/string/character_statistics/FindTheDifference.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/work/huangdu/exploration/start_from_scratch/string/character_statistics/FirstUniqChar.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/work/huangdu/exploration/start_from_scratch/string/character_statistics/FrequencySort.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/work/huangdu/exploration/start_from_scratch/string/character_statistics/GroupAnagrams.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/work/huangdu/exploration/start_from_scratch/string/character_statistics/IsAnagram.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/work/huangdu/exploration/start_from_scratch/string/character_statistics/JudgeCircle.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/work/huangdu/exploration/start_from_scratch/string/character_statistics/OriginalDigits.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/work/huangdu/exploration/start_from_scratch/string/common_prefix/LongestCommonPrefix.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/work/huangdu/exploration/start_from_scratch/string/conversion/Convert.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/work/huangdu/exploration/start_from_scratch/string/conversion/FullJustify.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/work/huangdu/exploration/start_from_scratch/string/conversion/LicenseKeyFormatting.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/work/huangdu/exploration/start_from_scratch/string/high_precision_calculate/AddBinary.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/work/huangdu/exploration/start_from_scratch/string/high_precision_calculate/AddStrings.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/work/huangdu/exploration/start_from_scratch/string/high_precision_calculate/IsAdditiveNumber.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/work/huangdu/exploration/start_from_scratch/string/high_precision_calculate/Multiply.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/work/huangdu/exploration/start_from_scratch/string/high_precision_calculate/PlusOne.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/work/huangdu/exploration/start_from_scratch/string/matching/RepeatedStringMatch.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/work/huangdu/exploration/start_from_scratch/string/matching/RepeatedSubstringPattern.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/work/huangdu/exploration/start_from_scratch/string/matching/ShortestPalindrome.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/work/huangdu/exploration/start_from_scratch/string/matching/StrStr.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/work/huangdu/exploration/start_from_scratch/string/number_transform_string/CompareVersion.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/work/huangdu/exploration/start_from_scratch/string/number_transform_string/ComplexNumberMultiply.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/work/huangdu/exploration/start_from_scratch/string/number_transform_string/Compress.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/work/huangdu/exploration/start_from_scratch/string/number_transform_string/CountAndSay.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/work/huangdu/exploration/start_from_scratch/string/number_transform_string/FindMinDifference.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/work/huangdu/exploration/start_from_scratch/string/number_transform_string/FindRelativeRanks.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/work/huangdu/exploration/start_from_scratch/string/number_transform_string/FizzBuzz.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/work/huangdu/exploration/start_from_scratch/string/number_transform_string/FractionAddition.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/work/huangdu/exploration/start_from_scratch/string/number_transform_string/GetHint.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/work/huangdu/exploration/start_from_scratch/string/number_transform_string/IntToRoman.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/work/huangdu/exploration/start_from_scratch/string/number_transform_string/MagicalString.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/work/huangdu/exploration/start_from_scratch/string/number_transform_string/MyAtoi.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/work/huangdu/exploration/start_from_scratch/string/number_transform_string/NumberToWords.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/work/huangdu/exploration/start_from_scratch/string/number_transform_string/OptimalDivision.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/work/huangdu/exploration/start_from_scratch/string/number_transform_string/RomanToInt.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/work/huangdu/exploration/start_from_scratch/string/number_transform_string/SolveEquation.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/work/huangdu/exploration/start_from_scratch/string/palindrome_define/IsPalindrome.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/work/huangdu/exploration/start_from_scratch/string/reverse/ReverseStr.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/work/huangdu/exploration/start_from_scratch/string/reverse/ReverseString.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/work/huangdu/exploration/start_from_scratch/string/reverse/ReverseWords.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/work/huangdu/exploration/start_from_scratch/string/reverse/ReverseWords2.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/work/huangdu/exploration/start_from_scratch/string/subsequence/FindLUSlength.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/work/huangdu/exploration/start_from_scratch/string/subsequence/FindLUSlength2.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/work/huangdu/exploration/start_from_scratch/string/subsequence/FindLongestWord.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/work/huangdu/exploration/start_from_scratch/string/subsequence/IsSubsequence.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/work/huangdu/exploration/start_from_scratch/string/word/CountSegments.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/work/huangdu/exploration/start_from_scratch/string/word/LengthOfLastWord.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/work/huangdu/exploration/start_from_scratch/tree/inorder_binary_search_tree/BSTIterator.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/work/huangdu/exploration/start_from_scratch/tree/inorder_binary_search_tree/ConvertBST.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/work/huangdu/exploration/start_from_scratch/tree/inorder_binary_search_tree/DeleteNode.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/work/huangdu/exploration/start_from_scratch/tree/inorder_binary_search_tree/GenerateTrees.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/work/huangdu/exploration/start_from_scratch/tree/inorder_binary_search_tree/GetMinimumDifference.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/work/huangdu/exploration/start_from_scratch/tree/inorder_binary_search_tree/InorderTraversal.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/work/huangdu/exploration/start_from_scratch/tree/inorder_binary_search_tree/IsBalanced.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/work/huangdu/exploration/start_from_scratch/tree/inorder_binary_search_tree/IsValidBST.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/work/huangdu/exploration/start_from_scratch/tree/inorder_binary_search_tree/KthSmallest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/work/huangdu/exploration/start_from_scratch/tree/inorder_binary_search_tree/SearchBST.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/work/huangdu/exploration/start_from_scratch/tree/inorder_binary_search_tree/SortedArrayToBST.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/work/huangdu/exploration/start_from_scratch/tree/inorder_binary_search_tree/SortedListToBST.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/work/huangdu/exploration/start_from_scratch/tree/inorder_binary_search_tree/TrimBST.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/work/huangdu/exploration/start_from_scratch/tree/level_order/AddOneRow.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/work/huangdu/exploration/start_from_scratch/tree/level_order/AverageOfLevels.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/work/huangdu/exploration/start_from_scratch/tree/level_order/BinaryTreePaths.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/work/huangdu/exploration/start_from_scratch/tree/level_order/Connect.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/work/huangdu/exploration/start_from_scratch/tree/level_order/Connect2.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/work/huangdu/exploration/start_from_scratch/tree/level_order/FindBottomLeftValue.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/work/huangdu/exploration/start_from_scratch/tree/level_order/FindSecondMinimumValue.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/work/huangdu/exploration/start_from_scratch/tree/level_order/FindTarget.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/work/huangdu/exploration/start_from_scratch/tree/level_order/GetImportance.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/work/huangdu/exploration/start_from_scratch/tree/level_order/HasPathSum.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/work/huangdu/exploration/start_from_scratch/tree/level_order/LargestValues.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/work/huangdu/exploration/start_from_scratch/tree/level_order/LevelOrder.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/work/huangdu/exploration/start_from_scratch/tree/level_order/LevelOrder2.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/work/huangdu/exploration/start_from_scratch/tree/level_order/LevelOrderBottom.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/work/huangdu/exploration/start_from_scratch/tree/level_order/MaxDepth.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/work/huangdu/exploration/start_from_scratch/tree/level_order/MaxDepthN.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/work/huangdu/exploration/start_from_scratch/tree/level_order/MinDepth.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/work/huangdu/exploration/start_from_scratch/tree/level_order/PathSum2.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/work/huangdu/exploration/start_from_scratch/tree/level_order/PrintTree.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/work/huangdu/exploration/start_from_scratch/tree/level_order/RightSideView.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/work/huangdu/exploration/start_from_scratch/tree/level_order/SumNumbers.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/work/huangdu/exploration/start_from_scratch/tree/level_order/SumOfLeftLeaves.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/work/huangdu/exploration/start_from_scratch/tree/level_order/WidthOfBinaryTree.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/work/huangdu/exploration/start_from_scratch/tree/level_order/ZigzagLevelOrder.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/work/huangdu/exploration/start_from_scratch/tree/postorder/PostorderTraversal.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/work/huangdu/exploration/start_from_scratch/tree/postorder/postorderN.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/work/huangdu/exploration/start_from_scratch/tree/preorder/PreorderN.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/work/huangdu/exploration/start_from_scratch/tree/preorder/PreorderTraversal.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/work/huangdu/exploration/start_from_scratch/tree/preorder_serialization/Codec.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/work/huangdu/exploration/start_from_scratch/tree/preorder_serialization/Codec2.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/work/huangdu/exploration/start_from_scratch/tree/preorder_serialization/FindDuplicateSubtrees.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/work/huangdu/exploration/start_from_scratch/tree/preorder_serialization/IsValidSerialization.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/work/huangdu/exploration/start_from_scratch/tree/preorder_serialization/Tree2str.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/work/huangdu/exploration/start_from_scratch/tree/recursion/ConstructMaximumBinaryTree.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/work/huangdu/exploration/start_from_scratch/tree/recursion/CountNodes.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/work/huangdu/exploration/start_from_scratch/tree/recursion/DiameterOfBinaryTree.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/work/huangdu/exploration/start_from_scratch/tree/recursion/FindFrequentTreeSum.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/work/huangdu/exploration/start_from_scratch/tree/recursion/FindTilt.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/work/huangdu/exploration/start_from_scratch/tree/recursion/InvertTree.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/work/huangdu/exploration/start_from_scratch/tree/recursion/IsSameTree.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/work/huangdu/exploration/start_from_scratch/tree/recursion/IsScramble.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/work/huangdu/exploration/start_from_scratch/tree/recursion/IsSubtree.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/work/huangdu/exploration/start_from_scratch/tree/recursion/IsSymmetric.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/work/huangdu/exploration/start_from_scratch/tree/recursion/LongestUnivaluePath.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/work/huangdu/exploration/start_from_scratch/tree/recursion/MergeTrees.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/work/huangdu/exploration/start_from_scratch/tree/recursion/PathSum.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/work/huangdu/interview/alibaba/Solution.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/work/huangdu/interview/bytedance/Solution.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/work/huangdu/question_bank/difficult/CountRangeSum.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/work/huangdu/question_bank/difficult/CrackSafe.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/work/huangdu/question_bank/difficult/FindCriticalAndPseudoCriticalEdges.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/work/huangdu/question_bank/difficult/FindNumOfValidWords.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/work/huangdu/question_bank/difficult/FindRedundantDirectedConnection.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/work/huangdu/question_bank/difficult/FindRotateSteps.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/work/huangdu/question_bank/difficult/HitBricks.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/work/huangdu/question_bank/difficult/JudgePoint24.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/work/huangdu/question_bank/difficult/MaxEnvelopes.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/work/huangdu/question_bank/difficult/MaxNumEdgesToRemove.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/work/huangdu/question_bank/difficult/MaxProfit3.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/work/huangdu/question_bank/difficult/MaxProfit4.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/work/huangdu/question_bank/difficult/MedianSlidingWindow.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/work/huangdu/question_bank/difficult/MinCameraCover.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/work/huangdu/question_bank/difficult/MinKBitFlips.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/work/huangdu/question_bank/difficult/MinPatches.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/work/huangdu/question_bank/difficult/MinSwapsCouples.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/work/huangdu/question_bank/difficult/NumSimilarGroups.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/work/huangdu/question_bank/difficult/RandomizedCollection.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/work/huangdu/question_bank/difficult/RecoverTree.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/work/huangdu/question_bank/difficult/RemoveBoxes.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/work/huangdu/question_bank/difficult/ReversePairs.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/work/huangdu/question_bank/difficult/SolveNQueens.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/work/huangdu/question_bank/difficult/SolveSudoku.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/work/huangdu/question_bank/difficult/SortItems.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/work/huangdu/question_bank/difficult/SubarraysWithKDistinct.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/work/huangdu/question_bank/difficult/SumOfDistancesInTree.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/work/huangdu/question_bank/difficult/SwimInWater.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/work/huangdu/question_bank/difficult/TotalNQueens.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/work/huangdu/question_bank/easy/AddToArrayForm.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/work/huangdu/question_bank/easy/AllCellsDistOrder.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/work/huangdu/question_bank/easy/ArrangeCoins.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/work/huangdu/question_bank/easy/BackspaceCompare.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/work/huangdu/question_bank/easy/CanWinNim.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/work/huangdu/question_bank/easy/CheckStraightLine.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/work/huangdu/question_bank/easy/CommonChars.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/work/huangdu/question_bank/easy/DeleteDuplicates.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/work/huangdu/question_bank/easy/FairCandySwap.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/work/huangdu/question_bank/easy/Fib.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/work/huangdu/question_bank/easy/FindMode.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/work/huangdu/question_bank/easy/FlipAndInvertImage.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/work/huangdu/question_bank/easy/FloodFill.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/work/huangdu/question_bank/easy/GetRow.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/work/huangdu/question_bank/easy/GuessNumber.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/work/huangdu/question_bank/easy/InvertTree.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/work/huangdu/question_bank/easy/IsLongPressedName.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/work/huangdu/question_bank/easy/IsMonotonic.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/work/huangdu/question_bank/easy/IsPerfectSquare.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/work/huangdu/question_bank/easy/IsPowerOfFour.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/work/huangdu/question_bank/easy/IsPowerOfTwo.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/work/huangdu/question_bank/easy/IsSameTree.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/work/huangdu/question_bank/easy/IsToeplitzMatrix.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/work/huangdu/question_bank/easy/IslandPerimeter.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/work/huangdu/question_bank/easy/KthLargest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/work/huangdu/question_bank/easy/LargeGroupPositions.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/work/huangdu/question_bank/easy/LargestPerimeter.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/work/huangdu/question_bank/easy/LastStoneWeight.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/work/huangdu/question_bank/easy/LemonadeChange.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/work/huangdu/question_bank/easy/LowestCommonAncestor.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/work/huangdu/question_bank/easy/MergeTrees.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/work/huangdu/question_bank/easy/MiddleNode.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/work/huangdu/question_bank/easy/MinCostClimbingStairs.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/work/huangdu/question_bank/easy/MyQueue.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/work/huangdu/question_bank/easy/MyStack.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/work/huangdu/question_bank/easy/NumEquivDominoPairs.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/work/huangdu/question_bank/easy/NumJewelsInStones.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/work/huangdu/question_bank/easy/PivotIndex.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/work/huangdu/question_bank/easy/PrefixesDivBy5.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/work/huangdu/question_bank/easy/RelativeSortArray.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/work/huangdu/question_bank/easy/RemoveElement.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/work/huangdu/question_bank/easy/RemoveElements.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/work/huangdu/question_bank/easy/SearchInsert.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/work/huangdu/question_bank/easy/SmallerNumbersThanCurrent.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/work/huangdu/question_bank/easy/SortArrayByParity.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/work/huangdu/question_bank/easy/SortArrayByParityII.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/work/huangdu/question_bank/easy/SortByBits.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/work/huangdu/question_bank/easy/SortString.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/work/huangdu/question_bank/easy/SortedSquares.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/work/huangdu/question_bank/easy/SumOddLengthSubarrays.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/work/huangdu/question_bank/easy/Transpose.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/work/huangdu/question_bank/easy/UniqueOccurrences.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/work/huangdu/question_bank/easy/ValidMountainArray.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/work/huangdu/question_bank/medium/AccountsMerge.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/work/huangdu/question_bank/medium/BuildTree.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/work/huangdu/question_bank/medium/CalcEquation.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/work/huangdu/question_bank/medium/CanPartition.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/work/huangdu/question_bank/medium/CanVisitAllRooms.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/work/huangdu/question_bank/medium/CloneGraph.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/work/huangdu/question_bank/medium/CombinationSum.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/work/huangdu/question_bank/medium/CombinationSum2.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/work/huangdu/question_bank/medium/CombinationSum3.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/work/huangdu/question_bank/medium/Combine.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/work/huangdu/question_bank/medium/CountBits.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/work/huangdu/question_bank/medium/CountNodes.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/work/huangdu/question_bank/medium/DetectCycle.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/work/huangdu/question_bank/medium/EqualSubstring.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/work/huangdu/question_bank/medium/FindCircleNum.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/work/huangdu/question_bank/medium/FindItinerary.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/work/huangdu/question_bank/medium/FindRedundantConnection.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/work/huangdu/question_bank/medium/FindSubsequences.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/work/huangdu/question_bank/medium/GetPermutation.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/work/huangdu/question_bank/medium/InsertIntoBST.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/work/huangdu/question_bank/medium/InsertionSortList.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/work/huangdu/question_bank/medium/IsNumber.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/work/huangdu/question_bank/medium/KClosest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/work/huangdu/question_bank/medium/LongestMountain.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/work/huangdu/question_bank/medium/LongestOnes.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/work/huangdu/question_bank/medium/LongestSubarray.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/work/huangdu/question_bank/medium/LongestSubstring.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/work/huangdu/question_bank/medium/MakeConnected.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/work/huangdu/question_bank/medium/MatrixScore.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/work/huangdu/question_bank/medium/MaxProfit.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/work/huangdu/question_bank/medium/MaxSatisfied.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/work/huangdu/question_bank/medium/MaxScore.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/work/huangdu/question_bank/medium/MaxSumRangeQuery.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/work/huangdu/question_bank/medium/MaxTurbulenceSize.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/work/huangdu/question_bank/medium/MinCostConnectPoints.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/work/huangdu/question_bank/medium/MinimumEffortPath.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/work/huangdu/question_bank/medium/MinimumOperations.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/work/huangdu/question_bank/medium/MonotoneIncreasingDigits.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/work/huangdu/question_bank/medium/NextPermutation.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/work/huangdu/question_bank/medium/OddEvenList.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/work/huangdu/question_bank/medium/PartitionLabels.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/work/huangdu/question_bank/medium/PathSum3.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/work/huangdu/question_bank/medium/PermuteUnique.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/work/huangdu/question_bank/medium/PredictTheWinner.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/work/huangdu/question_bank/medium/RangeBitwiseAnd.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/work/huangdu/question_bank/medium/RegionsBySlashes.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/work/huangdu/question_bank/medium/RemoveStones.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/work/huangdu/question_bank/medium/ReorderList.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/work/huangdu/question_bank/medium/ReorganizeString.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/work/huangdu/question_bank/medium/RestoreIpAddresses.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/work/huangdu/question_bank/medium/SmallestStringWithSwaps.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/work/huangdu/question_bank/medium/StockSpanner.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/work/huangdu/question_bank/medium/UpdateBoard.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/work/huangdu/question_bank/medium/VideoStitching.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/work/huangdu/specific/calculator/Calculator1.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/work/huangdu/specific/calculator/Calculator2.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/work/huangdu/specific/calculator/Calculator3.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/work/huangdu/specific/calculator/Tools.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/work/huangdu/specific/multithreading/Foo.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/work/huangdu/specific/sort/Bubble.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/work/huangdu/specific/sort/Bucket.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/work/huangdu/specific/sort/Counting.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/work/huangdu/specific/sort/Heap.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/work/huangdu/specific/sort/Insertion.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/work/huangdu/specific/sort/Merge.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/work/huangdu/specific/sort/Quick.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/work/huangdu/specific/sort/Radix.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/work/huangdu/specific/sort/Selection.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/work/huangdu/specific/sort/Shell.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/work/huangdu/specific/sort/Test.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/work/huangdu/specific/union_find_set/AbstractUnionFindSet.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/work/huangdu/specific/union_find_set/FinalUnionFindSet.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/work/huangdu/specific/union_find_set/QuickFindUnionFindSet.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/work/huangdu/specific/union_find_set/QuickUnionUnionFindSet.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/work/huangdu/specific/union_find_set/RankUnionFindSet.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/work/huangdu/specific/union_find_set/SizeUnionFindSet.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/work/huangdu/specific/union_find_set/UnionFindSetTest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/work/huangdu/temp/NextGreaterElements.java" beforeDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../.." />
+  </component>
+  <component name="GitSEFilterConfiguration">
+    <file-type-list>
+      <filtered-out-file-type name="LOCAL_BRANCH" />
+      <filtered-out-file-type name="REMOTE_BRANCH" />
+      <filtered-out-file-type name="TAG" />
+      <filtered-out-file-type name="COMMIT_BY_MESSAGE" />
+    </file-type-list>
+  </component>
+  <component name="GithubPullRequestsUISettings">
+    <option name="hiddenUrls">
+      <set>
+        <option value="https://github.com/huangdu94/down-to-earth.git" />
+      </set>
+    </option>
+  </component>
+  <component name="ProjectId" id="1mxMG9i1mxzECPhyoXnfawQmTfg" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="aspect.path.notification.shown" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="node.js.detected.package.eslint" value="true" />
+    <property name="node.js.detected.package.tslint" value="true" />
+    <property name="node.js.path.for.package.eslint" value="project" />
+    <property name="node.js.path.for.package.tslint" value="project" />
+    <property name="node.js.selected.package.eslint" value="(autodetect)" />
+    <property name="node.js.selected.package.tslint" value="(autodetect)" />
+    <property name="project.structure.last.edited" value="SDKs" />
+    <property name="project.structure.proportion" value="0.15" />
+    <property name="project.structure.side.proportion" value="0.2" />
+    <property name="settings.editor.selected.configurable" value="org.jetbrains.plugins.github.ui.GithubSettingsConfigurable" />
+  </component>
+  <component name="RunManager" selected="Application.MaxEnvelopes">
+    <configuration name="FindNumOfValidWords" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="work.huangdu.question_bank.difficult.FindNumOfValidWords" />
+      <module name="algorithms" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="work.huangdu.question_bank.difficult.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="LongestSubstring" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="work.huangdu.question_bank.medium.LongestSubstring" />
+      <module name="algorithms" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="work.huangdu.question_bank.medium.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="MaxEnvelopes" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="work.huangdu.question_bank.difficult.MaxEnvelopes" />
+      <module name="algorithms" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="work.huangdu.question_bank.difficult.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="UnionFindSetTest" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="work.huangdu.specific.union_find_set.UnionFindSetTest" />
+      <module name="algorithms" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="work.huangdu.specific.union_find_set.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration default="true" type="GroovyScriptRunConfiguration" factoryName="Groovy">
+      <setting name="path" value="" />
+      <setting name="vmparams" value="" />
+      <setting name="params" value="" />
+      <setting name="workDir" value="file://$PROJECT_DIR$" />
+      <setting name="debug" value="false" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <list>
+      <item itemvalue="Application.FindNumOfValidWords" />
+      <item itemvalue="Application.LongestSubstring" />
+      <item itemvalue="Application.UnionFindSetTest" />
+      <item itemvalue="Application.MaxEnvelopes" />
+    </list>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Application.MaxEnvelopes" />
+        <item itemvalue="Application.UnionFindSetTest" />
+        <item itemvalue="Application.LongestSubstring" />
+        <item itemvalue="Application.FindNumOfValidWords" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SpellCheckerSettings" BundledDictionaries="0" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" Dictionaries="0" CorrectionsLimit="5" DefaultDictionary="application-level" UseSingleDictionary="true" />
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="4c4d5feb-b0b8-4cec-acac-915d262b0650" name="Default Changelist" comment="" />
+      <created>1610430691804</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1610430691804</updated>
+      <workItem from="1610430693074" duration="146000" />
+      <workItem from="1610433635759" duration="1423000" />
+      <workItem from="1610452723236" duration="385000" />
+      <workItem from="1610530265539" duration="6000" />
+      <workItem from="1610541558411" duration="1162000" />
+      <workItem from="1610624927130" duration="2416000" />
+      <workItem from="1610628935073" duration="310000" />
+      <workItem from="1610629257093" duration="846000" />
+      <workItem from="1610716032027" duration="82000" />
+      <workItem from="1610716430900" duration="508000" />
+      <workItem from="1610776297343" duration="214000" />
+      <workItem from="1610776599896" duration="151000" />
+      <workItem from="1610779193771" duration="83000" />
+      <workItem from="1610803495992" duration="323000" />
+      <workItem from="1610867646192" duration="3744000" />
+      <workItem from="1610974677874" duration="1803000" />
+      <workItem from="1610976570356" duration="3706000" />
+      <workItem from="1611052132924" duration="3383000" />
+      <workItem from="1611237103075" duration="4373000" />
+      <workItem from="1611293089624" duration="4004000" />
+      <workItem from="1611386701586" duration="8634000" />
+      <workItem from="1611400626859" duration="362000" />
+      <workItem from="1611553771270" duration="15477000" />
+      <workItem from="1611750208400" duration="137000" />
+      <workItem from="1611750365661" duration="33000" />
+      <workItem from="1611750441191" duration="17815000" />
+      <workItem from="1611838790973" duration="139000" />
+      <workItem from="1611839050518" duration="7029000" />
+      <workItem from="1611997347569" duration="2868000" />
+      <workItem from="1612146255597" duration="4306000" />
+      <workItem from="1612165147213" duration="15602000" />
+      <workItem from="1612319400413" duration="470000" />
+      <workItem from="1612319966895" duration="349000" />
+      <workItem from="1612320583545" duration="7416000" />
+      <workItem from="1612413529492" duration="21348000" />
+      <workItem from="1612661758212" duration="4957000" />
+      <workItem from="1612677578936" duration="629000" />
+      <workItem from="1612679191550" duration="883000" />
+      <workItem from="1612680301345" duration="643000" />
+      <workItem from="1612759514525" duration="2289000" />
+      <workItem from="1612866147315" duration="5347000" />
+      <workItem from="1612930705787" duration="1331000" />
+      <workItem from="1612949651033" duration="509000" />
+      <workItem from="1612950344977" duration="2982000" />
+      <workItem from="1613102779197" duration="1033000" />
+      <workItem from="1613191144596" duration="3692000" />
+      <workItem from="1613366327845" duration="5098000" />
+      <workItem from="1613474764947" duration="42000" />
+      <workItem from="1613535863567" duration="4175000" />
+      <workItem from="1613706047585" duration="3099000" />
+      <workItem from="1613785500431" duration="1308000" />
+      <workItem from="1613815637342" duration="2674000" />
+      <workItem from="1613978746228" duration="2207000" />
+      <workItem from="1613991182485" duration="7524000" />
+      <workItem from="1614063788971" duration="5951000" />
+      <workItem from="1614241385373" duration="1501000" />
+      <workItem from="1614253281875" duration="2022000" />
+      <workItem from="1614318795057" duration="2632000" />
+      <workItem from="1614322337418" duration="498000" />
+      <workItem from="1614323673353" duration="6702000" />
+      <workItem from="1614337093690" duration="5168000" />
+      <workItem from="1614406782622" duration="9572000" />
+      <workItem from="1614488866353" duration="1099000" />
+      <workItem from="1614594740250" duration="980000" />
+      <workItem from="1614690822719" duration="1641000" />
+      <workItem from="1614841089130" duration="3731000" />
+      <workItem from="1614919391510" duration="616000" />
+      <workItem from="1614999244012" duration="4492000" />
+      <workItem from="1615093300980" duration="708000" />
+    </task>
+    <task id="LOCAL-00025" summary="树的前序遍历两题">
+      <created>1611837070095</created>
+      <option name="number" value="00025" />
+      <option name="presentableId" value="LOCAL-00025" />
+      <option name="project" value="LOCAL" />
+      <updated>1611837070095</updated>
+    </task>
+    <task id="LOCAL-00026" summary="每日一题。">
+      <created>1611905372782</created>
+      <option name="number" value="00026" />
+      <option name="presentableId" value="LOCAL-00026" />
+      <option name="project" value="LOCAL" />
+      <updated>1611905372782</updated>
+    </task>
+    <task id="LOCAL-00027" summary="每日一题。">
+      <created>1612007895110</created>
+      <option name="number" value="00027" />
+      <option name="presentableId" value="LOCAL-00027" />
+      <option name="project" value="LOCAL" />
+      <updated>1612007895110</updated>
+    </task>
+    <task id="LOCAL-00028" summary="每日一题。">
+      <created>1612157356976</created>
+      <option name="number" value="00028" />
+      <option name="presentableId" value="LOCAL-00028" />
+      <option name="project" value="LOCAL" />
+      <updated>1612157356977</updated>
+    </task>
+    <task id="LOCAL-00029" summary="树的先序遍历 序列化">
+      <created>1612169593464</created>
+      <option name="number" value="00029" />
+      <option name="presentableId" value="LOCAL-00029" />
+      <option name="project" value="LOCAL" />
+      <updated>1612169593464</updated>
+    </task>
+    <task id="LOCAL-00030" summary="验证二叉树的前序序列化">
+      <created>1612230695862</created>
+      <option name="number" value="00030" />
+      <option name="presentableId" value="LOCAL-00030" />
+      <option name="project" value="LOCAL" />
+      <updated>1612230695862</updated>
+    </task>
+    <task id="LOCAL-00031" summary="每日一题。">
+      <created>1612272286731</created>
+      <option name="number" value="00031" />
+      <option name="presentableId" value="LOCAL-00031" />
+      <option name="project" value="LOCAL" />
+      <updated>1612272286731</updated>
+    </task>
+    <task id="LOCAL-00032" summary="每日一题。 滑动窗口。">
+      <created>1612334253203</created>
+      <option name="number" value="00032" />
+      <option name="presentableId" value="LOCAL-00032" />
+      <option name="project" value="LOCAL" />
+      <updated>1612334253203</updated>
+    </task>
+    <task id="LOCAL-00033" summary="每日一题。 滑动窗口。">
+      <created>1612336030406</created>
+      <option name="number" value="00033" />
+      <option name="presentableId" value="LOCAL-00033" />
+      <option name="project" value="LOCAL" />
+      <updated>1612336030406</updated>
+    </task>
+    <task id="LOCAL-00034" summary="每日一题。 滑动窗口。">
+      <created>1612414427402</created>
+      <option name="number" value="00034" />
+      <option name="presentableId" value="LOCAL-00034" />
+      <option name="project" value="LOCAL" />
+      <updated>1612414427402</updated>
+    </task>
+    <task id="LOCAL-00035" summary="树的前序序列化。">
+      <created>1612416466777</created>
+      <option name="number" value="00035" />
+      <option name="presentableId" value="LOCAL-00035" />
+      <option name="project" value="LOCAL" />
+      <updated>1612416466777</updated>
+    </task>
+    <task id="LOCAL-00036" summary="树的前序序列化。 TODO">
+      <created>1612416501354</created>
+      <option name="number" value="00036" />
+      <option name="presentableId" value="LOCAL-00036" />
+      <option name="project" value="LOCAL" />
+      <updated>1612416501354</updated>
+    </task>
+    <task id="LOCAL-00037" summary="树的前序序列化">
+      <created>1612445645976</created>
+      <option name="number" value="00037" />
+      <option name="presentableId" value="LOCAL-00037" />
+      <option name="project" value="LOCAL" />
+      <updated>1612445645976</updated>
+    </task>
+    <task id="LOCAL-00038" summary="1208. 尽可能使字符串相等。">
+      <created>1612506586874</created>
+      <option name="number" value="00038" />
+      <option name="presentableId" value="LOCAL-00038" />
+      <option name="project" value="LOCAL" />
+      <updated>1612506586874</updated>
+    </task>
+    <task id="LOCAL-00039" summary="树的序列化。">
+      <created>1612514360432</created>
+      <option name="number" value="00039" />
+      <option name="presentableId" value="LOCAL-00039" />
+      <option name="project" value="LOCAL" />
+      <updated>1612514360432</updated>
+    </task>
+    <task id="LOCAL-00040" summary="每日一题。">
+      <created>1612666367731</created>
+      <option name="number" value="00040" />
+      <option name="presentableId" value="LOCAL-00040" />
+      <option name="project" value="LOCAL" />
+      <updated>1612666367731</updated>
+    </task>
+    <task id="LOCAL-00041" summary="每日一题。">
+      <created>1612761786400</created>
+      <option name="number" value="00041" />
+      <option name="presentableId" value="LOCAL-00041" />
+      <option name="project" value="LOCAL" />
+      <updated>1612761786400</updated>
+    </task>
+    <task id="LOCAL-00042" summary="每日一题。">
+      <created>1612869331245</created>
+      <option name="number" value="00042" />
+      <option name="presentableId" value="LOCAL-00042" />
+      <option name="project" value="LOCAL" />
+      <updated>1612869331245</updated>
+    </task>
+    <task id="LOCAL-00043" summary="每日一题。">
+      <created>1612950521307</created>
+      <option name="number" value="00043" />
+      <option name="presentableId" value="LOCAL-00043" />
+      <option name="project" value="LOCAL" />
+      <updated>1612950521307</updated>
+    </task>
+    <task id="LOCAL-00044" summary="每日一题+快速排序修改。">
+      <created>1613022351653</created>
+      <option name="number" value="00044" />
+      <option name="presentableId" value="LOCAL-00044" />
+      <option name="project" value="LOCAL" />
+      <updated>1613022351653</updated>
+    </task>
+    <task id="LOCAL-00045" summary="每日一题.">
+      <created>1613104943499</created>
+      <option name="number" value="00045" />
+      <option name="presentableId" value="LOCAL-00045" />
+      <option name="project" value="LOCAL" />
+      <updated>1613104943499</updated>
+    </task>
+    <task id="LOCAL-00046" summary="每日一题.">
+      <created>1613193988190</created>
+      <option name="number" value="00046" />
+      <option name="presentableId" value="LOCAL-00046" />
+      <option name="project" value="LOCAL" />
+      <updated>1613193988190</updated>
+    </task>
+    <task id="LOCAL-00047" summary="每日一题.">
+      <created>1613270444509</created>
+      <option name="number" value="00047" />
+      <option name="presentableId" value="LOCAL-00047" />
+      <option name="project" value="LOCAL" />
+      <updated>1613270444509</updated>
+    </task>
+    <task id="LOCAL-00048" summary="每日一题.">
+      <created>1613366578030</created>
+      <option name="number" value="00048" />
+      <option name="presentableId" value="LOCAL-00048" />
+      <option name="project" value="LOCAL" />
+      <updated>1613366578030</updated>
+    </task>
+    <task id="LOCAL-00049" summary="树的题目若干。">
+      <created>1613369449210</created>
+      <option name="number" value="00049" />
+      <option name="presentableId" value="LOCAL-00049" />
+      <option name="project" value="LOCAL" />
+      <updated>1613369449210</updated>
+    </task>
+    <task id="LOCAL-00050" summary="树的题目若干。">
+      <created>1613371783584</created>
+      <option name="number" value="00050" />
+      <option name="presentableId" value="LOCAL-00050" />
+      <option name="project" value="LOCAL" />
+      <updated>1613371783585</updated>
+    </task>
+    <task id="LOCAL-00051" summary="每日一题。">
+      <created>1613628015708</created>
+      <option name="number" value="00051" />
+      <option name="presentableId" value="LOCAL-00051" />
+      <option name="project" value="LOCAL" />
+      <updated>1613628015708</updated>
+    </task>
+    <task id="LOCAL-00052" summary="每日一题。">
+      <created>1613632132079</created>
+      <option name="number" value="00052" />
+      <option name="presentableId" value="LOCAL-00052" />
+      <option name="project" value="LOCAL" />
+      <updated>1613632132079</updated>
+    </task>
+    <task id="LOCAL-00053" summary="每日一题。">
+      <created>1613710963365</created>
+      <option name="number" value="00053" />
+      <option name="presentableId" value="LOCAL-00053" />
+      <option name="project" value="LOCAL" />
+      <updated>1613710963365</updated>
+    </task>
+    <task id="LOCAL-00054" summary="每日一题。">
+      <created>1613786737423</created>
+      <option name="number" value="00054" />
+      <option name="presentableId" value="LOCAL-00054" />
+      <option name="project" value="LOCAL" />
+      <updated>1613786737423</updated>
+    </task>
+    <task id="LOCAL-00055" summary="每日一题。">
+      <created>1613899968143</created>
+      <option name="number" value="00055" />
+      <option name="presentableId" value="LOCAL-00055" />
+      <option name="project" value="LOCAL" />
+      <updated>1613899968143</updated>
+    </task>
+    <task id="LOCAL-00056" summary="每日一题。">
+      <created>1613980941919</created>
+      <option name="number" value="00056" />
+      <option name="presentableId" value="LOCAL-00056" />
+      <option name="project" value="LOCAL" />
+      <updated>1613980941920</updated>
+    </task>
+    <task id="LOCAL-00057" summary="二叉搜索树。">
+      <created>1613993663201</created>
+      <option name="number" value="00057" />
+      <option name="presentableId" value="LOCAL-00057" />
+      <option name="project" value="LOCAL" />
+      <updated>1613993663201</updated>
+    </task>
+    <task id="LOCAL-00058" summary="二叉搜索树。">
+      <created>1613994623398</created>
+      <option name="number" value="00058" />
+      <option name="presentableId" value="LOCAL-00058" />
+      <option name="project" value="LOCAL" />
+      <updated>1613994623398</updated>
+    </task>
+    <task id="LOCAL-00059" summary="树若干题。">
+      <created>1613999122783</created>
+      <option name="number" value="00059" />
+      <option name="presentableId" value="LOCAL-00059" />
+      <option name="project" value="LOCAL" />
+      <updated>1613999122783</updated>
+    </task>
+    <task id="LOCAL-00060" summary="每日一题。">
+      <created>1614086218745</created>
+      <option name="number" value="00060" />
+      <option name="presentableId" value="LOCAL-00060" />
+      <option name="project" value="LOCAL" />
+      <updated>1614086218746</updated>
+    </task>
+    <task id="LOCAL-00061" summary="每日一题。">
+      <created>1614244751903</created>
+      <option name="number" value="00061" />
+      <option name="presentableId" value="LOCAL-00061" />
+      <option name="project" value="LOCAL" />
+      <updated>1614244751903</updated>
+    </task>
+    <task id="LOCAL-00062" summary="每日一题。">
+      <created>1614255112492</created>
+      <option name="number" value="00062" />
+      <option name="presentableId" value="LOCAL-00062" />
+      <option name="project" value="LOCAL" />
+      <updated>1614255112492</updated>
+    </task>
+    <task id="LOCAL-00063" summary="每日一题- 超时。">
+      <created>1614320768637</created>
+      <option name="number" value="00063" />
+      <option name="presentableId" value="LOCAL-00063" />
+      <option name="project" value="LOCAL" />
+      <updated>1614320768637</updated>
+    </task>
+    <task id="LOCAL-00064" summary="每日一题 字典树+回溯 二进制状态压缩。">
+      <created>1614335142745</created>
+      <option name="number" value="00064" />
+      <option name="presentableId" value="LOCAL-00064" />
+      <option name="project" value="LOCAL" />
+      <updated>1614335142745</updated>
+    </task>
+    <task id="LOCAL-00065" summary="每日一题。">
+      <created>1614405223662</created>
+      <option name="number" value="00065" />
+      <option name="presentableId" value="LOCAL-00065" />
+      <option name="project" value="LOCAL" />
+      <updated>1614405223662</updated>
+    </task>
+    <task id="LOCAL-00066" summary="删除temp内容">
+      <created>1614405329592</created>
+      <option name="number" value="00066" />
+      <option name="presentableId" value="LOCAL-00066" />
+      <option name="project" value="LOCAL" />
+      <updated>1614405329592</updated>
+    </task>
+    <task id="LOCAL-00067" summary="删除temp内容">
+      <created>1614405944083</created>
+      <option name="number" value="00067" />
+      <option name="presentableId" value="LOCAL-00067" />
+      <option name="project" value="LOCAL" />
+      <updated>1614405944083</updated>
+    </task>
+    <task id="LOCAL-00068" summary="删除temp内容">
+      <created>1614405973882</created>
+      <option name="number" value="00068" />
+      <option name="presentableId" value="LOCAL-00068" />
+      <option name="project" value="LOCAL" />
+      <updated>1614405973882</updated>
+    </task>
+    <task id="LOCAL-00069" summary="UnionFindSet 研究">
+      <created>1614446280954</created>
+      <option name="number" value="00069" />
+      <option name="presentableId" value="LOCAL-00069" />
+      <option name="project" value="LOCAL" />
+      <updated>1614446280955</updated>
+    </task>
+    <task id="LOCAL-00070" summary="每日一题。">
+      <created>1614750219596</created>
+      <option name="number" value="00070" />
+      <option name="presentableId" value="LOCAL-00070" />
+      <option name="project" value="LOCAL" />
+      <updated>1614750219597</updated>
+    </task>
+    <task id="LOCAL-00071" summary="每日一题。">
+      <created>1614845815220</created>
+      <option name="number" value="00071" />
+      <option name="presentableId" value="LOCAL-00071" />
+      <option name="project" value="LOCAL" />
+      <updated>1614845815220</updated>
+    </task>
+    <task id="LOCAL-00072" summary="每日一题。">
+      <created>1614919965765</created>
+      <option name="number" value="00072" />
+      <option name="presentableId" value="LOCAL-00072" />
+      <option name="project" value="LOCAL" />
+      <updated>1614919965765</updated>
+    </task>
+    <task id="LOCAL-00073" summary="每日一题。">
+      <created>1615002555767</created>
+      <option name="number" value="00073" />
+      <option name="presentableId" value="LOCAL-00073" />
+      <option name="project" value="LOCAL" />
+      <updated>1615002555767</updated>
+    </task>
+    <option name="localTasksCounter" value="74" />
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="2" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+    <option name="oldMeFiltersMigrated" value="true" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="每日一题 。" />
+    <MESSAGE value="二叉树层序遍历四题。" />
+    <MESSAGE value="二叉树层序遍历一题。" />
+    <MESSAGE value="一个小格分成四小格，不停并查集合并。" />
+    <MESSAGE value="二叉树层序遍历。几题。" />
+    <MESSAGE value="树的层序遍历两题。" />
+    <MESSAGE value="树的前序遍历两题" />
+    <MESSAGE value="树的先序遍历 序列化" />
+    <MESSAGE value="验证二叉树的前序序列化" />
+    <MESSAGE value="每日一题。 滑动窗口。" />
+    <MESSAGE value="树的前序序列化。" />
+    <MESSAGE value="树的前序序列化。 TODO" />
+    <MESSAGE value="树的前序序列化" />
+    <MESSAGE value="1208. 尽可能使字符串相等。" />
+    <MESSAGE value="树的序列化。" />
+    <MESSAGE value="每日一题+快速排序修改。" />
+    <MESSAGE value="每日一题." />
+    <MESSAGE value="树的题目若干。" />
+    <MESSAGE value="二叉搜索树。" />
+    <MESSAGE value="树若干题。" />
+    <MESSAGE value="每日一题- 超时。" />
+    <MESSAGE value="每日一题 字典树+回溯 二进制状态压缩。" />
+    <MESSAGE value="删除temp内容" />
+    <MESSAGE value="UnionFindSet 研究" />
+    <MESSAGE value="每日一题。" />
+    <option name="LAST_COMMIT_MESSAGE" value="每日一题。" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="530" y="255" key="#Inspections" timestamp="1614439345445">
+      <screen x="0" y="25" width="1792" height="1095" />
+    </state>
+    <state x="530" y="255" key="#Inspections/0.25.1792.1095@0.25.1792.1095" timestamp="1614439345445" />
+    <state x="780" y="439" key="#Notifications" timestamp="1615093546195">
+      <screen x="0" y="25" width="1792" height="1095" />
+    </state>
+    <state x="780" y="439" key="#Notifications/0.25.1792.1095@0.25.1792.1095" timestamp="1615093546195" />
+    <state x="360" y="231" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1615002639350">
+      <screen x="0" y="25" width="1792" height="1095" />
+    </state>
+    <state x="360" y="231" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.25.1792.1095@0.25.1792.1095" timestamp="1615002639350" />
+    <state x="709" y="283" key="#com.intellij.ide.util.MemberChooser" timestamp="1614440166384">
+      <screen x="0" y="25" width="1792" height="1095" />
+    </state>
+    <state x="709" y="283" key="#com.intellij.ide.util.MemberChooser/0.25.1792.1095@0.25.1792.1095" timestamp="1614440166384" />
+    <state x="180" y="120" width="1433" height="876" key="DiffContextDialog" timestamp="1614841904298">
+      <screen x="0" y="25" width="1792" height="1095" />
+    </state>
+    <state x="180" y="120" width="1433" height="876" key="DiffContextDialog/0.25.1792.1095@0.25.1792.1095" timestamp="1614841904298" />
+    <state width="976" height="169" key="GridCell.Tab.0.bottom" timestamp="1615093208963">
+      <screen x="0" y="25" width="1792" height="1095" />
+    </state>
+    <state width="976" height="169" key="GridCell.Tab.0.bottom/0.25.1792.1095@0.25.1792.1095" timestamp="1615093208963" />
+    <state width="1750" height="401" key="GridCell.Tab.0.bottom/1792.0.2560.1440/0.0.1792.1120@0.0.1792.1120" timestamp="1613980982692" />
+    <state width="1750" height="401" key="GridCell.Tab.0.bottom/1792.0.2560.1440/0.25.1792.1095@0.25.1792.1095" timestamp="1613980268896" />
+    <state width="976" height="169" key="GridCell.Tab.0.center" timestamp="1615093208962">
+      <screen x="0" y="25" width="1792" height="1095" />
+    </state>
+    <state width="976" height="169" key="GridCell.Tab.0.center/0.25.1792.1095@0.25.1792.1095" timestamp="1615093208962" />
+    <state width="1750" height="401" key="GridCell.Tab.0.center/1792.0.2560.1440/0.0.1792.1120@0.0.1792.1120" timestamp="1613980982690" />
+    <state width="1750" height="401" key="GridCell.Tab.0.center/1792.0.2560.1440/0.25.1792.1095@0.25.1792.1095" timestamp="1613980268894" />
+    <state width="976" height="169" key="GridCell.Tab.0.left" timestamp="1615093208962">
+      <screen x="0" y="25" width="1792" height="1095" />
+    </state>
+    <state width="976" height="169" key="GridCell.Tab.0.left/0.25.1792.1095@0.25.1792.1095" timestamp="1615093208962" />
+    <state width="1750" height="401" key="GridCell.Tab.0.left/1792.0.2560.1440/0.0.1792.1120@0.0.1792.1120" timestamp="1613980982689" />
+    <state width="1750" height="401" key="GridCell.Tab.0.left/1792.0.2560.1440/0.25.1792.1095@0.25.1792.1095" timestamp="1613980268892" />
+    <state width="976" height="169" key="GridCell.Tab.0.right" timestamp="1615093208962">
+      <screen x="0" y="25" width="1792" height="1095" />
+    </state>
+    <state width="976" height="169" key="GridCell.Tab.0.right/0.25.1792.1095@0.25.1792.1095" timestamp="1615093208962" />
+    <state width="1750" height="401" key="GridCell.Tab.0.right/1792.0.2560.1440/0.0.1792.1120@0.0.1792.1120" timestamp="1613980982691" />
+    <state width="1750" height="401" key="GridCell.Tab.0.right/1792.0.2560.1440/0.25.1792.1095@0.25.1792.1095" timestamp="1613980268895" />
+    <state width="976" height="169" key="GridCell.Tab.1.bottom" timestamp="1615093208964">
+      <screen x="0" y="25" width="1792" height="1095" />
+    </state>
+    <state width="976" height="169" key="GridCell.Tab.1.bottom/0.25.1792.1095@0.25.1792.1095" timestamp="1615093208964" />
+    <state width="1750" height="401" key="GridCell.Tab.1.bottom/1792.0.2560.1440/0.0.1792.1120@0.0.1792.1120" timestamp="1613980982695" />
+    <state width="1750" height="401" key="GridCell.Tab.1.bottom/1792.0.2560.1440/0.25.1792.1095@0.25.1792.1095" timestamp="1613980268776" />
+    <state width="976" height="169" key="GridCell.Tab.1.center" timestamp="1615093208963">
+      <screen x="0" y="25" width="1792" height="1095" />
+    </state>
+    <state width="976" height="169" key="GridCell.Tab.1.center/0.25.1792.1095@0.25.1792.1095" timestamp="1615093208963" />
+    <state width="1750" height="401" key="GridCell.Tab.1.center/1792.0.2560.1440/0.0.1792.1120@0.0.1792.1120" timestamp="1613980982693" />
+    <state width="1750" height="401" key="GridCell.Tab.1.center/1792.0.2560.1440/0.25.1792.1095@0.25.1792.1095" timestamp="1613980268774" />
+    <state width="976" height="169" key="GridCell.Tab.1.left" timestamp="1615093208963">
+      <screen x="0" y="25" width="1792" height="1095" />
+    </state>
+    <state width="976" height="169" key="GridCell.Tab.1.left/0.25.1792.1095@0.25.1792.1095" timestamp="1615093208963" />
+    <state width="1750" height="401" key="GridCell.Tab.1.left/1792.0.2560.1440/0.0.1792.1120@0.0.1792.1120" timestamp="1613980982692" />
+    <state width="1750" height="401" key="GridCell.Tab.1.left/1792.0.2560.1440/0.25.1792.1095@0.25.1792.1095" timestamp="1613980268772" />
+    <state width="976" height="169" key="GridCell.Tab.1.right" timestamp="1615093208964">
+      <screen x="0" y="25" width="1792" height="1095" />
+    </state>
+    <state width="976" height="169" key="GridCell.Tab.1.right/0.25.1792.1095@0.25.1792.1095" timestamp="1615093208964" />
+    <state width="1750" height="401" key="GridCell.Tab.1.right/1792.0.2560.1440/0.0.1792.1120@0.0.1792.1120" timestamp="1613980982694" />
+    <state width="1750" height="401" key="GridCell.Tab.1.right/1792.0.2560.1440/0.25.1792.1095@0.25.1792.1095" timestamp="1613980268775" />
+    <state x="484" y="319" key="IDE.errors.dialog" timestamp="1614063930823">
+      <screen x="0" y="25" width="1792" height="1095" />
+    </state>
+    <state x="484" y="319" key="IDE.errors.dialog/0.25.1792.1095@0.25.1792.1095" timestamp="1614063930823" />
+    <state x="627" y="279" key="RollbackChangesDialog" timestamp="1614064164459">
+      <screen x="0" y="25" width="1792" height="1095" />
+    </state>
+    <state x="627" y="279" key="RollbackChangesDialog/0.25.1792.1095@0.25.1792.1095" timestamp="1614064164459" />
+    <state x="405" y="208" key="SettingsEditor" timestamp="1614406079332">
+      <screen x="0" y="25" width="1792" height="1095" />
+    </state>
+    <state x="405" y="208" key="SettingsEditor/0.25.1792.1095@0.25.1792.1095" timestamp="1614406079332" />
+    <state x="496" y="309" key="Vcs.Push.Dialog.v2" timestamp="1615093535807">
+      <screen x="0" y="25" width="1792" height="1095" />
+    </state>
+    <state x="496" y="309" key="Vcs.Push.Dialog.v2/0.25.1792.1095@0.25.1792.1095" timestamp="1615093535807" />
+    <state x="687" y="490" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1614841094153">
+      <screen x="0" y="25" width="1792" height="1095" />
+    </state>
+    <state x="687" y="490" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.25.1792.1095@0.25.1792.1095" timestamp="1614841094153" />
+    <state x="596" y="329" width="850" height="486" key="find.popup" timestamp="1615001037912">
+      <screen x="0" y="25" width="1792" height="1095" />
+    </state>
+    <state x="596" y="329" width="850" height="486" key="find.popup/0.25.1792.1095@0.25.1792.1095" timestamp="1615001037912" />
+    <state x="675" y="465" key="git4idea.remote.GitConfigureRemotesDialog" timestamp="1614406234329">
+      <screen x="0" y="25" width="1792" height="1095" />
+    </state>
+    <state x="675" y="465" key="git4idea.remote.GitConfigureRemotesDialog/0.25.1792.1095@0.25.1792.1095" timestamp="1614406234329" />
+    <state x="561" y="269" width="670" height="676" key="search.everywhere.popup" timestamp="1613998332399">
+      <screen x="0" y="25" width="1792" height="1095" />
+    </state>
+    <state x="561" y="269" width="670" height="676" key="search.everywhere.popup/0.25.1792.1095@0.25.1792.1095" timestamp="1613998332399" />
+  </component>
+  <component name="XDebuggerManager">
+    <pin-to-top-manager>
+      <pinned-members>
+        <PinnedItemInfo typeName="work.huangdu.data_structure.TreeNode" fieldName="val" />
+      </pinned-members>
+    </pin-to-top-manager>
+  </component>
+  <component name="XSLT-Support.FileAssociations.UIState">
+    <expand />
+    <select />
+  </component>
+  <component name="com.intellij.coverage.CoverageDataManagerImpl">
+    <SUITE FILE_PATH="coverage/algorithms$MedianSlidingWindow.ic" NAME="MedianSlidingWindow Coverage Results" MODIFIED="1612323980159" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+      <FILTER>work.huangdu.question_bank.difficult.*</FILTER>
+    </SUITE>
+    <SUITE FILE_PATH="coverage/algorithms$MinCostConnectPoints.ic" NAME="MinCostConnectPoints Coverage Results" MODIFIED="1611053532507" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+      <FILTER>work.huangdu.question_bank.medium.*</FILTER>
+    </SUITE>
+  </component>
+</project>
