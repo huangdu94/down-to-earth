@@ -9,7 +9,7 @@ import com.iflytek.pattern.create.abstact_factory.size.impl.Small;
 /**
  * 尺寸工厂 抽象工厂的子类
  *
- * @author DuHuang 2019/10/31 10:54
+ * @author yiyun (huangdu.hd@alibaba-inc.com) 2019/10/31 10:54
  */
 public class SizeFactory extends AbstractFactory {
     @Override

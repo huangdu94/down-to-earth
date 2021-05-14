@@ -3,7 +3,7 @@ package com.iflytek.pattern.create.abstact_factory;
 /**
  * 工厂创造器
  *
- * @author DuHuang 2019/10/31 10:56
+ * @author yiyun (huangdu.hd@alibaba-inc.com) 2019/10/31 10:56
  */
 public class FactoryProducer {
     public static AbstractFactory getFactory(String factory) {

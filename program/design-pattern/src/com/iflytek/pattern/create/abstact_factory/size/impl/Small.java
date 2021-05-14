@@ -5,7 +5,7 @@ import com.iflytek.pattern.create.abstact_factory.size.ISize;
 /**
  * 小
  *
- * @author DuHuang 2019/10/31 10:44
+ * @author yiyun (huangdu.hd@alibaba-inc.com) 2019/10/31 10:44
  */
 public class Small implements ISize {
     @Override

@@ -7,7 +7,7 @@ import com.iflytek.pattern.create.abstact_factory.size.ISize;
  * 抽象工厂模式
  * 工厂的工厂
  *
- * @author DuHuang 2019/10/31 10:59
+ * @author yiyun (huangdu.hd@alibaba-inc.com) 2019/10/31 10:59
  */
 public class Main {
     public static void main(String[] args) {

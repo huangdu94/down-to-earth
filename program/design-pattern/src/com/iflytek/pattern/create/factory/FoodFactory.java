@@ -8,7 +8,7 @@ import com.iflytek.pattern.create.factory.food.impl.Milk;
 /**
  * 食物工厂
  *
- * @author DuHuang 2019/10/31 10:25
+ * @author yiyun (huangdu.hd@alibaba-inc.com) 2019/10/31 10:25
  */
 public class FoodFactory {
     public IFood getFood(String foodType) {

@@ -4,7 +4,7 @@ package com.iflytek.pattern.create.builder;
  * 建造者模式
  * main方法即使用者，两种使用方式
  *
- * @author DuHuang 2019/10/31 14:45
+ * @author yiyun (huangdu.hd@alibaba-inc.com) 2019/10/31 14:45
  */
 public class Main {
     public static void main(String[] args) {

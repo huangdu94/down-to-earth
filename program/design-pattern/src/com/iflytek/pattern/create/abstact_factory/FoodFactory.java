@@ -9,7 +9,7 @@ import com.iflytek.pattern.create.abstact_factory.size.ISize;
 /**
  * 食物工厂 抽象工厂的子类
  *
- * @author DuHuang 2019/10/31 10:52
+ * @author yiyun (huangdu.hd@alibaba-inc.com) 2019/10/31 10:52
  */
 public class FoodFactory extends AbstractFactory {
     @Override

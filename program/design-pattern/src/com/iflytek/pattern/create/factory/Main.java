@@ -7,7 +7,7 @@ import com.iflytek.pattern.create.factory.food.IFood;
  * 此为简单工厂
  * 另一种 工厂模式 将工厂抽象出一个接口，每一个工厂实现类单独生产一种产品
  *
- * @author DuHuang 2019/10/31 10:31
+ * @author yiyun (huangdu.hd@alibaba-inc.com) 2019/10/31 10:31
  */
 public class Main {
     public static void main(String[] args) {
