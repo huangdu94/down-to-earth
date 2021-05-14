@@ -9,7 +9,6 @@ public class SingletonA {
     private static SingletonA instance;
 
     private SingletonA() {
-
     }
 
     public static SingletonA getInstance() {

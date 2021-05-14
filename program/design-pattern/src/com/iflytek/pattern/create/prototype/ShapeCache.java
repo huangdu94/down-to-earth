@@ -1,11 +1,11 @@
 package com.iflytek.pattern.create.prototype;
 
+import java.util.Hashtable;
+
 import com.iflytek.pattern.create.prototype.shape.AbstractShape;
 import com.iflytek.pattern.create.prototype.shape.Circle;
 import com.iflytek.pattern.create.prototype.shape.Rectangle;
 import com.iflytek.pattern.create.prototype.shape.Square;
-
-import java.util.Hashtable;
 
 /**
  * 用于获取Shape实体类的缓存类，缓存在HashTable中
@@ -14,7 +14,7 @@ import java.util.Hashtable;
  * @date 2019/10/31 16:31
  */
 public class ShapeCache {
-    private static Hashtable<String, AbstractShape> shapeTable = new Hashtable<>();
+    private static final Hashtable<String, AbstractShape> shapeTable = new Hashtable<>();
 
     static {
         loadCache();

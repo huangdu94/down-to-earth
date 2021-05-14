@@ -9,7 +9,6 @@ public class SingletonD {
     private volatile static SingletonD instance;
 
     private SingletonD() {
-
     }
 
     public static SingletonD getInstance() {

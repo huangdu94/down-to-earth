@@ -7,7 +7,6 @@ package com.iflytek.pattern.create.singleton;
  */
 public class SingletonE {
     private SingletonE() {
-
     }
 
     private static class SingletonEHolder {
