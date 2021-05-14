@@ -1,7 +1,7 @@
-package com.iflytek.pattern.create.abstact_factory;
+package com.iflytek.pattern.create.abstact_factory.old;
 
-import com.iflytek.pattern.create.abstact_factory.food.IFood;
-import com.iflytek.pattern.create.abstact_factory.size.ISize;
+import com.iflytek.pattern.create.abstact_factory.old.food.IFood;
+import com.iflytek.pattern.create.abstact_factory.old.size.ISize;
 
 /**
  * 抽象工厂

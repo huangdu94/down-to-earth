@@ -1,4 +1,4 @@
-package com.iflytek.pattern.create.abstact_factory.food;
+package com.iflytek.pattern.create.abstact_factory.old.food;
 
 /**
  * 食物接口

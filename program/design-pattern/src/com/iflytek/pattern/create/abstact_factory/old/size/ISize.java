@@ -1,4 +1,4 @@
-package com.iflytek.pattern.create.abstact_factory.size;
+package com.iflytek.pattern.create.abstact_factory.old.size;
 
 /**
  * 尺寸接口

@@ -1,10 +1,10 @@
-package com.iflytek.pattern.create.abstact_factory;
+package com.iflytek.pattern.create.abstact_factory.old;
 
-import com.iflytek.pattern.create.abstact_factory.food.IFood;
-import com.iflytek.pattern.create.abstact_factory.food.impl.Bread;
-import com.iflytek.pattern.create.abstact_factory.food.impl.Ham;
-import com.iflytek.pattern.create.abstact_factory.food.impl.Milk;
-import com.iflytek.pattern.create.abstact_factory.size.ISize;
+import com.iflytek.pattern.create.abstact_factory.old.food.IFood;
+import com.iflytek.pattern.create.abstact_factory.old.food.impl.Bread;
+import com.iflytek.pattern.create.abstact_factory.old.food.impl.Ham;
+import com.iflytek.pattern.create.abstact_factory.old.food.impl.Milk;
+import com.iflytek.pattern.create.abstact_factory.old.size.ISize;
 
 /**
  * 食物工厂 抽象工厂的子类

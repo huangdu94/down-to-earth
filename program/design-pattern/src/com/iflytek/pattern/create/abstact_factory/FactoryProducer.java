@@ -1,5 +1,10 @@
 package com.iflytek.pattern.create.abstact_factory;
 
+import com.iflytek.pattern.create.abstact_factory.factory.AbstractFactory;
+import com.iflytek.pattern.create.abstact_factory.factory.impl.DellFactory;
+import com.iflytek.pattern.create.abstact_factory.factory.impl.LenovoFactory;
+import com.iflytek.pattern.create.abstact_factory.factory.impl.MacFactory;
+
 /**
  * 工厂创造器
  *
@@ -11,10 +16,12 @@ public class FactoryProducer {
             return null;
         }
         switch (factory.toUpperCase()) {
-            case "FOOD":
-                return new FoodFactory();
-            case "SIZE":
-                return new SizeFactory();
+            case "DELL":
+                return new DellFactory();
+            case "LENOVO":
+                return new LenovoFactory();
+            case "MAC":
+                return new MacFactory();
             default:
                 return null;
         }

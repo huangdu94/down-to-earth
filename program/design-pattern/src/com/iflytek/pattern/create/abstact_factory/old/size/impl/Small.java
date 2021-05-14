@@ -1,6 +1,6 @@
-package com.iflytek.pattern.create.abstact_factory.size.impl;
+package com.iflytek.pattern.create.abstact_factory.old.size.impl;
 
-import com.iflytek.pattern.create.abstact_factory.size.ISize;
+import com.iflytek.pattern.create.abstact_factory.old.size.ISize;
 
 /**
  * 小

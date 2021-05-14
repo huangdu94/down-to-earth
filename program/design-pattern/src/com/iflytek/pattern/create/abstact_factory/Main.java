@@ -1,7 +1,9 @@
 package com.iflytek.pattern.create.abstact_factory;
 
-import com.iflytek.pattern.create.abstact_factory.food.IFood;
-import com.iflytek.pattern.create.abstact_factory.size.ISize;
+import com.iflytek.pattern.create.abstact_factory.entity.headset.IHeadset;
+import com.iflytek.pattern.create.abstact_factory.entity.keyboard.IKeyboard;
+import com.iflytek.pattern.create.abstact_factory.entity.mouse.IMouse;
+import com.iflytek.pattern.create.abstact_factory.factory.AbstractFactory;
 
 /**
  * 抽象工厂模式
@@ -11,19 +13,26 @@ import com.iflytek.pattern.create.abstact_factory.size.ISize;
  */
 public class Main {
     public static void main(String[] args) {
-        AbstractFactory foodFactory = FactoryProducer.getFactory("food");
-        IFood food1 = foodFactory.getFood("bread");
-        IFood food2 = foodFactory.getFood("milk");
-        IFood food3 = foodFactory.getFood("ham");
-        AbstractFactory sizeFactory = FactoryProducer.getFactory("size");
-        ISize size1 = sizeFactory.getSize("small");
-        ISize size2 = sizeFactory.getSize("medium");
-        ISize size3 = sizeFactory.getSize("big");
-        food1.eat();
-        food2.eat();
-        food3.eat();
-        size1.show();
-        size2.show();
-        size3.show();
+        AbstractFactory dellFactory = FactoryProducer.getFactory("dell");
+        IMouse dellMouse = dellFactory.getMouse();
+        IKeyboard dellKeyboard = dellFactory.getKeyboard();
+        IHeadset dellHeadset = dellFactory.getHeadset();
+        AbstractFactory lenovoFactory = FactoryProducer.getFactory("lenovo");
+        IMouse lenovoMouse = lenovoFactory.getMouse();
+        IKeyboard lenovoKeyboard = lenovoFactory.getKeyboard();
+        IHeadset lenovoHeadset = lenovoFactory.getHeadset();
+        AbstractFactory macFactory = FactoryProducer.getFactory("mac");
+        IMouse macMouse = macFactory.getMouse();
+        IKeyboard macKeyboard = macFactory.getKeyboard();
+        IHeadset macHeadset = macFactory.getHeadset();
+        dellMouse.click();
+        dellKeyboard.knock();
+        dellHeadset.listen();
+        lenovoMouse.click();
+        lenovoKeyboard.knock();
+        lenovoHeadset.listen();
+        macMouse.click();
+        macKeyboard.knock();
+        macHeadset.listen();
     }
 }

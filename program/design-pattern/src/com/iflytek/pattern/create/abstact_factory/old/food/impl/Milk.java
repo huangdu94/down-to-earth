@@ -1,6 +1,6 @@
-package com.iflytek.pattern.create.abstact_factory.food.impl;
+package com.iflytek.pattern.create.abstact_factory.old.food.impl;
 
-import com.iflytek.pattern.create.abstact_factory.food.IFood;
+import com.iflytek.pattern.create.abstact_factory.old.food.IFood;
 
 /**
  * 牛奶
