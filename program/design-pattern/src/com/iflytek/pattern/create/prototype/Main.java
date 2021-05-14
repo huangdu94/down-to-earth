@@ -5,6 +5,7 @@ import com.iflytek.pattern.create.prototype.shape.AbstractShape;
 /**
  * 原型模式
  * 当直接创建对象的代价比较大时，可以采用此方式创建
+ * 分为浅拷贝 深拷贝 本示例为浅拷贝
  *
  * @author duhuang@iflytek
  * @date 2019/10/31 16:08
