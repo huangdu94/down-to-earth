@@ -1,6 +1,6 @@
-package com.iflytek.pattern.create.builder.item.pack.impl;
+package com.iflytek.pattern.create.builder.example2.item.pack.impl;
 
-import com.iflytek.pattern.create.builder.item.pack.Packing;
+import com.iflytek.pattern.create.builder.example2.item.pack.Packing;
 
 /**
  * 包装纸

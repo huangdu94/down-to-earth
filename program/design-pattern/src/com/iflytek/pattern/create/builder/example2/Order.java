@@ -1,6 +1,6 @@
-package com.iflytek.pattern.create.builder;
+package com.iflytek.pattern.create.builder.example2;
 
-import com.iflytek.pattern.create.builder.item.Item;
+import com.iflytek.pattern.create.builder.example2.item.Item;
 
 import java.util.ArrayList;
 import java.util.List;

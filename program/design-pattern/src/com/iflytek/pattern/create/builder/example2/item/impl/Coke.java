@@ -1,6 +1,6 @@
-package com.iflytek.pattern.create.builder.item.impl;
+package com.iflytek.pattern.create.builder.example2.item.impl;
 
-import com.iflytek.pattern.create.builder.item.ColdDrink;
+import com.iflytek.pattern.create.builder.example2.item.ColdDrink;
 
 /**
  * @author duhuang@iflytek

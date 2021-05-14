@@ -1,9 +1,9 @@
-package com.iflytek.pattern.create.builder;
+package com.iflytek.pattern.create.builder.example2;
 
-import com.iflytek.pattern.create.builder.item.impl.ChickenBurger;
-import com.iflytek.pattern.create.builder.item.impl.Coke;
-import com.iflytek.pattern.create.builder.item.impl.Pepsi;
-import com.iflytek.pattern.create.builder.item.impl.VegBurger;
+import com.iflytek.pattern.create.builder.example2.item.impl.ChickenBurger;
+import com.iflytek.pattern.create.builder.example2.item.impl.Coke;
+import com.iflytek.pattern.create.builder.example2.item.impl.Pepsi;
+import com.iflytek.pattern.create.builder.example2.item.impl.VegBurger;
 
 /**
  * 建造类(建造订单)
@@ -18,21 +18,25 @@ public class OrderBuilder implements IBuilder {
         order = new Order();
     }
 
+    @Override
     public OrderBuilder orderChickenBurger() {
         order.addItem(new ChickenBurger());
         return this;
     }
 
+    @Override
     public OrderBuilder orderVegBurger() {
         order.addItem(new VegBurger());
         return this;
     }
 
+    @Override
     public OrderBuilder orderPepsi() {
         order.addItem(new Pepsi());
         return this;
     }
 
+    @Override
     public OrderBuilder orderCoke() {
         order.addItem(new Coke());
         return this;

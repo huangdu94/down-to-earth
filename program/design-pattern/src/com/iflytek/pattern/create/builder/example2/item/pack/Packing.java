@@ -1,4 +1,4 @@
-package com.iflytek.pattern.create.builder.item.pack;
+package com.iflytek.pattern.create.builder.example2.item.pack;
 
 /**
  * 包装接口

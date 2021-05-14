@@ -1,7 +1,7 @@
-package com.iflytek.pattern.create.builder.item;
+package com.iflytek.pattern.create.builder.example2.item;
 
-import com.iflytek.pattern.create.builder.item.pack.Packing;
-import com.iflytek.pattern.create.builder.item.pack.impl.Wrapper;
+import com.iflytek.pattern.create.builder.example2.item.pack.Packing;
+import com.iflytek.pattern.create.builder.example2.item.pack.impl.Wrapper;
 
 /**
  * 汉堡抽象类

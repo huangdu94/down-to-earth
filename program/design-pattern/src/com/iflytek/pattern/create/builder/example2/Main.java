@@ -1,4 +1,4 @@
-package com.iflytek.pattern.create.builder;
+package com.iflytek.pattern.create.builder.example2;
 
 /**
  * 建造者模式

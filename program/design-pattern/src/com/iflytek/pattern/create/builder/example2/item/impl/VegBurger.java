@@ -1,6 +1,6 @@
-package com.iflytek.pattern.create.builder.item.impl;
+package com.iflytek.pattern.create.builder.example2.item.impl;
 
-import com.iflytek.pattern.create.builder.item.Burger;
+import com.iflytek.pattern.create.builder.example2.item.Burger;
 
 /**
  * 蔬菜汉堡

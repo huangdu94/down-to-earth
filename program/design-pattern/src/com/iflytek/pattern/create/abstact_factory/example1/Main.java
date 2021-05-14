@@ -1,6 +1,5 @@
 package com.iflytek.pattern.create.abstact_factory.example1;
 
-import com.iflytek.pattern.create.abstact_factory.example1.FactoryProducer;
 import com.iflytek.pattern.create.abstact_factory.example1.entity.headset.IHeadset;
 import com.iflytek.pattern.create.abstact_factory.example1.entity.keyboard.IKeyboard;
 import com.iflytek.pattern.create.abstact_factory.example1.entity.mouse.IMouse;
