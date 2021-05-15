@@ -1,5 +1,10 @@
 package club.huangdu94.pattern.structure.adapter.example1;
 
+import club.huangdu94.pattern.structure.adapter.example1.extension.AdvancedMediaPlayer;
+import club.huangdu94.pattern.structure.adapter.example1.extension.Mp4Player;
+import club.huangdu94.pattern.structure.adapter.example1.extension.VlcPlayer;
+import club.huangdu94.pattern.structure.adapter.example1.origin.MediaPlayer;
+
 /**
  * 适配器，用于扩展原播放器功能
  *

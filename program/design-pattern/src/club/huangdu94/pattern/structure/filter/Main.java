@@ -1,5 +1,8 @@
 package club.huangdu94.pattern.structure.filter;
 
+import java.util.ArrayList;
+import java.util.List;
+
 import club.huangdu94.pattern.structure.filter.criteria.AndCriteria;
 import club.huangdu94.pattern.structure.filter.criteria.Criteria;
 import club.huangdu94.pattern.structure.filter.criteria.CriteriaFemale;
@@ -7,10 +10,6 @@ import club.huangdu94.pattern.structure.filter.criteria.CriteriaMale;
 import club.huangdu94.pattern.structure.filter.criteria.CriteriaSingle;
 import club.huangdu94.pattern.structure.filter.criteria.OrCriteria;
 import club.huangdu94.pattern.structure.filter.entity.Person;
-import com.iflytek.pattern.structure.filter.criteria.*;
-
-import java.util.ArrayList;
-import java.util.List;
 
 /**
  * 过滤器模式

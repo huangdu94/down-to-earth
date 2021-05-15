@@ -1,6 +1,6 @@
 package club.huangdu94.pattern.structure.adapter.example1;
 
-import sun.audio.AudioPlayer;
+import club.huangdu94.pattern.structure.adapter.example1.origin.AudioPlayer;
 
 /**
  * 适配器模式
