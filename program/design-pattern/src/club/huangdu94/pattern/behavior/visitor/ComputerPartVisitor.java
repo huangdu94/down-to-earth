@@ -1,5 +1,9 @@
 package club.huangdu94.pattern.behavior.visitor;
 
+import club.huangdu94.pattern.behavior.visitor.entity.Keyboard;
+import club.huangdu94.pattern.behavior.visitor.entity.Monitor;
+import club.huangdu94.pattern.behavior.visitor.entity.Mouse;
+
 /**
  * 访问者接口
  *

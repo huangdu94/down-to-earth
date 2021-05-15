@@ -1,4 +1,7 @@
-package club.huangdu94.pattern.behavior.visitor;
+package club.huangdu94.pattern.behavior.visitor.entity;
+
+import club.huangdu94.pattern.behavior.visitor.ComputerPart;
+import club.huangdu94.pattern.behavior.visitor.ComputerPartVisitor;
 
 /**
  * @author duhuang@iflytek.com

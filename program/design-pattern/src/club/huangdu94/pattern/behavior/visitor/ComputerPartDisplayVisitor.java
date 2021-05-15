@@ -1,5 +1,9 @@
 package club.huangdu94.pattern.behavior.visitor;
 
+import club.huangdu94.pattern.behavior.visitor.entity.Keyboard;
+import club.huangdu94.pattern.behavior.visitor.entity.Monitor;
+import club.huangdu94.pattern.behavior.visitor.entity.Mouse;
+
 /**
  * @author duhuang@iflytek.com
  * @version 2020/11/29 23:33

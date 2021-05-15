@@ -1,5 +1,9 @@
 package club.huangdu94.pattern.behavior.visitor;
 
+import club.huangdu94.pattern.behavior.visitor.entity.Keyboard;
+import club.huangdu94.pattern.behavior.visitor.entity.Monitor;
+import club.huangdu94.pattern.behavior.visitor.entity.Mouse;
+
 /**
  * 电脑的accept方法稍微特殊一点点，它除了自己要被观察者访问以外，还要调用其组成部分的每一个accept方法
  *
