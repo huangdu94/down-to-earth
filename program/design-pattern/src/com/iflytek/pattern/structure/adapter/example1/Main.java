@@ -1,6 +1,6 @@
-package com.iflytek.pattern.structure.adapter;
+package com.iflytek.pattern.structure.adapter.example1;
 
-import com.iflytek.pattern.structure.adapter.origin.AudioPlayer;
+import sun.audio.AudioPlayer;
 
 /**
  * 适配器模式

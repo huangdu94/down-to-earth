@@ -1,9 +1,4 @@
-package com.iflytek.pattern.structure.adapter;
-
-import com.iflytek.pattern.structure.adapter.extension.AdvancedMediaPlayer;
-import com.iflytek.pattern.structure.adapter.extension.Mp4Player;
-import com.iflytek.pattern.structure.adapter.extension.VlcPlayer;
-import com.iflytek.pattern.structure.adapter.origin.MediaPlayer;
+package com.iflytek.pattern.structure.adapter.example1;
 
 /**
  * 适配器，用于扩展原播放器功能

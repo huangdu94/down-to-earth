@@ -1,4 +1,4 @@
-package com.iflytek.pattern.structure.adapter.extension;
+package com.iflytek.pattern.structure.adapter.example1.extension;
 
 /**
  * @author duhuang@iflytek.com

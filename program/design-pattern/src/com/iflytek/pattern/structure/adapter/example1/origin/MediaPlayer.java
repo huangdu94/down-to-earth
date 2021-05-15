@@ -1,4 +1,4 @@
-package com.iflytek.pattern.structure.adapter.origin;
+package com.iflytek.pattern.structure.adapter.example1.origin;
 
 /**
  * 媒体播放器

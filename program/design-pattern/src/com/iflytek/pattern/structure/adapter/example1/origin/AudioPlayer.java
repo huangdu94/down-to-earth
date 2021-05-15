@@ -1,6 +1,6 @@
-package com.iflytek.pattern.structure.adapter.origin;
+package com.iflytek.pattern.structure.adapter.example1.origin;
 
-import com.iflytek.pattern.structure.adapter.MediaAdapter;
+import com.iflytek.pattern.structure.adapter.example1.MediaAdapter;
 
 /**
  * @author duhuang@iflytek.com
