@@ -1,8 +1,8 @@
 package club.huangdu94.pattern.structure.filter.criteria;
 
-import club.huangdu94.pattern.structure.filter.entity.Person;
-
 import java.util.List;
+
+import club.huangdu94.pattern.structure.filter.entity.Person;
 
 /**
  * 标准且
@@ -12,8 +12,8 @@ import java.util.List;
  */
 public class AndCriteria implements Criteria {
 
-    private Criteria criteria;
-    private Criteria otherCriteria;
+    private final Criteria criteria;
+    private final Criteria otherCriteria;
 
     public AndCriteria(Criteria criteria, Criteria otherCriteria) {
         this.criteria = criteria;

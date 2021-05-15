@@ -1,8 +1,8 @@
 package club.huangdu94.pattern.structure.filter.criteria;
 
-import club.huangdu94.pattern.structure.filter.entity.Person;
-
 import java.util.List;
+
+import club.huangdu94.pattern.structure.filter.entity.Person;
 
 /**
  * 标准或
@@ -12,8 +12,8 @@ import java.util.List;
  */
 public class OrCriteria implements Criteria {
 
-    private Criteria criteria;
-    private Criteria otherCriteria;
+    private final Criteria criteria;
+    private final Criteria otherCriteria;
 
     public OrCriteria(Criteria criteria, Criteria otherCriteria) {
         this.criteria = criteria;
