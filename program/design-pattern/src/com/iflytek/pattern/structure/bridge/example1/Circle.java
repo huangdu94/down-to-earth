@@ -1,4 +1,4 @@
-package com.iflytek.pattern.structure.bridge;
+package com.iflytek.pattern.structure.bridge.example1;
 
 /**
  * 关键点，把需要调用的方法的对象作为构造参数传进来。

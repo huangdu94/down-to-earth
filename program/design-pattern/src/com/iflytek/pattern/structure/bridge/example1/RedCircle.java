@@ -1,4 +1,6 @@
-package com.iflytek.pattern.structure.bridge;
+package com.iflytek.pattern.structure.bridge.example1;
+
+import com.iflytek.pattern.structure.bridge.example1.DrawAPI;
 
 /**
  * @author duhuang@iflytek.com

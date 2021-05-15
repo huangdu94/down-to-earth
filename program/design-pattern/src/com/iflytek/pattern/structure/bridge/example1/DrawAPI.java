@@ -1,4 +1,4 @@
-package com.iflytek.pattern.structure.bridge;
+package com.iflytek.pattern.structure.bridge.example1;
 
 /**
  * @author duhuang@iflytek.com
