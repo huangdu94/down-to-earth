@@ -1,6 +1,9 @@
 package club.huangdu94.pattern.create.factory;
 
 import club.huangdu94.pattern.create.factory.food.IFood;
+import club.huangdu94.pattern.create.factory.food.impl.Bread;
+import club.huangdu94.pattern.create.factory.food.impl.Ham;
+import club.huangdu94.pattern.create.factory.food.impl.Milk;
 
 /**
  * 简单工厂模式
@@ -18,5 +21,12 @@ public class Main {
         food1.eat();
         food2.eat();
         food3.eat();
+
+        IFood bread = foodFactory.getFood(Bread.class);
+        IFood milk = foodFactory.getFood(Milk.class);
+        IFood ham = foodFactory.getFood(Ham.class);
+        bread.eat();
+        milk.eat();
+        ham.eat();
     }
 }
