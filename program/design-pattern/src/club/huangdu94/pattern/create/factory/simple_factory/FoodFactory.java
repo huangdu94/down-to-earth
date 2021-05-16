@@ -1,4 +1,4 @@
-package club.huangdu94.pattern.create.factory;
+package club.huangdu94.pattern.create.factory.simple_factory;
 
 import club.huangdu94.pattern.create.factory.food.IFood;
 import club.huangdu94.pattern.create.factory.food.impl.Bread;
