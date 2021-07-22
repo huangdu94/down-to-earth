@@ -27,7 +27,7 @@ public class Originator {
     /**
      * 读取备忘录中的状态
      */
-    public void getStateFromMemento(Memento Memento) {
-        state = Memento.getState();
+    public void getStateFromMemento(Memento memento) {
+        state = memento.getState();
     }
 }
