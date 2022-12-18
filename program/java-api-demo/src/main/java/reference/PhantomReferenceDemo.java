@@ -18,7 +18,7 @@ public class PhantomReferenceDemo {
         MyObject obj = new MyObject();
         ReferenceQueue<MyObject> phantomQueue = new ReferenceQueue<>();
         PhantomReference<MyObject> phantomRef = new PhantomReference<>(obj, phantomQueue);
-        new CheckRefQueue(phantomQueue).start();
+        new CheckRefQueue<>(phantomQueue).start();
         obj = null;
         System.out.println("Before GC:Soft Get= " + phantomRef.get());
         System.gc();

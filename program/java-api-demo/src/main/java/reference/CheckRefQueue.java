@@ -9,16 +9,16 @@ import java.lang.ref.ReferenceQueue;
  * @author duhuang@iflytek
  * @version 2019/11/20 15:18
  */
-public class CheckRefQueue extends Thread {
-    private ReferenceQueue<MyObject> softQueue;
+public class CheckRefQueue<T> extends Thread {
+    private final ReferenceQueue<T> softQueue;
 
-    CheckRefQueue(ReferenceQueue<MyObject> softQueue) {
+    CheckRefQueue(ReferenceQueue<T> softQueue) {
         this.softQueue = softQueue;
     }
 
     @Override
     public void run() {
-        Reference<? extends MyObject> obj = null;
+        Reference<? extends T> obj = null;
         try {
             obj = softQueue.remove();
         } catch (InterruptedException e) {

@@ -19,10 +19,11 @@ import java.lang.ref.SoftReference;
  */
 public class SoftReferenceDemo {
     public static void main(String[] args) throws InterruptedException {
-        MyObject obj = new MyObject();//强引用
+        // 强引用
+        MyObject obj = new MyObject();
         ReferenceQueue<MyObject> softQueue = new ReferenceQueue<>();
         SoftReference<MyObject> softRef = new SoftReference<>(obj, softQueue);
-        new CheckRefQueue(softQueue).start();
+        new CheckRefQueue<>(softQueue).start();
         obj = null;
         System.gc();
         System.out.println("After GC:Soft Get= " + softRef.get());

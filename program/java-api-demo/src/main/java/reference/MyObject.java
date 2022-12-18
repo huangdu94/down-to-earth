@@ -10,7 +10,8 @@ public class MyObject {
     @Override
     public void finalize() throws Throwable {
         super.finalize();
-        System.out.println("MyObject's finalize called");//被回收时输出
+        // 被回收时输出
+        System.out.println("MyObject's finalize called");
     }
 
     @Override
