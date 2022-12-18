@@ -1,0 +1,6 @@
+print(3+5)
+print(8-0)
+print(40/5)
+print(2*4)
+print(2**3)
+print(''+str(8))
