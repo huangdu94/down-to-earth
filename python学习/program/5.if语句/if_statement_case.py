@@ -25,3 +25,14 @@ if var:
     print("var is not empty.")
 else:
     print("var is empty.")
+# 确定字符串不是空的（Python将非空字符串解读为True）
+var = ""
+if var:
+    print("var is not empty.")
+else:
+    print("var is empty.")
+var = "hello"
+if var:
+    print("var is not empty.")
+else:
+    print("var is empty.")
