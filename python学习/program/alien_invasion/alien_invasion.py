@@ -30,7 +30,7 @@ def run_game():
         if stats.game_active:
             ship.update()
             gf.update_bullets(ai_settings, screen, stats, scoreboard, ship, bullets, aliens)
-            gf.update_aliens(ai_settings, stats, screen, ship, aliens, bullets)
+            gf.update_aliens(ai_settings, stats, scoreboard, screen, ship, aliens, bullets)
         gf.update_screen(ai_settings, screen, stats, scoreboard, ship, aliens, bullets, play_button)
 
 
