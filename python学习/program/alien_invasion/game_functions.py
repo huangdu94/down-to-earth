@@ -49,7 +49,9 @@ def check_keyup_events(event, ship):
 
 def check_play_button(ai_settings, screen, stats, play_button, ship, aliens, bullets, mouse_x, mouse_y):
     """在玩家单击Play按钮时开始新游戏"""
-    if play_button.rect.collidepoint(mouse_x, mouse_y):
+    if play_button.rect.collidepoint(mouse_x, mouse_y) and not stats.game_active:
+        # 隐藏光标
+        pygame.mouse.set_visible(False)
         stats.game_active = True
         # 重置游戏统计信息
         stats.reset_stats()
@@ -167,6 +169,7 @@ def ship_hit(ai_settings, stats, screen, ship, aliens, bullets):
     """响应被外星人撞到的飞船"""
     if stats.ships_left == 0:
         stats.game_active = False
+        pygame.mouse.set_visible(True)
         return
     # 将ships_left减1
     stats.ships_left -= 1
