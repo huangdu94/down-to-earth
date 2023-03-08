@@ -105,14 +105,14 @@ def update_screen(ai_settings, screen, stats, scoreboard, ship, aliens, bullets,
     """更新屏幕上的图像，并切换到新屏幕"""
     # 每次循环时都重绘屏幕
     screen.fill(ai_settings.bg_color)
-    # 显示得分
-    scoreboard.show_score()
     ship.blitme()
     # 在飞船和外星人后面重绘所有子弹
     for bullet in bullets.sprites():
         bullet.draw_bullet()
     ship.blitme()
     aliens.draw(screen)
+    # 显示得分
+    scoreboard.show_score()
     # 如果游戏处于非活动状态，就绘制Play按钮
     if not stats.game_active:
         play_button.draw_button()
