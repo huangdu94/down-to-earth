@@ -5,7 +5,7 @@ from alien import Alien
 from bullet import Bullet
 
 
-def check_events(ai_settings, screen, stats, play_button, ship, aliens, bullets):
+def check_events(ai_settings, screen, stats, scoreboard, play_button, ship, aliens, bullets):
     """响应按键和鼠标事件"""
     for event in pygame.event.get():
         if event.type == pygame.QUIT:
@@ -16,7 +16,8 @@ def check_events(ai_settings, screen, stats, play_button, ship, aliens, bullets)
             check_keyup_events(event, ship)
         elif event.type == pygame.MOUSEBUTTONDOWN:
             mouse_x, mouse_y = pygame.mouse.get_pos()
-            check_play_button(ai_settings, screen, stats, play_button, ship, aliens, bullets, mouse_x, mouse_y)
+            check_play_button(ai_settings, screen, stats, scoreboard, play_button, ship, aliens, bullets, mouse_x,
+                              mouse_y)
 
 
 def check_keydown_events(event, ai_settings, screen, ship, bullets):
@@ -47,7 +48,7 @@ def check_keyup_events(event, ship):
         ship.moving_right = False
 
 
-def check_play_button(ai_settings, screen, stats, play_button, ship, aliens, bullets, mouse_x, mouse_y):
+def check_play_button(ai_settings, screen, stats, scoreboard, play_button, ship, aliens, bullets, mouse_x, mouse_y):
     """在玩家单击Play按钮时开始新游戏"""
     if play_button.rect.collidepoint(mouse_x, mouse_y) and not stats.game_active:
         # 重置游戏设置
@@ -55,6 +56,10 @@ def check_play_button(ai_settings, screen, stats, play_button, ship, aliens, bul
         # 隐藏光标
         pygame.mouse.set_visible(False)
         stats.game_active = True
+        # 重置记分牌图像
+        scoreboard.prep_score()
+        scoreboard.prep_high_score()
+        scoreboard.prep_level()
         # 重置游戏统计信息
         stats.reset_stats()
         # 清空外星人列表和子弹列表
@@ -89,6 +94,9 @@ def check_bullet_alien_collisions(ai_settings, screen, stats, scoreboard, ship, 
         # 删除现有的所有子弹，加快游戏节奏，并创建一个新的外星人群
         bullets.empty()
         ai_settings.increase_speed()
+        # 提高等级
+        stats.level += 1
+        scoreboard.prep_level()
         create_fleet(ai_settings, screen, ship, aliens)
 
 

@@ -26,7 +26,7 @@ def run_game():
     scoreboard = Scoreboard(ai_settings, screen, stats)
     # 开始游戏的主循环
     while True:
-        gf.check_events(ai_settings, screen, stats, play_button, ship, aliens, bullets)
+        gf.check_events(ai_settings, screen, stats, scoreboard, play_button, ship, aliens, bullets)
         if stats.game_active:
             ship.update()
             gf.update_bullets(ai_settings, screen, stats, scoreboard, ship, bullets, aliens)
