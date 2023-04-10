@@ -1,4 +1,10 @@
-from typing import List
+from typing import List, Optional
+
+
+class ListNode:
+    def __init__(self, val=0, next=None):
+        self.val = val
+        self.next = next
 
 
 class Solution:
@@ -29,6 +35,19 @@ class Solution:
             elif i - mapping[idx] != distance[idx]:
                 return False
         return True
+
+    def nextLargerNodes(self, head: Optional[ListNode]) -> List[int]:
+        ans = []
+        stack = []
+        while head:
+            while stack and ans[stack[-1]] < head.val:
+                ans[stack.pop()] = head.val
+            stack.append(len(ans))
+            ans.append(head.val)
+            head = head.next
+        for idx in stack:
+            ans[idx] = 0
+        return ans
 
 
 solution = Solution()
