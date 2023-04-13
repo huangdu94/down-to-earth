@@ -49,6 +49,18 @@ class Solution:
             ans[idx] = 0
         return ans
 
+    def mostFrequentEven(self, nums: List[int]) -> int:
+        freq = {}
+        ans = -1
+        for num in nums:
+            if (num & 1) == 0:
+                if num not in freq:
+                    freq[num] = 0
+                freq[num] += 1
+                if ans == -1 or freq[num] > freq[ans] or freq[num] == freq[ans] and num < ans:
+                    ans = num
+        return ans
+
 
 solution = Solution()
 print(solution.baseNeg2(4))
