@@ -1,3 +1,6 @@
+import bisect
+import math
+from functools import cache
 from typing import List, Optional
 
 
@@ -61,7 +64,23 @@ class Solution:
                     ans = num
         return ans
 
+    def makeArrayIncreasing(self, arr1: List[int], arr2: List[int]) -> int:
+        n = len(arr1)
+        arr2 = sorted(set(arr2))
+
+        @cache
+        def dfs(i, pre):
+            if i < 0:
+                return 0
+            idx = bisect.bisect_left(arr2, pre) - 1
+            if arr1[i] >= pre:
+                return math.inf if idx == -1 else dfs(i - 1, arr2[idx]) + 1
+            else:
+                return dfs(i - 1, arr1[i]) if idx == -1 else min(dfs(i - 1, arr1[i]), dfs(i - 1, arr2[idx]) + 1)
+
+        ans = dfs(n - 1, math.inf)
+        return ans if ans < math.inf else -1
+
 
 solution = Solution()
-print(solution.baseNeg2(4))
-print(ord('a'))
+print(solution.makeArrayIncreasing([7, 6, 3, 0, 3], [9]))
