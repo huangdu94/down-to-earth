@@ -1,7 +1,6 @@
 ## 一、shell概述
 1. shell是系统跟计算机硬件交互时使用的中间介质，它是系统的一个工具
 2. bash(Bourne Again Shell)是sh(Bourne Shell)的增强版本
-
 ## 二、bash特点
 1. 记录命令历史
 	+ linux预设可以记录1000条我们敲过的命令，这些命令保存在用户的家目录中的`.bash_history`文件中
@@ -30,7 +29,6 @@
 	+ `fg` 恢复当前进程
 	+ `bg` 后台运行
 	+ `jobs` 查看当前shell后台执行的任务
-
 ## 三、变量及常用配置
 1. `/etc/profile` 想系统内所有用户登录后都能使用该变量
 2. 用户主目录下的`.bashrc`文件 只想让当前用户使用该变量
@@ -51,7 +49,6 @@
 	+ `.bash_history` 记录命令历史
 	+ `.bash_logout` 当退出shell时，会执行该文件，可以把一些清理的工作放到这个文件中。
 9. `source` 目前设定的配置刷新
-
 ## 四、linux shell中的特殊符号
 1. `*` 零个或多个字符或数字
 2. `?` 一个任意的字符
@@ -65,7 +62,6 @@
 10. `>` `>>` `2>` `2>>` 重定向 追加 错误重定向 错误追加
 11. `[]` 其中字符中任一个(同正则表达式)
 12. `&&` `||` 执行成功为true，执行失败为false，遵循短路
-
 ## 五、常用命令
 1. `bash` 打开一个shell，`exit` 退出当前shell
 2. `pstree` 将系统所有进程通过树形结构打印出来
@@ -77,7 +73,6 @@
 8. `tee` 包含`>`的功能，同时显示到屏幕上
 9. `tr` 替换字符
 10. `split -b 500 /etc/passwd passwd` 切割文档
-
 ## 六、正则表达式(Regular Expression)
 1. 它是指一个用来描述或者匹配一系列符合某个句法规则的字符串的单个字符串
 2. `[1-9]` `[123]` `[^123]`
@@ -86,7 +81,6 @@
 5. `*` 零个或多个前面的字符
 6. `\{n1,n2\}` n1-n2个，n2省略表示大于等于n1个
 7. 支持正则表达式的命令:	`grep`/`egrep` `sed` `awk`
-
 ### grep [-cinvABC] 'regex' filename
 + `-c` 打印符合要求的行数
 + `-i` 忽略大小写
@@ -95,13 +89,11 @@
 + `-A` 后跟一个数字（有无空格都可以），例如-A2则表示打印符合要求的行以及下面两行
 + `-B` 打印符合要求的行以及上面n行
 + `-C` 打印符合要求的行以及上下各n行
-
 ### egrep(grep扩展版)
 + `?` 零个或一个前面的字符
 + `+` 一个或一个以上前面的字符
 + `|` 或者
 + `()` 表示一个整体
-
 ### sed
 + `sed -n 'n'p filename` 打印某行
 + `sed -n '1,$'p filename` 打印多行
@@ -114,7 +106,6 @@
 + 除了可以使用`/`以外`#`和`@`也可以
 + `sed 's/\(word1\)\(.*\)\(word2\)/\3\2\1/' filename` 替换两个字符串的位置
 + `sed -i 's/regex/替换后内容/g' filename` 直接修改文件内容
-
 ### awk
 + `awk -F':' '{print $1}' filename`
 + `-F` 的作用是指定分隔符，如果不加`-F`指定，则以空格或者tab为分隔符
@@ -130,11 +121,10 @@
 	+ `=` 赋值，`END` 所有行都执行完
 	+ `awk -F':' '{(tot+=$3)};END {print tot}' filename`
 	+ `awk -F':' '{if ($1=="root") print $0}' filename`
-
 ## 七、shell脚本
 1. shell脚本的基本结构以及如何执行
 	+ shell脚本通常是以`.sh`为后缀名的
-	+ 第一行一定是`#！/bin/bash` 如果不设置该行，脚本不能被执行
+	+ 第一行一定是`#!/bin/bash` 如果不设置该行，脚本不能被执行
 	+ 使用`sh`来执行脚本，`-x` 选项来查看这个脚本的执行过程
 	+ `chmod +x file.sh ./file.sh` 加可执行权限后也可直接执行
 	+ `date` 打印当前系统时间
@@ -148,74 +138,74 @@
 		+ `$1` 脚本执行时的第一个变量
 		+ `$2` 脚本执行时的第二个变量
 3. shell脚本中的逻辑判断
-	+ ```shell
-	  if ((判断语句)) ; then
-		  command
-	  fi
-	  ```
-	+ ```shell
-	  if ((判断语句)) ; then
-		  command1
-	  else
-		  command2
-	  fi
-	  ```
-	+ ```shell
-	  if ((判断语句))||((判断语句)) ; then
-		  command1
-	  elif ((判断语句))&&((判断语句)) ; then
-		  command2
-	  else
-		  command3
-	  fi
-	  ```
 	+ 判断语句可使用`[]`，但要使用`-lt` `-gt` `-le` `-ge` `-eq` `-ne`
 	+ `if [-e filename] ; then`
 		+ `-e` 判断文件或目录是否存在
 		+ `-d` 判断是不是目录，并是否存在
 		+ `-f` 判断是否是普通文件，并是否存在
 		+ `-r` `-w` `-x` 判断文档是否有相应权限 
-	+ ```shell
-	  case 变量 in
-	  value1)
-		  command1
-		  ;;
-	  value2)
-		  command2
-		  ;;
-	  value3)
-		  command3
-		  ;;
-	  *)
-		  command4
-		  ;;
-	  esac
-	  ```
+```shell
+if ((判断语句)) ; then
+	command
+fi
+```
+```shell
+if ((判断语句)) ; then
+	command1
+else
+	command2
+fi
+```
+```shell
+if ((判断语句))||((判断语句)) ; then
+	command1
+elif ((判断语句))&&((判断语句)) ; then
+	command2
+else
+	command3
+fi
+```
+```shell
+case 变量 in
+value1)
+	command1
+	;;
+value2)
+	command2
+	;;
+value3)
+	command3
+	;;
+*)
+	command4
+	;;
+esac
+```
 4. shell脚本中的循环
-	+ ```shell
-	  # 循环的条件
-	  # `seq 1 5`，1-5的一个序列
-	  # 也可以写 1 2 3 4 5
-	  # 还可以是 `ls` `cat test.txt`
-	  for 变量名 in 循环的条件; do
-		  command
-	  done
-	  ```
-	+ ```shell
-	  while [判断语句] ; do
-		  command
-	  done
-	  ```
-	+ ```shell
-	  # 死循环
-	  while :; do
-		  command
-	  done
-	  ```
+```shell
+# 循环的条件
+# `seq 1 5`，1-5的一个序列
+# 也可以写 1 2 3 4 5
+# 还可以是 `ls` `cat test.txt`
+for 变量名 in 循环的条件; do
+	command
+done
+```
+```shell
+while [判断语句] ; do
+	command
+done
+```
+```shell
+# 死循环
+while :; do
+	command
+done
+```
 5. shell脚本中的函数
-	+ ```shell
-	  # 一定要写在调用函数前
-	  function 函数名(){
-		  函数体
-	  }
-	  ```
+```shell
+# 一定要写在调用函数前
+function 函数名(){
+	函数体
+}
+```
