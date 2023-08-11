@@ -23,8 +23,8 @@ for key, value in dic.items():
 for key in dic.keys():
     print(key)
 # 遍历所有的值
-for key in dic.values():
-    print(key)
+for value in dic.values():
+    print(value)
 # 对列表进行去重 排序
 array = [1, 1, 4, 1, 2, 2, 3]
 print(set(array))
