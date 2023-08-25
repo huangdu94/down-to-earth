@@ -1,7 +1,7 @@
 package club.huangdu94.pattern.create.singleton;
 
 /**
- * 饿汉式 效率高 线程安全 (静态内部类)
+ * 懒汉式 效率高 线程安全 (静态内部类)
  *
  * @author yiyun (huangdu.hd@alibaba-inc.com) 2019/10/31 14:13
  */

@@ -6,7 +6,7 @@ package club.huangdu94.pattern.create.singleton;
  * @author yiyun (huangdu.hd@alibaba-inc.com) 2019/10/31 14:09
  */
 public class SingletonC {
-    private static SingletonC instance = new SingletonC();
+    private static final SingletonC instance = new SingletonC();
 
     private SingletonC() {
     }
