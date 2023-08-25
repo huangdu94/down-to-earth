@@ -5,7 +5,7 @@ package club.huangdu94.pattern.structure.flyweight.shape;
  * @version 2020/11/29 19:51
  */
 public class Circle implements Shape {
-    private String color;
+    private final String color;
     private int x;
     private int y;
     private int radius;
