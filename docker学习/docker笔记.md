@@ -57,7 +57,7 @@ Dism /online /enable-feature /featurename:Microsoft-Hyper-V-All 	/LimitAccess /A
 6. 构建镜像
    `docker build -t [username]/[repname]:[tag] [Dockerfile path]`
    Dockerfile文件实例：
-   ```SH
+   ```shell
    FROM    centos:6.7
    MAINTAINER      Fisher "fisher@sudops.com"
    RUN     /bin/echo 'root:123456' |chpasswd
