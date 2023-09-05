@@ -1,0 +1,22 @@
+plugins {
+    id 'java'
+}
+
+group 'org.springframework'
+version '5.0.2.RELEASE'
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    compile(project(":spring-beans"))
+    compile(project(":spring-core"))
+    compile(project(":spring-context"))
+    compile(project(":spring-webmvc"))
+    compile(project(":spring-jdbc"))
+    compile(project(":spring-orm"))
+    compile(project(":spring-tx"))
+    compile(project(":spring-web"))
+    testImplementation 'junit:junit:4.12'
+}
