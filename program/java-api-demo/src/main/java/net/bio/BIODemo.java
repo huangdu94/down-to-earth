@@ -14,7 +14,6 @@ public class BIODemo {
         Socket socket = new Socket("localhost", 8088);
         try (OutputStream os = socket.getOutputStream(); PrintWriter pw = new PrintWriter(os)) {
             pw.println("我是狗！");
-            pw.println("FIN");
         }
         server.stop();
     }

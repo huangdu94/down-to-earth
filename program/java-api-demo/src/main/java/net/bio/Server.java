@@ -19,6 +19,8 @@ import com.google.common.util.concurrent.ThreadFactoryBuilder;
 public class Server {
     private final ServerSocket serverSocket;
     private final ExecutorService clientHandlerPool;
+    private final ExecutorService serverHandler;
+    private volatile boolean stop = false;
 
     public Server() {
         try {
@@ -26,13 +28,23 @@ public class Server {
         } catch (IOException e) {
             throw new RuntimeException(e);
         }
-        this.clientHandlerPool = new ThreadPoolExecutor(10, 100, 60, TimeUnit.SECONDS, new ArrayBlockingQueue<>(100), new ThreadFactoryBuilder().setNameFormat("client-handler-%d").build());
-        ExecutorService serverHandler = new ThreadPoolExecutor(1, 1, 0, TimeUnit.MILLISECONDS, new SynchronousQueue<>(), new ThreadFactoryBuilder().setNameFormat("server").build());
+        this.clientHandlerPool = new ThreadPoolExecutor(10, 100, 60, TimeUnit.SECONDS, new ArrayBlockingQueue<>(100), new ThreadFactoryBuilder().setNameFormat("client-handler-%d").build()) {
+            @Override
+            protected void beforeExecute(Thread t, Runnable r) {
+                System.out.println("已连接.");
+            }
+
+            @Override
+            protected void afterExecute(Runnable r, Throwable t) {
+                System.out.println("已断开.");
+            }
+        };
+        this.serverHandler = new ThreadPoolExecutor(1, 1, 0, TimeUnit.MILLISECONDS, new SynchronousQueue<>(), new ThreadFactoryBuilder().setNameFormat("server").build());
         serverHandler.submit(this::waitConnect);
     }
 
     public void waitConnect() {
-        while (true) {
+        while (!stop) {
             try {
                 clientHandlerPool.submit(new ClientHandler(serverSocket.accept()));
             } catch (IOException e) {
@@ -54,13 +66,23 @@ public class Server {
                 try (BufferedReader br = new BufferedReader(new InputStreamReader(socket.getInputStream()))) {
                     String line;
                     while ((line = br.readLine()) != null) {
-                        if ("FIN".equals(line)) {break;}
                         System.out.println(line);
                     }
                 } catch (IOException e) {
                     throw new RuntimeException(e);
                 }
             }
+        }
+    }
+
+    public void stop() {
+        this.stop = true;
+        serverHandler.shutdown();
+        clientHandlerPool.shutdown();
+        try {
+            serverSocket.close();
+        } catch (IOException e) {
+            throw new RuntimeException(e);
         }
     }
 }
