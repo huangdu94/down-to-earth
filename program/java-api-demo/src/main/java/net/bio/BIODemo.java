@@ -11,13 +11,11 @@ import java.net.Socket;
 public class BIODemo {
     public static void main(String[] args) throws IOException {
         Server server = new Server();
-
         Socket socket = new Socket("localhost", 8088);
         try (OutputStream os = socket.getOutputStream(); PrintWriter pw = new PrintWriter(os)) {
             pw.println("我是狗！");
+            pw.println("FIN");
         }
-        //Socket socket2 = new Socket("localhost", 8088);
-        //Socket socket3 = new Socket("localhost", 8088);
-        //Socket socket4 = new Socket("localhost", 8088);
+        server.stop();
     }
 }
