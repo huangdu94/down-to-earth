@@ -24,7 +24,6 @@ public class Server {
         server.accept(null, new CompletionHandler<AsynchronousSocketChannel, Object>() {
             // 创建ByteBuffer
             final ByteBuffer buffer = ByteBuffer.allocate(1024);
-
             @Override
             public void completed(AsynchronousSocketChannel channel, Object attachment) {
                 System.out.println("客户端连接成功");
