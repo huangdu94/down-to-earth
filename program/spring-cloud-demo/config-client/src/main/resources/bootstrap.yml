@@ -15,6 +15,7 @@ eureka:
   client:
     serviceUrl:
       defaultZone: http://localhost:8761/eureka/
+# http://localhost:8881/actuator/refresh post请求 刷新配置
 management:
   endpoints:
     web:
