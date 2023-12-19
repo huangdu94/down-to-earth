@@ -9,7 +9,7 @@ spring:
       server:
         git:
           uri: https://github.com/huangdu94/down-to-earth.git
-          search-paths: SpringCloud学习\code\respo
+          search-paths: SpringCloud学习/code/respo
 eureka:
   instance:
     prefer-ip-address: true
