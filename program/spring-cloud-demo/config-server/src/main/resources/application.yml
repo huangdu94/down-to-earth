@@ -13,7 +13,7 @@ spring:
 eureka:
   instance:
     prefer-ip-address: true
-    ip-address: 127.0.0.1
+    ip-address: 127.0.0.1 # 这一行配置可以去掉
   client:
     serviceUrl:
       defaultZone: http://localhost:8761/eureka/
