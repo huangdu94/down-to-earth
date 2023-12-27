@@ -8,7 +8,7 @@ import org.springframework.web.bind.annotation.RestController;
  * @author yiyun (huangdu.hd@alibaba-inc.com)
  */
 @RestController
-@RequestMapping("")
+@RequestMapping("/user")
 public class UserController {
 
     @RequestMapping("/getCurrentUser")
