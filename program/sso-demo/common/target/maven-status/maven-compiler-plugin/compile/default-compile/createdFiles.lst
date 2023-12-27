@@ -1,0 +1,7 @@
+work/huangdu/common/util/MockDatabaseUtil.class
+work/huangdu/common/util/HttpUtil.class
+work/huangdu/common/util/SsoClientUtil.class
+work/huangdu/common/constant/CommonConstant.class
+work/huangdu/common/filter/SsoFilter.class
+work/huangdu/common/util/LoggerUtil.class
+work/huangdu/common/entity/ClientInfoDO.class
