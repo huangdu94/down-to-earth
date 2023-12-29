@@ -41,9 +41,9 @@ public class MyClient {
 
         write.write(sb.toString().getBytes());
         byte[] bytes = new byte[1024];
-        read.read(bytes);
+        int len = read.read(bytes);
         System.out.println("-------------set-------------");
-        System.out.println(new String(bytes));
+        System.out.println(new String(bytes, 0, len));
     }
 
     public void get(String key) throws IOException {
@@ -62,13 +62,13 @@ public class MyClient {
 
         write.write(sb.toString().getBytes());
         byte[] bytes = new byte[1024];
-        read.read(bytes);
+        int len = read.read(bytes);
         System.out.println("-------------get-------------");
-        System.out.println(new String(bytes));
+        System.out.println(new String(bytes, 0, len));
     }
 
     public static void main(String[] args) throws IOException {
-        MyClient client = new MyClient("192.168.8.202", 6379);
+        MyClient client = new MyClient("localhost", 6379);
         client.set("qingshan", "2673");
         client.get("qingshan");
     }
