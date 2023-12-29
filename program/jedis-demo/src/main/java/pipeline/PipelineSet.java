@@ -13,7 +13,8 @@ public class PipelineSet {
         Jedis jedis = new Jedis("127.0.0.1", 6379);
         Pipeline pipelined = jedis.pipelined();
         long t1 = System.currentTimeMillis();
-        for (int i=0; i < 100000; i++) {
+        // 100W 只要几秒
+        for (int i=0; i < 1000000; i++) {
             pipelined.set("batch"+i,""+i);
         }
         pipelined.syncAndReturnAll();
