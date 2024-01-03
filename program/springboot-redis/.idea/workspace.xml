@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="b7cdb3f1-e10c-430d-8c22-e5c63a329a4f" name="Changes" comment="两个">
+      <change beforePath="$PROJECT_DIR$/../jedis-demo/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../jedis-demo/pom.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../jedis-demo/src/main/java/cluster/ClusterTest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../jedis-demo/src/main/java/concurrency/CyclicBarrierTest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../jedis-demo/src/main/java/datatype/BasicTest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../jedis-demo/src/main/java/datatype/BytesTest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../jedis-demo/src/main/java/datatype/HashTest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../jedis-demo/src/main/java/datatype/HyperLogLogTest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../jedis-demo/src/main/java/datatype/StringTest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../jedis-demo/src/main/java/datatype/ZSetTest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../jedis-demo/src/main/java/distlock/DistLock.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../jedis-demo/src/main/java/lru/LRUCache.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../jedis-demo/src/main/java/lua/LuaTest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../jedis-demo/src/main/java/monitor/MonitorTest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../jedis-demo/src/main/java/myclient/MyClient.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../jedis-demo/src/main/java/pipeline/PipelineGet.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../jedis-demo/src/main/java/pipeline/PipelineSet.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../jedis-demo/src/main/java/pubsub/ListenTest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../jedis-demo/src/main/java/pubsub/MyListener.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../jedis-demo/src/main/java/pubsub/PublishTest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../jedis-demo/src/main/java/selector/testServer.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../jedis-demo/src/main/java/sentinel/JedisSentinelTest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../jedis-demo/src/main/java/shard/ShardingTest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../jedis-demo/src/main/java/transaction/TestTransaction.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../jedis-demo/src/main/java/util/JedisUtil.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../jedis-demo/src/main/java/util/ResourceUtil.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../jedis-demo/src/main/resources/redis.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../redisson-demo/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../redisson-demo/pom.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../redisson-demo/src/main/java/cluster/ClusterTest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../redisson-demo/src/main/java/lock/LockTest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../redisson-demo/src/main/java/sentinel/SentinelTest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../redisson-demo/src/main/java/single/SingleTest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/gupaoedu/RedisApp.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/gupaoedu/config/RedisConfig.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/gupaoedu/entity/User.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/gupaoedu/entity/UserTest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/gupaoedu/lettuce/LettuceASyncTest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/gupaoedu/lettuce/LettucePool.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/gupaoedu/lettuce/LettuceSyncTest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/gupaoedu/lettuce/PubSub.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/gupaoedu/lettuce/ReactiveAPI.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/gupaoedu/mapper/UserMapper.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/gupaoedu/service/UserService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/gupaoedu/service/impl/UserServiceImpl.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/gupaoedu/util/RedisUtil.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/application.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/banner.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/mapper/userMapper.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/gupaoedu/BloomFilterDemo.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/gupaoedu/BloomTestsConcurrency.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/gupaoedu/CountingBloomFilterTest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/gupaoedu/RedisAppTests.java" beforeDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../.." />
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
+  <component name="MavenImportPreferences">
+    <option name="generalSettings">
+      <MavenGeneralSettings>
+        <option name="useMavenConfig" value="true" />
+      </MavenGeneralSettings>
+    </option>
+  </component>
+  <component name="ProjectId" id="2aCioUKNQVE7by8129A5tSdHcgz" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "last_opened_file_path": "/Users/huangdu/git-repo/down-to-earth/program/springboot-redis",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "project.structure.last.edited": "Project",
+    "project.structure.proportion": "0.0",
+    "project.structure.side.proportion": "0.0",
+    "settings.editor.selected.configurable": "project.propCompiler",
+    "spring.configuration.checksum": "da20562c9b4d8f35b2bfef245367e47c"
+  }
+}]]></component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="b7cdb3f1-e10c-430d-8c22-e5c63a329a4f" name="Changes" comment="" />
+      <created>1703829137005</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1703829137005</updated>
+      <workItem from="1703829138322" duration="3847000" />
+      <workItem from="1703937105620" duration="820000" />
+    </task>
+    <task id="LOCAL-00001" summary="两个">
+      <created>1703829287548</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1703829287548</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="两个" />
+    <option name="LAST_COMMIT_MESSAGE" value="两个" />
+  </component>
+</project>
