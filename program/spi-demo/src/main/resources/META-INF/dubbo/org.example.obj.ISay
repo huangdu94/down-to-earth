@@ -1,0 +1,2 @@
+hello=org.example.obj.impl.HelloSay
+hi=org.example.obj.impl.HiSay
