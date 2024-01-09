@@ -1,3 +1,5 @@
 one=org.example.obj.impl.OneTest
 two=org.example.obj.impl.TwoTest
 three=org.example.obj.impl.ThreeTest
+wrapper1=org.example.obj.impl.NumberTestWrapper1
+wrapper2=org.example.obj.impl.NumberTestWrapper2

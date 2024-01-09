@@ -37,6 +37,8 @@ public class DubboSpiDemo {
         parameters.put("key", "two");
         URL url = new URL("test", "localhost", 0, parameters);
         System.out.println(iTest.test(url));
+        ITest test = el2.getExtension("one");
+        System.out.println();
 
         System.out.println(ApplicationModel.defaultModel().getDefaultModule().getExtensionLoader(Protocol.class).getAdaptiveExtension());
     }
