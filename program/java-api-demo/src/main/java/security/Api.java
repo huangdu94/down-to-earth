@@ -11,6 +11,7 @@ public class Api {
         /*
          * 启用SecurityManager有两种方式：
          * 1. JVM参数 -Djava.security.manager -Djava.security.policy=my.policy
+         * (policy文件参考 .\lib\security\java.policy)
          * 其中my.policy是指定的策略文件，相对路径/绝对路径均可
          * 2. 代码中设置 System.setSecurityManager()
          */
