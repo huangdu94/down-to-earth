@@ -7,7 +7,7 @@ import java.util.List;
 import java.util.Set;
 
 /**
- * StringBuiler不是线程安全的，当多个线程操作同一个字符串时应当使用StringBuffer
+ * StringBuilder不是线程安全的，当多个线程操作同一个字符串时应当使用StringBuffer
  * 对于集合而言，常用的实现类：ArrayList,LinkedList,HashSet它们都不是线程安全的.
  * Collections可以将现有的集合转换为线程安全的.
  *
