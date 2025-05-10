@@ -31,7 +31,7 @@ public class Thread_sleep {
 
 /**
  * 输入一个数字，从该数字开始倒数，直到0为止.
- * 没隔一秒倒数一次.
+ * 每隔一秒倒数一次.
  *
  * @author Bean
  */
