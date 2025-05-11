@@ -8,7 +8,7 @@
 2. 依赖倒置原则（dependence inversion principle）  
    面向接口编程
 3. 单一职责原则（Single Responsibility Principle）  
-   一个类或者一个方法只负责一项职责，尽量做到类的只有一个行为原因引起变化
+   一个类或者一个方法只负责一项职责，尽量做到类只由一个行为原因引起变化
 4. 接口隔离（interface segregation principle）  
    建立单一接口
 5. 迪米特原则（law of demeter LOD）  
