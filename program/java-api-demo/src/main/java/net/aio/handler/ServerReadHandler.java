@@ -20,6 +20,9 @@ public class ServerReadHandler implements CompletionHandler<Integer, Asynchronou
 
     @Override
     public void completed(Integer len, AsynchronousSocketChannel attachment) {
+        if (len <= 0) {
+            return;
+        }
         ByteBuffer readBuffer = bufferPair.getReadBuffer();
         readBuffer.flip();
         String message = new String(readBuffer.array(), 0, len);
