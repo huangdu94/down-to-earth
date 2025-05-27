@@ -22,43 +22,51 @@ public class Client {
     private final SocketChannel socketChannel;
     private final ByteBuffer readBuffer;
     private final ByteBuffer writeBuffer;
+    private volatile boolean stop = false;
 
     public Client(int port) {
+        this("127.0.0.1", port);
+    }
+
+    public Client(String host, int port) {
         try {
             this.selector = Selector.open();
             this.socketChannel = SocketChannel.open();
             socketChannel.configureBlocking(false);
-            socketChannel.connect(new InetSocketAddress(port));
-            socketChannel.register(selector, SelectionKey.OP_CONNECT);
+            doConnect(new InetSocketAddress(host, port));
             readBuffer = ByteBuffer.allocate(1024);
             writeBuffer = ByteBuffer.allocate(1024);
         } catch (IOException e) {
             throw new RuntimeException(e);
         }
-        ExecutorService clientHandler = new ThreadPoolExecutor(1, 1, 0, TimeUnit.MILLISECONDS, new SynchronousQueue<>(), new ThreadFactoryBuilder().setNameFormat("client").build());
-        clientHandler.submit(this::run);
+        new Thread(this::run, "client").start();
     }
 
     public void run() {
         try {
-            while (selector.select() > 0) {
+            while (!stop && selector.select() > 0) {
                 Iterator<SelectionKey> iterator = selector.selectedKeys().iterator();
                 while (iterator.hasNext()) {
                     SelectionKey selectionKey = iterator.next();
-                    if (selectionKey.isConnectable()) {
-                        SocketChannel socketChannel = (SocketChannel)selectionKey.channel();
-                        if (socketChannel.finishConnect()) {
-                            System.out.println("client: 连接成功.");
-                            socketChannel.register(selector, SelectionKey.OP_READ);
-                        } else {
-                            System.out.println("client: 连接失败.");
-                        }
-                    } else if (selectionKey.isReadable()) {
-                        System.out.println("client read: " + read());
-                    }
                     iterator.remove();
+                    try {
+                        handleInput(selectionKey);
+                    } catch (IOException e) {
+                        System.out.println(e.getMessage());
+                    }
                 }
             }
+        } catch (IOException e) {
+            throw new RuntimeException(e);
+        } finally {
+            stop();
+        }
+    }
+
+    public void stop() {
+        this.stop = true;
+        try {
+            selector.close();
         } catch (IOException e) {
             throw new RuntimeException(e);
         }
@@ -83,11 +91,51 @@ public class Client {
         }
     }
 
+    private void doConnect(InetSocketAddress inetSocketAddress) throws IOException {
+        if (socketChannel.connect(inetSocketAddress)) {
+            socketChannel.register(selector, SelectionKey.OP_READ);
+        } else {
+            socketChannel.register(selector, SelectionKey.OP_CONNECT);
+        }
+    }
+
+    private void handleInput(SelectionKey selectionKey) throws IOException {
+        if (!selectionKey.isValid()) {
+            return;
+        }
+        if (selectionKey.isConnectable()) {
+            SocketChannel socketChannel = (SocketChannel) selectionKey.channel();
+            if (socketChannel.finishConnect()) {
+                System.out.println("client: 连接成功.");
+                socketChannel.register(selector, SelectionKey.OP_READ);
+            } else {
+                System.out.println("client: 连接失败.");
+                // 连接失败，进程退出
+                System.exit(1);
+            }
+        } else if (selectionKey.isReadable()) {
+            String message = read();
+            if (message == null) {
+                System.out.println("server: 断开连接.");
+                selectionKey.cancel();
+                System.exit(1);
+            }
+            System.out.println("client read: " + message);
+        }
+    }
+
     private String read() {
         try {
-            socketChannel.read(readBuffer);
-            readBuffer.flip();
-            return new String(readBuffer.array(), 0, readBuffer.limit());
+            int readBytes = socketChannel.read(readBuffer);
+            if (readBytes > 0) {
+                readBuffer.flip();
+                return new String(readBuffer.array(), 0, readBuffer.limit());
+            } else if (readBytes < 0) {
+                socketChannel.close();
+                return null;
+            } else {
+                return "";
+            }
         } catch (IOException e) {
             throw new RuntimeException(e);
         } finally {
