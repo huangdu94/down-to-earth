@@ -81,6 +81,7 @@ public class Server {
             // 返回读到的字节数量
             int readBytes = socketChannel.read(buffer);
             if (readBytes > 0) {
+                // 写完要取消注册，不然只要缓冲区是空闲的就会一直触发
                 socketChannel.register(selector, SelectionKey.OP_WRITE, buffer);
             } else if (readBytes < 0) {
                 // 连接已关闭
